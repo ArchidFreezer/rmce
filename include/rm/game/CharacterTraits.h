@@ -7,6 +7,7 @@ namespace rm::game::character {
  * character's traits and preferences.
  */
 struct CharacterTraits {
+	int caster_{0};      /**< A [1-9] weighting for caster abilities. These include most magic skills and other abilities that are tied to the use of magic, such as familiars training */
 	int combat_{0};      /**< A [1-9] weighting for combat oriented abilities, including both attack and CC abilities */
 	int information_{0}; /**< A [1-9] weighting for information gathering abilities. These include most wilderness, lore and social skills that are used to gather information about the world and its inhabitants */
 	int stealth_{0};     /**< A [1-9] weighting for stealth abilities. These include subterfuge, some urban and other skills that are used to avoid detection and manipulate the state of the world without direct confrontation */

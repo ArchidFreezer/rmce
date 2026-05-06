@@ -4,7 +4,7 @@
             "id" : "SKILL_ACROBATICS",
             "name" : "Acrobatics",
             "category" : "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-            "description" : "This skill provides a bonus for in-air manoeuvres (e.g., flying or levitation) or swinging on objects. This skill includes the use of parallel bars, uneven bars, and other gymnastic activities in which the majority of the activity is spent in airborne manoeuvres. A successful manoeuvre roll can reduce the severity of a falling critical by one (i.e., a ?B' becomes an ?A', a ?D' becomes a ?C', etc.).",
+            "description" : "This skill provides a bonus for in-air manoeuvres (e.g., flying or levitation) or swinging on objects. This skill includes the use of parallel bars, uneven bars, and other gymnastic activities in which the majority of the activity is spent in airborne manoeuvres. A successful manoeuvre roll can reduce the severity of a falling critical by one (i.e., a 'B' becomes an 'A', a 'D' becomes a 'C', etc.).",
             "book" : "BOOK_FANTASY_ROLE_PLAYING",
             "action" : "Moving",
             "difficultiesSummary" : "<li>Routine: Holding onto a swinging object (e.g., a rope). Partial Success requires a second roll to determine whether or not the character has lost his grip. <li>Easy: Swinging across a pit or other opening provided the rope is already in hand. Again, Partial Success requires another roll. <li>Light: A swing to a specific location. Partial Success indicates that the swing was successful, but misses the intended location by a similar percentage. (For example, Glimglad wants to swing from one balcony, across the room to the top of a staircase (a total of 50'). The result of the Light manoeuvre is a 70. Glimglad misses his intended location by 15'(30 percent). The Gamemaster decides that Glimglad has instead landed on the banister fifteen feet down the stairs.) <li>Medium: A swing onto or into a combatant. A successful result forces the victim to make a RR (level vs. number of ranks of Acrobatics) or take an Unbalancing critical (1 severity/20 failure). If the acrobat lands on the victim, the victim resists at a -20, but the acrobat falls if the victim makes the RR. This is a Very Hard manoeuvre if the acrobat has a weapon or other object in one hand. <li>Hard: Riding a curtain or a sail with a knife. Partial Success indicates the acrobat falls more quickly than intended and may take falling damage. (For example, E'Roll leaps out of a crow's nest and attempts to use the sail to brake his fall. He rolls and gets a 30. Since the crow's nest was 50'high, E'Roll takes damage for a 35'fall. Ouch!) Catching a static object while falling and swinging around it before dropping further. (This is frequently done in comic books.) This manoeuvre is modified by -1 for every 10'fallen, but will reduce the severity of a falling critical by one. This is an extremely hard manoeuvre if the object being caught is in motion (e.g., a trapeze). Note that if there are several objects to brake the fall, the acrobat can reduce the critical several times, thereby eliminating the critical(s) entirely. <li>Very Hard: Swinging from rope to rope, vine to vine, etc. Partial Success indicates that the acrobat covers less than the normal distance. If one rope must be released prior to grasping the next, the manoeuvre becomes more difficult and all Partial Successes must be rolled again to avoid falling. <li>Extremely Hard: 1'-10'between ropes. <li>Sheer Folly: 11'-25'between ropes. <li>Absurd: 26'-50'between ropes.",
@@ -18,7 +18,15 @@
                 "Agility"
             ],
             "exhaustion" : 1.666666716337204E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ACTING",
@@ -38,7 +46,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_ADMINISTRATION",
@@ -58,7 +74,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ADRENAL_BALANCE",
@@ -78,13 +102,21 @@
                 "Agility"
             ],
             "exhaustion" : 5E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ADRENAL_CONCENTRATION",
             "name" : "Adrenal Concentration",
             "category" : "SKILLCATEGORY_SELF_CONTROL",
-            "description" : "This skill provides a bonus for achieving a special +25 bonus on any activity attempted using concentration and the focusing of internal reserves. If the user makes a successful static maneuver, +25 is added to any such activity the next round. However, this static maneuver requires 75% of the userÒs activity the round it is attempted.",
+            "description" : "This skill provides a bonus for achieving a special +25 bonus on any activity attempted using concentration and the focusing of internal reserves. If the user makes a successful static maneuver, +25 is added to any such activity the next round. However, this static maneuver requires 75% of the user's activity the round it is attempted.",
             "book" : "BOOK_CHARACTER_LAW",
             "action" : "Static",
             "difficultiesSummary" : "<li>Routine: One of the character's life-long goals or ambitions is about to be realized. <li>Easy: One of the character's major goals or ambitions is about to be realized. <li>Light: One of the character's minor goals or ambitions is about to be realized or during the plot resolution (final climax). <li>Medium: During a climactic scene. <li>Hard: During a scene significant to the adventure plot. <li>Very Hard: During a minor scene. <li>Extremely Hard: During a scene where the failure of the character is useful. <li>Sheer Folly: During a scene where the failure of the character is crucial. <li>Absurd: When the GM really wants the character to fail!",
@@ -98,14 +130,22 @@
                 "Presence"
             ],
             "exhaustion" : 5E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_ADRENAL_DEFENSE",
             "name" : "Adrenal Defense",
             "category" : "SKILLCATEGORY_SPECIAL_DEFENCES",
             "description" : "By using this skill, attacks with melee or missile weapons may be dodged or deflected wholly or partially.) The skill bonus of the Defender is added to his DB versus melee attacks. Against missile attacks, the skill bonus is halved (1/2ed) and added to DB. To use Adrenal Defense, you must be aware of the fact that you are under attack. In addition, the character must not be wearing any armour and cannot have a shield or large object in his hands.",
-            "book" : "BOOK_FANTASY_ROLE_PLAYING",
+            "book" : "BOOK_MARTIAL_ARTS_COMPANION",
             "action" : "Static",
             "difficultiesSummary" : "No difficulties-summary provided",
             "notes" : "No notes",
@@ -113,7 +153,15 @@
             "canSpecialise" : true,
             "mandatorySubcategory" : false,
             "exhaustion" : 1E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_ADRENAL_DEFLECTING",
@@ -133,7 +181,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_ADRENAL_EVASION",
@@ -153,7 +209,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_ADRENAL_LANDING",
@@ -173,7 +237,15 @@
                 "Agility"
             ],
             "exhaustion" : 5E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ADRENAL_LEAPING",
@@ -193,7 +265,15 @@
                 "Strength"
             ],
             "exhaustion" : 5E0,
-            "distanceMultiplier" : 5E-1
+            "distanceMultiplier" : 5E-1,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ADRENAL_QUICKDRAW",
@@ -216,7 +296,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 5E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_ADRENAL_RESISTANCE",
@@ -231,7 +319,15 @@
             "canSpecialise" : true,
             "mandatorySubcategory" : false,
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_ADRENAL_SPEED",
@@ -251,7 +347,15 @@
                 "Quickness"
             ],
             "exhaustion" : 5E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ADRENAL_STABILIZATION",
@@ -271,7 +375,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_ADRENAL_STRENGTH",
@@ -291,7 +403,15 @@
                 "Strength"
             ],
             "exhaustion" : 5E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ADRENAL_TOUGHNESS",
@@ -306,7 +426,15 @@
             "canSpecialise" : true,
             "mandatorySubcategory" : false,
             "exhaustion" : 5E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_ADVANCED_MATH",
@@ -326,7 +454,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_ADVERTISING",
@@ -349,7 +485,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ALCHEMY",
@@ -369,7 +513,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 4,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ALERTNESS",
@@ -389,7 +541,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 3,
+                "information" : 5,
+                "stealth" : 7,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_AMBUSH",
@@ -409,7 +569,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 6,
+                "information" : 1,
+                "stealth" : 8,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ANATOMY",
@@ -429,7 +597,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 8,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_ANIMAL_HANDLING",
@@ -452,7 +628,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 3,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 4,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_ANIMAL_HEALING",
@@ -475,7 +659,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_ANIMAL_MASTERY",
@@ -498,7 +690,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_ANIMAL_TRAINING",
@@ -521,7 +721,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 4,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ANTHROPOLOGY",
@@ -541,7 +749,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_APPRAISAL",
@@ -561,7 +777,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ARCHITECTURE",
@@ -581,7 +805,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ARTIFACT_LORE",
@@ -601,7 +833,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ASTRONOMY",
@@ -621,7 +861,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ATHLETIC_GAMES_BRAWN",
@@ -644,7 +892,15 @@
                 "Agility"
             ],
             "exhaustion" : 3E0,
-            "distanceMultiplier" : 1.3333333730697632E0
+            "distanceMultiplier" : 1.3333333730697632E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_ATHLETIC_GAMES_ENDURANCE",
@@ -667,7 +923,15 @@
                 "Constitution"
             ],
             "exhaustion" : 5E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ATHLETIC_GAMES_GYMNASTIC",
@@ -690,7 +954,15 @@
                 "Constitution"
             ],
             "exhaustion" : 2.5E-1,
-            "distanceMultiplier" : 5E-1
+            "distanceMultiplier" : 5E-1,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ATTUNEMENT",
@@ -710,7 +982,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 9,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 4,
+                "support" : 4,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_BASIC_MATH",
@@ -730,7 +1010,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 2,
+                "information" : 7,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_BEGGING",
@@ -750,7 +1038,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_BIOCHEMISTRY",
@@ -770,7 +1066,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_BLIND_FIGHTING",
@@ -790,7 +1094,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_BLOCKING",
@@ -810,7 +1122,15 @@
                 "Strength"
             ],
             "exhaustion" : 2.5E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_BOAT_PILOT",
@@ -833,7 +1153,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_BODY_DEVELOPMENT",
@@ -853,7 +1181,15 @@
                 "Constitution"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 4,
+                "combat" : 9,
+                "information" : 3,
+                "stealth" : 5,
+                "support" : 5,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_BONE_CARVING",
@@ -873,7 +1209,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_BOXING",
@@ -893,7 +1237,15 @@
                 "Strength"
             ],
             "exhaustion" : 5E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_BRAWLING",
@@ -913,7 +1265,15 @@
                 "Strength"
             ],
             "exhaustion" : 5E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_BRIBERY",
@@ -933,7 +1293,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_CALLIGRAPHY",
@@ -953,7 +1321,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_CAMOUFLAGE",
@@ -973,7 +1349,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 7,
+                "support" : 6,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_CARTOGRAPHY",
@@ -993,7 +1377,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_CAVING",
@@ -1013,7 +1405,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_CHAIN_ARMOUR",
@@ -1033,7 +1433,15 @@
                 "Strength"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_CHANNELING",
@@ -1053,7 +1461,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_BUDDHA_S_PALM",
@@ -1072,7 +1488,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_CLOTH_LANCE",
@@ -1092,7 +1516,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_CONTINUOUS_STRIKES",
@@ -1112,7 +1544,15 @@
                 "Quickness"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_DISTANCE_STRIKE",
@@ -1132,7 +1572,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_ELEMENTAL_FIST",
@@ -1152,7 +1600,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_FALLING_LEAF",
@@ -1172,7 +1628,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_FANTASTIC_LEAP",
@@ -1192,7 +1656,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_FISTS_OF_IRON",
@@ -1212,7 +1684,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_HOLD_BREATH",
@@ -1232,7 +1712,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_INVINCIBLE_STANCE",
@@ -1251,7 +1739,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_INVULNERABILITY",
@@ -1270,7 +1766,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_LEAPING_STRIKE",
@@ -1290,7 +1794,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_LIGHT_FEET",
@@ -1310,7 +1822,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_LIZARD_S_CLIMB",
@@ -1330,7 +1850,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_LORE",
@@ -1350,7 +1878,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_NO_SHADOW_ATTACK",
@@ -1370,7 +1906,15 @@
                 "Quickness"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_POISON_FIST",
@@ -1390,7 +1934,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_RESIST_ELEMENTS",
@@ -1410,7 +1962,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_RESIST_PAIN",
@@ -1430,7 +1990,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_RISE_OF_THE_PHOENIX",
@@ -1450,7 +2018,15 @@
                 "Strength"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_SENSE_WEAKNESS",
@@ -1470,7 +2046,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_CHI_POWERS_STICKING_TOUCH",
@@ -1490,7 +2074,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_CIRCLE_LORE",
@@ -1510,7 +2102,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_CLEANSING_TRANCE",
@@ -1530,7 +2130,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_CLIMBING",
@@ -1550,7 +2158,15 @@
                 "Strength"
             ],
             "exhaustion" : 1E0,
-            "distanceMultiplier" : 2.0000000298023224E-1
+            "distanceMultiplier" : 2.0000000298023224E-1,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_CONTACTING",
@@ -1570,7 +2186,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 6
+            }
         },
         {
             "id" : "SKILL_CONTORTIONS",
@@ -1590,7 +2214,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 8.33333358168602E-2,
-            "distanceMultiplier" : 1.0000000149011612E-1
+            "distanceMultiplier" : 1.0000000149011612E-1,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 6,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_CONTROL_LYCANTHROPY",
@@ -1610,7 +2242,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_COOKING",
@@ -1633,7 +2273,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 4,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_CORPUS_LORE",
@@ -1653,7 +2301,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_COUNTERFEITING",
@@ -1673,7 +2329,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 4,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_CULTURE_LORE",
@@ -1696,7 +2360,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 4,
+                "combat" : 4,
+                "information" : 7,
+                "stealth" : 4,
+                "support" : 4,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_DANCING",
@@ -1716,7 +2388,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_DEATH_TRANCE",
@@ -1736,7 +2416,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_DEMON_DEVIL_LORE",
@@ -1756,7 +2444,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 4,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_DETECT_TRAPS",
@@ -1776,7 +2472,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 8,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_DIAGNOSTICS",
@@ -1799,7 +2503,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_DIPLOMACY",
@@ -1819,7 +2531,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 2,
+                "information" : 5,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_DIRECTED_SPELLS",
@@ -1842,7 +2562,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 8,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_DIRECTION_SENSE",
@@ -1862,7 +2590,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 3,
+                "stealth" : 4,
+                "support" : 4,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_DISARMING_TRAPS",
@@ -1882,7 +2618,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 7,
+                "support" : 6,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_DISARM_FOE_ARMED",
@@ -1905,7 +2649,15 @@
                 "Strength"
             ],
             "exhaustion" : 5E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_DISARM_FOE_UNARMED",
@@ -1928,7 +2680,15 @@
                 "Strength"
             ],
             "exhaustion" : 5E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_DISGUISE",
@@ -1948,7 +2708,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 8,
+                "support" : 5,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_DISTANCE_RUNNING",
@@ -1968,7 +2736,15 @@
                 "Constitution"
             ],
             "exhaustion" : 5E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_DIVINATION",
@@ -1991,7 +2767,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_DIVINATION_LORE",
@@ -2014,7 +2798,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_DIVING",
@@ -2034,7 +2826,15 @@
                 "Agility"
             ],
             "exhaustion" : 3.333333507180214E-2,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_DOWSING",
@@ -2054,7 +2854,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_DRAFTING",
@@ -2074,7 +2882,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_DRAGON_LORE",
@@ -2094,7 +2910,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_DREAMWORLD_CONTROL",
@@ -2114,7 +2938,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_DREAMWORLD_LORE",
@@ -2134,7 +2966,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_DREAM_CONTROL",
@@ -2154,7 +2994,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_DREAM_LORE",
@@ -2177,7 +3025,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_DRIVING",
@@ -2200,7 +3056,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_DROWSING",
@@ -2220,7 +3084,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_DUPING",
@@ -2240,7 +3112,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_ENGINEERING",
@@ -2260,7 +3140,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_EVALUATE_ARMOUR",
@@ -2280,7 +3168,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_EVALUATE_METAL",
@@ -2300,7 +3196,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_EVALUATE_STONE",
@@ -2320,7 +3224,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_EVALUATE_WEAPON",
@@ -2340,7 +3252,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_FAERIE_LORE",
@@ -2360,7 +3280,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_FAMILIAR_MASTERY",
@@ -2383,7 +3311,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_FAUNA_LORE",
@@ -2403,7 +3339,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 6,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_FEINT_ARMED",
@@ -2423,7 +3367,15 @@
                 "Quickness"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_FEINT_UNARMED",
@@ -2443,7 +3395,15 @@
                 "Quickness"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_FIRST_AID",
@@ -2463,7 +3423,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 4,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 8,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_FLETCHING",
@@ -2483,7 +3451,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_FLORA_LORE",
@@ -2503,7 +3479,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 6,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_FLYING_GLIDING",
@@ -2523,7 +3507,15 @@
                 "Intuition"
             ],
             "exhaustion" : 8.33333358168602E-2,
-            "distanceMultiplier" : 2E0
+            "distanceMultiplier" : 2E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_FORAGING",
@@ -2543,7 +3535,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 5,
+                "support" : 6,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_FORGERY",
@@ -2566,7 +3566,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 6
+            }
         },
         {
             "id" : "SKILL_FRENZY",
@@ -2586,7 +3594,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 1E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_GAMBLING",
@@ -2606,7 +3622,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_GIMMICKRY",
@@ -2626,7 +3650,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_GLYPH_LORE",
@@ -2646,7 +3678,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_HEALING_TRANCE",
@@ -2666,7 +3706,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_HERALDRY",
@@ -2689,7 +3737,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 3,
+                "information" : 7,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_HERB_LORE",
@@ -2709,7 +3765,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_HERDING",
@@ -2732,7 +3796,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_HIDING",
@@ -2752,7 +3824,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 9,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_HIDING_ITEMS",
@@ -2772,7 +3852,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 7,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_HISTORY",
@@ -2795,7 +3883,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_HORTICULTURE",
@@ -2815,7 +3911,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_HUNTING",
@@ -2835,7 +3939,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 5,
+                "support" : 6,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_HYPNOSIS",
@@ -2855,7 +3967,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_INTERROGATION",
@@ -2875,7 +3995,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 2,
+                "information" : 7,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 6
+            }
         },
         {
             "id" : "SKILL_JEWELRY_SMITHING",
@@ -2895,7 +4023,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_JOUSTING",
@@ -2915,7 +4051,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 5E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_JUGGLING",
@@ -2935,7 +4079,15 @@
                 "Intuition"
             ],
             "exhaustion" : 3.333333507180214E-2,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_JUMPING",
@@ -2955,7 +4107,15 @@
                 "Agility"
             ],
             "exhaustion" : 1E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_LANGUAGES",
@@ -2979,7 +4139,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 6,
+                "combat" : 5,
+                "information" : 9,
+                "stealth" : 5,
+                "support" : 6,
+                "utility" : 7
+            }
         },
         {
             "id" : "SKILL_LEADERSHIP",
@@ -2999,7 +4167,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 3,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 4,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_LEATHER_CRAFTS",
@@ -3019,7 +4195,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_LIE_PERCEPTION",
@@ -3039,7 +4223,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 6,
+                "stealth" : 5,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_LIP_READING",
@@ -3059,7 +4251,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_LIST_ARCANE_BASE_LIST",
@@ -3077,7 +4277,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LIST_ARCANE_CLOSED_LIST",
@@ -3095,7 +4303,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 4,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LIST_ARCANE_OPEN_LIST",
@@ -3113,7 +4329,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LIST_OTHER_REALM_BASE_LIST",
@@ -3131,7 +4355,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LIST_OTHER_REALM_CLOSED_LIST",
@@ -3149,7 +4381,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LIST_OTHER_REALM_OPEN_LIST",
@@ -3167,7 +4407,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 4,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LIST_OTHER_REALM_TRAINING_PACKAGE",
@@ -3185,7 +4433,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 4,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LIST_OWN_REALM_CLOSED_LIST",
@@ -3203,7 +4459,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LIST_OWN_REALM_OPEN_LIST",
@@ -3221,7 +4485,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LIST_OWN_REALM_OTHER_BASE_LIST",
@@ -3239,7 +4511,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LIST_OWN_REALM_OWN_BASE_LIST",
@@ -3257,7 +4537,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 9,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LIST_OWN_REALM_TRAINING_PACKAGE",
@@ -3275,7 +4563,15 @@
                 "{SpellList}"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LOCATE_HIDDEN",
@@ -3295,7 +4591,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 3,
+                "stealth" : 7,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_LOCKING_HOLDS",
@@ -3315,7 +4619,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_LOCK_LORE",
@@ -3335,7 +4647,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 8,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_MAGICAL_LANGUAGE",
@@ -3358,7 +4678,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_MAGIC_RITUAL",
@@ -3378,7 +4706,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 4,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_MAPPING",
@@ -3398,7 +4734,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_MARTIAL_ARTS_BLIND_FIGHTING",
@@ -3418,7 +4762,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_MARTIAL_ARTS_STRIKING",
@@ -3438,7 +4790,15 @@
                 "Strength"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_MARTIAL_ARTS_STYLE_ADVANCED",
@@ -3461,7 +4821,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_MARTIAL_ARTS_STYLE_BASIC",
@@ -3484,7 +4852,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_MARTIAL_ARTS_STYLE_LORE",
@@ -3504,7 +4880,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_MARTIAL_ARTS_SWEEPING",
@@ -3524,7 +4908,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_MECHANITION",
@@ -3547,7 +4939,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_MEDITATION",
@@ -3567,7 +4967,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_MENTAL_CONTROL_ASSAULT",
@@ -3587,7 +4995,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_MENTAL_CONTROL_DEFENSE",
@@ -3607,7 +5023,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_METAL_CRAFTS",
@@ -3627,7 +5051,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_METAL_LORE",
@@ -3650,7 +5082,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_MIDWIFERY",
@@ -3670,7 +5110,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_MILITARY_ORGANIZATION",
@@ -3690,7 +5138,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_MIMERY",
@@ -3710,7 +5166,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_MIMICRY",
@@ -3730,7 +5194,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_MINGLING",
@@ -3750,7 +5222,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_MINING",
@@ -3773,7 +5253,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_MISSILE_DEFLECTING",
@@ -3793,7 +5281,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_MNEMONICS",
@@ -3813,7 +5309,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_MOUNTED_COMBAT",
@@ -3833,7 +5337,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_MUSIC",
@@ -3856,7 +5368,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_NAVIGATION",
@@ -3876,7 +5396,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_NERVE_STRIKES",
@@ -3896,7 +5424,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_OBSERVATION",
@@ -3916,7 +5452,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 6,
+                "support" : 4,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_OPERATING_EQUIPMENT",
@@ -3936,7 +5480,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_ORIENTEERING",
@@ -3956,7 +5508,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_PAINTING",
@@ -3976,7 +5536,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_PAPER_MAKING",
@@ -3996,7 +5564,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_PHILOSOPHY",
@@ -4016,7 +5592,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_PICKING_LOCKS",
@@ -4036,7 +5620,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 8,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_PICKING_POCKETS",
@@ -4056,7 +5648,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 7,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_PLANAR_LORE",
@@ -4076,7 +5676,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_PLATE_ARMOUR",
@@ -4096,7 +5704,15 @@
                 "Strength"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_PLAY_INSTRUMENT",
@@ -4119,7 +5735,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_POETIC_IMPROVISATION",
@@ -4139,7 +5763,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_POETRY",
@@ -4159,7 +5791,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_POISON_LORE",
@@ -4179,7 +5819,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 4,
+                "support" : 6,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_POISON_PERCEPTION",
@@ -4199,7 +5847,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 3,
+                "stealth" : 3,
+                "support" : 6,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_POLE_VAULTING",
@@ -4219,7 +5875,15 @@
                 "Agility"
             ],
             "exhaustion" : 1E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_POWER_PERCEPTION",
@@ -4239,7 +5903,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_POWER_POINT_DEVELOPMENT",
@@ -4254,7 +5926,15 @@
             "canSpecialise" : false,
             "mandatorySubcategory" : false,
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 9,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_POWER_STRIKING",
@@ -4274,7 +5954,15 @@
                 "Strength"
             ],
             "exhaustion" : 1E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_POWER_THROWING",
@@ -4294,7 +5982,15 @@
                 "Strength"
             ],
             "exhaustion" : 1E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_PREPARE_HERBS",
@@ -4314,7 +6010,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 3,
+                "support" : 7,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_PREPARE_POISONS",
@@ -4334,7 +6038,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 6,
+                "support" : 4,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_PROPAGANDA",
@@ -4354,7 +6066,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_PSYCHOLOGY",
@@ -4377,7 +6097,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 8,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_PUBLIC_SPEAKING",
@@ -4397,7 +6125,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_QUICKDRAW",
@@ -4417,7 +6153,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_RACIAL_ATTACK",
@@ -4440,7 +6184,15 @@
                 "Strength"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_RAPPELLING",
@@ -4460,7 +6212,15 @@
                 "Strength"
             ],
             "exhaustion" : 2.0000000298023224E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_READING_TRACKS",
@@ -4480,7 +6240,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 6,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_READ_RUNES",
@@ -4500,7 +6268,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 8,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_REALITY_AWARENESS",
@@ -4520,7 +6296,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_REGION_LORE",
@@ -4543,7 +6327,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 3,
+                "information" : 5,
+                "stealth" : 3,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_RELIGION",
@@ -4563,7 +6355,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_RESEARCH",
@@ -4583,7 +6383,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_REVERSE_STROKE",
@@ -4606,7 +6414,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_RIDING",
@@ -4629,7 +6445,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 5,
+                "combat" : 5,
+                "information" : 5,
+                "stealth" : 5,
+                "support" : 5,
+                "utility" : 7
+            }
         },
         {
             "id" : "SKILL_RIGID_LEATHER_ARMOUR",
@@ -4649,7 +6473,15 @@
                 "Strength"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_ROPE_MASTERY",
@@ -4669,7 +6501,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 2,
+                "stealth" : 6,
+                "support" : 5,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_ROWING",
@@ -4689,7 +6529,15 @@
                 "Strength"
             ],
             "exhaustion" : 1.666666716337204E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 4,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_SAILING",
@@ -4709,7 +6557,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_SANITY_HEALING",
@@ -4732,7 +6588,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_SCALING",
@@ -4752,7 +6616,15 @@
                 "Strength"
             ],
             "exhaustion" : 8.33333358168602E-2,
-            "distanceMultiplier" : 1.0000000149011612E-1
+            "distanceMultiplier" : 1.0000000149011612E-1,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_SCRIBING",
@@ -4772,7 +6644,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_SCROUNGING",
@@ -4792,7 +6672,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SCULPTING",
@@ -4812,7 +6700,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_SECOND_AID",
@@ -4832,7 +6728,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 6,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SEDUCTION",
@@ -4852,7 +6756,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SENSE_AMBUSH",
@@ -4872,7 +6784,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 5,
+                "information" : 3,
+                "stealth" : 8,
+                "support" : 3,
+                "utility" : 6
+            }
         },
         {
             "id" : "SKILL_SENSE_AWARENESS",
@@ -4895,7 +6815,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SERVICE",
@@ -4915,7 +6843,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_SETTING_TRAPS",
@@ -4935,7 +6871,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 4,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_SEWING",
@@ -4955,7 +6899,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SHIELD_MAKING",
@@ -4975,7 +6927,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SHIP_BUILDING",
@@ -4995,7 +6955,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_SIEGE_ENGINEERING",
@@ -5015,7 +6983,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SIGNALING",
@@ -5035,7 +7011,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SILENT_ATTACK",
@@ -5055,7 +7039,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 7,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_SINGING",
@@ -5078,7 +7070,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SITUATIONAL_AWARENESS",
@@ -5101,7 +7101,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 4,
+                "combat" : 6,
+                "information" : 3,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_SKATING",
@@ -5121,7 +7129,15 @@
                 "Agility"
             ],
             "exhaustion" : 1.666666753590107E-2,
-            "distanceMultiplier" : 2E0
+            "distanceMultiplier" : 2E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SKIING",
@@ -5141,7 +7157,15 @@
                 "Constitution"
             ],
             "exhaustion" : 1.666666753590107E-2,
-            "distanceMultiplier" : 2E0
+            "distanceMultiplier" : 2E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SKINNING",
@@ -5161,7 +7185,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 4,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_SLEEP_TRANCE",
@@ -5181,7 +7213,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_SOFT_LEATHER_ARMOUR",
@@ -5201,7 +7241,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 1,
+                "stealth" : 6,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_SPATIAL_LOCATION_AWARENESS",
@@ -5221,7 +7269,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_SPELL_ARTISTRY",
@@ -5241,7 +7297,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_SPELL_CONCENTRATION",
@@ -5261,7 +7325,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_SPELL_LORE",
@@ -5281,7 +7353,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 8,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_SPELL_MASTERY",
@@ -5304,7 +7384,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_SPELL_TRICKERY",
@@ -5324,7 +7412,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_SPINNING",
@@ -5344,7 +7440,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_SPRINTING",
@@ -5364,7 +7468,15 @@
                 "Quickness"
             ],
             "exhaustion" : 1.666666753590107E-2,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_STALKING",
@@ -5384,7 +7496,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 8,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_STAR_GAZING",
@@ -5404,7 +7524,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_STILT_WALKING",
@@ -5424,7 +7552,15 @@
                 "Agility"
             ],
             "exhaustion" : 3.333333507180214E-2,
-            "distanceMultiplier" : 5E-1
+            "distanceMultiplier" : 5E-1,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_STONE_CRAFTS",
@@ -5444,7 +7580,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_STONE_LORE",
@@ -5467,7 +7611,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_STREETWISE",
@@ -5487,7 +7639,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 5,
+                "support" : 2,
+                "utility" : 6
+            }
         },
         {
             "id" : "SKILL_STUNNED_MANOEUVREING",
@@ -5507,7 +7667,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_STUN_REMOVAL",
@@ -5527,7 +7695,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_SUBDUAL",
@@ -5547,7 +7723,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_SUMMONING",
@@ -5567,7 +7751,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_SURFING",
@@ -5587,7 +7779,15 @@
                 "Constitution"
             ],
             "exhaustion" : 8.33333358168602E-2,
-            "distanceMultiplier" : 2E0
+            "distanceMultiplier" : 2E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_SURGERY",
@@ -5607,7 +7807,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_SURVEILLANCE",
@@ -5627,7 +7835,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_SURVIVAL",
@@ -5650,7 +7866,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 6,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_SWASHBUCKLING",
@@ -5670,7 +7894,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 6,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_SWIMMING",
@@ -5690,7 +7922,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 1.666666716337204E-1,
-            "distanceMultiplier" : 5E-1
+            "distanceMultiplier" : 5E-1,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 3,
+                "information" : 2,
+                "stealth" : 5,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_SYMBOL_LORE",
@@ -5710,7 +7950,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_TACKLING",
@@ -5730,7 +7978,15 @@
                 "Strength"
             ],
             "exhaustion" : 5E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_TACTICAL_GAMES",
@@ -5750,7 +8006,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_TACTICS",
@@ -5773,7 +8037,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_TALE_TELLING",
@@ -5793,7 +8065,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_TATTOOING",
@@ -5813,7 +8093,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 3,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_TEACHING",
@@ -5833,7 +8121,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_TIGHTROPE_WALKING",
@@ -5853,7 +8149,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 3.333333507180214E-2,
-            "distanceMultiplier" : 2.0000000298023224E-1
+            "distanceMultiplier" : 2.0000000298023224E-1,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_TIME_SENSE",
@@ -5873,7 +8177,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 3,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_TRACKING",
@@ -5893,7 +8205,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_TRADING",
@@ -5913,7 +8233,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 5,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_TRADING_LORE",
@@ -5933,7 +8261,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_TRANSCEND_ARMOR",
@@ -5953,7 +8289,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 7,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_TRAPPING",
@@ -5973,7 +8317,15 @@
                 "Empathy"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_TRAP_BUILDING",
@@ -5993,7 +8345,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_TRICKERY",
@@ -6013,7 +8373,15 @@
                 "Presence"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 7,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_TUMBLING",
@@ -6033,7 +8401,15 @@
                 "Agility"
             ],
             "exhaustion" : 1.666666716337204E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 5,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_TUMBLING_EVASION",
@@ -6053,7 +8429,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_TWO_WEAPON_COMBAT",
@@ -6076,7 +8460,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_UNDEAD_LORE",
@@ -6096,7 +8488,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 4,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_USING_PREPARED_HERBS",
@@ -6116,7 +8516,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 3,
+                "combat" : 2,
+                "information" : 5,
+                "stealth" : 3,
+                "support" : 8,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_USING_REMOVING_POISON",
@@ -6136,7 +8544,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 6,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_VENTRILOQUISM",
@@ -6156,7 +8572,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_VITAL_POINTS_LORE",
@@ -6179,13 +8603,21 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_WARDING_LORE",
             "name" : "Warding Lore",
             "category" : "SKILLCATEGORY_LORE_MAGICAL",
-            "description" : "This skill provides a bonus for manipulating and us-ing wards in conjunction with the appropriate ward spells It also allows a spell user to pursue non-magical research in defining and identifying new wards to add to his repertoire of ward spells.",
+            "description" : "This skill provides a bonus for manipulating and using wards in conjunction with the appropriate ward spells It also allows a spell user to pursue non-magical research in defining and identifying new wards to add to his repertoire of ward spells.",
             "book" : "BOOK_CHARACTER_LAW",
             "action" : "Static",
             "difficultiesSummary" : "<li>Routine: Recognizing a ward as magical. <li>Easy: Identifying the approximate power of a ward. <li>Light: Identifying the realm of a ward. <li>Medium: Learning a very low level (1-5) ward. <li>Hard: Learning a low level (6-10) ward. Identifying a ward's trigger. <li>Very Hard: Learning a medium level (11-15) ward. <li>Extremely Hard: Learning a high level (16-20) ward. <li>Sheer Folly: Learning a very high level (21-50) ward. <li>Absurd: Learning an extremely high level (51+) ward.",
@@ -6199,7 +8631,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_WEAPON_1_H_CONCUSSION",
@@ -6222,7 +8662,15 @@
                 "Strength"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 8,
+                "information" : 2,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_WEAPON_1_H_EDGED",
@@ -6245,7 +8693,15 @@
                 "Strength"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 8,
+                "information" : 2,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_WEAPON_2_HANDED",
@@ -6268,7 +8724,15 @@
                 "Strength"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 5,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_WEAPON_MISSILE",
@@ -6291,7 +8755,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 2,
+                "stealth" : 6,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILL_WEAPON_MISSILE_ARTILLERY",
@@ -6314,7 +8786,15 @@
                 "Reasoning"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_WEAPON_POLE_ARMS",
@@ -6337,7 +8817,15 @@
                 "Strength"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_WEAPON_STYLE_ADVANCED",
@@ -6360,7 +8848,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_WEAPON_STYLE_BASIC",
@@ -6383,7 +8879,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_WEAPON_STYLE_LORE",
@@ -6403,7 +8907,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILL_WEAPON_THROWN",
@@ -6426,7 +8938,15 @@
                 "Agility"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 6,
+                "information" : 3,
+                "stealth" : 6,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILL_WEATHER_WATCHING",
@@ -6446,7 +8966,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_WEAVING",
@@ -6466,7 +8994,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_WEIGHT_LIFTING",
@@ -6486,7 +9022,15 @@
                 "Strength"
             ],
             "exhaustion" : 1E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILL_WOOD_CRAFTS",
@@ -6506,7 +9050,15 @@
                 "Intuition"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILL_WRESTLING",
@@ -6526,7 +9078,15 @@
                 "Self Discipline"
             ],
             "exhaustion" : 2.5E-1,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILL_XENO_LORE",
@@ -6549,7 +9109,15 @@
                 "Memory"
             ],
             "exhaustion" : 0E0,
-            "distanceMultiplier" : 1E0
+            "distanceMultiplier" : 1E0,
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         }
     ]
 }

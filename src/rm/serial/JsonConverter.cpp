@@ -374,6 +374,7 @@ rm::game::character::CharacterTraits JsonConverter::getCharacterTraits(const jso
 	if (!trait_obj) {
 		return traits; // Return default traits if the object is not found
 	}
+	traits.caster_ = getInt(*trait_obj, "caster");
 	traits.combat_ = getInt(*trait_obj, "combat");
 	traits.information_ = getInt(*trait_obj, "information");
 	traits.stealth_ = getInt(*trait_obj, "stealth");
@@ -384,6 +385,7 @@ rm::game::character::CharacterTraits JsonConverter::getCharacterTraits(const jso
 
 void JsonConverter::setCharacterTraits(json::object& obj, std::string_view key, const rm::game::character::CharacterTraits& traits) {
 	json::object trait_obj;
+	trait_obj["caster"] = traits.caster_;
 	trait_obj["combat"] = traits.combat_;
 	trait_obj["information"] = traits.information_;
 	trait_obj["stealth"] = traits.stealth_;

@@ -21,6 +21,7 @@ json::value SkillSerializer::serializeObject(const SkillData& ref) const {
 	JsonConverter::setEnumSet(obj, "stats", ref.stats());
 	JsonConverter::setFloat(obj, "exhaustion", ref.exhaustionCost());
 	JsonConverter::setFloat(obj, "distanceMultiplier", ref.distanceMultiplier());
+	JsonConverter::setCharacterTraits(obj, "traits", ref.traits());
 
 	return obj;
 }
@@ -47,6 +48,7 @@ const SkillData& SkillSerializer::deserializeObject(json::object& jsonObj) const
 	ref.setStats(JsonConverter::getEnumVector<StatType::Type>(jsonObj, "stats"));
 	ref.setExhaustionCost(JsonConverter::getFloat(jsonObj, "exhaustion", 0.0f));
 	ref.setDistanceMultiplier(JsonConverter::getFloat(jsonObj, "distanceMultiplier", 1.0f));
+	ref.setTraits(JsonConverter::getCharacterTraits(jsonObj, "traits"));
 
 	return ref;
 }

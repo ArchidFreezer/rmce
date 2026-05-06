@@ -5,6 +5,7 @@
 #include <vector>
 
 #include <BookData.h>
+#include <CharacterTraits.h>
 #include <GameRuleData.h>
 #include <StatType.h>
 #include <SkillActionType.h>
@@ -397,21 +398,44 @@ public:
 		return distance_multiplier_;
 	}
 
+	/**
+	 * @brief Set the character traits relevant to the skill
+	 *
+	 * These traits may be used by the character AI when making decisions about which skills to develop and how to use them.
+	 *
+	 * @param traits CharacterTraits struct containing the traits relevant to the skill
+	 */
+	void setTraits(rm::game::character::CharacterTraits traits) {
+		traits_ = traits;
+	}
+
+	/**
+	 * @brief Get the character traits relevant to the skill
+	 *
+	 * These traits may be used by the character AI when making decisions about which skills to develop and how to use them.
+	 *
+	 * @return CharacterTraits struct containing the traits relevant to the skill
+	 */
+	const rm::game::character::CharacterTraits traits() const {
+		return traits_;
+	}
+
 private:
-	std::string name_{};                    /**< Name of the skill as seen in-game */
-	std::string description_{};             /**< What the skill is used for */
-	const BookData* book_{};                /** Game rule book that the skill appears in */
-	::SkillActionType::Type action_type_{}; /**< Type of skill action performed when usng the skill */
-	std::string difficulty_summary_{};      /**< Description of the difficulties of some use cases using the skill */
-	std::string notes_{};                   /**< Additional informatio on the skill and its usage */
-	bool restricted_{};                     /**< Is the SkillDevelopmentType normally kRestricted */
-	const SkillCategoryData* category_{};   /** The skill category the skill belongs to */
-	bool can_specialise_{};                 /** Whether the character can select a speciality for the skill */
-	bool mandatory_subcategory_{};          /**< Whether the character must select a specific type of the this skills focus */
-	std::set<std::string> subcategories_{}; /**< Definition of the types of subcategories the skill has */
-	std::vector<::StatType::Type> stats_{}; /**< Stats providing a bonus to the skill */
-	float exhaustion_cost_{};               /** The number of exhaution points expended per round when using the skill at normal pace */
-	float distance_multiplier_{};           /** Multiplier for the distance moved when using this skill */
+	std::string name_{};                            /**< Name of the skill as seen in-game */
+	std::string description_{};                     /**< What the skill is used for */
+	const BookData* book_{};                        /** Game rule book that the skill appears in */
+	::SkillActionType::Type action_type_{};         /**< Type of skill action performed when usng the skill */
+	std::string difficulty_summary_{};              /**< Description of the difficulties of some use cases using the skill */
+	std::string notes_{};                           /**< Additional informatio on the skill and its usage */
+	bool restricted_{};                             /**< Is the SkillDevelopmentType normally kRestricted */
+	const SkillCategoryData* category_{};           /** The skill category the skill belongs to */
+	bool can_specialise_{};                         /** Whether the character can select a speciality for the skill */
+	bool mandatory_subcategory_{};                  /**< Whether the character must select a specific type of the this skills focus */
+	std::set<std::string> subcategories_{};         /**< Definition of the types of subcategories the skill has */
+	std::vector<::StatType::Type> stats_{};         /**< Stats providing a bonus to the skill */
+	float exhaustion_cost_{};                       /** The number of exhaution points expended per round when using the skill at normal pace */
+	float distance_multiplier_{};                   /** Multiplier for the distance moved when using this skill */
+	rm::game::character::CharacterTraits traits_{}; /**< Character traits that are relevant to the skill and may be used by the character AI when making decisions about which skills to develop and how to use them. */
 };
 
 } // namespace rm::rule
