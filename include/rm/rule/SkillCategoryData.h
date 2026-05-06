@@ -4,6 +4,7 @@
 #include <string_view>
 #include <vector>
 
+#include <CharacterTraits.h>
 #include <GameRuleData.h>
 #include <SkillGroupData.h>
 #include <StatType.h>
@@ -252,6 +253,28 @@ public:
 		}
 	};
 
+	/**
+	 * @brief Set the character traits relevant to the skill category
+	 *
+	 * These traits may be used by the character AI when making decisions about which skill categories to develop and how to use them.
+	 *
+	 * @param traits CharacterTraits struct containing the traits relevant to the skill category
+	 */
+	void setTraits(rm::game::character::CharacterTraits traits) {
+		traits_ = traits;
+	}
+
+	/**
+	 * @brief Get the character traits relevant to the skill category
+	 *
+	 * These traits may be used by the character AI when making decisions about which skill categories to develop and how to use them.
+	 *
+	 * @return CharacterTraits struct containing the traits relevant to the skill category
+	 */
+	const rm::game::character::CharacterTraits traits() const {
+		return traits_;
+	}
+
 private:
 	const SkillGroupData* group_{};                                /**< Skill group the category belongs to */
 	const SkillProgressionTypeData* skill_progression_{};          /**< How many bonus points each skill rank provides by default in skills in the category */
@@ -259,6 +282,7 @@ private:
 	std::string name_{};                                           /**< Name of the category as seen in-game */
 	std::vector<StatType::Type> stats_{};                          /**< Stats providing a bonus to the category */
 	bool use_realm_stats_{};                                       /**< Whether the realm stat of the character should determine the applicable stats */
+	rm::game::character::CharacterTraits traits_{};                                     /**< Character traits relevant to the category that may be used by the character AI when making decisions about which skills to develop and how to use them */
 };
 
 } // namespace rm::rule

@@ -11,7 +11,15 @@
                 "Strength",
                 "Agility",
                 "Strength"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILLCATEGORY_ARMOUR_LIGHT",
@@ -24,7 +32,15 @@
                 "Agility",
                 "Strength",
                 "Agility"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 6,
+                "information" : 2,
+                "stealth" : 5,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "SKILLCATEGORY_ARMOUR_MEDIUM",
@@ -37,7 +53,15 @@
                 "Strength",
                 "Agility",
                 "Strength"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILLCATEGORY_ARTISTIC_ACTIVE",
@@ -50,7 +74,15 @@
                 "Presence",
                 "Empathy",
                 "Agility"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILLCATEGORY_ARTISTIC_PASSIVE",
@@ -63,7 +95,15 @@
                 "Empathy",
                 "Intuition",
                 "Presence"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILLCATEGORY_ATHLETIC_BRAWN",
@@ -76,7 +116,15 @@
                 "Strength",
                 "Constitution",
                 "Agility"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_ATHLETIC_ENDURANCE",
@@ -89,7 +137,15 @@
                 "Constitution",
                 "Agility",
                 "Strength"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
@@ -102,7 +158,15 @@
                 "Agility",
                 "Quickness",
                 "Agility"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
@@ -115,7 +179,15 @@
                 "Intuition",
                 "Self Discipline",
                 "Intuition"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_AWARENESS_SEARCHING",
@@ -128,7 +200,15 @@
                 "Intuition",
                 "Reasoning",
                 "Self Discipline"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 5,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILLCATEGORY_AWARENESS_SENSES",
@@ -141,7 +221,15 @@
                 "Intuition",
                 "Self Discipline",
                 "Intuition"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 3,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
@@ -154,7 +242,15 @@
                 "Constitution",
                 "Self Discipline",
                 "Constitution"
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_COMBAT_MANOEUVRES",
@@ -167,7 +263,15 @@
                 "Agility",
                 "Quickness",
                 "Self Discipline"
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_COMMUNICATION",
@@ -180,7 +284,15 @@
                 "Reasoning",
                 "Memory",
                 "Empathy"
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 3,
+                "information" : 7,
+                "stealth" : 3,
+                "support" : 7,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_CRAFTS",
@@ -193,7 +305,15 @@
                 "Agility",
                 "Memory",
                 "Self Discipline"
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_DIRECTED_SPELLS",
@@ -206,7 +326,15 @@
                 "Agility",
                 "Self Discipline",
                 "Agility"
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILLCATEGORY_INFLUENCE",
@@ -219,7 +347,15 @@
                 "Presence",
                 "Empathy",
                 "Intuition"
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 2,
+                "information" : 6,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_LORE_GENERAL",
@@ -232,7 +368,15 @@
                 "Memory",
                 "Reasoning",
                 "Memory"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 7,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILLCATEGORY_LORE_MAGICAL",
@@ -245,7 +389,15 @@
                 "Memory",
                 "Reasoning",
                 "Memory"
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILLCATEGORY_LORE_OBSCURE",
@@ -258,7 +410,15 @@
                 "Memory",
                 "Reasoning",
                 "Memory"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILLCATEGORY_LORE_TECHNICAL",
@@ -271,7 +431,15 @@
                 "Memory",
                 "Reasoning",
                 "Memory"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
@@ -284,7 +452,15 @@
                 "Agility",
                 "Quickness",
                 "Self Discipline"
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
@@ -297,7 +473,15 @@
                 "Strength",
                 "Agility",
                 "Strength"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
@@ -310,7 +494,15 @@
                 "Agility",
                 "Strength",
                 "Agility"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILLCATEGORY_OUTDOOR_ANIMAL",
@@ -323,7 +515,15 @@
                 "Empathy",
                 "Agility",
                 "Empathy"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 3,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 5,
+                "utility" : 6
+            }
         },
         {
             "id" : "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
@@ -336,7 +536,15 @@
                 "Self Discipline",
                 "Intuition",
                 "Memory"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 5,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_POWER_AWARENESS",
@@ -349,7 +557,15 @@
                 "Empathy",
                 "Intuition",
                 "Presence"
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILLCATEGORY_POWER_MANIPULATION",
@@ -362,7 +578,15 @@
                 "Empathy",
                 "Intuition",
                 "Presence"
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
@@ -370,7 +594,15 @@
             "name" : "Power Point Development",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_NONE",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
@@ -383,7 +615,15 @@
                 "Reasoning",
                 "Memory",
                 "Reasoning"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 7,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_SCIENCE_ANALYTIC_SPECIALISED",
@@ -396,7 +636,15 @@
                 "Reasoning",
                 "Memory",
                 "Reasoning"
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SELF_CONTROL",
@@ -409,7 +657,15 @@
                 "Self Discipline",
                 "Presence",
                 "Self Discipline"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPECIAL_ATTACKS",
@@ -422,7 +678,15 @@
                 "Strength",
                 "Agility",
                 "Self Discipline"
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPECIAL_DEFENCES",
@@ -430,7 +694,15 @@
             "name" : "Special Defences",
             "useRealmStats" : false,
             "skillProgression" : "SKILLPROGRESSIONTYPE_COMBINED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS",
@@ -438,7 +710,15 @@
             "name" : "Arcane Base Lists",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS",
@@ -446,7 +726,15 @@
             "name" : "Arcane Closed Lists",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS",
@@ -454,7 +742,15 @@
             "name" : "Arcane Open Lists",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS",
@@ -462,7 +758,15 @@
             "name" : "Other Realm Base Lists",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS",
@@ -470,7 +774,15 @@
             "name" : "Other Realm Closed Lists",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS",
@@ -478,7 +790,15 @@
             "name" : "Other Realm Open Lists",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE",
@@ -486,7 +806,15 @@
             "name" : "Other Realm Training Package",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
@@ -494,7 +822,15 @@
             "name" : "Own Realm Closed Lists",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
@@ -502,7 +838,15 @@
             "name" : "Own Realm Open Lists",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS",
@@ -510,7 +854,15 @@
             "name" : "Own Realm Other Base Lists",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
@@ -518,7 +870,15 @@
             "name" : "Own Realm Own Base Lists",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
@@ -526,7 +886,15 @@
             "name" : "Own Realm Training Package",
             "useRealmStats" : true,
             "skillProgression" : "SKILLPROGRESSIONTYPE_LIMITED",
-            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE"
+            "categoryProgression" : "SKILLPROGRESSIONTYPE_NONE",
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_SUBTERFUGE_ATTACK",
@@ -539,7 +907,15 @@
                 "Agility",
                 "Self Discipline",
                 "Intuition"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
@@ -552,7 +928,15 @@
                 "Intuition",
                 "Agility",
                 "Reasoning"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 8,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "SKILLCATEGORY_SUBTERFUGE_STEALTH",
@@ -565,7 +949,15 @@
                 "Agility",
                 "Self Discipline",
                 "Intuition"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 2,
+                "information" : 2,
+                "stealth" : 9,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
@@ -578,7 +970,15 @@
                 "Reasoning",
                 "Memory",
                 "Self Discipline"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILLCATEGORY_TECHNICAL_TRADE_PROFESSIONAL",
@@ -591,7 +991,15 @@
                 "Reasoning",
                 "Memory",
                 "Intuition"
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
@@ -604,7 +1012,15 @@
                 "Memory",
                 "Intuition",
                 "Reasoning"
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_URBAN",
@@ -617,7 +1033,15 @@
                 "Intuition",
                 "Presence",
                 "Reasoning"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 4,
+                "support" : 5,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
@@ -630,7 +1054,15 @@
                 "Strength",
                 "Agility",
                 "Strength"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 8,
+                "information" : 2,
+                "stealth" : 5,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_WEAPON_1_H_EDGED",
@@ -643,7 +1075,15 @@
                 "Strength",
                 "Agility",
                 "Strength"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 9,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_WEAPON_2_HANDED",
@@ -656,7 +1096,15 @@
                 "Strength",
                 "Agility",
                 "Strength"
-            ]
+            ],
+            "traits" : {
+                "caster" : 4,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILLCATEGORY_WEAPON_MISSILE",
@@ -669,7 +1117,15 @@
                 "Agility",
                 "Strength",
                 "Agility"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 2,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "SKILLCATEGORY_WEAPON_MISSILE_ARTILLERY",
@@ -682,7 +1138,15 @@
                 "Intuition",
                 "Agility",
                 "Reasoning"
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "SKILLCATEGORY_WEAPON_POLE_ARMS",
@@ -695,7 +1159,15 @@
                 "Strength",
                 "Agility",
                 "Strength"
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "SKILLCATEGORY_WEAPON_THROWN",
@@ -708,7 +1180,15 @@
                 "Agility",
                 "Strength",
                 "Agility"
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 6,
+                "information" : 1,
+                "stealth" : 5,
+                "support" : 2,
+                "utility" : 4
+            }
         }
     ]
 }

@@ -13,6 +13,7 @@ json::value SkillCategorySerializer::serializeObject(const SkillCategoryData& re
 	JsonConverter::setString(obj, "skillProgression", ref.defaultSkillProgression().id());
 	JsonConverter::setString(obj, "categoryProgression", ref.skillCategoryProgression().id());
 	JsonConverter::setEnumSet(obj, "stats", ref.stats());
+	JsonConverter::setCharacterTraits(obj, "traits", ref.traits());
 
 	return obj;
 }
@@ -32,7 +33,7 @@ const SkillCategoryData& SkillCategorySerializer::deserializeObject(json::object
 	SkillProgressionTypeData& category_progression{manager().get<SkillProgressionTypeData>(category_progression_id)};
 	ref.setSkillProgressions(skill_progression, category_progression);
 	ref.setStats(JsonConverter::getEnumVector<StatType::Type>(jsonObj, "stats"));
-
+	ref.setTraits(JsonConverter::getCharacterTraits(jsonObj, "traits"));
 
 	return ref;
 }
