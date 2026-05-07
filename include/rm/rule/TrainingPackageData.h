@@ -6,6 +6,7 @@
 #include <stdexcept>
 #include <string_view>
 #include <tuple>
+#include <CharacterTraits.h>
 #include <Dice.h>
 #include <EnumChoice.h>
 #include <GameRuleData.h>
@@ -777,6 +778,28 @@ public:
 		return language_choices_;
 	}
 
+	/**
+	 * @brief Set the character traits relevant to the training package
+	 *
+	 * These traits may be used by the character AI when making decisions about which training packages to develop and how to use them.
+	 *
+	 * @param traits CharacterTraits struct containing the traits relevant to the training package
+	 */
+	void setTraits(rm::game::character::CharacterTraits traits) {
+		traits_ = traits;
+	}
+
+	/**
+	 * @brief Get the character traits relevant to the training package
+	 *
+	 * These traits may be used by the character AI when making decisions about which training packages to develop and how to use them.
+	 *
+	 * @return CharacterTraits struct containing the traits relevant to the training package
+	 */
+	const rm::game::character::CharacterTraits traits() const {
+		return traits_;
+	}
+
 private:
 	std::string name_{};                                                                       /**< Name of the training package */
 	std::string description_{};                                                                /**< General description of the training package */
@@ -806,6 +829,7 @@ private:
 	std::set<GameRuleDataChoice<SkillCategoryData>>
 	    lifestyle_category_skill_choices_{};                             /**< A set of choices of skill categories from which the player may select one or more skill to gain up to 15 ranks from the package rather than the usual cap of 10 */
 	std::map<GameRuleDataChoice<LanguageData>, int> language_choices_{}; /**< A set of language choices that the player may select from to gain ranks in languages */
+	rm::game::character::CharacterTraits traits_{};                      /**< Character traits that are relevant to the skill and may be used by the character AI when making decisions about which TPs to purchase. */
 };
 
 } // namespace rm::rule

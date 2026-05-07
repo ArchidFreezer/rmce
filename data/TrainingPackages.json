@@ -101,7 +101,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ADVISOR",
@@ -219,7 +227,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_AMATEUR_MAGE_REVISED",
@@ -313,7 +329,15 @@
             ],
             "lifestyleGroups" : [
                 "SKILLGROUP_LORE"
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ANIMAL_FRIEND",
@@ -423,7 +447,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ANIMAL_HANDLER",
@@ -551,7 +583,15 @@
                 {
                     "id" : "SKILL_ANIMAL_HANDLING"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 7
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ANTAGONIST",
@@ -641,7 +681,15 @@
                     "id" : "SKILLCATEGORY_URBAN",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 5,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_APOTHECARY",
@@ -725,7 +773,15 @@
                     "id" : "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 8,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ARACHNAMANCER",
@@ -741,7 +797,7 @@
                     "chance" : 30
                 },
                 {
-                    "value" : "dlO doses of spider venom (lvl 5 reduction)",
+                    "value" : "d10 doses of spider venom (lvl 5 reduction)",
                     "chance" : 50
                 },
                 {
@@ -753,7 +809,7 @@
                     "chance" : 40
                 },
                 {
-                    "value" : "dlO doses of spider venom (lvl 3 reduction)",
+                    "value" : "d10 doses of spider venom (lvl 3 reduction)",
                     "chance" : 30
                 },
                 {
@@ -845,7 +901,15 @@
                     "id" : "SKILL_FAUNA_LORE",
                     "subcategory" : "Spiders"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ARCHAEOLOGIST",
@@ -959,7 +1023,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ARCHITECT",
@@ -1033,7 +1105,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ARMS_INSTRUCTOR",
@@ -1146,7 +1226,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ARTIFICER",
@@ -1233,7 +1321,15 @@
                         "SPELLLIST_ITEM_ENHANCEMENT"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ASSASSIN",
@@ -1327,7 +1423,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 6,
+                "information" : 1,
+                "stealth" : 6,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ASTRONOMER",
@@ -1409,7 +1513,15 @@
                     "id" : "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 8,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ATHLETE",
@@ -1429,7 +1541,7 @@
                     "chance" : 30
                 },
                 {
-                    "value" : "Competitive rival ",
+                    "value" : "Competitive rival",
                     "chance" : 50
                 },
                 {
@@ -1509,7 +1621,15 @@
                     "value" : 2,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_BEASTMASTER",
@@ -1648,7 +1768,15 @@
                         "SPELLLIST_ANIMAL_BONDING"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 4,
+                "combat" : 4,
+                "information" : 3,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_BERSERKER",
@@ -1702,10 +1830,18 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_BHERSCHEURKûM",
+            "id" : "TRAININGPACKAGE_BHERSCHEURKUM",
             "name" : "Bherscheurkûm",
             "description" : "The Bherscheukïm are the berserkers of the Dwarven race. Unlike Mannish berserkers, who lose control of their reason in a mindless fury of slaying, those of the Mountain Folk retain more of their sense, for theirs is a different kind of frenzy - it is a loosing of the fetters that bind the soul-deep griefs of their race. The grim sadness and foredoomed resignation that lies within every Dwarf is given relief and expression by the fury of the Bherscheurkïm. Most weep while they fight...",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -1819,7 +1955,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_BHOURDIRRIM",
@@ -1938,7 +2082,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 2,
+                "stealth" : 6,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_BLIND_FIGHTER",
@@ -1967,7 +2119,7 @@
                     "chance" : 40
                 },
                 {
-                    "value" : "Weapon (+5 non-magic) ",
+                    "value" : "Weapon (+5 non-magic)",
                     "chance" : 0
                 }
             ],
@@ -2024,7 +2176,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_BOARSADDLER",
@@ -2116,7 +2276,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_BODYGUARD",
@@ -2219,7 +2387,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 6,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_BRELISSKER",
@@ -2300,7 +2476,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_BRELISS_ARCHER",
@@ -2370,7 +2554,15 @@
                     "value" : 2,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_BURGLAR",
@@ -2464,7 +2656,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 2,
+                "stealth" : 8,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CARAVAN_GUARD",
@@ -2585,7 +2785,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 5,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CATALYST_COLLECTOR",
@@ -2605,7 +2813,7 @@
                     "chance" : 30
                 },
                 {
-                    "value" : "Small Catalyst Case (ldlO random catalysts)",
+                    "value" : "Small Catalyst Case (1d10 random catalysts)",
                     "chance" : 30
                 },
                 {
@@ -2674,7 +2882,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CAVALIER",
@@ -2757,7 +2973,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CHAMBERLAIN",
@@ -2863,7 +3087,15 @@
                     "value" : 3,
                     "numChoices" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 7
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CHANCELLOR",
@@ -2989,7 +3221,15 @@
                 {
                     "id" : "SKILL_RELIGION"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CHAPLAIN",
@@ -3080,7 +3320,15 @@
                     "id" : "SKILLCATEGORY_POWER_AWARENESS",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CHARLATAN",
@@ -3185,7 +3433,15 @@
                         "SPELLLIST_CHARADES"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 4,
+                "combat" : 2,
+                "information" : 3,
+                "stealth" : 7,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CHI_MASTER",
@@ -3267,7 +3523,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 6,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CITY_GUARD",
@@ -3352,7 +3616,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 7,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CLERIHEW",
@@ -3465,7 +3737,15 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CLOAKER_OF_CLANS",
@@ -3580,7 +3860,15 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CLOISTERED_ACADEMIC",
@@ -3676,7 +3964,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 9,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CLOISTERED_ZEALOT",
@@ -3762,7 +4058,15 @@
                     "value" : 3,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_COLLECTOR",
@@ -3859,7 +4163,15 @@
                     "value" : 4,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 8,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CONJUROR",
@@ -3945,7 +4257,15 @@
                         "SPELLLIST_SUMMONS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 8,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CON_MAN",
@@ -4029,7 +4349,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 7,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CORPIST_CASTER",
@@ -4118,7 +4446,15 @@
                 {
                     "id" : "SKILL_FAUNA_LORE"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_COURT_MAGICIAN",
@@ -4194,7 +4530,15 @@
                         "SPELLLIST_LESSER_ILLUSIONS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CRAFTER",
@@ -4260,7 +4604,15 @@
                     "value" : 3,
                     "numChoices" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CROAKER",
@@ -4325,7 +4677,15 @@
                     "id" : "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 2,
+                "support" : 8,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CRUSADING_ACADEMIC",
@@ -4419,7 +4779,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 2,
+                "information" : 5,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CRYSTALIST_CASTER",
@@ -4434,11 +4802,11 @@
             "timeToAcquire" : 46,
             "specials" : [
                 {
-                    "value" : "Necklace with large crystal (3dl0 gp value)",
+                    "value" : "Necklace with large crystal (3d10 gp value)",
                     "chance" : 20
                 },
                 {
-                    "value" : "Pendant with medium crystal (dlO gp value)",
+                    "value" : "Pendant with medium crystal (d10 gp value)",
                     "chance" : 30
                 },
                 {
@@ -4446,15 +4814,15 @@
                     "chance" : 50
                 },
                 {
-                    "value" : "Brooch with small crystal (dlO gp value)",
+                    "value" : "Brooch with small crystal (d10 gp value)",
                     "chance" : 40
                 },
                 {
-                    "value" : "Two small crystal gemstones (dlO gp value)",
+                    "value" : "Two small crystal gemstones (d10 gp value)",
                     "chance" : 40
                 },
                 {
-                    "value" : "Small crystal ring (d 10-5 gp value)",
+                    "value" : "Small crystal ring (d10 - 5 gp value)",
                     "chance" : 30
                 },
                 {
@@ -4462,11 +4830,11 @@
                     "chance" : 30
                 },
                 {
-                    "value" : "Small crystal gemstone (dl0-5 gp value)",
+                    "value" : "Small crystal gemstone (d10 - 5 gp value)",
                     "chance" : 30
                 },
                 {
-                    "value" : "Tiny crystal gemstone (dlO sp value)",
+                    "value" : "Tiny crystal gemstone (d10 - 5 sp value)",
                     "chance" : 0
                 }
             ],
@@ -4505,7 +4873,15 @@
                 {
                     "id" : "SKILL_STONE_LORE"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CULTIST",
@@ -4611,7 +4987,15 @@
                         "SKILLCATEGORY_LORE_OBSCURE"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 4,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_CUT_PURSE",
@@ -4695,7 +5079,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 6,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_DEMONOLOGIST",
@@ -4842,523 +5234,18 @@
                         "LANGUAGE_DEMONIC_II"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_DETECTIVE",
-            "name" : "Detective",
-            "description" : "A detective is the character who investigates a mysterious happening. This could be a member of the city guard or a specialist called upon when needed. A detective is rarely found outside an urban environment unless he is seeking clues to the current case.",
-            "book" : "BOOK_CHARACTER_LAW",
-            "lifestyle" : false,
-            "timeToAcquire" : 33,
-            "specials" : [
-                {
-                    "value" : "Contacts in a city’s administration",
-                    "chance" : 40
-                },
-                {
-                    "value" : "Piece of jewelry (reward—worth 10d10 sp)",
-                    "chance" : 50
-                },
-                {
-                    "value" : "d100 Gems (reward—worth 10d10 sp total)",
-                    "chance" : 50
-                },
-                {
-                    "value" : "Piece of artwork (reward—worth d10 sp)",
-                    "chance" : 50
-                },
-                {
-                    "value" : "Favour from an important person",
-                    "chance" : 30
-                },
-                {
-                    "value" : "Underworld contacts",
-                    "chance" : 0
-                }
-            ],
-            "skillRanks" : [
-                {
-                    "id" : "SKILL_ALERTNESS",
-                    "value" : 4
-                }
-            ],
-            "categoryRanks" : [
-                {
-                    "id" : "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "value" : 4
-                },
-                {
-                    "id" : "SKILLCATEGORY_AWARENESS_SENSES",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILLCATEGORY_INFLUENCE",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILLCATEGORY_URBAN",
-                    "value" : 1
-                }
-            ],
-            "categoryMultiSkillRankChoices" : [
-                {
-                    "id" : "SKILLCATEGORY_INFLUENCE",
-                    "value" : 1,
-                    "numChoices" : 1
-                },
-                {
-                    "id" : "SKILLCATEGORY_URBAN",
-                    "value" : 1,
-                    "numChoices" : 1
-                },
-                {
-                    "id" : "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "value" : 4,
-                    "numChoices" : 4
-                },
-                {
-                    "id" : "SKILLCATEGORY_AWARENESS_SENSES",
-                    "value" : 1,
-                    "numChoices" : 1
-                }
-            ]
-        },
-        {
-            "id" : "TRAININGPACKAGE_DIPLOMAT",
-            "name" : "Diplomat",
-            "description" : "A diplomat is a person who has made it his job to negotiate and talk to various other people in positions of power and authority. He is usually well versed in more than one culture and has contacts in many cities.",
-            "book" : "BOOK_CHARACTER_LAW",
-            "notes" : [
-                "Communications category choices must spend 3 ranks on written languages and 3 on spoken languages"
-            ],
-            "lifestyle" : false,
-            "timeToAcquire" : 48,
-            "startingMoneyModifierDice" : "d10",
-            "specials" : [
-                {
-                    "value" : "City administration contacts in city A",
-                    "chance" : 50
-                },
-                {
-                    "value" : "City administration contacts in city B",
-                    "chance" : 60
-                },
-                {
-                    "value" : "Favour from an important person",
-                    "chance" : 40
-                },
-                {
-                    "value" : "Favour from an important person",
-                    "chance" : 30
-                },
-                {
-                    "value" : "Favour from an important person",
-                    "chance" : 20
-                },
-                {
-                    "value" : "Potion (one dose, level 1 spell)",
-                    "chance" : 20
-                },
-                {
-                    "value" : "Rune (level 1 spell)",
-                    "chance" : 20
-                },
-                {
-                    "value" : "Finely crafted object (gift)",
-                    "chance" : 0
-                }
-            ],
-            "skillRanks" : [
-                {
-                    "id" : "SKILL_BRIBERY",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILL_CULTURE_LORE",
-                    "subcategory" : "Culture 1",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILL_CULTURE_LORE",
-                    "subcategory" : "Culture 2",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILL_DIPLOMACY",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILL_LIE_PERCEPTION",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILL_REGION_LORE",
-                    "subcategory" : "Region 1",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILL_REGION_LORE",
-                    "subcategory" : "Region 2",
-                    "value" : 1
-                }
-            ],
-            "categoryRanks" : [
-                {
-                    "id" : "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILLCATEGORY_COMMUNICATION",
-                    "value" : 6
-                },
-                {
-                    "id" : "SKILLCATEGORY_INFLUENCE",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILLCATEGORY_LORE_GENERAL",
-                    "value" : 4
-                }
-            ],
-            "categoryMultiSkillRankChoices" : [
-                {
-                    "id" : "SKILLCATEGORY_COMMUNICATION",
-                    "value" : 6,
-                    "numChoices" : 6
-                }
-            ]
-        },
-        {
-            "id" : "TRAININGPACKAGE_DOCTOR",
-            "name" : "Doctor",
-            "description" : "A doctor is a person dedicated to tending to the sick. This should include all types of persons who are caring for the sick, not just those that actually perform the healing (e.g., the nurses, attendants, etc.). Most people who tend to the sick are doing so on a voluntary basis.",
-            "book" : "BOOK_FANTASY_ROLE_PLAYING",
-            "lifestyle" : false,
-            "timeToAcquire" : 18,
-            "specials" : [
-                {
-                    "value" : "2d10 Concussion Repair herbs",
-                    "chance" : 50
-                },
-                {
-                    "value" : "d10 Poison antidotes",
-                    "chance" : 30
-                },
-                {
-                    "value" : "d10 Burn/Exposure herbs",
-                    "chance" : 30
-                },
-                {
-                    "value" : "d10 Circulatory Repair herbs",
-                    "chance" : 30
-                },
-                {
-                    "value" : "d10 General Purpose herbs",
-                    "chance" : 30
-                },
-                {
-                    "value" : "Superior medical kit (+15 non-magical)",
-                    "chance" : 30
-                },
-                {
-                    "value" : "Medical kit (+5 non-magical)",
-                    "chance" : 100
-                }
-            ],
-            "skillRanks" : [
-                {
-                    "id" : "SKILL_DIAGNOSTICS",
-                    "value" : 3
-                },
-                {
-                    "id" : "SKILL_FIRST_AID",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILL_SECOND_AID",
-                    "value" : 3
-                },
-                {
-                    "id" : "SKILL_USING_PREPARED_HERBS",
-                    "value" : 1
-                }
-            ]
-        },
-        {
-            "id" : "TRAININGPACKAGE_DREAMWEAVER",
-            "name" : "Dreamweaver",
-            "description" : "The Dreamweaver has specialized in tapping the power of the mind through dreams, being able to select and manipulate dreams, whether for divination, wish fulfilment, or to increase creativity. He also possesses almost total control of his sleeping pattern. With preparation, he can influence the dreams of others, inducing daydreams of pleasant aspect or nightmares of hellish terror as he chooses.",
-            "flavourText" : "I see. You wish to know the dreams of the king? A strange ambition, and yet an enlightened one: the king dreams as oft as the next man, and what a man dreams might tell you much of him. And yet, I feel it my duty to warn you: a king has more than his share of worries, and perhaps more than his share of nightmares as well. Especially this king. Such dreams could prove unpleasant. And yet, if you are certain this is what you wish, I am certain I could satisfy your curiosity....",
-            "book" : "BOOK_MENTALISM_COMPANION",
-            "notes" : [
-                "The content of all stored dreams requires GM approval."
-            ],
-            "lifestyle" : true,
-            "timeToAcquire" : 124,
-            "specials" : [
-                {
-                    "value" : "d10 stored daydream patterns",
-                    "chance" : 50
-                },
-                {
-                    "value" : "d10 stored normal dream patterns (not nightmares)",
-                    "chance" : 50
-                },
-                {
-                    "value" : "d5 stored nightmare patterns",
-                    "chance" : 20
-                },
-                {
-                    "value" : "d10 stored dreamer patterns of family/associates (GM choice)",
-                    "chance" : 20
-                },
-                {
-                    "value" : "Book on dreams (+10 to Dream Lore)",
-                    "chance" : 0
-                }
-            ],
-            "skillRanks" : [
-                {
-                    "id" : "SKILL_ALERTNESS",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILL_DREAM_LORE",
-                    "value" : 3
-                },
-                {
-                    "id" : "SKILL_MEDITATION",
-                    "value" : 3
-                },
-                {
-                    "id" : "SKILL_SLEEP_TRANCE",
-                    "value" : 3
-                },
-                {
-                    "id" : "SKILL_TIME_SENSE",
-                    "value" : 2
-                }
-            ],
-            "categoryRanks" : [
-                {
-                    "id" : "SKILLCATEGORY_ARTISTIC_ACTIVE",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILLCATEGORY_ARTISTIC_PASSIVE",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILLCATEGORY_AWARENESS_SENSES",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILLCATEGORY_LORE_MAGICAL",
-                    "value" : 3
-                },
-                {
-                    "id" : "SKILLCATEGORY_SELF_CONTROL",
-                    "value" : 2
-                }
-            ],
-            "spellListRanks" : [
-                {
-                    "optionalCategory" : "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
-                    "value" : 2,
-                    "numChoices" : 1,
-                    "options" : [
-                        "SPELLLIST_DREAM_LAW"
-                    ]
-                },
-                {
-                    "optionalCategory" : "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
-                    "value" : 2,
-                    "numChoices" : 1,
-                    "options" : [
-                        "SPELLLIST_DREAM_LORE"
-                    ]
-                }
-            ]
-        },
-        {
-            "id" : "TRAININGPACKAGE_DREAM_TRAVELLER",
-            "name" : "Dream Traveller",
-            "description" : "To the uninitiated, sleep is merely relief from the troubles of the waking world, and bodily rest. To the Dream Traveller, sleep is the doorway into the dream world, a world as dangerous as the mundane world, with its own inexplicable physical laws and mind-bending unreality. Of all the mortal wayfarers in the dream realm, the Dream Traveller is most able to explore in safety, by using magic to strengthen the dream-self with the abilities of the other world; others are unprotected against the anarchy of dreams.",
-            "flavourText" : "Remember, my girl, in the dream realm things are seldom what the seem. You can't take anything for granted. Events have meaning. Colors have significance. Time follows no rules, and Nature's laws don't always apply. — What you see as a staff might actually be a snake; what you see a snake might actually be a spear. Things may fall up; a girl might be a ghoul, and a ghoul might be your friend. Confusing? Indeed so. And then of course some things might be exactly what they seem: in the words of a famous Dream Traveller, 'Sometimes a cigar is just a cigar.' You have to keep your wits about you.",
-            "book" : "BOOK_MENTALISM_COMPANION",
-            "notes" : [
-                "Secret knowledge relating to the real world may be gained whenever the character visits the dream world analogue of a real location, and may relate to the past, the present or the future. The interpretation of the relevance (if any) of dream world events and symbology to the real world is a matter for the character to reflect upon"
-            ],
-            "lifestyle" : true,
-            "timeToAcquire" : 122,
-            "specials" : [
-                {
-                    "value" : "Book (+20 to Dream World Lore)",
-                    "chance" : 40
-                },
-                {
-                    "value" : "Secret knowledge of the real world",
-                    "chance" : 30
-                },
-                {
-                    "value" : "Secret knowledge of the real world’s future",
-                    "chance" : 30
-                },
-                {
-                    "value" : "Familiarity with a sanctuary in the Dream World",
-                    "chance" : 30
-                },
-                {
-                    "value" : "Friends with a dream world entity",
-                    "chance" : 20
-                },
-                {
-                    "value" : "Enemies with a dream world entity",
-                    "chance" : 20
-                },
-                {
-                    "value" : "Book (+10 to Dream World Lore)",
-                    "chance" : 0
-                }
-            ],
-            "skillRanks" : [
-                {
-                    "id" : "SKILL_ALERTNESS",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILL_DREAMWORLD_LORE",
-                    "value" : 4
-                },
-                {
-                    "id" : "SKILL_DREAM_LORE",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILL_HEALING_TRANCE",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILL_MEDITATION",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILL_REALITY_AWARENESS",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILL_SLEEP_TRANCE",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILL_TIME_SENSE",
-                    "value" : 2
-                }
-            ],
-            "categoryRanks" : [
-                {
-                    "id" : "SKILLCATEGORY_AWARENESS_SENSES",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILLCATEGORY_LORE_MAGICAL",
-                    "value" : 4
-                },
-                {
-                    "id" : "SKILLCATEGORY_SELF_CONTROL",
-                    "value" : 2
-                }
-            ],
-            "spellListRanks" : [
-                {
-                    "optionalCategory" : "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
-                    "value" : 3,
-                    "numChoices" : 1,
-                    "options" : [
-                        "SPELLLIST_DREAM_TRAVEL"
-                    ]
-                }
-            ]
-        },
-        {
-            "id" : "TRAININGPACKAGE_DUELIST",
-            "name" : "Duelist",
-            "description" : "Where words leave off, swords pick up. Often disputes are settled in duels of honor. A duelist is a professional settler of such disputes. They can be hired to fight for lords, so the lord need not worry about his own safety. A duelist is adept at single combat, but not necessarily honorable combat. A duelist fights with honor only so long as he is sure he can win.",
-            "book" : "BOOK_CASTLES_RUINS",
-            "lifestyle" : false,
-            "timeToAcquire" : 32,
-            "specials" : [
-                {
-                    "value" : "Weapon (+10 non-magic)",
-                    "chance" : 30
-                },
-                {
-                    "value" : "Armour (+10 non-magic)",
-                    "chance" : 40
-                },
-                {
-                    "value" : "Shield (+10 non-magic)",
-                    "chance" : 30
-                },
-                {
-                    "value" : "Rival (equal or better skill)",
-                    "chance" : 40
-                },
-                {
-                    "value" : "Weapon (+5 non-magic)",
-                    "chance" : 30
-                },
-                {
-                    "value" : "Favour from an important person",
-                    "chance" : 0
-                }
-            ],
-            "skillRanks" : [
-                {
-                    "id" : "SKILL_BODY_DEVELOPMENT",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILL_CONTACTING",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILL_DISARM_FOE_ARMED",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILL_HERALDRY",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILL_QUICKDRAW",
-                    "value" : 2
-                },
-                {
-                    "id" : "SKILL_SWASHBUCKLING",
-                    "value" : 2
-                }
-            ],
-            "categoryRanks" : [
-                {
-                    "id" : "SKILLCATEGORY_LORE_GENERAL",
-                    "value" : 1
-                },
-                {
-                    "id" : "SKILLCATEGORY_URBAN",
-                    "value" : 1
-                }
-            ],
-            "groupCategoryAndSkillRankChoices" : [
-                {
-                    "id" : "SKILLGROUP_WEAPON",
-                    "value" : 2
-                }
-            ]
-        },
-        {
-            "id" : "TRAININGPACKAGE_DëRNAKWMüN",
+            "id" : "TRAININGPACKAGE_DERNAKWMUN",
             "name" : "Dërnakwmün",
             "description" : "The Dërnakwmün are the priests of the Mountain Folk, the servitors of Dûntherradinbarak Mountainsbeard, Beard of the Earth. There are two different orders of Clerics, but the differences between the two are unclear, so much that the two seem often to run together.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -5491,7 +5378,576 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 8,
+                "combat" : 3,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
+        },
+        {
+            "id" : "TRAININGPACKAGE_DETECTIVE",
+            "name" : "Detective",
+            "description" : "A detective is the character who investigates a mysterious happening. This could be a member of the city guard or a specialist called upon when needed. A detective is rarely found outside an urban environment unless he is seeking clues to the current case.",
+            "book" : "BOOK_CHARACTER_LAW",
+            "lifestyle" : false,
+            "timeToAcquire" : 33,
+            "specials" : [
+                {
+                    "value" : "Contacts in a city’s administration",
+                    "chance" : 40
+                },
+                {
+                    "value" : "Piece of jewelry (reward—worth 10d10 sp)",
+                    "chance" : 50
+                },
+                {
+                    "value" : "d100 Gems (reward—worth 10d10 sp total)",
+                    "chance" : 50
+                },
+                {
+                    "value" : "Piece of artwork (reward—worth d10 sp)",
+                    "chance" : 50
+                },
+                {
+                    "value" : "Favour from an important person",
+                    "chance" : 30
+                },
+                {
+                    "value" : "Underworld contacts",
+                    "chance" : 0
+                }
+            ],
+            "skillRanks" : [
+                {
+                    "id" : "SKILL_ALERTNESS",
+                    "value" : 4
+                }
+            ],
+            "categoryRanks" : [
+                {
+                    "id" : "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value" : 4
+                },
+                {
+                    "id" : "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILLCATEGORY_INFLUENCE",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILLCATEGORY_URBAN",
+                    "value" : 1
+                }
+            ],
+            "categoryMultiSkillRankChoices" : [
+                {
+                    "id" : "SKILLCATEGORY_INFLUENCE",
+                    "value" : 1,
+                    "numChoices" : 1
+                },
+                {
+                    "id" : "SKILLCATEGORY_URBAN",
+                    "value" : 1,
+                    "numChoices" : 1
+                },
+                {
+                    "id" : "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value" : 4,
+                    "numChoices" : 4
+                },
+                {
+                    "id" : "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value" : 1,
+                    "numChoices" : 1
+                }
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 6
+            }
+        },
+        {
+            "id" : "TRAININGPACKAGE_DIPLOMAT",
+            "name" : "Diplomat",
+            "description" : "A diplomat is a person who has made it his job to negotiate and talk to various other people in positions of power and authority. He is usually well versed in more than one culture and has contacts in many cities.",
+            "book" : "BOOK_CHARACTER_LAW",
+            "notes" : [
+                "Communications category choices must spend 3 ranks on written languages and 3 on spoken languages"
+            ],
+            "lifestyle" : false,
+            "timeToAcquire" : 48,
+            "startingMoneyModifierDice" : "d10",
+            "specials" : [
+                {
+                    "value" : "City administration contacts in city A",
+                    "chance" : 50
+                },
+                {
+                    "value" : "City administration contacts in city B",
+                    "chance" : 60
+                },
+                {
+                    "value" : "Favour from an important person",
+                    "chance" : 40
+                },
+                {
+                    "value" : "Favour from an important person",
+                    "chance" : 30
+                },
+                {
+                    "value" : "Favour from an important person",
+                    "chance" : 20
+                },
+                {
+                    "value" : "Potion (one dose, level 1 spell)",
+                    "chance" : 20
+                },
+                {
+                    "value" : "Rune (level 1 spell)",
+                    "chance" : 20
+                },
+                {
+                    "value" : "Finely crafted object (gift)",
+                    "chance" : 0
+                }
+            ],
+            "skillRanks" : [
+                {
+                    "id" : "SKILL_BRIBERY",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILL_CULTURE_LORE",
+                    "subcategory" : "Culture 1",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILL_CULTURE_LORE",
+                    "subcategory" : "Culture 2",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILL_DIPLOMACY",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILL_LIE_PERCEPTION",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILL_REGION_LORE",
+                    "subcategory" : "Region 1",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILL_REGION_LORE",
+                    "subcategory" : "Region 2",
+                    "value" : 1
+                }
+            ],
+            "categoryRanks" : [
+                {
+                    "id" : "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILLCATEGORY_COMMUNICATION",
+                    "value" : 6
+                },
+                {
+                    "id" : "SKILLCATEGORY_INFLUENCE",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILLCATEGORY_LORE_GENERAL",
+                    "value" : 4
+                }
+            ],
+            "categoryMultiSkillRankChoices" : [
+                {
+                    "id" : "SKILLCATEGORY_COMMUNICATION",
+                    "value" : 6,
+                    "numChoices" : 6
+                }
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 4
+            }
+        },
+        {
+            "id" : "TRAININGPACKAGE_DOCTOR",
+            "name" : "Doctor",
+            "description" : "A doctor is a person dedicated to tending to the sick. This should include all types of persons who are caring for the sick, not just those that actually perform the healing (e.g., the nurses, attendants, etc.). Most people who tend to the sick are doing so on a voluntary basis.",
+            "book" : "BOOK_FANTASY_ROLE_PLAYING",
+            "lifestyle" : false,
+            "timeToAcquire" : 18,
+            "specials" : [
+                {
+                    "value" : "2d10 Concussion Repair herbs",
+                    "chance" : 50
+                },
+                {
+                    "value" : "d10 Poison antidotes",
+                    "chance" : 30
+                },
+                {
+                    "value" : "d10 Burn/Exposure herbs",
+                    "chance" : 30
+                },
+                {
+                    "value" : "d10 Circulatory Repair herbs",
+                    "chance" : 30
+                },
+                {
+                    "value" : "d10 General Purpose herbs",
+                    "chance" : 30
+                },
+                {
+                    "value" : "Superior medical kit (+15 non-magical)",
+                    "chance" : 30
+                },
+                {
+                    "value" : "Medical kit (+5 non-magical)",
+                    "chance" : 100
+                }
+            ],
+            "skillRanks" : [
+                {
+                    "id" : "SKILL_DIAGNOSTICS",
+                    "value" : 3
+                },
+                {
+                    "id" : "SKILL_FIRST_AID",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILL_SECOND_AID",
+                    "value" : 3
+                },
+                {
+                    "id" : "SKILL_USING_PREPARED_HERBS",
+                    "value" : 1
+                }
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 8,
+                "utility" : 1
+            }
+        },
+        {
+            "id" : "TRAININGPACKAGE_DREAMWEAVER",
+            "name" : "Dreamweaver",
+            "description" : "The Dreamweaver has specialized in tapping the power of the mind through dreams, being able to select and manipulate dreams, whether for divination, wish fulfilment, or to increase creativity. He also possesses almost total control of his sleeping pattern. With preparation, he can influence the dreams of others, inducing daydreams of pleasant aspect or nightmares of hellish terror as he chooses.",
+            "flavourText" : "I see. You wish to know the dreams of the king? A strange ambition, and yet an enlightened one: the king dreams as oft as the next man, and what a man dreams might tell you much of him. And yet, I feel it my duty to warn you: a king has more than his share of worries, and perhaps more than his share of nightmares as well. Especially this king. Such dreams could prove unpleasant. And yet, if you are certain this is what you wish, I am certain I could satisfy your curiosity....",
+            "book" : "BOOK_MENTALISM_COMPANION",
+            "notes" : [
+                "The content of all stored dreams requires GM approval."
+            ],
+            "lifestyle" : true,
+            "timeToAcquire" : 124,
+            "specials" : [
+                {
+                    "value" : "d10 stored daydream patterns",
+                    "chance" : 50
+                },
+                {
+                    "value" : "d10 stored normal dream patterns (not nightmares)",
+                    "chance" : 50
+                },
+                {
+                    "value" : "d5 stored nightmare patterns",
+                    "chance" : 20
+                },
+                {
+                    "value" : "d10 stored dreamer patterns of family/associates (GM choice)",
+                    "chance" : 20
+                },
+                {
+                    "value" : "Book on dreams (+10 to Dream Lore)",
+                    "chance" : 0
+                }
+            ],
+            "skillRanks" : [
+                {
+                    "id" : "SKILL_ALERTNESS",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILL_DREAM_LORE",
+                    "value" : 3
+                },
+                {
+                    "id" : "SKILL_MEDITATION",
+                    "value" : 3
+                },
+                {
+                    "id" : "SKILL_SLEEP_TRANCE",
+                    "value" : 3
+                },
+                {
+                    "id" : "SKILL_TIME_SENSE",
+                    "value" : 2
+                }
+            ],
+            "categoryRanks" : [
+                {
+                    "id" : "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILLCATEGORY_LORE_MAGICAL",
+                    "value" : 3
+                },
+                {
+                    "id" : "SKILLCATEGORY_SELF_CONTROL",
+                    "value" : 2
+                }
+            ],
+            "spellListRanks" : [
+                {
+                    "optionalCategory" : "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value" : 2,
+                    "numChoices" : 1,
+                    "options" : [
+                        "SPELLLIST_DREAM_LAW"
+                    ]
+                },
+                {
+                    "optionalCategory" : "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value" : 2,
+                    "numChoices" : 1,
+                    "options" : [
+                        "SPELLLIST_DREAM_LORE"
+                    ]
+                }
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 3
+            }
+        },
+        {
+            "id" : "TRAININGPACKAGE_DREAM_TRAVELLER",
+            "name" : "Dream Traveller",
+            "description" : "To the uninitiated, sleep is merely relief from the troubles of the waking world, and bodily rest. To the Dream Traveller, sleep is the doorway into the dream world, a world as dangerous as the mundane world, with its own inexplicable physical laws and mind-bending unreality. Of all the mortal wayfarers in the dream realm, the Dream Traveller is most able to explore in safety, by using magic to strengthen the dream-self with the abilities of the other world; others are unprotected against the anarchy of dreams.",
+            "flavourText" : "Remember, my girl, in the dream realm things are seldom what the seem. You can't take anything for granted. Events have meaning. Colors have significance. Time follows no rules, and Nature's laws don't always apply. — What you see as a staff might actually be a snake; what you see a snake might actually be a spear. Things may fall up; a girl might be a ghoul, and a ghoul might be your friend. Confusing? Indeed so. And then of course some things might be exactly what they seem: in the words of a famous Dream Traveller, 'Sometimes a cigar is just a cigar.' You have to keep your wits about you.",
+            "book" : "BOOK_MENTALISM_COMPANION",
+            "notes" : [
+                "Secret knowledge relating to the real world may be gained whenever the character visits the dream world analogue of a real location, and may relate to the past, the present or the future. The interpretation of the relevance (if any) of dream world events and symbology to the real world is a matter for the character to reflect upon"
+            ],
+            "lifestyle" : true,
+            "timeToAcquire" : 122,
+            "specials" : [
+                {
+                    "value" : "Book (+20 to Dream World Lore)",
+                    "chance" : 40
+                },
+                {
+                    "value" : "Secret knowledge of the real world",
+                    "chance" : 30
+                },
+                {
+                    "value" : "Secret knowledge of the real world’s future",
+                    "chance" : 30
+                },
+                {
+                    "value" : "Familiarity with a sanctuary in the Dream World",
+                    "chance" : 30
+                },
+                {
+                    "value" : "Friends with a dream world entity",
+                    "chance" : 20
+                },
+                {
+                    "value" : "Enemies with a dream world entity",
+                    "chance" : 20
+                },
+                {
+                    "value" : "Book (+10 to Dream World Lore)",
+                    "chance" : 0
+                }
+            ],
+            "skillRanks" : [
+                {
+                    "id" : "SKILL_ALERTNESS",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILL_DREAMWORLD_LORE",
+                    "value" : 4
+                },
+                {
+                    "id" : "SKILL_DREAM_LORE",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILL_HEALING_TRANCE",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILL_MEDITATION",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILL_REALITY_AWARENESS",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILL_SLEEP_TRANCE",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILL_TIME_SENSE",
+                    "value" : 2
+                }
+            ],
+            "categoryRanks" : [
+                {
+                    "id" : "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILLCATEGORY_LORE_MAGICAL",
+                    "value" : 4
+                },
+                {
+                    "id" : "SKILLCATEGORY_SELF_CONTROL",
+                    "value" : 2
+                }
+            ],
+            "spellListRanks" : [
+                {
+                    "optionalCategory" : "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value" : 3,
+                    "numChoices" : 1,
+                    "options" : [
+                        "SPELLLIST_DREAM_TRAVEL"
+                    ]
+                }
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 4
+            }
+        },
+        {
+            "id" : "TRAININGPACKAGE_DUELIST",
+            "name" : "Duelist",
+            "description" : "Where words leave off, swords pick up. Often disputes are settled in duels of honor. A duelist is a professional settler of such disputes. They can be hired to fight for lords, so the lord need not worry about his own safety. A duelist is adept at single combat, but not necessarily honorable combat. A duelist fights with honor only so long as he is sure he can win.",
+            "book" : "BOOK_CASTLES_RUINS",
+            "lifestyle" : false,
+            "timeToAcquire" : 32,
+            "specials" : [
+                {
+                    "value" : "Weapon (+10 non-magic)",
+                    "chance" : 30
+                },
+                {
+                    "value" : "Armour (+10 non-magic)",
+                    "chance" : 40
+                },
+                {
+                    "value" : "Shield (+10 non-magic)",
+                    "chance" : 30
+                },
+                {
+                    "value" : "Rival (equal or better skill)",
+                    "chance" : 40
+                },
+                {
+                    "value" : "Weapon (+5 non-magic)",
+                    "chance" : 30
+                },
+                {
+                    "value" : "Favour from an important person",
+                    "chance" : 0
+                }
+            ],
+            "skillRanks" : [
+                {
+                    "id" : "SKILL_BODY_DEVELOPMENT",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILL_CONTACTING",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILL_DISARM_FOE_ARMED",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILL_HERALDRY",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILL_QUICKDRAW",
+                    "value" : 2
+                },
+                {
+                    "id" : "SKILL_SWASHBUCKLING",
+                    "value" : 2
+                }
+            ],
+            "categoryRanks" : [
+                {
+                    "id" : "SKILLCATEGORY_LORE_GENERAL",
+                    "value" : 1
+                },
+                {
+                    "id" : "SKILLCATEGORY_URBAN",
+                    "value" : 1
+                }
+            ],
+            "groupCategoryAndSkillRankChoices" : [
+                {
+                    "id" : "SKILLGROUP_WEAPON",
+                    "value" : 2
+                }
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ENGINEER",
@@ -5576,12 +6032,20 @@
                         "SPELLLIST_PERIMETER_WARDINGS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ESCORT",
             "name" : "Escort",
-            "description" : "An escort is a professional companion-as a friend, as an entertainer, and sometimes as a protector. Often escorts learn secrets about their clients that can lead them into adventures.",
+            "description" : "An escort is a professional companion - as a friend, as an entertainer, and sometimes as a protector. Often escorts learn secrets about their clients that can lead them into adventures.",
             "book" : "BOOK_SCHOOL_OF_HARD_KNOCKS",
             "lifestyle" : false,
             "timeToAcquire" : 29,
@@ -5599,7 +6063,7 @@
                     "chance" : 20
                 },
                 {
-                    "value" : "Contact in the underworld ",
+                    "value" : "Contact in the underworld",
                     "chance" : 40
                 },
                 {
@@ -5655,12 +6119,20 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 6,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_EXECUTIONER",
             "name" : "Executioner",
-            "description" : "Even the most benevolent of rulers find that they must sometimes punish criminals, spies, or enemies with painful death. The Executioner is trained to do so with great efficiency. Executioners are trained in the art of torture and interrogation as well. In lands with public beheadings or hangings, the Executioner is often expected to make a grand display of torturing the prisoner for as long as possible. An Executioner with a brutal reputation can be a deterrent to criminals and spies by mere rumor alone.",
+            "description" : "Even the most benevolent of rulers find that they must sometimes punish criminals, spies, or enemies with painful death. The Executioner is trained to do so with great efficiency. Executioners are trained in the art of torture and interrogation as well. In lands with public beheadings or hangings, the Executioner is often expected to make a grand display of torturing the prisoner for as long as possible. An Executioner with a brutal reputation can be a deterrent to criminals and spies by mere rumour alone.",
             "book" : "BOOK_CASTLES_RUINS",
             "lifestyle" : false,
             "timeToAcquire" : 28,
@@ -5716,7 +6188,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 6,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "TRAININGPACKAGE_EXPLORER",
@@ -5821,7 +6301,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 4,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_FAMULUS",
@@ -5905,7 +6393,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_FARMER",
@@ -5995,7 +6491,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_FINDER",
@@ -6095,7 +6599,15 @@
                     "value" : 5,
                     "numChoices" : 4
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 3,
+                "information" : 2,
+                "stealth" : 7,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_FORTUNE_TELLER",
@@ -6188,10 +6700,18 @@
                     "id" : "SKILLCATEGORY_POWER_AWARENESS",
                     "value" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 5,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_GHâRNURGHIR",
+            "id" : "TRAININGPACKAGE_GHARNURGHIR",
             "name" : "Ghârnurghir",
             "description" : "The Ghârnurghir are the soldiery of the Mountain Folk, the Dwarves who are trained in the use of arms. It is important to note that virtually every dwarf is a doughty fighter in his (or her) own right - these Dwarves simply have greater and more professional training. The different kinds of Ghârnurghir are many and varied, the one thing all have in common is ferocity and pride in full measure.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -6277,7 +6797,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 9,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_GLADIATOR",
@@ -6382,7 +6910,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_GOSSIP",
@@ -6405,7 +6941,7 @@
                     "chance" : 40
                 },
                 {
-                    "value" : "Valuable secret (about someone else) ",
+                    "value" : "Valuable secret (about someone else)",
                     "chance" : 30
                 },
                 {
@@ -6454,7 +6990,15 @@
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_GRAVE_ROBBER",
@@ -6558,7 +7102,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 7,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "TRAININGPACKAGE_GROOM",
@@ -6632,7 +7184,15 @@
                     "id" : "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_GUARDIAN",
@@ -6729,7 +7289,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 6,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_GUIDE",
@@ -6821,7 +7389,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 4,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 6,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_GUILD_APPRENTICE",
@@ -6943,7 +7519,15 @@
                         "SPELLLIST_GUILDCRAFT_MASTERY"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_GUILD_MEMBER",
@@ -7026,12 +7610,20 @@
                     "value" : 2,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_HEDGE_WIZARD",
             "name" : "Hedge Wizard",
-            "description" : "A hedge wizard is a primitive Essence user who has learned the trade through oral tradition and practice, not through studying dusty books. Hedge wizards are generally found in less civilized areas, though hedge wizards can thrive anywhere a grandparent teaches the old traditions to their relatives. A hedge wizard generally excels at ritual magic, while finding spell lists more difficult to learn. Since hedge wizards tend to require time to cast most of their magic, they are practiced at intimidating others, convincing them that while it may take the hedge wizard longer to cast a spell, it till be suitably nasty. Hedge wizards are sometimes confused with witches, warlocks, and shamans.",
+            "description" : "A hedge wizard is a primitive Essence user who has learned the trade through oral tradition and practice, not through studying dusty books. Hedge wizards are generally found in less civilized areas, though hedge wizards can thrive anywhere a grandparent teaches the old traditions to their relatives. A hedge wizard generally excels at ritual magic, while finding spell lists more difficult to learn. Since hedge wizards tend to require time to cast most of their magic, they are practiced at intimidating others, convincing them that while it may take the hedge wizard longer to cast a spell, it will be suitably nasty. Hedge wizards are sometimes confused with witches, warlocks, and shamans.",
             "flavourText" : "Magic is like any other craft; to do it properly takes time.",
             "book" : "BOOK_ESSENCE_COMPANION",
             "qualifiers" : [
@@ -7175,7 +7767,15 @@
                 {
                     "id" : "SKILL_SPELL_MASTERY"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "TRAININGPACKAGE_HENCHMAN",
@@ -7267,10 +7867,18 @@
                     "value" : 2,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 3,
+                "information" : 3,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 6
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_HEPHUZâD",
+            "id" : "TRAININGPACKAGE_HEPHUZAD",
             "name" : "Hephuzâd",
             "description" : "The Hephuzâd are Dwarves who have begun to tread the path towards the craft that all Mountain Folk revere - smithwork. No Dwarf, no matter how ancient, how skilled, or how learned, is the smith he would wish to be. It is the most honored and respected of all Dwarven crafts, one of which every Dwarf will know at least a little. The Hephuzâd are the forge workers of a people that labors unceasingly, and are driven to master metals and jewels to create works of great splendor and strength.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -7355,7 +7963,15 @@
                     "value" : 6,
                     "numChoices" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 7
+            }
         },
         {
             "id" : "TRAININGPACKAGE_HERBALIST",
@@ -7453,7 +8069,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 8,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_HERBALIST_CASTER",
@@ -7541,7 +8165,15 @@
                 {
                     "id" : "SKILL_HERB_LORE"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "TRAININGPACKAGE_HERMIT",
@@ -7667,7 +8299,15 @@
                     "value" : 3,
                     "numChoices" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 3,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 4,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_HEWER",
@@ -7764,7 +8404,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 9,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_HIGHWAYMAN",
@@ -7833,7 +8481,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_HOURI",
@@ -7941,10 +8597,18 @@
                         "SPELLLIST_HOURI_S_BEGUILEMENT"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_HOYTHIJ_RâK",
+            "id" : "TRAININGPACKAGE_HOYTHIJ_RAK",
             "name" : "Hoythij Râk",
             "description" : "The Unhomed are Dwarves who have left the cavernous homes of their fathers and gone wandering the world. Many young Dwarves (those less than a hundred years old) will follow this path if they have a taste for adventure and derring-do. Others, older and wiser, may have been one of the Ghârnurghir in younger years, or perhaps even a Dërnak, and come to have a wanderlust. Some are glory seekers, in pursuit of great treasures or feats of arms to win renown for their clan and race. Others feel dispossessed, have a gloom or taciturnity that even their fellows might view as weighty. Whatever their provenance, the Hoythij Râk may be encountered anywhere, at any time, and may be more dangerous than their warrior kin, for these Dwarves are unpredictable.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -8061,7 +8725,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 4,
+                "stealth" : 3,
+                "support" : 3,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_HUNTER",
@@ -8167,7 +8839,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 3,
+                "stealth" : 4,
+                "support" : 4,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_INNKEEPER",
@@ -8266,7 +8946,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 3,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_INQUISITOR",
@@ -8360,7 +9048,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 2,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_INVENTOR",
@@ -8449,7 +9145,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_INVENTOR_GOBLIN",
@@ -8542,7 +9246,15 @@
                     "value" : 3,
                     "numChoices" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 4,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_JESTER",
@@ -8627,7 +9339,15 @@
                     "value" : 3,
                     "numChoices" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_JOURNEYING_APPRENTICE",
@@ -8738,7 +9458,15 @@
                         "SPELLLIST_TRAVELER_S_WAYS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_KNIGHT",
@@ -8840,7 +9568,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_LABORER",
@@ -8897,7 +9633,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_LIBRARIAN",
@@ -9001,7 +9745,15 @@
                     "value" : 4,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 8,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_LOREMASTER",
@@ -9071,7 +9823,15 @@
                     "value" : 6,
                     "numChoices" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 9,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MAGIC_CRAFTER",
@@ -9156,7 +9916,15 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MANIPULATOR",
@@ -9243,7 +10011,15 @@
                         "SPELLLIST_MIND_SUBVERSION"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MARINER",
@@ -9405,7 +10181,15 @@
                         "SPELLLIST_SAILING_MASTERY"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 4,
+                "combat" : 2,
+                "information" : 4,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 7
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MARTIAL_ARTIST_REVISED",
@@ -9518,7 +10302,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MARTIAL_ARTS_CHALLENGER",
@@ -9641,7 +10433,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MARTIAL_ARTS_CHAMPION",
@@ -9739,7 +10539,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MARTIAL_ARTS_OPERA_PERFORMER",
@@ -9867,7 +10675,15 @@
                     "value" : 3,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MARTIAL_ARTS_STREET_PERFORMER",
@@ -9961,7 +10777,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MARTIAL_ARTS_WEAPON_MASTER",
@@ -10058,7 +10882,15 @@
                         "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MEDIC",
@@ -10159,7 +10991,15 @@
                         "SPELLLIST_CONCUSSION_S_WAYS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 7,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MEDIUM",
@@ -10277,10 +11117,18 @@
                 {
                     "id" : "SKILL_MEDITATION"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_MENEUMERAKKINîM",
+            "id" : "TRAININGPACKAGE_MENEUMERAKKINIM",
             "name" : "Meneumerakkinîm",
             "description" : "Rare is the season that passes without bloody conflict between Dwarves and their most hated foes, the goblin or orc folk. Goblins often are the worse of the two, for though Orcs are hardier and stronger in war, the Goblins are more cunning in their machination, delighting in the invention, construction and employment of torturous machines and traps. Recognizing the peril presented by these varied wicked creations, many Dwarves seek to master skills that allow them to circumvent or disable them. The Meneumerakkinïm are Mountain Folk who have the unenviable task of disabling Goblin traps and machines.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -10390,7 +11238,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 6,
+                "information" : 1,
+                "stealth" : 7,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MERCENARY",
@@ -10505,7 +11361,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MERCHANT",
@@ -10579,7 +11443,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 4,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MINER",
@@ -10669,7 +11541,15 @@
                     "id" : "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
                     "value" : 4
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 5,
+                "information" : 2,
+                "stealth" : 7,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MINISTER",
@@ -10795,7 +11675,15 @@
                 {
                     "id" : "SKILL_RELIGION"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 4,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MISSIONARY",
@@ -10932,7 +11820,15 @@
                 {
                     "id" : "SKILL_PUBLIC_SPEAKING"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_MOTHER",
@@ -11015,7 +11911,15 @@
                     "id" : "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 7,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_NECROMANCER",
@@ -11115,7 +12019,15 @@
                         "SPELLLIST_NECROMANCY"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_NINJA",
@@ -11249,7 +12161,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 6,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "TRAININGPACKAGE_NOBLE",
@@ -11346,7 +12266,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 4,
+                "combat" : 4,
+                "information" : 4,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_NOMENIST_CASTER",
@@ -11422,7 +12350,15 @@
                         "SPELLLIST_NOMENIST_CASTING"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ORACLE",
@@ -11548,7 +12484,15 @@
                         "SPELLLIST_STARLORE"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 8,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_PANHANDLER",
@@ -11628,7 +12572,15 @@
                     "id" : "SKILLCATEGORY_URBAN",
                     "value" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 5,
+                "stealth" : 6,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_PATH_FINDER",
@@ -11662,7 +12614,7 @@
                     "chance" : 40
                 },
                 {
-                    "value" : "Owed favor by influential clan member ",
+                    "value" : "Owed favor by influential clan member",
                     "chance" : 40
                 },
                 {
@@ -11751,7 +12703,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 7,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_PERFORMER",
@@ -11829,7 +12789,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_PHILOSOPHER",
@@ -11915,7 +12883,15 @@
                     "value" : 5,
                     "numChoices" : 4
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 1,
+                "information" : 8,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_PHYSICIAN",
@@ -11956,7 +12932,7 @@
                     "chance" : 10
                 },
                 {
-                    "value" : "Vow (moral obligation to patients) ",
+                    "value" : "Vow (moral obligation to patients)",
                     "chance" : 0
                 }
             ],
@@ -12037,7 +13013,15 @@
                         "SPELLLIST_PHYSICKS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 8,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_PILGRIM",
@@ -12157,7 +13141,15 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 3,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_PILLAGER",
@@ -12273,7 +13265,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 8,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_PIRATE",
@@ -12378,7 +13378,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_POLITICAL",
@@ -12495,7 +13503,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 7,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "TRAININGPACKAGE_POTIONER",
@@ -12505,7 +13521,7 @@
             "book" : "BOOK_ESSENCE_COMPANION",
             "qualifiers" : [
                 {
-                    "qualifier" : "A total of 6 ranks in Alchemy and Biochemistry ",
+                    "qualifier" : "A total of 6 ranks in Alchemy and Biochemistry",
                     "reduction" : -3
                 }
             ],
@@ -12598,7 +13614,15 @@
                 {
                     "id" : "SKILL_ALCHEMY"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 7,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_PROPHET",
@@ -12699,7 +13723,15 @@
                         "SPELLLIST_DETECTION_MASTERY"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_PROTECTOR",
@@ -12811,10 +13843,18 @@
                         "SPELLLIST_THE_HUNTER"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 4,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_PROTéGé",
+            "id" : "TRAININGPACKAGE_PROTEGE",
             "name" : "Protégé",
             "description" : "The sole or star pupil of a learned spell user, the Protégé gains deep knowledge of a chosen area of magic, and a thorough understanding of the magical arts. Days spent in learning are repaid later with services rendered in assisting the mentor in his research and goals. Even if student surpasses master, or later rejects the ideals espoused by the mentor to follow another path, this long nurturing will shape and mold the Protégé's world-view and lifestyle for the rest of his career.",
             "flavourText" : "When I first met master Grimaud and his pupil, I thought the boy was his son, or perhaps his younger brother; I would have guessed them twins if their ages had been commensurate. They wore the same style gown, cut their hair the same way, walked the same, spoke the same, held the same opinions, and even cast their spells in the same signal manner. I would have laughed (I assure you, I almost did) but the boy showed such formidable apprehension of his master's art as to be truly remarkable. He is truly gifted. The boy will prove another Grimaud before you know it. With luck he might even improve upon the original....",
@@ -12922,7 +13962,15 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "TRAININGPACKAGE_PROWLDARK",
@@ -13031,7 +14079,15 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 8,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ROMANTIC",
@@ -13092,7 +14148,15 @@
                     "value" : 4,
                     "numChoices" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 2,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_RUNEMASTER",
@@ -13171,7 +14235,15 @@
                         "SPELLLIST_RUNE_MASTERY"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 2,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SAGE",
@@ -13307,7 +14379,15 @@
                         "SPELLLIST_KNOWLEDGE_MASTERY"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 0,
+                "combat" : 0,
+                "information" : 0,
+                "stealth" : 0,
+                "support" : 0,
+                "utility" : 0
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SAILOR",
@@ -13406,7 +14486,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SCHOLAR",
@@ -13511,7 +14599,15 @@
                     "value" : 4,
                     "numChoices" : 4
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 8,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SCHOOL_MASTER",
@@ -13605,7 +14701,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 6,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SCOUT",
@@ -13682,7 +14786,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 7,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SCRIBE",
@@ -13772,7 +14884,15 @@
                     "value" : 5,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SECRET_SOCIETY_MEMBER",
@@ -13856,7 +14976,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 1,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SERVITOR",
@@ -13932,10 +15060,18 @@
                     "value" : 2,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 2,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_SHAGUK_KUN_TORâMIM",
+            "id" : "TRAININGPACKAGE_SHAGUK_KUN_TORAMIM",
             "name" : "Shaguk Kun-Torâmim",
             "description" : "Death is sure. The Shaguk who can make puppets of the dead is powerful indeed. There are necromantic spell users among both Shaguk-mîm and Shaguk-cûr, but it is the Grey Orcs who pursue necromancy most voraciously and excel at it, and it is the Grey Orcs who produce the most feared of the Shaguk Kun-Torâmim.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -14035,10 +15171,18 @@
                         "SPELLLIST_NECROMANCY"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 8,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_SHAGUK_RU_KLEFTäK_SHER",
+            "id" : "TRAININGPACKAGE_SHAGUK_RU_KLEFTAK_SHER",
             "name" : "Shaguk Ru'Kleftäk-sher",
             "description" : "Though the Grey Orcs are not so physically powerful as their Greater kin, they have the strength of their Common cousins and the aggressiveness of any Orc. So it is that many who possess the ability to work spells may also wish to taste blood on their tusks and wet a blade. These Shaguk often pursue the profession of Shaguk Ru'Kleftäk-sher.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -14138,10 +15282,18 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 6,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_SHAGUK_SH_RMAUK_ëND",
+            "id" : "TRAININGPACKAGE_SHAGUK_SH_RMAUK_END",
             "name" : "Shaguk Sh'rmauk-ënd",
             "description" : "These Shaguk-cûr have honed their natural Orcish fighting ability and ferocity, made themselves into fighters unmatched by many liveried soldiers of more civilized lands. They are the Shaguk Sh'rmauk-ënd.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -14239,10 +15391,18 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 9,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_SHAGUK_SPîLLAK",
+            "id" : "TRAININGPACKAGE_SHAGUK_SPILLAK",
             "name" : "Shaguk Spîllak",
             "description" : "The Shaguk Spîllak are the spell users, wizards and shamans of the Shaguk-cûr. While the Greater Orcs may not have the gift as a race that the Grey Orcs do, the clans still spawn occasional talented individuals. They are as black-hearted and treacherous as any of their sword-wielding kinsmen. They simply fight in a different way.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -14340,10 +15500,18 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 2,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_SHAGUK_STâZ_PARGUN",
+            "id" : "TRAININGPACKAGE_SHAGUK_STAZ_PARGUN",
             "name" : "Shaguk Stâz-pargun",
             "description" : "Shaguk-cûr raise both wolves of various types and a breed of giant bat that they utilize as cavalry. Often the riders will begin to identify with their respective beasts, some tattoing or scarring related images on themselves and some adorning arms and armor with the same images. The Shaguk Stâz-pargun enjoy a respected (but usually disliked) position among other Shaguk. Those who ride bats are in a good position, for normally their smaller size would mark them for abuse.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -14462,10 +15630,18 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
-            "id" : "TRAININGPACKAGE_SHAGUK_ZHUN_KLEFTäK",
+            "id" : "TRAININGPACKAGE_SHAGUK_ZHUN_KLEFTAK",
             "name" : "Shaguk Zhun-Kleftäk",
             "description" : "Among the more numerous of Shaguk-gûl who practice wizardry in its many forms, the Shaguk Zhun-Kleftäk are spell users who practice violent sorceries to the exclusion of almost all others. They have the bloodthirstiness and fighting temper of their kinsmen, but use magic instead of steel to vent their ferocity.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -14541,7 +15717,15 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 8,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SHAMAN_PRIEST",
@@ -14631,7 +15815,15 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 6,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SHIELDSMAN",
@@ -14679,7 +15871,15 @@
                     "id" : "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SHIRRIFF",
@@ -14776,7 +15976,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 7,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 4,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SIEGE_ENGINEER",
@@ -14841,7 +16049,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SKULKER",
@@ -14949,7 +16165,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 6,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SNEAK_KNIFE",
@@ -15047,7 +16271,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 5,
+                "information" : 1,
+                "stealth" : 8,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SOKHUDNERRIM",
@@ -15120,7 +16352,15 @@
                     "id" : "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 1,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SOLDIER",
@@ -15216,7 +16456,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SPELL_RESEARCHER",
@@ -15339,7 +16587,15 @@
                 {
                     "id" : "SKILL_RESEARCH"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 8,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SPELL_STUDENT",
@@ -15444,7 +16700,15 @@
                         "SPELLLIST_TRAVELER_S_WAYS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 1,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_SPY",
@@ -15534,7 +16798,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 8,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_TABULA_RASA",
@@ -15651,7 +16923,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 4,
+                "combat" : 4,
+                "information" : 7,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_TEMPLAR",
@@ -15748,7 +17028,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_TEMPLE_MONK",
@@ -15866,7 +17154,15 @@
                         "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 3
+            }
         },
         {
             "id" : "TRAININGPACKAGE_THEURGIST",
@@ -15982,7 +17278,15 @@
                 {
                     "id" : "SKILL_FIRST_AID"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 7,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_TRAVELLER",
@@ -16051,7 +17355,15 @@
                     "value" : 1,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 3,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 5,
+                "support" : 1,
+                "utility" : 7
+            }
         },
         {
             "id" : "TRAININGPACKAGE_TROUBADOUR",
@@ -16141,7 +17453,15 @@
                     "value" : 2,
                     "numChoices" : 2
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 6
+            }
         },
         {
             "id" : "TRAININGPACKAGE_TUSKERER",
@@ -16210,7 +17530,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 8,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "TRAININGPACKAGE_VETERINARIAN",
@@ -16279,7 +17607,15 @@
                     "value" : 3,
                     "numChoices" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 8,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_VIZIER",
@@ -16376,7 +17712,15 @@
                         "SPELLLIST_DELVING"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 4,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "TRAININGPACKAGE_WANDERER",
@@ -16474,7 +17818,15 @@
                     "value" : 3,
                     "numChoices" : 3
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 1,
+                "information" : 4,
+                "stealth" : 3,
+                "support" : 2,
+                "utility" : 7
+            }
         },
         {
             "id" : "TRAININGPACKAGE_WANDERING_MONK",
@@ -16589,7 +17941,15 @@
                     "value" : 2,
                     "numChoices" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_WARLOCK",
@@ -16676,7 +18036,15 @@
                         "SPELLLIST_PHYSICAL_EROSION"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 7,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_WARRIOR_PRIEST",
@@ -16775,7 +18143,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 4,
+                "combat" : 4,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_WEAPON_MASTER",
@@ -16827,7 +18203,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 9,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
+            }
         },
         {
             "id" : "TRAININGPACKAGE_WITCH",
@@ -16977,7 +18361,15 @@
                         "SPELLLIST_NATURE_DOMINATION"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 7,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "TRAININGPACKAGE_ZEALOT",
@@ -17042,7 +18434,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 1
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 2,
+                "combat" : 4,
+                "information" : 4,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 2
+            }
         }
     ]
 }

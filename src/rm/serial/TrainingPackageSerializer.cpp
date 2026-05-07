@@ -52,6 +52,7 @@ json::value TrainingPackageSerializer::serializeObject(const TrainingPackageData
 		JsonConverter::setDataChoiceSet<SkillCategoryData>(obj, "lifestyleCategorySkillChoices", ref.lifestyleCategorySkillChoices());
 	if (!ref.languageChoices().empty())
 		JsonConverter::setDataChoicePrimitiveMap<LanguageData, int>(obj, "languageChoices", ref.languageChoices());
+	JsonConverter::setCharacterTraits(obj, "traits", ref.traits());
 
 	return obj;
 }
@@ -110,6 +111,7 @@ const TrainingPackageData& TrainingPackageSerializer::deserializeObject(json::ob
 		ref.setLifestyleCategorySkillChoices(JsonConverter::getDataChoiceSet<SkillCategoryData>(jsonObj, "lifestyleCategorySkillChoices", manager_));
 	if (jsonObj.find("languageChoices") != jsonObj.end())
 		ref.setLanguageChoices(JsonConverter::getDataChoicePrimitiveMap<LanguageData, int>(jsonObj, "languageChoices", manager_));
+	ref.setTraits(JsonConverter::getCharacterTraits(jsonObj, "traits"));
 
 	return ref;
 }
