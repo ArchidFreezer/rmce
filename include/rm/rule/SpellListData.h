@@ -3,6 +3,7 @@
 #include <set>
 #include <string>
 #include <BookData.h>
+#include <CharacterTraits.h>
 #include <GameRuleData.h>
 #include <RealmType.h>
 #include <SpellListType.h>
@@ -50,6 +51,22 @@ public:
 	 */
 	const std::string& name() const {
 		return name_;
+	}
+
+	/**
+	 * @brief Set the description of the spell list
+	 * @param description Description of the spell list
+	 */
+	void setDescription(std::string_view description) {
+		description_ = description;
+	}
+
+	/**
+	 * @brief Get the description of the spell list
+	 * @return Description of the spell list as a string reference
+	 */
+	const std::string& description() const {
+		return description_;
 	}
 
 	/**
@@ -164,13 +181,55 @@ public:
 		return summoning_;
 	}
 
+	/**
+	 * @brief Set whether any spells on the list require the Directed Spell skill
+	 * @param directed If any spells require the Directed Spell skill
+	 */
+	void setIsDirected(bool directed) {
+		directed_ = directed;
+	}
+
+	/**
+	 * @brief Get whether any spells on the list require the Directed Spell skill
+	 * @return `true` if any spells require the Directed Spell skill
+	 * @return `false` if no spells require the Directed Spell skill
+	 */
+	bool isDirected() const {
+		return directed_;
+	}
+
+	/**
+	 * @brief Set the character traits relevant to the spell list
+	 *
+	 * These traits may be used by the character AI when making decisions about which spell lists to develop and how to use them.
+	 *
+	 * @param traits CharacterTraits struct containing the traits relevant to the spell list
+	 */
+	void setTraits(rm::game::character::CharacterTraits traits) {
+		traits_ = traits;
+	}
+
+	/**
+	 * @brief Get the character traits relevant to the spell list
+	 *
+	 * These traits may be used by the character AI when making decisions about which spell lists to develop and how to use them.
+	 *
+	 * @return CharacterTraits struct containing the traits relevant to the spell list
+	 */
+	const rm::game::character::CharacterTraits traits() const {
+		return traits_;
+	}
+
 private:
 	std::string name_{};                                   /**< Name of teh spell list */
+	std::string description_{};                            /**< Description of the spell list and its use in the game */
 	std::set<RealmType::Type> realms_{};                   /**< Realm(s) that the spells on the list draw power from */
 	std::optional<const BookData*> book_{std::nullopt};    /**< Book that the spell list is described in */
 	SpellListType::Type type_{SpellListType::Type::kOpen}; /**< Type of spell list */
-	bool evil_{};                                          /** Whether the list is considered evil */
-	bool summoning_{};                                     /** Whether spells on the list summon entities */
+	bool evil_{};                                          /**< Whether the list is considered evil */
+	bool summoning_{};                                     /**< Whether spells on the list summon entities */
+	bool directed_{};                                      /**< Whether spells on the list require the Directed Spell skill */
+	rm::game::character::CharacterTraits traits_{};        /**< Character traits that are relevant to the skill and may be used by the character AI when making decisions about which skills to develop and how to use them. */
 };
 
 } // namespace rm::rule
