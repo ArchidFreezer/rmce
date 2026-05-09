@@ -325,7 +325,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 5,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 7,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_ARCANIST",
@@ -630,7 +638,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_ARMSMASTER",
@@ -946,7 +962,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 9,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_ASTROLOGER",
@@ -1299,7 +1323,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 3,
+                "information" : 9,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_BARBARIAN",
@@ -1619,7 +1651,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 15
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 9,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "PROFESSION_BARD",
@@ -1939,7 +1979,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 5,
+                "information" : 7,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_CHANNELING_ALCHEMIST",
@@ -2269,7 +2317,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 5,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_CHAOTIC",
@@ -2581,7 +2637,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 6,
+                "information" : 2,
+                "stealth" : 3,
+                "support" : 5,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_CLERIC",
@@ -2912,7 +2976,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 6,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_DABBLER",
@@ -3248,7 +3320,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 9,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_DERNAKWMUN_KHAD",
@@ -3556,7 +3636,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 9,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_DERNAKWMUN_POR",
@@ -3864,7 +3952,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 7,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_ENCHANTER",
@@ -4197,7 +4293,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 7,
+                "information" : 3,
+                "stealth" : 7,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_ESSENCE_ALCHEMIST",
@@ -4536,7 +4640,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 5,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 6
+            }
         },
         {
             "id" : "PROFESSION_FIGHTER",
@@ -4847,7 +4959,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 20
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 9,
+                "information" : 3,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_HEALER",
@@ -5196,7 +5316,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 2,
+                "information" : 4,
+                "stealth" : 2,
+                "support" : 9,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_ILLUSIONIST",
@@ -5515,7 +5643,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 3,
+                "information" : 2,
+                "stealth" : 9,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_LAYMAN",
@@ -5831,7 +5967,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 6,
+                "stealth" : 3,
+                "support" : 4,
+                "utility" : 6
+            }
         },
         {
             "id" : "PROFESSION_LAY_HEALER",
@@ -6178,7 +6322,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 2,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 9,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_MAGEHUNTER",
@@ -6496,7 +6648,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 7,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_MAGENT",
@@ -6808,7 +6968,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 4,
+                "information" : 5,
+                "stealth" : 8,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_MAGICIAN",
@@ -7127,12 +7295,20 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 9,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_MANA_MOLDER",
             "name" : "Mana Molder",
-            "description" : "Mana Molders are Pure Spells users of Essence who concentrate on Mana Forms. mana forms are solid manifestations of the Essence. Mana molders employe their spells to create temporary items, force fields, and even mana creatures. Mana creatures can either be servants capable of simple tasks or warriors capable of following simple orders.",
+            "description" : "Mana Molders are Pure Spells users of Essence who concentrate on Mana Forms. mana forms are solid manifestations of the Essence. Mana molders employ their spells to create temporary items, force fields, and even mana creatures. Mana creatures can either be servants capable of simple tasks or warriors capable of following simple orders.",
             "book" : "BOOK_ESSENCE_COMPANION",
             "spellUserType" : "Pure",
             "realms" : [
@@ -7442,7 +7618,15 @@
                     "id" : "SKILLGROUP_TECHNICAL_TRADE",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 5
+            }
         },
         {
             "id" : "PROFESSION_MENTALISM_ALCHEMIST",
@@ -7781,7 +7965,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 6,
+                "information" : 3,
+                "stealth" : 3,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_MENTALIST",
@@ -8108,7 +8300,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_MONK",
@@ -8428,7 +8628,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 8,
+                "information" : 2,
+                "stealth" : 2,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_MYSTIC",
@@ -8765,7 +8973,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 6,
+                "information" : 3,
+                "stealth" : 8,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_MYTHIC",
@@ -9077,7 +9293,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 5,
+                "information" : 5,
+                "stealth" : 6,
+                "support" : 3,
+                "utility" : 1
+            }
         },
         {
             "id" : "PROFESSION_OUTRIDER",
@@ -9391,7 +9615,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 3,
+                "stealth" : 7,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PALADIN",
@@ -9709,12 +9941,20 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 9,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_AGRICULTURE",
             "name" : "Priest of Agriculture",
-            "description" : "Priests of Agriculture help those who wortk the land cultivating food.",
+            "description" : "Priests of Agriculture help those who work the land cultivating food.",
             "book" : "BOOK_CHANNELING_COMPANION",
             "spellUserType" : "Pure",
             "realms" : [
@@ -9722,7 +9962,7 @@
             ],
             "stats" : [
                 "Constitution",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -10026,7 +10266,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 4,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 7,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_ANCESTORS",
@@ -10038,7 +10286,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory"
+                "Memory",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -10351,7 +10600,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 4,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_ANIMALS",
@@ -10363,8 +10620,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Self Discipline"
+                "Self Discipline",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -10695,7 +10952,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 4,
+                "information" : 3,
+                "stealth" : 5,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_ARTS",
@@ -10707,8 +10972,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Reasoning"
+                "Reasoning",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -11022,7 +11287,15 @@
                         "SKILLGROUP_ARTISTIC"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 3,
+                "information" : 5,
+                "stealth" : 3,
+                "support" : 3,
+                "utility" : 6
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_BIRTH_CHILDREN",
@@ -11034,7 +11307,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory"
+                "Memory",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -11340,7 +11614,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 1,
+                "information" : 5,
+                "stealth" : 2,
+                "support" : 9,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_COMMUNITY",
@@ -11352,8 +11634,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Self Discipline"
+                "Self Discipline",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -11659,7 +11941,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 3,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 7,
+                "utility" : 5
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_COMPETITION",
@@ -11671,8 +11961,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Reasoning"
+                "Reasoning",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -11996,7 +12286,15 @@
                         "SKILLGROUP_WEAPON"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_CRAFTS",
@@ -12009,7 +12307,7 @@
             ],
             "stats" : [
                 "Agility",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -12318,7 +12616,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 5,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_DARKNESS_NIGHT",
@@ -12330,8 +12636,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Reasoning"
+                "Reasoning",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -12647,7 +12953,15 @@
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 7,
+                "information" : 4,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_DAWN",
@@ -12659,8 +12973,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Self Discipline"
+                "Self Discipline",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -12964,7 +13278,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_DEATH",
@@ -12976,7 +13298,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory"
+                "Memory",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -13276,7 +13599,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_DISEASE",
@@ -13289,7 +13620,7 @@
             ],
             "stats" : [
                 "Constitution",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -13601,7 +13932,15 @@
                     "id" : "SKILLGROUP_SUBTERFUGE",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 5,
+                "support" : 3,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_EARTH",
@@ -13613,7 +13952,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory"
+                "Memory",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -13942,7 +14282,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 6,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_FATE_DESTINY",
@@ -13954,7 +14302,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory"
+                "Memory",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -14266,7 +14615,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 4,
+                "information" : 7,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_FERTILITY",
@@ -14278,8 +14635,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Self Discipline"
+                "Self Discipline",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -14611,7 +14968,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 4,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 5
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_FIRE",
@@ -14623,8 +14988,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Reasoning"
+                "Reasoning",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -14930,7 +15295,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_FORTUNE_LUCK",
@@ -14942,8 +15315,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Self Discipline"
+                "Self Discipline",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -15253,7 +15626,15 @@
                     "id" : "SKILLGROUP_SUBTERFUGE",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 4,
+                "information" : 6,
+                "stealth" : 5,
+                "support" : 3,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_GUARDIANSHIP",
@@ -15266,7 +15647,7 @@
             ],
             "stats" : [
                 "Constitution",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -15589,7 +15970,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 7,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_HEALING",
@@ -15601,8 +15990,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Reasoning"
+                "Reasoning",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -15912,7 +16301,15 @@
                     "id" : "SKILLGROUP_TECHNICAL_TRADE",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 2,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 9,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_HUNTING",
@@ -15925,7 +16322,7 @@
             ],
             "stats" : [
                 "Agility",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -16261,7 +16658,15 @@
                     "id" : "SKILLGROUP_OUTDOOR",
                     "value" : "Everyman"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 4,
+                "support" : 2,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_JUSTICE_REVENGE",
@@ -16274,7 +16679,7 @@
             ],
             "stats" : [
                 "Constitution",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -16586,7 +16991,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 9,
+                "information" : 4,
+                "stealth" : 3,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_LIGHT",
@@ -16598,8 +17011,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Reasoning"
+                "Reasoning",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -16909,7 +17322,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_LIGHTNING",
@@ -16922,7 +17343,7 @@
             ],
             "stats" : [
                 "Constitution",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -17226,7 +17647,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 9,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_LITERATURE_POETRY",
@@ -17238,8 +17667,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Self Discipline"
+                "Self Discipline",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -17545,7 +17974,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 5,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_LOVE",
@@ -17557,8 +17994,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Self Discipline"
+                "Self Discipline",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -17876,7 +18313,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 6,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_MAGIC",
@@ -17888,8 +18333,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Reasoning"
+                "Reasoning",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -18224,7 +18669,15 @@
                         "SKILLGROUP_SPELLS"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_MARRIAGE",
@@ -18236,7 +18689,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory"
+                "Memory",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -18544,7 +18998,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 6,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_MESSENGERS",
@@ -18556,8 +19018,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Self Discipline"
+                "Self Discipline",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -18861,7 +19323,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 7,
+                "information" : 7,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_METALWORK",
@@ -18874,7 +19344,7 @@
             ],
             "stats" : [
                 "Constitution",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -19190,7 +19660,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 5
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_MISCHIEF_TRICKERY",
@@ -19202,8 +19680,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
-                "Reasoning"
+                "Reasoning",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -19511,7 +19989,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 6,
+                "information" : 3,
+                "stealth" : 8,
+                "support" : 1,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_MOON",
@@ -19523,7 +20009,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory"
+                "Memory",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -19833,7 +20320,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 7,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_MUSIC_DANCE",
@@ -19846,7 +20341,7 @@
             ],
             "stats" : [
                 "Agility",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -20167,7 +20662,15 @@
                         "SKILLGROUP_ARTISTIC"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 6
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_NATURE",
@@ -20179,6 +20682,7 @@
                 "Channeling"
             ],
             "stats" : [
+                "Intuition",
                 "Memory"
             ],
             "baseSpellListChoices" : [
@@ -20505,7 +21009,15 @@
                     "id" : "SKILLGROUP_OUTDOOR",
                     "value" : "Everyman"
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 4,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_OCEANS_RIVERS",
@@ -20517,7 +21029,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory"
+                "Memory",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -20837,7 +21350,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 7,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_ORACLES_PROPHECY",
@@ -20849,7 +21370,7 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
+                "Intuition",
                 "Self Discipline"
             ],
             "baseSpellListChoices" : [
@@ -21164,7 +21685,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 3,
+                "information" : 9,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_SKY_WEATHER",
@@ -21177,7 +21706,7 @@
             ],
             "stats" : [
                 "Constitution",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -21477,7 +22006,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 5,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 6
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_STRENGTH",
@@ -21490,7 +22027,7 @@
             ],
             "stats" : [
                 "Constitution",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -21810,7 +22347,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_SUN",
@@ -21822,7 +22367,7 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory",
+                "Intuition",
                 "Reasoning"
             ],
             "baseSpellListChoices" : [
@@ -22153,7 +22698,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 8,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_THUNDER",
@@ -22166,7 +22719,7 @@
             ],
             "stats" : [
                 "Constitution",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -22470,7 +23023,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 9,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_VEGETATION",
@@ -22482,6 +23043,7 @@
                 "Channeling"
             ],
             "stats" : [
+                "Intuition",
                 "Memory"
             ],
             "baseSpellListChoices" : [
@@ -22802,7 +23364,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 3,
+                "information" : 7,
+                "stealth" : 2,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_WAR",
@@ -22815,7 +23385,7 @@
             ],
             "stats" : [
                 "Constitution",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -23162,7 +23732,15 @@
                         "SKILLGROUP_ARMOUR"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 9,
+                "information" : 3,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 2
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_WIND",
@@ -23175,7 +23753,7 @@
             ],
             "stats" : [
                 "Agility",
-                "Memory"
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -23483,7 +24061,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 7,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 5
+            }
         },
         {
             "id" : "PROFESSION_PRIEST_OF_WISDOM",
@@ -23495,7 +24081,8 @@
                 "Channeling"
             ],
             "stats" : [
-                "Memory"
+                "Memory",
+                "Intuition"
             ],
             "baseSpellListChoices" : [
                 {
@@ -23804,7 +24391,15 @@
                         "SKILLGROUP_SCIENCE_ANALYTIC"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 7,
+                "information" : 6,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_RANGER",
@@ -24102,7 +24697,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 7,
+                "information" : 2,
+                "stealth" : 4,
+                "support" : 4,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_ROGUE",
@@ -24133,10 +24736,7 @@
                     "type" : "Everyman",
                     "options" : [
                         {
-                            "id" : "SKILL_BOXING"
-                        },
-                        {
-                            "id" : "SKILL_TACKLING"
+                            "id" : "SKILL_SITUATIONAL_AWARENESS"
                         }
                     ]
                 },
@@ -24145,7 +24745,10 @@
                     "type" : "Everyman",
                     "options" : [
                         {
-                            "id" : "SKILL_SITUATIONAL_AWARENESS"
+                            "id" : "SKILL_BOXING"
+                        },
+                        {
+                            "id" : "SKILL_TACKLING"
                         }
                     ]
                 }
@@ -24423,7 +25026,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 15
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 7,
+                "information" : 2,
+                "stealth" : 6,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_RUNEMAGE",
@@ -24747,7 +25358,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 7,
+                "information" : 6,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_SAGE",
@@ -25042,7 +25661,15 @@
                         "SKILLGROUP_LORE"
                     ]
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 5,
+                "information" : 8,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_SEER",
@@ -25381,7 +26008,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 3,
+                "information" : 9,
+                "stealth" : 1,
+                "support" : 4,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_SORCERER",
@@ -25706,7 +26341,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 9,
+                "information" : 5,
+                "stealth" : 2,
+                "support" : 1,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_SUMMONER",
@@ -26031,7 +26674,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 7,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_SWASHBUCKLER",
@@ -26345,7 +26996,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 9,
+                "information" : 4,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_TAOIST_MONK",
@@ -26651,7 +27310,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 9,
+                "information" : 2,
+                "stealth" : 1,
+                "support" : 5,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_THIEF",
@@ -26968,7 +27635,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 10
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 4,
+                "information" : 3,
+                "stealth" : 9,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_WARLOCK",
@@ -27297,7 +27972,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 9,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 2,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_WARRIOR_MAGE",
@@ -27605,7 +28288,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 9,
+                "information" : 1,
+                "stealth" : 3,
+                "support" : 4,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_WARRIOR_MONK",
@@ -27912,7 +28603,15 @@
                     "id" : "SKILLGROUP_MARTIAL_ARTS",
                     "value" : 15
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 1,
+                "combat" : 9,
+                "information" : 3,
+                "stealth" : 2,
+                "support" : 3,
+                "utility" : 3
+            }
         },
         {
             "id" : "PROFESSION_WIZARD",
@@ -28217,7 +28916,15 @@
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 9,
+                "combat" : 9,
+                "information" : 5,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 4
+            }
         },
         {
             "id" : "PROFESSION_ZEN_MONK",
@@ -28523,7 +29230,15 @@
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
                 }
-            ]
+            ],
+            "traits" : {
+                "caster" : 5,
+                "combat" : 9,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 6,
+                "utility" : 3
+            }
         }
     ]
 }

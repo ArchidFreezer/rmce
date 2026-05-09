@@ -7,6 +7,7 @@
 #include <vector>
 
 #include <BookData.h>
+#include <CharacterTraits.h>
 #include <GameRuleData.h>
 #include <GameRuleDataChoice.h>
 #include <RaceData.h>
@@ -1013,13 +1014,39 @@ public:
 		throw InvalidCategoryDevelopmentCost("There is no skill development cost for the category: " + category.id());
 	}
 
+	/**
+	 * @brief Set the character traits the profession aligns with
+	 *
+	 * These are used as a base from defining the traits that a character has. It is expected that each individual character will have some variation from the base traits of the profession, but these provide a starting point for the
+	 * character AI when making decisions about which skills to develop and how to use them.
+	 * 
+	 * The caster trait is an outlier and should have a value of 0 for None, 5 for Semi and 9 for Pure/Hybrid casters.
+	 *
+	 * @param traits CharacterTraits struct containing the base character traits for the profession.
+	 */
+	void setTraits(rm::game::character::CharacterTraits traits) {
+		traits_ = traits;
+	}
 
+	/**
+	 * @brief Get the character traits the profession aligns with
+	 *
+	 * These are used as a base from defining the traits that a character has. It is expected that each individual character will have some variation from the base traits of the profession, but these provide a starting point for the
+	 * character AI when making decisions about which skills to develop and how to use them.
+	 *
+	 * The caster trait is an outlier and should have a value of 0 for None, 5 for Semi and 9 for Pure/Hybrid casters.
+	 *
+	 * @return CharacterTraits struct containing the base character traits for the profession.
+	 */
+	const rm::game::character::CharacterTraits traits() const {
+		return traits_;
+	}
 
 private:
 	std::string name_{};                                                    /**< Name of the profession */
 	std::string description_{};                                             /**< General description of the profession */
 	std::optional<const BookData*> book_{std::nullopt};                     /**< Book that the profession is described in */
-	std::set<const RaceData*> allowed_races_{};                                    /**< Set of races allowed to take the profession */
+	std::set<const RaceData*> allowed_races_{};                             /**< Set of races allowed to take the profession */
 	SpellUserType::Type spell_user_type_{SpellUserType::kNone};             /**< Spell user type */
 	std::set<RealmType::Type> realms_{};                                    /**< Realm(s) that the profession draws power from */
 	std::vector<StatType::Type> stats_{};                                   /**< Stats providing a bonus to the profession */
@@ -1038,12 +1065,13 @@ private:
 	std::map<const SkillGroupData*, SkillDevelopmentType::Type> skill_group_skill_development_types_{};       /** Skill groups that all skills within have their development type changed */
 
 	// Skill development type choices
-	std::map<GameRuleDataChoice<SubcategoriedSkillData>, SkillDevelopmentType::Type> skill_development_type_choices_{};      /** Set of skills that the character may select one or more from to change their development type */
+	std::map<GameRuleDataChoice<SubcategoriedSkillData>, SkillDevelopmentType::Type> skill_development_type_choices_{}; /** Set of skills that the character may select one or more from to change their development type */
 	std::map<GameRuleDataChoice<SkillCategoryData>, SkillDevelopmentType::Type>
 	    skill_category_skill_development_type_choices_{};                                                                   /** Set of skill categories the character may select one or more skills from to change their development type */
 	std::map<GameRuleDataChoice<SkillGroupData>, SkillDevelopmentType::Type> skill_group_skill_development_type_choices_{}; /** Set of skill groups the character may select one or more skills from to change their development type */
 
 	std::map<const SkillCategoryData*, rm::game::character::SkillDevelopmentCost> skill_category_development_costs_{}; /** Cost to purchase ranks for a skill category */
+	rm::game::character::CharacterTraits traits_{};                                                                    /**< Character traits that the profession aligns with. */
 };
 
 } // namespace rm::rule

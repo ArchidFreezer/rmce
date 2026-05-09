@@ -43,6 +43,7 @@ json::value ProfessionSerializer::serializeObject(const ProfessionData& ref) con
 	JsonConverter::setDataPrimitiveMap(obj, "skillGroupSpecialBonuses", ref.skillGroupSpecialBonuses());
 	JsonConverter::setDataEnumMap(obj, "skillGroupSkillDevelopmentTypes", ref.skillGroupSkillDevelopmentTypes());
 	JsonConverter::setDataChoiceEnumMap(obj, "skillGroupSkillDevelopmentTypeChoices", ref.skillGroupSkillDevelopmentTypeChoices());
+	JsonConverter::setCharacterTraits(obj, "traits", ref.traits());
 
 	return obj;
 }
@@ -85,6 +86,7 @@ const ProfessionData& ProfessionSerializer::deserializeObject(json::object& json
 	ref.setSkillGroupSpecialBonuses(JsonConverter::getDataPrimitiveMap<SkillGroupData, int>(jsonObj, "skillGroupSpecialBonuses", manager_));
 	ref.setSkillGroupSkillDevelopmentTypes(JsonConverter::getDataEnumMap<SkillGroupData, SkillDevelopmentType::Type>(jsonObj, "skillGroupSkillDevelopmentTypes", manager_));
 	ref.setSkillGroupSkillDevelopmentTypeChoices(JsonConverter::getDataChoiceEnumMap<SkillGroupData, SkillDevelopmentType::Type>(jsonObj, "skillGroupSkillDevelopmentTypeChoices", manager_));
+	ref.setTraits(JsonConverter::getCharacterTraits(jsonObj, "traits"));
 
 	return ref;
 }
