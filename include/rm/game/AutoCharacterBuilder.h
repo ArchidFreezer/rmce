@@ -305,6 +305,11 @@ private:
 	std::vector<const SubcategoriedSkillData*> getSubcategoriesForSkill(CharacterBuilder& builder, const SkillData& skill); /* Get the common subcategories for a skill  */
 };
 
+
+/* ------------------------------------------------------------------ */
+/* Free functions                                                     */
+/* ------------------------------------------------------------------ */
+
 std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, rm::PersistentObjectManager& object_manager); /* Get the skills included in a category */
 
 std::vector<const SkillData*> getGroupSkills(const SkillGroupData& group, rm::PersistentObjectManager& object_manager); /* Get the skills included in a group */

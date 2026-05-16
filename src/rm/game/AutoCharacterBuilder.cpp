@@ -7,6 +7,9 @@
 
 namespace rm::game::character {
 
+/* --------------------------------------------------------------------------------- */
+/* Automate the choices based on the initial data such as profession and culture.    */
+/* --------------------------------------------------------------------------------- */
 void AutoCharacterBuilder::autoPrimaryChoices(CharacterBuilder& builder) {
 	if (builder.built_) {
 		throw std::runtime_error("CharacterBuilder: Cannot auto initial choices after character has been built.");
@@ -367,21 +370,6 @@ void AutoCharacterBuilder::allocateWeaponCosts(CharacterBuilder& builder) {
 	LOG_DEBUG("Weapon Skill Category Costs:{}", buffer);
 }
 
-std::vector<const SubcategoriedSkillData*> AutoCharacterBuilder::getSubcategoriesForSkill(CharacterBuilder& builder, const SkillData& skill) {
-	// We currently only handle the riding skill, but this could be expanded later if needed.
-	std::vector<const SubcategoriedSkillData*> subcategories;
-
-	if (skill.id() == "SKILL_RIDING") {
-		subcategories.append_range(getCultureMountSkills(*builder.culture_type_, *builder.object_factory_));
-		subcategories.append_range(getRaceMountSkills(*builder.race_, *builder.object_factory_));
-	} else {
-		SubcategoriedSkillData& subcategoried_skill_data = builder.object_factory_->subcategoriedSkillData(skill);
-		subcategories.push_back(&subcategoried_skill_data);
-	}
-
-	return std::move(subcategories);
-}
-
 void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
 	// We randomise the traits if they have not already been initialised.
 	ensureTraits(builder);
@@ -533,6 +521,10 @@ void AutoCharacterBuilder::ensureTraits(CharacterBuilder& builder) {
 		LOG_TRACE("AutoCharacterBuilder: Set aligned to {}.", aligned_);
 	}
 }
+
+/* ------------------------------------------------------------------ */
+/* Automate stat generation and allocation                            */
+/* ------------------------------------------------------------------ */
 
 void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int primeFloorMin, int numPrimeFloorMin) const {
 	if (builder.built_) {
@@ -700,6 +692,27 @@ void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int pri
 	LOG_DEBUG("{:-<{}}\n", "", 45);
 }
 
+/* ------------------------------------------------------------------ */
+/* Helper functions                                                   */
+/* ------------------------------------------------------------------ */
+std::vector<const SubcategoriedSkillData*> AutoCharacterBuilder::getSubcategoriesForSkill(CharacterBuilder& builder, const SkillData& skill) {
+	// We currently only handle the riding skill, but this could be expanded later if needed.
+	std::vector<const SubcategoriedSkillData*> subcategories;
+
+	if (skill.id() == "SKILL_RIDING") {
+		subcategories.append_range(getCultureMountSkills(*builder.culture_type_, *builder.object_factory_));
+		subcategories.append_range(getRaceMountSkills(*builder.race_, *builder.object_factory_));
+	} else {
+		SubcategoriedSkillData& subcategoried_skill_data = builder.object_factory_->subcategoriedSkillData(skill);
+		subcategories.push_back(&subcategoried_skill_data);
+	}
+
+	return subcategories;
+}
+
+/* ------------------------------------------------------------------ */
+/* Free functions                                                     */
+/* ------------------------------------------------------------------ */
 std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, rm::PersistentObjectManager& object_manager) {
 	std::vector<const SkillData*> category_skills;
 	for (const SkillData& skill : object_manager.getAll<SkillData>()) {
@@ -707,7 +720,7 @@ std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& categor
 			category_skills.emplace_back(&skill);
 		}
 	}
-	return std::move(category_skills);
+	return category_skills;
 }
 
 std::vector<const SkillData*> getGroupSkills(const SkillGroupData& group, rm::PersistentObjectManager& object_manager) {
@@ -717,7 +730,7 @@ std::vector<const SkillData*> getGroupSkills(const SkillGroupData& group, rm::Pe
 			group_skills.emplace_back(&skill);
 		}
 	}
-	return std::move(group_skills);
+	return group_skills;
 }
 
 std::vector<const SkillCategoryData*> getGroupCategories(const SkillGroupData& group, rm::PersistentObjectManager& object_manager) {
@@ -727,7 +740,7 @@ std::vector<const SkillCategoryData*> getGroupCategories(const SkillGroupData& g
 			group_categories.emplace_back(&category);
 		}
 	}
-	return std::move(group_categories);
+	return group_categories;
 }
 
 std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, rm::PersistentObjectManager& object_manager) {
@@ -737,7 +750,7 @@ std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, rm::P
 			skill_weapons.emplace_back(&weapon);
 		}
 	}
-	return std::move(skill_weapons);
+	return skill_weapons;
 }
 
 std::vector<const SubcategoriedSkillData*> getCultureMountSkills(const CultureTypeData& culture, rm::PersistentObjectManager& object_manager) {
@@ -765,7 +778,7 @@ std::vector<const SubcategoriedSkillData*> getCultureMountSkills(const CultureTy
 		culture_mounts.push_back(&subcategoried_skill_data);
 	}
 
-	return std::move(culture_mounts);
+	return culture_mounts;
 }
 
 std::vector<const SubcategoriedSkillData*> getRaceMountSkills(const RaceData& race, rm::PersistentObjectManager& object_manager) {
@@ -786,7 +799,7 @@ std::vector<const SubcategoriedSkillData*> getRaceMountSkills(const RaceData& ra
 		mounts.push_back("Boar");
 	} else if (race.name().starts_with("Halflings")) {
 		mounts.push_back("Pony");
-	} else if (race.id() == "RACE_HOBGOBLINs") {
+	} else if (race.id() == "RACE_HOBGOBLINS") {
 		mounts.push_back("Boar");
 		mounts.push_back("Breliss");
 	} else if (race.name().starts_with("Orcs")) {
@@ -799,7 +812,7 @@ std::vector<const SubcategoriedSkillData*> getRaceMountSkills(const RaceData& ra
 		race_mounts.push_back(&subcategoried_skill_data);
 	}
 
-	return std::move(race_mounts);
+	return race_mounts;
 }
 
 std::vector<const SpellListData*> getSpellLists(SpellListType::Type type, const std::set<RealmType ::Type>& realms, rm::PersistentObjectManager& object_manager) {
@@ -811,7 +824,7 @@ std::vector<const SpellListData*> getSpellLists(SpellListType::Type type, const 
 		}
 	}
 
-	return std::move(spell_lists);
+	return spell_lists;
 }
 
 void logSkillCategoryCosts(std::map<const SkillDevelopmentCost, int>& category_costs) {
