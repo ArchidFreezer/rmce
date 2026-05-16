@@ -13,7 +13,7 @@ void AutoCharacterBuilder::autoPrimaryChoices(CharacterBuilder& builder) {
 	}
 
 	// We randomise the traits if they have not already been initialised.
-	ensureTraits();
+	ensureTraits(builder);
 
 	// Set any racial everyman skill categories.
 	// These define one of more skill categories where a defined number of skills within the category should be defined as Everyman skills and populate the builder.race_category_everyman_choices_ member
@@ -349,7 +349,6 @@ void AutoCharacterBuilder::allocateWeaponCosts(CharacterBuilder& builder) {
 	buffer += std::format("\n| {:<8} | {:<18} |\n", "Cost", "Category");
 	buffer += "|----------|--------------------|\n";
 
-
 	for (const auto& [cost, count] : weapon_category_cost_count) {
 		for (int i = 0; i < count; ++i) {
 			if (weighted_weapon_categories.empty()) {
@@ -385,7 +384,7 @@ std::vector<const SubcategoriedSkillData*> AutoCharacterBuilder::getSubcategorie
 
 void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
 	// We randomise the traits if they have not already been initialised.
-	ensureTraits();
+	ensureTraits(builder);
 
 	// Create a map to store the weights for each armour type which we seed with a valure of 100.
 	std::map<const ArmourTypeData*, int> armour_weights;
@@ -474,7 +473,7 @@ void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
 	}
 }
 
-void AutoCharacterBuilder::ensureTraits() {
+void AutoCharacterBuilder::ensureTraits(CharacterBuilder& builder) {
 	/* Core characteristics that drive preferred abilities */
 	if (!traits_.combat_) {
 		traits_.combat_ = archid::Dice(9).roll().result();
@@ -499,18 +498,39 @@ void AutoCharacterBuilder::ensureTraits() {
 
 	/* How combat is conducted */
 	if (!combat_casting_) {
-		combat_casting_ = archid::Dice(9).roll().result();
+		// This is a function of the caster type and their spell lists.
+		if (traits_.caster_ > 1) {
+			// We take the how big a focus the character puts on casting, plus a random element to determine how likely they are to want to cast in combat. This means that characters with a higher castering trait are more likely to want to
+			// cast in combat, but there is still a random element to allow for some variation and for some characters to be more focused on casting outside of combat.
+			int value = traits_.caster_ * 2;
+			value += Random::get(1, 9);
+			combat_casting_ = value / 3; // The more a character uses spells the more likely they are to want to cast in combat
+		} else {
+			combat_casting_ = 1; // Non spell users are very unlikely to want to cast in combat.
+		}
 		LOG_TRACE("AutoCharacterBuilder: Set combat casting to {}.", combat_casting_);
 	}
 	if (!combat_closeness_) {
-		combat_closeness_ = archid::Dice(9).roll().result();
+		if (builder.profession_->spellUserType() == SpellUserType::kPure || builder.profession_->spellUserType() == SpellUserType::kHybrid) {
+			combat_closeness_ = Random::get(1, 3); // Pure and hybrid casters are unlikely to want to get close to combat.
+		} else if (builder.profession_->spellUserType() == SpellUserType::kSemi) {
+			combat_closeness_ = Random::get(3, 9); // Semi casters are more likely to want to be in medium range or close combat.
+		} else {
+			combat_closeness_ = Random::get(1, 9); // Non spell users can have a wide range of preferences for combat closeness so we give them a full range of random options.
+		}
 		LOG_TRACE("AutoCharacterBuilder: Set combat closeness to {}.", combat_closeness_);
 	}
 
-	/* How to spend DPs on the preferred abilities */
+	/* Whether to spend DPs on a small set of skills or a wider range */
 	if (!focussed_) {
-		focussed_ = archid::Dice(9).roll().result();
+		focussed_ = Random::get(1, 9);
 		LOG_TRACE("AutoCharacterBuilder: Set focussed to {}.", focussed_);
+	}
+
+	/* Whether to keep closely aligned to the traits or not */
+	if (!aligned_) {
+		aligned_ = Random::get(1, 9);
+		LOG_TRACE("AutoCharacterBuilder: Set aligned to {}.", aligned_);
 	}
 }
 

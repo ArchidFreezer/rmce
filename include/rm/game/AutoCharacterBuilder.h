@@ -85,7 +85,157 @@ public:
 	 * The values are used for weighting the skill selection rather than stats as the stats are more of a means to an end for the character's abilities and the skills are what define the character's playstyle and role in the game, so it
 	 * makes more sense to use these values to weight the skill selection rather than the stat selection.
 	 */
-	void ensureTraits();
+	void ensureTraits(CharacterBuilder& builder);
+
+	/**
+	 * @brief Set the traits of the character being built.
+	 *
+	 * This method is used to get the traits of the character being built. The traits are defined on scales of 1 - 9 to allow for a median value of 5 to be used for random generation and to allow for more extreme values to be generated
+	 * for unique characters or MOBs if desired. They are initialised to 0 to indicate that they have not been set yet and to allow for the auto generation of these values if they are not set by the caller.
+	 *
+	 * The values are used for weighting the skill selection rather than stats as the stats are more of a means to an end for the character's abilities and the skills are what define the character's playstyle and role in the game, so it
+	 * makes more sense to use these values to weight the skill selection rather than the stat selection.
+	 *
+	 * @param traits A CharacterTraits object representing the traits of the character being built, which are used for weighting the skill selection.
+	 */
+	void setTraits(const CharacterTraits traits) {
+		traits_ = traits;
+	}
+
+	/**
+	 * @brief Set all the traits of the character being built at once.
+	 *
+	 * This method is used to set all the traits of the character being built at once. The traits are defined on scales of 1 - 9 to allow for a median value of 5 to be used for random generation and to allow for more extreme values to be
+	 * generated for unique characters or MOBs if desired. They are initialised to 0 to indicate that they have not been set yet and to allow for the auto generation of these values if they are not set by the caller.
+	 *
+	 * The values are used for weighting the skill selection rather than stats as the stats are more of a means to an end for the character's abilities and the skills are what define the character's playstyle and role in the game, so it
+	 * makes more sense to use these values to weight the skill selection rather than the stat selection.
+	 *
+	 * @param traits A CharacterTraits object representing the traits of the character being built, which are used for weighting the skill selection.
+	 * @param combat_casting An integer representing whether the character prefers to use spells in combat (higher value) or not (lower value)..
+	 * @param combat_closeness An integer representing whether the character prefers ranged attacks (low value) or melee (higher value)..
+	 * @param focussed An integer representing whether the character prefers to focus on a single skill (higher value) or be more of a generalist (lower value).
+	 * @param aligned An integer representing whether the character prefers to be more aligned with their profession (higher value) or to be more independent and make choices outside their profession (lower value).
+	 */
+	void setAlltraits(const CharacterTraits traits, int combat_casting, int combat_closeness, int focussed, int aligned) {
+		traits_ = traits;
+		combat_casting_ = combat_casting;
+		combat_closeness_ = combat_closeness;
+		focussed_ = focussed;
+		aligned_ = aligned;
+	}
+
+	/**
+	 * @brief Set the combat casting trait of the character being built.
+	 *
+	 * @param combat_casting An integer representing whether the character prefers to use spells in combat (higher value) or not (lower value). The value is defined on a scale of 1 - 9 to allow for a median value of 5 to be used for random
+	 * generation and to allow for more extreme values to be generated for unique characters or MOBs if desired. It is initialised to 0 to indicate that it has not been set yet and to allow for the auto generation of this value if it is not
+	 * set by the caller.
+	 */
+	void setCombatCasting(int combat_casting) {
+		combat_casting_ = combat_casting;
+	}
+
+	/**
+	 * @brief Set the combat closeness trait of the character being built.
+	 *
+	 * @param combat_closeness An integer representing whether the character prefers ranged attacks (low value) or melee (higher value). The value is defined on a scale of 1 - 9 to allow for a median value of 5 to be used for random
+	 * generation and to allow for more extreme values to be generated for unique characters or MOBs if desired. It is initialised to 0 to indicate that it has not been set yet and to allow for the auto generation of this value if it is not
+	 * set by the caller.
+	 */
+	void setCombatCloseness(int combat_closeness) {
+		combat_closeness_ = combat_closeness;
+	}
+
+	/**
+	 * @brief Set the focussed trait of the character being built.
+	 *
+	 * @param focussed An integer representing whether the character prefers to focus on a single skill (higher value) or be more of a generalist (lower value). The value is defined on a scale of 1 - 9 to allow for a median value of 5 to be
+	 * used for random generation and to allow for more extreme values to be generated for unique characters or MOBs if desired. It is initialised to 0 to indicate that it has not been set yet and to allow for the auto generation of this
+	 * value if it is not set by the caller.
+	 */
+	void setFocussed(int focussed) {
+		focussed_ = focussed;
+	}
+
+	/**
+	 * @brief Set the aligned trait of the character being built.
+	 *
+	 * @param aligned An integer representing whether the character prefers to be more aligned with their profession (higher value) or to be more independent and make choices outside their profession (lower value). The value is defined on a
+	 * scale of 1 - 9 to allow for a median value of 5 to be used for random generation and to allow for more extreme values to be generated for unique characters or MOBs if desired. It is initialised to 0 to indicate that it has not been
+	 * set yet and to allow for the auto generation of this value if it is not set by the caller.
+	 */
+	void setAligned(int aligned) {
+		aligned_ = aligned;
+	}
+
+	/**
+	 * @brief Gets whether any of the traits have been set for the character being built.
+	 *
+	 * @return `true` if any of the traits have been set for the character being built; `false` otherwise.
+	 */
+	bool traitsSet() const {
+		return traits_.caster_ || traits_.combat_ || traits_.information_ || traits_.stealth_ || traits_.support_ || traits_.utility_;
+	}
+
+	/**
+	 * @brief Get the traits of the character being built.
+	 *
+	 * The traits are defined on scales of 1 - 9 to allow for a median value of 5 to be used for random generation and to allow for more extreme values to be generated for unique characters or MOBs if desired. They are initialised to 0 to
+	 * indicate that they have not been set yet and to allow for the auto generation of these values if they are not set by the caller.
+	 *
+	 * The values are used for weighting the skill selection rather than stats as the stats are more of a means to an end for the character's abilities and the skills are what define the character's playstyle and role in the game, so it
+	 * makes more sense to use these values to weight the skill selection rather than the stat selection.
+	 *
+	 * @return A CharacterTraits object representing the traits of the character being built, which are used for weighting the skill selection.
+	 */
+	CharacterTraits traits() const {
+		return traits_;
+	}
+
+	/**
+	 * @brief Get the combat casting trait of the character being built.
+	 *
+	 * @return An integer representing whether the character prefers to use spells in combat (higher value) or not (lower value). The value is defined on a scale of 1 - 9 to allow for a median value of 5 to be used for random generation and
+	 * to allow for more extreme values to be generated for unique characters or MOBs if desired. It is initialised to 0 to indicate that it has not been set yet and to allow for the auto generation of this value if it is not set by the
+	 * caller.
+	 */
+	int combatCasting() const {
+		return combat_casting_;
+	}
+
+	/**
+	 * @brief Get the combat closeness trait of the character being built.
+	 *
+	 * @return An integer representing whether the character prefers ranged attacks (low value) or melee (higher value). The value is defined on a scale of 1 - 9 to allow for a median value of 5 to be used for random generation and to
+	 * allow for more extreme values to be generated for unique characters or MOBs if desired. It is initialised to 0 to indicate that it has not been set yet and to allow for the auto generation of this value if it is not set by the
+	 * caller.
+	 */
+	int combatCloseness() const {
+		return combat_closeness_;
+	}
+
+	/**
+	 * @brief Get the focussed trait of the character being built.
+	 *
+	 * @return An integer representing whether the character prefers to focus on a single skill (higher value) or be more of a generalist (lower value). The value is defined on a scale of 1 - 9 to allow for a median value of 5 to be
+	 * used for random generation and to allow for more extreme values to be generated for unique characters or MOBs if desired. It is initialised to 0 to indicate that it has not been set yet and to allow for the auto generation of this
+	 * value if it is not set by the caller.
+	 */
+	int focussed() const {
+		return focussed_;
+	}
+
+	/**
+	 * @brief Get the aligned trait of the character being built.
+	 *
+	 * @return An integer representing whether the character prefers to be more aligned with their profession (higher value) or to be more independent and make choices outside their profession (lower value). The value is defined on a
+	 * scale of 1 - 9 to allow for a median value of 5 to be used for random generation and to allow for more extreme values to be generated for unique characters or MOBs if desired. It is initialised to 0 to indicate that it has not been
+	 * set yet and to allow for the auto generation of this value if it is not set by the caller.
+	 */
+	int aligned() const {
+		return aligned_;
+	}
 
 	/**
 	 * @brief Automatically select initial choices for the character being built based on the traits defined in this AutoCharacterBuilder object.
@@ -123,6 +273,7 @@ private:
 	int combat_casting_{0};   /**< An integer representing whether the character prefers to use spells in combat (higher value) or not (lower value). */
 	int combat_closeness_{0}; /**< An integer representing whether the character prefers ranged attacks (low value) or melee (higher value). */
 	int focussed_{0};         /**< An integer representing whether the character prefers to focus on a single skill (higher value) or be more of a generalist (lower value). */
+	int aligned_{0};          /**< An integer representing whether the character prefers to be more aligned with their profession (higher value) or to be more independent and make choices outside their profession (lower value). */
 
 	/*
 	 * Basic choices such as weapon and arnmour types

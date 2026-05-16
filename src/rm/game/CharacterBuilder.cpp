@@ -452,6 +452,17 @@ void CharacterBuilder::applyProfession() {
 	for (const auto& category : profession_->skillCategoriesWithCost()) {
 		category_development_costs_.insert_or_assign(category, profession_->skillCategoryDevelopmentCost(*category));
 	}
+
+	// Set the auto character builder if it does not already exist
+	if (auto_builder_ == nullptr) {
+		auto_builder_ = &object_factory_->get<AutoCharacterBuilder>();
+	}
+
+	// Set the traits from the profession if they have not already been set.
+	if (!auto_builder_->traitsSet()) {
+		auto_builder_->setTraits(profession_->traits());
+	}
+
 }
 
 void CharacterBuilder::applyProfessionChoices() {
