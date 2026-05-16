@@ -51,11 +51,18 @@ public:
 	void autoStats(int min = 25, int primeFloorMin = 90, int numPrimeFloorMin = 2);
 
 	/**
-	 * @brief Automatically make choices based on the initial dfata such as profession and culture.
+	 * @brief Automatically make choices based on the initial data such as profession and culture.
 	 *
 	 * This method is used to automate the initial choices based on the profession and culture in the character creation process.
 	 */
 	void autoPrimaryChoices();
+
+	/**
+	 * @brief Automatically make hobby choices based on the culture.
+	 *
+	 * This method is used to automate the hobby choices based on the culture in the character creation process.
+	 */
+	void autoHobbyChoices();
 
 	/**
 	 * @brief Reset the aggreagrated state of the builder to its initial state, then apply any choices that have been made to recalculate the aggregated state of the builder based on the current choices.

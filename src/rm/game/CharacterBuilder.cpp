@@ -660,7 +660,9 @@ void CharacterBuilder::setSpellListCategories() {
 			category = getSkillCategoryForSpellList(magical_realms_, spell_list, *object_factory_);
 		}
 
-		spell_list_categories_[category].emplace(&spell_list);
+		if (category != nullptr) {
+			spell_list_categories_[category].emplace(&spell_list);
+		}
 	} // end for all spell lists
 }
 
@@ -937,6 +939,11 @@ void CharacterBuilder::autoStats(int min, int primeFloorMin, int numPrimeFloorMi
 
 void CharacterBuilder::autoPrimaryChoices() {
 	auto_builder_->autoPrimaryChoices(*this);
+	auto_build_ = false;
+}
+
+void CharacterBuilder::autoHobbyChoices() {
+	auto_builder_->autoHobbyChoices(*this);
 	auto_build_ = false;
 }
 

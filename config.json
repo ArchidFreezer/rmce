@@ -1,5 +1,5 @@
 {
-  "log-level": "debug",
+  "log-level": "trace",
   "data-input": "C:/Projects/Rolemaster/rmce/data/",
   "data-output": "C:/Projects/Rolemaster/rmce/data2/",
   "rest-server": {

@@ -308,7 +308,9 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 			const std::string category_id = JsonConverter::getString(category_obj, "category");
 			const SkillCategoryData* category_data = &manager_.get<SkillCategoryData>(category_id);
 			std::set<const SpellListData*> spell_lists = JsonConverter::getDataSet<SpellListData>(category_obj, "spellLists", manager_);
-			ref.spell_list_categories_.insert_or_assign(category_data, std::move(spell_lists));
+			if (category_data && spell_lists.size()) {
+				ref.spell_list_categories_.insert_or_assign(category_data, std::move(spell_lists));
+			}
 		}
 	}
 

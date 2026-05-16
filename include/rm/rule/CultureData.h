@@ -365,7 +365,7 @@ private:
 	std::string description_{};                                                     /**< General description of the culture */
 	const CultureTypeData* culture_type_{};                                         /**< Culture type this culture is based on */
 	bool high_culture_{};                                                           /**< Whether the culture has developed */
-	std::map<std::string, const rm::game::character::LanguageRanks> languages_{}; /**< Language ranks that members of the race learn prior during their adolescence */
+	std::map<std::string, const rm::game::character::LanguageRanks> languages_{};   /**< Language ranks that members of the race learn prior during their adolescence */
 	std::set<const SubcategoriedSkillData*> hobby_skills_{};                        /**< Set of skills that would typically be given skill ranks by adolescents of this culture */
 	std::set<const SkillCategoryData*> hobby_skill_categories_{};                   /**< Set of skill categories that would typically be given skill ranks by adolescents of this culture */
 	std::set<const ProfessionData*> preferred_professions_{};                       /**< Set of preferred professions for members of the culture */

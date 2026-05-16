@@ -209,7 +209,7 @@ void AutoCharacterBuilder::setBaseSpellLists(CharacterBuilder& builder) {
 	LOG_DEBUG("Spell Lists:{}", buffer);
 }
 
-void AutoCharacterBuilder::allocateWeaponCosts(CharacterBuilder& builder) {
+void AutoCharacterBuilder::allocateWeaponCosts(CharacterBuilder& builder) const {
 	PersistentObjectManager& object_manager = *builder.object_factory_;
 
 	// First get the weapon categories and the current costs. We don't care how they are allocated now we just need the set of costs as we will be reallocating them from scratch.
@@ -525,7 +525,6 @@ void AutoCharacterBuilder::ensureTraits(CharacterBuilder& builder) {
 /* ------------------------------------------------------------------ */
 /* Automate stat generation and allocation                            */
 /* ------------------------------------------------------------------ */
-
 void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int primeFloorMin, int numPrimeFloorMin) const {
 	if (builder.built_) {
 		throw std::runtime_error("CharacterBuilder: Cannot auto stats after character has been built.");
@@ -693,6 +692,148 @@ void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int pri
 }
 
 /* ------------------------------------------------------------------ */
+/* Automate hobby choices                                             */
+/* ------------------------------------------------------------------ */
+void AutoCharacterBuilder::autoHobbyChoices(CharacterBuilder& builder) {
+	if (builder.built_) {
+		throw std::runtime_error("CharacterBuilder: Cannot auto hobbies after character has been built.");
+	}
+
+	auto logger = rm::util::Logger::get();
+
+	// This may be the first auto function called so we need to ensure the traits have been initialised
+	ensureTraits(builder);
+
+	/*
+	 * Skill ranks - This is a blunt approach for now where we get the weight of each skill from the available choices and pick the highest ranked skill/category until we run out of ranks to allocate.
+	 */
+
+	// Sort both skills and categories with the highest weights at the top se we can use .begin() to pick the highest weighted option.
+	std::multimap<int, const SubcategoriedSkillData*, std::greater<int>> skill_rank_weights;
+	for (const SubcategoriedSkillData* skill : builder.culture_->hobbySkills()) {
+		if (logger && logger->should_log(spdlog::level::trace)) {
+			LOG_TRACE("AutoCharacterBuilder: Calculating weight for hobby skill {}.", skill->name());
+		}
+		int weight = traitComparisonWeighting(traits_, skill->skillData().traits());
+		skill_rank_weights.emplace(weight, skill);
+	}
+	std::multimap<int, const SkillCategoryData*, std::greater<int>> category_rank_weights;
+	for (const SkillCategoryData* category : builder.culture_->hobbySkillCategories()) {
+		if (logger && logger->should_log(spdlog::level::trace)) {
+			LOG_TRACE("AutoCharacterBuilder: Calculating weight for hobby skill category {}.", category->name());
+		}
+		int weight = traitComparisonWeighting(traits_, category->traits());
+		category_rank_weights.emplace(weight, category);
+	}
+
+	// We are going to look at the skills first and then check if the corresponding category has any ranks and if not adding one to ensure there is no negative bonus and then add the skill bonus.
+	int hobby_skill_ranks = builder.num_hobby_skill_ranks_;
+	while (hobby_skill_ranks > 0) {
+		if (skill_rank_weights.empty() && category_rank_weights.empty()) {
+			LOG_WARN("AutoCharacterBuilder: No hobby skills or categories to allocate for profession {}. This should not happen as there should always be at least some culture preferences to allocate, but we break out of the loop "
+			         "just in case.",
+			         builder.profession_->name());
+			break;
+		}
+
+		// Pick the top weighted
+		int top_skill = skill_rank_weights.empty() ? -1 : skill_rank_weights.begin()->first;
+		int top_category = category_rank_weights.empty() ? -1 : category_rank_weights.begin()->first;
+
+		if (top_category > top_skill) {
+			const SkillCategoryData* category = category_rank_weights.begin()->second;
+			category_rank_weights.erase(category_rank_weights.begin());
+			builder.hobby_category_ranks_[category]++;
+			hobby_skill_ranks--;
+			// We add the category back with half weight to allow for multiple ranks in the same category to be allocated if there are still ranks left to allocate and the category is still the highest weighted option.
+			if (logger && logger->should_log(spdlog::level::debug)) {
+				LOG_DEBUG("AutoCharacterBuilder: Allocated hobby category rank to {}. Remaining hobby skill ranks: {}.", category->name(), hobby_skill_ranks);
+			}
+			category_rank_weights.emplace(top_category / 2, category);
+		} else {
+			const SubcategoriedSkillData* skill = skill_rank_weights.begin()->second;
+			skill_rank_weights.erase(skill_rank_weights.begin());
+			builder.hobby_skill_ranks_[skill]++;
+			hobby_skill_ranks--;
+			// We add the skill back with half weight to allow for multiple ranks in the same category to be allocated if there are still ranks left to allocate and the skill is still the highest weighted option.
+			if (logger && logger->should_log(spdlog::level::debug)) {
+				LOG_DEBUG("AutoCharacterBuilder: Allocated hobby skill rank to {}. Remaining hobby skill ranks: {}.", skill->name(), hobby_skill_ranks);
+			}
+			skill_rank_weights.emplace(top_skill / 2, skill);
+		}
+	}
+
+	/*
+	 * Language ranks - We randomize these selections as this would be game world specific and we have no data on that.
+	 */
+	std::vector<std::string> languages;
+	for (const auto& [language, ranks] : builder.race_->adolescentLanguageAbilities()) {
+		languages.push_back(language);
+	}
+
+	int num_language_ranks = builder.num_adolescent_language_ranks_;
+	while (num_language_ranks > 0) {
+		std::ranges::shuffle(languages, Random::mt);
+		// Select a language at random to add ranks to
+		std::string language_name = languages.back();
+
+		// Get the max ranks we can have in the language
+		LanguageRanks max_language_ranks = builder.race_->adolescentLanguageAbilities().at(language_name);
+
+		// Initialize our chosen language ranks with the correct language, which will set all the ranks to 0
+		LanguageRanks current_ranks{max_language_ranks.language()};
+
+		// Check if we can add any more ranks to this language
+		for (const LanguageRanks& existing_ranks : builder.language_abilities_) {
+			if (existing_ranks.languageId() == max_language_ranks.languageId()) {
+				current_ranks = existing_ranks;
+				break;
+			}
+		}
+
+		// Now check if we have added any adolescent ranks
+		for (const LanguageRanks& adolescent_ranks : builder.adolescent_language_choices_) {
+			if (adolescent_ranks.languageId() == max_language_ranks.languageId()) {
+				if (adolescent_ranks.spokenRanks() > current_ranks.spokenRanks() || adolescent_ranks.writtenRanks() > current_ranks.writtenRanks()) {
+					current_ranks = adolescent_ranks;
+					break;
+				}
+			}
+		}
+
+		// Add the rank to the character if we have not already reached the max ranks for the language. We check both spoken and written ranks as they can be different and we want to ensure we don't exceed the max for either.
+		if (current_ranks.spokenRanks() < max_language_ranks.spokenRanks()) {
+			if (logger && logger->should_log(spdlog::level::debug)) {
+				LOG_DEBUG("AutoCharacterBuilder: Allocated spoken language rank to {}. Remaining language ranks: {}.", current_ranks.language().name(), num_language_ranks - 1);
+			}
+			current_ranks.updateSpokenRanks(1);
+			builder.adolescent_language_choices_.emplace(current_ranks);
+			num_language_ranks--;
+		} else if (current_ranks.writtenRanks() < max_language_ranks.writtenRanks()) {
+			if (logger && logger->should_log(spdlog::level::debug)) {
+				LOG_DEBUG("AutoCharacterBuilder: Allocated written language rank to {}. Remaining language ranks: {}.", current_ranks.language().name(), num_language_ranks - 1);
+			}
+			current_ranks.updateWrittenRanks(1);
+			builder.adolescent_language_choices_.emplace(current_ranks);
+			num_language_ranks--;
+		}
+	}
+
+	/*
+	 * Spell lists - We pick a random list from the own realm open lists
+	 */
+	std::vector<const SpellListData*> list_options = getSpellLists(SpellListType::kOpen, builder.magical_realms_, *builder.object_factory_);
+	if (!list_options.empty()) {
+		std::ranges::shuffle(list_options, Random::mt);
+		const SpellListData* list = list_options.front();
+		if (logger && logger->should_log(spdlog::level::debug)) {
+			LOG_DEBUG("AutoCharacterBuilder: Added adolescent spell list {}.", list->name());
+		}
+		builder.adolescent_spell_list_choice_ = list;
+	}
+}
+
+/* ------------------------------------------------------------------ */
 /* Helper functions                                                   */
 /* ------------------------------------------------------------------ */
 std::vector<const SubcategoriedSkillData*> AutoCharacterBuilder::getSubcategoriesForSkill(CharacterBuilder& builder, const SkillData& skill) {
@@ -825,6 +966,43 @@ std::vector<const SpellListData*> getSpellLists(SpellListType::Type type, const 
 	}
 
 	return spell_lists;
+}
+
+int traitComparisonWeighting(const CharacterTraits& creature, const CharacterTraits& other) {
+	auto logger = rm::util::Logger::get();
+
+	// First we get the alignment which is a measure of how close the traits of the creature and the other are. We start with a base value of 48 which is the minimum alignment possible as the trait values are between 1 and 9 and there are 6
+	// traits so the maximum difference is 8 for each trait which gives a total of 48. We then subtract the absolute difference between each trait value for the creature and the other from this base value to get the final alignment score.
+	//
+	// This gives us a theoretical range of between 0 and 48, but in reality we are much more likely to see values closer to 30 to 40 given that few trait values will have a value of greater than 7 and certainly not for all traits.
+	int alignment{48};
+	alignment -= std::abs(creature.combat_ - other.combat_);
+	alignment -= std::abs(creature.information_ - other.information_);
+	alignment -= std::abs(creature.stealth_ - other.stealth_);
+	alignment -= std::abs(creature.support_ - other.support_);
+	alignment -= std::abs(creature.utility_ - other.utility_);
+	alignment -= std::abs(creature.caster_ - other.caster_);
+
+	// Next we look at the priorities of the creature and see if the ability meets these, we are looking for a high score here so we take the minimum of the trait values for each trait as this will give us a high score if both the creature
+	// and the other have a high value for that trait, but a low score if either of them has a low value for that trait. This means that we are looking for a good match on the traits that are important to the creature.
+	int priority_score{0};
+	priority_score += std::min(creature.combat_, other.combat_);
+	priority_score += std::min(creature.information_, other.information_);
+	priority_score += std::min(creature.stealth_, other.stealth_);
+	priority_score += std::min(creature.support_, other.support_);
+	priority_score += std::min(creature.utility_, other.utility_);
+	priority_score += std::min(creature.caster_, other.caster_);
+
+	int weight{0};
+	// We use the creature's trait as the baseline
+	weight = alignment + (priority_score * 3);
+
+	// Gate the logic to TRACE
+	if (logger && logger->should_log(spdlog::level::trace)) {
+		LOG_TRACE("Trait Comparison: alignment={}, priority_score={}, weight={}", alignment, priority_score, weight);
+	}
+
+	return weight;
 }
 
 void logSkillCategoryCosts(std::map<const SkillDevelopmentCost, int>& category_costs) {
