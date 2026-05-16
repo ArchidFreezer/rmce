@@ -824,6 +824,9 @@ void CharacterBuilder::applyBackgroundChoices() {
 	for (const auto& item : background_items_) {
 		total_items_.push_back(item);
 	}
+
+	setCommunicationCategoryRanks(); // We need to set the ranks for the communication category based on the character's language abilities after applying the background language choices as these may have changed the character's language
+	                                 // abilities which would affect the ranks for the communication category. At this point all "free" language ranks have been applied so we can calculate the starting communication ranks.
 }
 
 /* Utility functions */
@@ -903,6 +906,25 @@ const SkillProgressionTypeData* CharacterBuilder::getPpProgression() {
 		return combined;
 	}
 	return nullptr;
+}
+
+void CharacterBuilder::setCommunicationCategoryRanks() {
+	std::string id = "SKILLCATEGORY_COMMUNICATION";
+	SkillCategoryData& communication_category = object_factory_->get<SkillCategoryData>(id);
+	// loop through the character languages and get the highest number of ranks,
+	int max_ranks{0};
+	for (const auto& language_ability : language_abilities_) {
+		if (language_ability.spokenRanks() > max_ranks) {
+			max_ranks = language_ability.spokenRanks();
+		}
+		if (language_ability.writtenRanks() > max_ranks) {
+			max_ranks = language_ability.writtenRanks();
+		}
+		if (language_ability.somaticRanks() > max_ranks) {
+			max_ranks = language_ability.somaticRanks();
+		}
+	}
+	category_ranks_.insert_or_assign(&communication_category, max_ranks);
 }
 
 /* ------------------------------------------------------------------ */

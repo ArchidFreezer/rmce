@@ -212,7 +212,7 @@ private:
 	/* Basic data                                                         */
 	/* ------------------------------------------------------------------ */
 	bool auto_build_{false}; /**< A boolean indicating whether the character should be automatically built with random/ai choices. This may be set for each step of the build process. */
-	bool built_{false}; /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
+	bool built_{false};      /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
 	bool set_spell_list_categories_{false}; /**< Flag indicating categories for spell lists should be calculated; this is an expensive operation only to be performed when either the character realms or base spell lists have changed. */
 	std::string name_{};                    /**< The name of the character being built. This is used for display purposes and may not be unique. */
 	bool pc_{true};                         /**< A boolean indicating whether the character being built is a player character (PC) or a non-player character (NPC). */
@@ -454,6 +454,18 @@ private:
 	 * @return A pointer to the SkillProgressionTypeData object representing the character's PP progression.
 	 */
 	const SkillProgressionTypeData* getPpProgression();
+
+	/**
+	 * @brief Sets the ranks for the communication skill category based on the character's language abilities.
+	 *
+	 * This function sets the ranks for the communication skill category to the highest number of ranks in any skill the character knows. This is to ensure that the character has enough ability in the communication category to use their
+	 * languare ranks effectively. The communication category ranks are used as a cap for language abilities, preventing the character in from having more ranks in a language than they have in the communication category, which would not
+	 * make sense from a gameplay perspective. By setting the communication category ranks to match the character's language abilities, we ensure that the character can fully utilize their language skills without being limited by an
+	 * artificially low communication category rank.
+	 * 
+	 * This function is called after the background options have been chosen as that is the last point that "free" languages are gained prior to the cap being imposed.
+	 */
+	void setCommunicationCategoryRanks();
 };
 
 /* ------------------------------------------------------------------ */
