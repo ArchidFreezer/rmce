@@ -56,6 +56,10 @@ void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& bu
 		}
 	}
 
+	// We store the biggest ranks for the main weapon types to set the preferred weapon for the character.
+	int max_ranged{0};
+	int max_melee{0};
+	const SubcategoriedSkillData* current_weapon{nullptr};
 	for (const auto& [skill_category_data, skill_rank] : builder.culture_->cultureType().skillCategorySkillRanks()) {
 		std::vector<const SkillData*> category_skills = getCategorySkills(*skill_category_data, *builder.object_factory_);
 		if (category_skills.empty()) {
@@ -74,9 +78,9 @@ void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& bu
 
 		int num_intersections = intersection.size();
 		if (num_intersections > 0) {
-			const SubcategoriedSkillData* subcategoried_skill_data = intersection[Random::get(0, num_intersections - 1)];
-			builder.culture_type_category_skill_ranks_.emplace(subcategoried_skill_data, skill_rank);
-			LOG_TRACE("AutoCharacterBuilder: Setting {} skill ranks to weapon category {} for culture preferred weapon {}.", skill_rank, skill_category_data->name(), subcategoried_skill_data->subcategory().value());
+			current_weapon = intersection[Random::get(0, num_intersections - 1)];
+			builder.culture_type_category_skill_ranks_.emplace(current_weapon, skill_rank);
+			LOG_TRACE("AutoCharacterBuilder: Setting {} skill ranks to weapon category {} for culture preferred weapon {}.", skill_rank, skill_category_data->name(), current_weapon->subcategory().value());
 		} else {
 			int num_category_skills = category_skills.size();
 			const SkillData* chosen_skill = category_skills[Random::get(0, num_category_skills - 1)];
@@ -85,10 +89,27 @@ void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& bu
 			std::vector<const WeaponTypeData*> skill_weapons = getSkillWeapons(*chosen_skill, *builder.object_factory_);
 			int num_skill_weapons = skill_weapons.size();
 			const WeaponTypeData* chosen_weapon = skill_weapons[Random::get(0, num_skill_weapons - 1)];
-			SubcategoriedSkillData* subcategoried_skill_data = &builder.object_factory_->subcategoriedSkillData(skill_id, chosen_weapon->name());
-			builder.culture_type_category_skill_ranks_.emplace(subcategoried_skill_data, skill_rank);
-			LOG_TRACE("AutoCharacterBuilder: Setting {} skill ranks to weapon category {} with no culture preferred weapon {}.", skill_rank, skill_category_data->name(), subcategoried_skill_data->subcategory().value());
+			current_weapon = &builder.object_factory_->subcategoriedSkillData(skill_id, chosen_weapon->name());
+			builder.culture_type_category_skill_ranks_.emplace(current_weapon, skill_rank);
+			LOG_TRACE("AutoCharacterBuilder: Setting {} skill ranks to weapon category {} with no culture preferred weapon {}.", skill_rank, skill_category_data->name(), current_weapon->subcategory().value());
 		}
+
+		// We set this as the characters preferred weapon of the appropriate type if it is the strongest so far.
+		std::string skill_id = current_weapon->skillData().id();
+		bool ranged = (skill_id == "SKILL_WEAPON_MISSILE" || skill_id == "SKILL_WEAPON_THROWN");
+		if (ranged && skill_rank > max_ranged) {
+			preferred_ranged_ = current_weapon;
+			max_ranged = skill_rank;
+		} else if (!ranged && skill_rank > max_melee) {
+			preferred_melee_ = current_weapon;
+			max_melee = skill_rank;
+		}
+	}
+	if (preferred_ranged_) {
+		LOG_DEBUG("AutoCharacterBuilder: Setting preferred ranged weapon to {} based on cultural preferences.", preferred_ranged_->name());
+	}
+	if (preferred_melee_) {
+		LOG_DEBUG("AutoCharacterBuilder: Setting preferred melee weapon to {} based on cultural preferences.", preferred_melee_->name());
 	}
 }
 
@@ -371,6 +392,11 @@ void AutoCharacterBuilder::allocateWeaponCosts(CharacterBuilder& builder) const 
 }
 
 void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
+	// Short circuit if we have already set a preferred armour type from the culture preferences as there is no need to go through the process of weighting the options if we have already made a choice.
+	if (preferred_armour_) {
+		return; // Preferred armour has already been set, so we can skip this step.
+	}
+
 	// We randomise the traits if they have not already been initialised.
 	ensureTraits(builder);
 
@@ -527,7 +553,7 @@ void AutoCharacterBuilder::ensureTraits(CharacterBuilder& builder) {
 /* ------------------------------------------------------------------ */
 void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int primeFloorMin, int numPrimeFloorMin) const {
 	if (builder.built_) {
-		throw std::runtime_error("CharacterBuilder: Cannot auto stats after character has been built.");
+		throw std::runtime_error("CharacterBuilder: Cannot set stats after character has been built.");
 	}
 
 	builder.initial_stats_.clear(); // Clear any existing stats to ensure that there is no double-dippiong of the stat rolls if the function is called multiple times during the character building process.
@@ -696,7 +722,7 @@ void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int pri
 /* ------------------------------------------------------------------ */
 void AutoCharacterBuilder::autoHobbyChoices(CharacterBuilder& builder) {
 	if (builder.built_) {
-		throw std::runtime_error("CharacterBuilder: Cannot auto hobbies after character has been built.");
+		throw std::runtime_error("CharacterBuilder: Cannot set hobbies after character has been built.");
 	}
 
 	auto logger = rm::util::Logger::get();
@@ -830,6 +856,29 @@ void AutoCharacterBuilder::autoHobbyChoices(CharacterBuilder& builder) {
 			LOG_DEBUG("AutoCharacterBuilder: Added adolescent spell list {}.", list->name());
 		}
 		builder.adolescent_spell_list_choice_ = list;
+	}
+}
+
+/* ------------------------------------------------------------------ */
+/* Automate background choices                                             */
+/* ------------------------------------------------------------------ */
+void AutoCharacterBuilder::autoBackgroundChoices(CharacterBuilder& builder) {
+	if (builder.built_) {
+		throw std::runtime_error("CharacterBuilder: Cannot set background choices after character has been built.");
+	}
+
+	int num_options = builder.race_->numBackgroundOptions();
+
+	// We always perform stat gain rolls if we have > 2 choices to make and even then there is a 50% chace to take this approach as it may incrase the number of DPs we have to spend during apprenticeship.
+	if (num_options > 2 || Random::mt() % 2 == 0) {
+		builder.makeBackgroundStatGainRolls();
+		num_options--;
+	}
+
+	// An assumption is being made that characters that are being auto generated will be NPCs so extra money is unlikely to be fo value, but we will add a 5% chance if we have more than 2 options.
+	if (num_options > 2 && Random::mt() % 20 == 0) {
+		builder.backgroundMoneyRoll(-1); // Make a random roll for extra money
+		num_options--;
 	}
 }
 

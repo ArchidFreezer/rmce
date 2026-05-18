@@ -254,62 +254,69 @@ void CharacterOperationsRequestHandler::requestSetBackgroundChoices(http::respon
 			return;
 		}
 		std::string id = json_body.as_object().at("id").as_string().c_str();
+		bool auto_build = json_body.as_object().at("autoBuild").as_bool();
+
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
 
-		// Stat gain rolls
-		bool stat_gains = json_body.as_object().at("statGains").as_bool();
-		if (stat_gains) {
-			builder.makeBackgroundStatGainRolls();
+		if (auto_build) {
+			builder.autoBackgroundChoices();
+		} else {
+			// Stat gain rolls
+			bool stat_gains = json_body.as_object().at("statGains").as_bool();
+			if (stat_gains) {
+				builder.makeBackgroundStatGainRolls();
+			}
+
+			// Extra money roll
+			int extra_money = static_cast<int>(json_body.as_object().at("extraMoney").as_int64());
+			if (extra_money > 1) {
+				builder.backgroundMoneyRoll(100); // putting two points into extra money gives the maximum result
+			} else if (extra_money == 1) {
+				builder.backgroundMoneyRoll(-1); // Make a random roll for extra money
+			}
+
+			// Background languages
+			const auto& languages_json = json_body.as_object().at("backgroundLanguages").as_array();
+			for (const auto& language_json : languages_json) {
+				std::string language_id = language_json.as_object().at("language").as_string().c_str();
+				int somatic = JsonConverter::getInt(language_json.as_object(), "somatic", 0);
+				int spoken = JsonConverter::getInt(language_json.as_object(), "spoken", 0);
+				int written = JsonConverter::getInt(language_json.as_object(), "written", 0);
+
+				LanguageData& language_data = serial_manager_.objectManager().get<LanguageData>(language_id);
+				LanguageRanks language_ability(language_data, spoken, written, somatic);
+				builder.addBackgroundLanguageChoice(std::move(language_ability));
+			}
+
+			// Skill special bonus
+			const auto& skills_json = json_body.as_object().at("backgroundSkillBonus").as_array();
+			for (const auto& skill_json : skills_json) {
+				std::string skill_id = skill_json.as_object().at("id").as_string().c_str();
+				std::optional<std::string> subcategory = JsonConverter::getOptionalString(skill_json.as_object(), "subcategory");
+				int value = JsonConverter::getInt(skill_json.as_object(), "value", 0);
+
+				SubcategoriedSkillData& skill_data = serial_manager_.objectManager().subcategoriedSkillData(skill_id, subcategory);
+				builder.addBackgroundSkillSpecialBonus(&skill_data, value);
+			}
+
+			// Category special bonus
+			const auto& categories_json = json_body.as_object().at("backgroundCategoryBonus").as_array();
+			for (const auto& category_json : categories_json) {
+				std::string category_id = category_json.as_object().at("id").as_string().c_str();
+				int value = JsonConverter::getInt(category_json.as_object(), "value", 0);
+
+				SkillCategoryData& category_data = serial_manager_.objectManager().get<SkillCategoryData>(category_id);
+				builder.addBackgroundCategorySpecialBonus(&category_data, value);
+			}
+
+			std::map<const SpellListData*, int> bonuses = JsonConverter::getDataPrimitiveMap<SpellListData, int>(json_body.as_object(), "spellListSpecialBonuses", serial_manager_.objectManager());
+			builder.setSpellListSpecialBonuses(std::move(bonuses));
+
+			// Special items
+			int item_count = static_cast<int>(json_body.as_object().at("backgroundItemCount").as_int64());
+
+			builder.generateBackgroundItems(item_count);
 		}
-
-		// Extra money roll
-		int extra_money = static_cast<int>(json_body.as_object().at("extraMoney").as_int64());
-		if (extra_money > 1) {
-			builder.backgroundMoneyRoll(100); // putting tow points into extar money gives the maximum result
-		} else if (extra_money == 1) {
-			builder.backgroundMoneyRoll(-1); // Make a random roll for extra money
-		}
-
-		// Background languages
-		const auto& languages_json = json_body.as_object().at("backgroundLanguages").as_array();
-		for (const auto& language_json : languages_json) {
-			std::string language_id = language_json.as_object().at("language").as_string().c_str();
-			int somatic = JsonConverter::getInt(language_json.as_object(), "somatic", 0);
-			int spoken = JsonConverter::getInt(language_json.as_object(), "spoken", 0);
-			int written = JsonConverter::getInt(language_json.as_object(), "written", 0);
-
-			LanguageData& language_data = serial_manager_.objectManager().get<LanguageData>(language_id);
-			LanguageRanks language_ability(language_data, spoken, written, somatic);
-			builder.addBackgroundLanguageChoice(std::move(language_ability));
-		}
-
-		// Skill special bonus
-		const auto& skills_json = json_body.as_object().at("backgroundSkillBonus").as_array();
-		for (const auto& skill_json : skills_json) {
-			std::string skill_id = skill_json.as_object().at("id").as_string().c_str();
-			std::optional<std::string> subcategory = JsonConverter::getOptionalString(skill_json.as_object(), "subcategory");
-			int value = JsonConverter::getInt(skill_json.as_object(), "value", 0);
-
-			SubcategoriedSkillData& skill_data = serial_manager_.objectManager().subcategoriedSkillData(skill_id, subcategory);
-			builder.addBackgroundSkillSpecialBonus(&skill_data, value);
-		}
-
-		// Category special bonus
-		const auto& categories_json = json_body.as_object().at("backgroundCategoryBonus").as_array();
-		for (const auto& category_json : categories_json) {
-			std::string category_id = category_json.as_object().at("id").as_string().c_str();
-			int value = JsonConverter::getInt(category_json.as_object(), "value", 0);
-
-			SkillCategoryData& category_data = serial_manager_.objectManager().get<SkillCategoryData>(category_id);
-			builder.addBackgroundCategorySpecialBonus(&category_data, value);
-		}
-
-		std::map<const SpellListData*, int> bonuses = JsonConverter::getDataPrimitiveMap<SpellListData, int>(json_body.as_object(), "spellListSpecialBonuses", serial_manager_.objectManager());
-		builder.setSpellListSpecialBonuses(std::move(bonuses));
-	
-		// Special items
-		int item_count = static_cast<int>(json_body.as_object().at("backgroundItemCount").as_int64());
-		builder.generateBackgroundItems(item_count);
 
 		// Apply all the existing choices
 		builder.recalculateAggregatedState();

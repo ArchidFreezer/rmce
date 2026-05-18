@@ -947,6 +947,11 @@ void CharacterBuilder::autoHobbyChoices() {
 	auto_build_ = false;
 }
 
+void CharacterBuilder::autoBackgroundChoices() {
+	auto_builder_->autoBackgroundChoices(*this);
+	auto_build_ = false;
+}
+
 /* ------------------------------------------------------------------ */
 /* Free functions                                                     */
 /* ------------------------------------------------------------------ */

@@ -255,6 +255,16 @@ public:
 	 */
 	void autoHobbyChoices(CharacterBuilder& builder);
 
+	/**
+	 * @brief Automatically select background skill choices for the character being built based on the traits defined in this AutoCharacterBuilder object.
+	 *
+	 * Automatically select background skill choices for the character being built based on the traits defined in this AutoCharacterBuilder object. This method deals with the background skill choices for the character being built. The
+	 * choices are governed by the traits defined in this AutoCharacterBuilder object, which are used to weight the selection of skills and other choices for the character being built. The traits are defined on scales of 1 - 9 to allow for
+	 * a median value of 5 to be used for random generation and to allow for more extreme values to be generated for unique characters or MOBs if desired. They are initialised to 0 to indicate that they have not been set yet and to allow
+	 * for the auto generation of these values if they are not set by the caller.
+	 */
+	void autoBackgroundChoices(CharacterBuilder& builder);
+
 private:
 	/* Basic data */
 	std::string name_{""}; /**< The name of this AutoCharacterBuilder object, which is used for display purposes and may not be unique. */
@@ -304,7 +314,6 @@ private:
 
 	std::vector<const SubcategoriedSkillData*> getSubcategoriesForSkill(CharacterBuilder& builder, const SkillData& skill); /* Get the common subcategories for a skill  */
 };
-
 
 /* ------------------------------------------------------------------ */
 /* Free functions                                                     */
