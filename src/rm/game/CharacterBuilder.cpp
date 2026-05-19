@@ -932,6 +932,12 @@ void CharacterBuilder::setCommunicationCategoryRanks() {
 /* ------------------------------------------------------------------ */
 /* Automation                                                         */
 /* ------------------------------------------------------------------ */
+
+void CharacterBuilder::autoCreate() {
+	auto_builder_->autoCreate(*this);
+	auto_build_ = false;
+}
+
 void CharacterBuilder::autoStats(int min, int primeFloorMin, int numPrimeFloorMin) {
 	auto_builder_->autoStats(*this, min, primeFloorMin, numPrimeFloorMin);
 	auto_build_ = false;

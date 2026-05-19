@@ -19,7 +19,9 @@ void CharacterOperationsRequestHandler::handleRequest(const http::request<http::
 	// Get the operation from the path to determine which specific character builder task to perform
 	std::string_view operation = path.extractNextSegment("/rmce/operations/character/");
 
-	if (request.method() == http::verb::post && operation == "primary-definition")
+	if (request.method() == http::verb::post && operation == "auto-primary")
+		requestAutoPrimary(response, request);
+	else if (request.method() == http::verb::post && operation == "primary-definition")
 		requestPrimaryDefinition(response, request);
 	else if (request.method() == http::verb::post && operation == "primary-choices")
 		requestPrimaryChoices(response, request);
@@ -41,6 +43,38 @@ void CharacterOperationsRequestHandler::handleRequest(const http::request<http::
 		response.result(http::status::not_found);
 		response.set(http::field::content_type, "application/json");
 		response.body() = R"({"error": "Endpoint not found", "message": "The requested endpoint does not exist"})";
+	}
+}
+
+void CharacterOperationsRequestHandler::requestAutoPrimary(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+	using namespace rm::game::character;
+	using namespace rm::serial;
+	try {
+		json::value json_body = json::parse(request.body());
+		if (!json_body.is_object()) {
+			response.result(http::status::bad_request);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Invalid request body", "message": "Expected a JSON object"})";
+			return;
+		}
+		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
+		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
+		std::string id = deserialized.id();
+		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
+
+		builder.autoCreate();
+
+		// Now we have all the updates to the character we can create the character object at level 0.
+		Character& character = builder.build();
+
+		serial_manager_.objectManager().deleteObject(id); // We can delete the builder from the cache as it is no longer needed after the character has been built
+
+		response.result(http::status::ok);
+		response.set(http::field::content_type, "application/json");
+		response.body() = serial_manager_.serializeObject<Character>(character);
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to auto-generate primary choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
 	}
 }
 

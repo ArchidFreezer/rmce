@@ -53,6 +53,14 @@ public:
 	/**
 	 * @brief Automatically make choices based on the initial data such as profession and culture.
 	 *
+	 * This method is used to automate the initial choices based on the profession and culture in the character creation process. It will make choices for the primary options, hobby options, and background options based on the initial
+	 * data provided for the character being built.
+	 */
+	void autoCreate();
+
+	/**
+	 * @brief Automatically make choices based on the initial data such as profession and culture.
+	 *
 	 * This method is used to automate the initial choices based on the profession and culture in the character creation process.
 	 */
 	void autoPrimaryChoices();

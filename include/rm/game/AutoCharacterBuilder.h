@@ -42,6 +42,16 @@ public:
 	AutoCharacterBuilder() = default; /**< Default constructor */
 
 	/**
+	 * @brief Automatically make choices based on the initial data such as profession and culture.
+	 *
+	 * This method is used to automate the initial choices based on the profession and culture in the character creation process. It will make choices for the primary options, hobby options, and background options based on the initial
+	 * data provided for the character being built.
+	 *
+	 * @param builder The CharacterBuilder object for which to automatically generate choices. This builder will be modified by this function to set the generated choices for the character being built.
+	 */
+	void autoCreate(CharacterBuilder& builder);
+
+	/**
 	 * @brief Automatically roll stats and assign them to the character being built.
 	 *
 	 * This method is used to automate the stat generation step. It will roll temporary and potential values and assign them to character stats based on the chosen profession.

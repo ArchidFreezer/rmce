@@ -7,6 +7,25 @@
 
 namespace rm::game::character {
 
+/* ---------------------------------------------------------------------------------------- */
+/* Automate the complete creation based on the initial data such as profession and culture. */
+/* ---------------------------------------------------------------------------------------- */
+	void AutoCharacterBuilder::autoCreate(CharacterBuilder& builder) {
+		if (builder.built_) {
+			throw std::runtime_error("CharacterBuilder: Cannot auto create after character has been built.");
+		}
+		autoPrimaryChoices(builder);
+	    autoStats(builder);
+	    builder.recalculateAggregatedState();
+	    builder.auto_build_modifier_ = true;
+	    builder.auto_height_ = true;
+	    builder.generatePhysique();
+		autoHobbyChoices(builder);
+	    builder.recalculateAggregatedState();
+	    autoBackgroundChoices(builder);
+	    builder.recalculateAggregatedState();
+    }
+
 /* --------------------------------------------------------------------------------- */
 /* Automate the choices based on the initial data such as profession and culture.    */
 /* --------------------------------------------------------------------------------- */
@@ -609,7 +628,7 @@ void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int pri
 	for (auto stat_type : archid::enum_range(StatType::kAgility, StatType::kStrength)) {
 		stat_weights[stat_type] = 0;
 		if (std::ranges::contains(builder.profession_->stats(), stat_type)) {
-			stat_weights[stat_type] += 10; // Prime stats get a big boost to ensure they are prioritized in the assignment
+			stat_weights[stat_type] += 15; // Prime stats get a big boost to ensure they are prioritized in the assignment
 		}
 		if (StatType::isDevelopment(stat_type)) {
 			stat_weights[stat_type] += 3; // Development stats get a boost but should not be a major priority.
@@ -848,14 +867,16 @@ void AutoCharacterBuilder::autoHobbyChoices(CharacterBuilder& builder) {
 	/*
 	 * Spell lists - We pick a random list from the own realm open lists
 	 */
-	std::vector<const SpellListData*> list_options = getSpellLists(SpellListType::kOpen, builder.magical_realms_, *builder.object_factory_);
-	if (!list_options.empty()) {
-		std::ranges::shuffle(list_options, Random::mt);
-		const SpellListData* list = list_options.front();
-		if (logger && logger->should_log(spdlog::level::debug)) {
-			LOG_DEBUG("AutoCharacterBuilder: Added adolescent spell list {}.", list->name());
+	if (builder.num_adolescent_spell_list_ranks_ > 0) {
+		std::vector<const SpellListData*> list_options = getSpellLists(SpellListType::kOpen, builder.magical_realms_, *builder.object_factory_);
+		if (!list_options.empty()) {
+			std::ranges::shuffle(list_options, Random::mt);
+			const SpellListData* list = list_options.front();
+			if (logger && logger->should_log(spdlog::level::debug)) {
+				LOG_DEBUG("AutoCharacterBuilder: Added adolescent spell list {}.", list->name());
+			}
+			builder.adolescent_spell_list_choice_ = list;
 		}
-		builder.adolescent_spell_list_choice_ = list;
 	}
 }
 

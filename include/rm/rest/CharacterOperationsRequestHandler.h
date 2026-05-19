@@ -45,6 +45,17 @@ private:
 	PersistentObjectSerializationManager& serial_manager_;
 
 	/**
+	 * @brief Requests the automatic generation of a character based on provided primary definitions.
+	 *
+	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with parameters that define the initial choices for character creation.
+	 * The function will take the provided primary definitions and automatically generate a completed level 0 character based on them.
+	 *
+	 * @param response The HTTP response object to populate with the result of the operation.
+	 * @param request The HTTP request containing the data for the operation in its body.
+	 */
+	void requestAutoPrimary(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+
+	/**
 	 * @brief Requests the generation of initial character creation choices based on provided parameters.
 	 *
 	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with parameters that define the initial choices for character creation.
