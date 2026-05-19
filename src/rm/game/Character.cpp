@@ -133,7 +133,7 @@ void Character::updateMaxHits() {
 }
 
 void Character::updateMaxPowerPoints() {
-	max_power_points_ = skillBonus(*power_point_skill_);
+	max_power_points_ = std::max(0, skillBonus(*power_point_skill_));
 }
 
 void Character::updateDevelopmentPoints() {
