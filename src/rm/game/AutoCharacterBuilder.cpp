@@ -872,12 +872,94 @@ void AutoCharacterBuilder::autoBackgroundChoices(CharacterBuilder& builder) {
 	// We always perform stat gain rolls if we have > 2 choices to make and even then there is a 50% chace to take this approach as it may incrase the number of DPs we have to spend during apprenticeship.
 	if (num_options > 2 || Random::mt() % 2 == 0) {
 		builder.makeBackgroundStatGainRolls();
+		LOG_DEBUG("AutoCharacterBuilder: Made background stat gain rolls for {} options.", num_options);
 		num_options--;
 	}
 
-	// An assumption is being made that characters that are being auto generated will be NPCs so extra money is unlikely to be fo value, but we will add a 5% chance if we have more than 2 options.
+	// An assumption is being made that characters that are being auto generated will be NPCs so extra money is unlikely to be of value, but we will add a 5% chance if we have more than 2 options.
 	if (num_options > 2 && Random::mt() % 20 == 0) {
 		builder.backgroundMoneyRoll(-1); // Make a random roll for extra money
+		LOG_DEBUG("AutoCharacterBuilder: Made background money roll for {} options.", num_options);
+		num_options--;
+	}
+
+	// Even for NPCs additional items can be useful so we will select at least 1 if we have more than one option left
+	if (num_options > 1) {
+		builder.generateBackgroundItems(1); // Make a random roll for an extra item
+		LOG_DEBUG("AutoCharacterBuilder: Made background item roll for {} options.", num_options);
+		num_options--;
+	}
+
+	// We now select randomly for the remaining options, The choices come from the following list:
+	// 1. Skill bonus
+	// 2. Category bonus
+	// 3. Extra item
+	// 4. Spell List bonus (for casters only)
+	int range = (traits_.caster_ > 5 && Random::get(1, 100) <= 10) ? 4 : 3; // Casters have a 10% chance of an extra option for spell list bonus so we need to adjust the range of our random selection accordingly.
+	bool used_combat_bonus{false};           // We don't want to give multiple combat bonuses so we track it here.
+	while (num_options > 0) {
+		int choice = Random::get(1, range);
+		if (choice == 1) {
+			if (traits_.combat_ > 5 && !used_combat_bonus) { // If the character is combat focussed use that for the bonus
+				if (combat_closeness_ > 5) {
+					builder.addBackgroundSkillSpecialBonus(preferred_melee_, 10);
+					used_combat_bonus = true;
+					LOG_DEBUG("AutoCharacterBuilder: Made background skill bonus for preferred melee weapon.");
+				} else {
+					builder.addBackgroundSkillSpecialBonus(preferred_ranged_, 10);
+					used_combat_bonus = true;
+					LOG_DEBUG("AutoCharacterBuilder: Made background skill bonus for preferred ranged weapon.");
+				}
+			} else {
+				// Pick a random skill from those that have ranks.
+				size_t random_index = Random::get(0, builder.skill_ranks_.size() - 1);
+
+				// Advance the iterator to the randomly selected index
+				auto it = builder.skill_ranks_.begin();
+				std::ranges::advance(it, random_index);
+				builder.addBackgroundSkillSpecialBonus(it->first, 10);
+				LOG_DEBUG("AutoCharacterBuilder: Made background skill bonus for {}.", it->first->name());
+			}
+		} else if (choice == 2) {
+			if (traits_.combat_ > 5 && !used_combat_bonus) { // If the character is combat focussed use that for the bonus
+				if (combat_closeness_ > 5) {
+					builder.addBackgroundCategorySpecialBonus(&preferred_melee_->skillData().category(), 10);
+					used_combat_bonus = true;
+					LOG_DEBUG("AutoCharacterBuilder: Made background category bonus for preferred melee weapon.");
+				} else {
+					builder.addBackgroundCategorySpecialBonus(&preferred_ranged_->skillData().category(), 10);
+					used_combat_bonus = true;
+					LOG_DEBUG("AutoCharacterBuilder: Made background category bonus for preferred ranged weapon.");
+				}
+			} else {
+				// Pick a random skill from those that have ranks.
+				size_t random_index = Random::get(0, builder.category_ranks_.size() - 1);
+
+				// Advance the iterator to the randomly selected index
+				auto it = builder.category_ranks_.begin();
+				std::ranges::advance(it, random_index);
+				builder.addBackgroundCategorySpecialBonus(it->first, 10);
+				LOG_DEBUG("AutoCharacterBuilder: Made background category bonus for {}.", it->first->name());
+			}
+		} else if (choice == 3) {
+			builder.generateBackgroundItems(1); // Make a random roll for an extra item
+			LOG_DEBUG("AutoCharacterBuilder: Made background item roll for {} options.", num_options);
+		} else if (choice == 4) { // This should be rare even for casters
+			// Pick a random list formn those known.
+			size_t random_index = Random::get(0, builder.spell_list_ranks_.size() - 1);
+
+			// Advance the iterator to the randomly selected index
+			auto it = builder.spell_list_ranks_.begin();
+			std::ranges::advance(it, random_index);
+
+			std::map<const SpellListData*, int> bonuses = {{it->first, 10}};
+			builder.setSpellListSpecialBonuses(std::move(bonuses));
+
+			// Only do this once
+			range--;
+
+			LOG_DEBUG("AutoCharacterBuilder: Made background spell list roll for {} options.", num_options);
+		}
 		num_options--;
 	}
 }
