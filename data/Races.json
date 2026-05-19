@@ -481,7 +481,7 @@
                 },
                 {
                     "id" : "Disease",
-                    "value" : -100
+                    "value" : 100
                 },
                 {
                     "id" : "Essence",
@@ -493,7 +493,7 @@
                 },
                 {
                     "id" : "Poison",
-                    "value" : -10
+                    "value" : 10
                 }
             ],
             "statBonuses" : [
