@@ -49,51 +49,7 @@ json::value AnimalSerializer::serializeObject(const AnimalData& ref) const {
 	}
 
 	// Location data
-	{
-		rm::game::Location location = ref.location();
-		JsonConverter::NestedBuilder location_builder = JsonConverter::createNested(obj).beginObject("location");
-		if (location.features().size()) {
-			std::set<std::string> features_str{};
-			for (const auto& feature : location.features()) {
-				features_str.emplace(EnvironmentType::toString(feature));
-			}
-			if (features_str.size())
-				location_builder.setStringArray("features", features_str);
-		}
-		if (location.terrains().size()) {
-			std::set<std::string> terrains_str{};
-			for (const auto& terrain : location.terrains()) {
-				terrains_str.emplace(EnvironmentType::toString(terrain));
-			}
-			if (terrains_str.size())
-				location_builder.setStringArray("terrains", terrains_str);
-		}
-		if (location.vegetation().size()) {
-			std::set<std::string> vegetation_str{};
-			for (const auto& vegetation : location.vegetation()) {
-				vegetation_str.emplace(EnvironmentType::toString(vegetation));
-			}
-			if (vegetation_str.size())
-				location_builder.setStringArray("vegetation", vegetation_str);
-		}
-		if (location.water().size()) {
-			std::set<std::string> water_str{};
-			for (const auto& water : location.water()) {
-				water_str.emplace(EnvironmentType::toString(water));
-			}
-			if (water_str.size())
-				location_builder.setStringArray("waterSources", water_str);
-		}
-		if (location.climates().size()) {
-			std::set<std::string> climates_str{};
-			for (const auto& climate : location.climates()) {
-				climates_str.emplace(climate->id());
-			}
-			if (climates_str.size())
-				location_builder.setStringArray("climates", climates_str);
-		}
-		location_builder.endObject();
-	}
+	JsonConverter::nestLocation(obj, "location", ref.location());
 
 	// Standard attacks
 	if (ref.attacks().size()) {
@@ -274,38 +230,9 @@ const AnimalData& AnimalSerializer::deserializeObject(json::object& jsonObj) con
 		}
 	}
 
-	{
-		rm::game::Location location{};
-		std::set<std::string> features_str = JsonConverter::getNestedStringArray(jsonObj, "location/features");
-		for (const auto& feature_str : features_str) {
-			EnvironmentType::Feature feature{};
-			fromString(feature_str, feature);
-			location.addFeature(feature);
-		}
-		std::set<std::string> terrains_str = JsonConverter::getNestedStringArray(jsonObj, "location/terrains");
-		for (const auto& terrain_str : terrains_str) {
-			EnvironmentType::Terrain terrain{};
-			fromString(terrain_str, terrain);
-			location.addTerrain(terrain);
-		}
-		std::set<std::string> vegetation_str = JsonConverter::getNestedStringArray(jsonObj, "location/vegetation");
-		for (const auto& vegetation_str : vegetation_str) {
-			EnvironmentType::Vegetation vegetation{};
-			fromString(vegetation_str, vegetation);
-			location.addVegetation(vegetation);
-		}
-		std::set<std::string> water_str = JsonConverter::getNestedStringArray(jsonObj, "location/waterSources");
-		for (const auto& water_str : water_str) {
-			EnvironmentType::Water water{};
-			fromString(water_str, water);
-			location.addWater(water);
-		}
-		std::set<std::string> climates_str = JsonConverter::getNestedStringArray(jsonObj, "location/climates");
-		for (const auto& climate_str : climates_str) {
-			location.addClimate(&manager_.get<ClimateData>(climate_str));
-		}
-		ref.setLocation(location);
-	}
+	// Location data
+	rm::game::Location location = JsonConverter::getLocation(jsonObj, "location", manager_);
+	ref.setLocation(location);
 
 	NumberMatcherFactory number_matcher{};
 
