@@ -1,130 +1,481 @@
 {
     "poisons" : [
         {
+            "id" : "POISON_ACAANA",
+            "name" : "Acaana",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 10,
+            "levelVariance" : "E",
+            "notes" : "Black paste affects nervous system.\nExtreme effect destroys nervous system and kills instantly.",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_ASGURASH",
+            "name" : "Asgurash",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 3,
+            "levelVariance" : "F",
+            "notes" : "Brownish red snake venom.\nModerate effect is upper body paralysis",
+            "maxSeverity" : "Moderate"
+        },
+        {
+            "id" : "POISON_BARGOLITH",
+            "name" : "Bargolith",
+            "type" : "POISONTYPE_CONVERSION",
+            "level" : 5,
+            "levelVariance" : "B",
+            "notes" : "Bluish juice causes victim's body to heat up.\nSevere effects results in spontaneous combustion.\nComes from a phosphorescent green firefly",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_BRITHAGRUTH",
+            "name" : "Brithagruth",
+            "type" : "POISONTYPE_CONVERSION",
+            "level" : 2,
+            "levelVariance" : "A",
+            "notes" : "Black venom causes hardening of tendons in 1-4 appendages.\nSevere effects make appendage useless",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_CARNEGURTH",
+            "name" : "Carnegurth",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 1,
+            "levelVariance" : "C",
+            "notes" : "Reddish juice causes massive blood clotting",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_CATHAANA",
+            "name" : "Cathaana",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 1,
+            "levelVariance" : "D",
+            "notes" : "White powder instantly causes mild euphoria (victim at -50 action for 1-10 rounds).\nExtreme effect is that brain is destroyed after 1-10 minutes",
+            "maxSeverity" : "Extreme"
+        },
+        {
             "id" : "POISON_COBRA_VENOM",
             "name" : "Cobra Venom",
             "type" : "POISONTYPE_NERVE",
             "level" : 4,
-            "levelVariance" : "A"
+            "levelVariance" : "A",
+            "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_DYNALLCA",
+            "name" : "Dynallca",
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 3,
+            "levelVariance" : "B",
+            "notes" : "Tan paste affects hearing and gives 1-10 hits.\nSevere general effect destroys hearing.",
+            "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_GALENAANA",
+            "name" : "Galenaana",
+            "type" : "POISONTYPE_RESPIRATORY",
+            "level" : 9,
+            "levelVariance" : "D",
+            "notes" : "Green powder.\nMax of Severe effects (except for elves who can suffer Extreme effects)",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_GEMSTING_VENOM",
             "name" : "Gemsting Venom",
             "type" : "POISONTYPE_RESPIRATORY",
             "level" : 6,
-            "levelVariance" : "A"
+            "levelVariance" : "A",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_GILA_MONSTER_VENOM",
             "name" : "Gila Monster Venom",
             "type" : "POISONTYPE_NERVE",
             "level" : 3,
-            "levelVariance" : "B"
+            "levelVariance" : "B",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_HENUIAL",
+            "name" : "Henuial",
+            "type" : "POISONTYPE_CONVERSION",
+            "level" : 6,
+            "levelVariance" : "E",
+            "notes" : "Yellow venom acts on victim's eyes.\nSevere effects converts optic juices to honey",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_HITHIGIRITH",
+            "name" : "Hith-I-Girith",
+            "type" : "POISONTYPE_RESPIRATORY",
+            "level" : 4,
+            "levelVariance" : "C",
+            "notes" : "Mist/vapour from tree acts as depressant causing immediate and continuing sleep.\nThere are no other effects.",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_HORNED_SNAKE_VENOM",
             "name" : "Horned Snake Venom",
             "type" : "POISONTYPE_CONVERSION",
             "level" : 6,
-            "levelVariance" : "D"
+            "levelVariance" : "D",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_HORSE_VIPER_VENOM",
             "name" : "Horse Viper Venom",
             "type" : "POISONTYPE_MUSCLE",
             "level" : 5,
-            "levelVariance" : "B"
+            "levelVariance" : "B",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_JADEBACK_VENOM",
             "name" : "Jadeback Venom",
             "type" : "POISONTYPE_REDUCTION",
             "level" : 4,
-            "levelVariance" : "B"
+            "levelVariance" : "B",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_JEGGA",
+            "name" : "Jegga",
+            "type" : "POISONTYPE_RESPIRATORY",
+            "level" : 7,
+            "levelVariance" : "B",
+            "notes" : "Brown paste gives 1-100 hits.",
+            "maxSeverity" : "Mild"
+        },
+        {
+            "id" : "POISON_JEGGARUKH",
+            "name" : "Jeggarukh",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 6,
+            "levelVariance" : "B",
+            "notes" : "Black powder gives 10-100 hits.",
+            "maxSeverity" : "Moderate"
+        },
+        {
+            "id" : "POISON_JITSU",
+            "name" : "Jitsu",
+            "type" : "POISONTYPE_RESPIRATORY",
+            "level" : 5,
+            "levelVariance" : "B",
+            "notes" : "Yellow venom gives 1-50 hits.",
+            "maxSeverity" : "Mild"
+        },
+        {
+            "id" : "POISON_JITSUTYR",
+            "name" : "Jitsutyr",
+            "type" : "POISONTYPE_RESPIRATORY",
+            "level" : 2,
+            "levelVariance" : "A",
+            "notes" : "Tan paste.\nExtreme effects destroys lungs and kills in 1-100 rounds",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_JUTH",
+            "name" : "Juth",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 2,
+            "levelVariance" : "B",
+            "notes" : "Severe effect is insanity in 1-100 weeks",
+            "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_KAKTU",
+            "name" : "Kaktu",
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 1,
+            "levelVariance" : "A",
+            "notes" : "Affects 1-4 appendages, with Severe inflicting loss of 1-100 in temp Agility",
+            "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_KARFAR",
+            "name" : "Karfar",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 7,
+            "levelVariance" : "C",
+            "notes" : "Reddish paste causes heart to malfunction.\nAll effects begin in 2-12 rounds",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_KLY",
+            "name" : "Kly",
+            "type" : "POISONTYPE_RESPIRATORY",
+            "level" : 3,
+            "levelVariance" : "F",
+            "notes" : "Brown juice gives 3-300 hits.",
+            "maxSeverity" : "Mild"
+        },
+        {
+            "id" : "POISON_KLYTUN",
+            "name" : "Klytun",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 5,
+            "levelVariance" : "A",
+            "notes" : "Golden paste causes 1-10 day coma.\nEffects begin after all general effects have begun",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_LHUGRUTH",
+            "name" : "Lhugruth",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 10,
+            "levelVariance" : "B",
+            "notes" : "Grey/black blood affects exposed areas. \nSevere effects (dissolves inflicted area in 1-10 rounds)\nAffects metal and organic material, not glass, sand and pottery",
+            "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_MUILFANA",
+            "name" : "Muilfana",
+            "type" : "POISONTYPE_CONVERSION",
+            "level" : 2,
+            "levelVariance" : "C",
+            "notes" : "Orange tree sap affects mucous membranes.\nSevere affects turns mucous to acid (blinds, or destroys windpipe and oesophagus)",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_NIMNAUR",
+            "name" : "Nimnaur",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 3,
+            "levelVariance" : "A",
+            "notes" : "Milky white juices affect organs.\nSevere effects (liquefies one organ in 1-10 minutes)",
+            "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_ONDOHITHUI",
+            "name" : "Ondohithui",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 3,
+            "levelVariance" : "D",
+            "notes" : "Blue/grey paste causes dehydration.\nExtreme effect is fatal in 1-10 minutes",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_ONKOKAMBA",
+            "name" : "Onkokamba",
+            "type" : "POISONTYPE_CONVERSION",
+            "level" : 2,
+            "levelVariance" : "C",
+            "notes" : "Green venom acts on appendages.\nSevere effects turns 1-4 appendages into stone",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_PLAYPUS_VENOM",
             "name" : "Platypus Venom",
             "type" : "POISONTYPE_MUSCLE",
             "level" : 5,
-            "levelVariance" : "B"
+            "levelVariance" : "B",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_PORTUGUESE_MAN_OF_WAR_VENOM",
             "name" : "Portuguese Man-of-War Venom",
             "type" : "POISONTYPE_MUSCLE",
             "level" : 3,
-            "levelVariance" : "C"
+            "levelVariance" : "C",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_RUTHIIAUR",
+            "name" : "Ruth-I-Iaur",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 4,
+            "levelVariance" : "C",
+            "notes" : "Brownish cave-drake saliva.\nSevere effects include erosion of nervous system in 1-20 rounds and victim left at -50 to -100 activity",
+            "maxSeverity" : "Severe"
         },
         {
             "id" : "POISON_SCORPION_VENOM",
             "name" : "Scorpion Venom",
             "type" : "POISONTYPE_RESPIRATORY",
             "level" : 3,
-            "levelVariance" : "D"
+            "levelVariance" : "D",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_SCRA_PREN_VENOM",
             "name" : "Scra Pren Venom",
             "type" : "POISONTYPE_CIRCULATORY",
             "level" : 4,
-            "levelVariance" : "B"
+            "levelVariance" : "B",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_SEA_ANEMONE_VENOM",
             "name" : "Sea Anemone Venom",
             "type" : "POISONTYPE_MUSCLE",
             "level" : 1,
-            "levelVariance" : "B"
+            "levelVariance" : "B",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_SEA_SNAKE_VENOM",
             "name" : "Sea Snake Venom",
             "type" : "POISONTYPE_NERVE",
             "level" : 6,
-            "levelVariance" : "A"
+            "levelVariance" : "A",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_SHARDUVAAK",
+            "name" : "Sharduvaak",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 3,
+            "levelVariance" : "E",
+            "notes" : "Brown liquid slows blood flow and victim needs double usual sleep until fully recovered.",
+            "maxSeverity" : "Moderate"
+        },
+        {
+            "id" : "POISON_SHARKASAR",
+            "name" : "Sharkasar",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 10,
+            "levelVariance" : "D",
+            "notes" : "Brown paste gives 1-10 hits",
+            "maxSeverity" : "Moderate"
+        },
+        {
+            "id" : "POISON_SILMAANA",
+            "name" : "Silmaana",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 9,
+            "levelVariance" : "C",
+            "notes" : "Silver powder scars skin.\nGives 2-20 hits.",
+            "maxSeverity" : "Moderate"
+        },
+        {
+            "id" : "POISON_SLIRD",
+            "name" : "Slird",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 2,
+            "levelVariance" : "C",
+            "notes" : "Acts in 1-2 rounds.  \nModerate effects: victim loses feeling in 1-6 extremities (head, hands, genitals…) for 1-100 days",
+            "maxSeverity" : "Moderate"
+        },
+        {
+            "id" : "POISON_SLOTA",
+            "name" : "Slota",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 5,
+            "levelVariance" : "A",
+            "notes" : "Extreme effect is slow (1 day) paralysis and death (1-10 days)",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_SOLDIER_ANT_VENOM",
             "name" : "Soldier Ant Venom",
             "type" : "POISONTYPE_RESPIRATORY",
             "level" : 1,
-            "levelVariance" : "C"
+            "levelVariance" : "C",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_SPIDER_VENOM",
             "name" : "Spider Venom",
             "type" : "POISONTYPE_MUSCLE",
             "level" : 1,
-            "levelVariance" : "C"
+            "levelVariance" : "C",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_STARFISH_VENOM",
             "name" : "Starfish Venom",
             "type" : "POISONTYPE_NERVE",
             "level" : 2,
-            "levelVariance" : "B"
+            "levelVariance" : "B",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_STINGRAY_VENOM",
             "name" : "Stingray Venom",
             "type" : "POISONTYPE_NERVE",
             "level" : 2,
-            "levelVariance" : "B"
+            "levelVariance" : "B",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_TAYNAGA",
+            "name" : "Taynaga",
+            "type" : "POISONTYPE_CONVERSION",
+            "level" : 8,
+            "levelVariance" : "D",
+            "notes" : "Brownish powder sterilises and gives 5-50 hits.",
+            "maxSeverity" : "Moderate"
         },
         {
             "id" : "POISON_TENTMORSE_VENOM",
             "name" : "Tentmorse Venom",
             "type" : "POISONTYPE_MUSCLE",
             "level" : 3,
-            "levelVariance" : "C"
+            "levelVariance" : "C",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_TRUSA",
+            "name" : "Trusa",
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 4,
+            "levelVariance" : "C",
+            "notes" : "Mild effect is blindness in 1-2 eyes.\nModerate effect is complete blindness and coma.\nSevere effect is death.",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_ULACAANA",
+            "name" : "Ul-acaana",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 20,
+            "levelVariance" : "A",
+            "notes" : "Extreme effects result in destruction of nervous system (paralysed instantly; dead in 1-10 minutes)",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_URAANA",
+            "name" : "Uraana",
+            "type" : "POISONTYPE_RESPIRATORY",
+            "level" : 6,
+            "levelVariance" : "A",
+            "notes" : "Creamy paste gives 3-30 hits.",
+            "maxSeverity" : "Mild"
         },
         {
             "id" : "POISON_VIPER_VENOM",
             "name" : "Viper Venom",
             "type" : "POISONTYPE_MUSCLE",
             "level" : 2,
-            "levelVariance" : "B"
+            "levelVariance" : "B",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_VURAANA",
+            "name" : "Vuraana",
+            "type" : "POISONTYPE_RESPIRATORY",
+            "level" : 2,
+            "levelVariance" : "A",
+            "notes" : "Pinkish paste delivers 1-100 hits.",
+            "maxSeverity" : "Mild"
+        },
+        {
+            "id" : "POISON_WEKBAAS",
+            "name" : "Wek-baas",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 5,
+            "levelVariance" : "D",
+            "notes" : "Acts in 1-100 rounds\nMild effect is deep sleep.\nModerate effect is degeneration of balance and hearing (-1 - -100 Agility and -50 to perception).\nSevere effect is total paralysis.",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_ZAGANZAR",
+            "name" : "Zaganzar",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 5,
+            "levelVariance" : "H",
+            "notes" : "Bluish extract.\nSevere effect is to blind by reducing optic nerve to water.\nGives 1-10 hits.",
+            "maxSeverity" : "Severe"
         }
     ]
 }

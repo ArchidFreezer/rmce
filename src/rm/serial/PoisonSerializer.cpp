@@ -11,6 +11,10 @@ json::value PoisonSerializer::serializeObject(const PoisonData& ref) const {
 	JsonConverter::setString(obj, "type", ref.type().id());
 	JsonConverter::setInt(obj, "level", ref.averageLevel());
 	JsonConverter::setString(obj, "levelVariance", LevelVarianceType::toString(ref.levelVarianceType()));
+	if (!ref.notes().empty()) {
+		JsonConverter::setString(obj, "notes", ref.notes());
+	}
+	JsonConverter::setString(obj, "maxSeverity", DiseasePoisonSeverityType::toString(ref.maxSeverity()));
 
 	return obj;
 }
@@ -27,8 +31,15 @@ const PoisonData& PoisonSerializer::deserializeObject(json::object& jsonObj) con
 
 	// Get the level variance type based on the string value in the json file and set it
 	LevelVarianceType::Type level_variance_type{};
-	LevelVarianceType::fromString(JsonConverter::getString(jsonObj, "levelVariance"), level_variance_type);
+	LevelVarianceType::fromString(JsonConverter::getString(jsonObj, "levelVariance", "None"), level_variance_type);
 	ref.setLevelVarianceType(level_variance_type);
+
+	ref.setNotes(JsonConverter::getString(jsonObj, "notes", ""));
+
+	// Get the maximum severity based on the string value in the json file and set it
+	DiseasePoisonSeverityType::Type max_severity{};
+	DiseasePoisonSeverityType::fromString(JsonConverter::getString(jsonObj, "maxSeverity", "Extreme"), max_severity);
+	ref.setMaxSeverity(max_severity);
 
 	return ref;
 }

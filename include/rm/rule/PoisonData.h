@@ -115,11 +115,45 @@ public:
 		return level_variance_type_;
 	}
 
+	/**
+	 * @brief Set any additional notes about the poison
+	 * @param notes Additional notes about the poison
+	 */
+	void setNotes(std::string_view notes) {
+		notes_ = notes;
+	}
+
+	/**
+	 * @brief Get any additional notes about the poison
+	 * @return Additional notes about the poison as a string reference
+	 */
+	const std::string& notes() const {
+		return notes_;
+	}
+
+	/**
+	 * @brief Set the maximum severity of the symptoms caused by the poison, used for determining the number of rounds before the symptoms of the poison start to take effect.
+	 * @param max_severity The maximum severity of the symptoms caused by the poison, used for determining the number of rounds before the symptoms of the poison start to take effect.
+	 */
+	void setMaxSeverity(DiseasePoisonSeverityType::Type max_severity) {
+		max_severity_ = max_severity;
+	}
+
+	/**
+	 * @brief Get the maximum severity of the symptoms caused by the poison, used for determining the number of rounds before the symptoms of the poison start to take effect.
+	 * @return The maximum severity of the symptoms caused by the poison, used for determining the number of rounds before the symptoms of the poison start to take effect.
+	 */
+	DiseasePoisonSeverityType::Type maxSeverity() const {
+		return max_severity_;
+	}
+
 private:
-	std::string name_{};                            /**< The name of the poison type, used for flavour purposes. */
-	int average_level_{};                           /**< The average level of the poison, used for determining the severity of the symptoms caused by the poison. */
-	const PoisonTypeData* poison_type_data_{};      /**< Pointer to the PoisonTypeData object that represents the type of poison. This is used to determine where in the body the poison affects and the symptoms it causes. */
-	LevelVarianceType::Type level_variance_type_{}; /**< The type of level variance to determine tha actual level of an instance of this poison. */
+	std::string name_{};                             /**< The name of the poison type, used for flavour purposes. */
+	int average_level_{};                            /**< The average level of the poison, used for determining the severity of the symptoms caused by the poison. */
+	const PoisonTypeData* poison_type_data_{};       /**< Pointer to the PoisonTypeData object that represents the type of poison. This is used to determine where in the body the poison affects and the symptoms it causes. */
+	LevelVarianceType::Type level_variance_type_{};  /**< The type of level variance to determine tha actual level of an instance of this poison. */
+	std::string notes_{};                            /**< Any additional notes about the poison. */
+	DiseasePoisonSeverityType::Type max_severity_{}; /**< The maximum severity of the symptoms caused by the poison, used for determining the number of rounds before the symptoms of the poison start to take effect. */
 };
 
 } // namespace rm::rule
