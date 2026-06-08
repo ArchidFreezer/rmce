@@ -10,21 +10,21 @@ namespace rm::game::character {
 /* ---------------------------------------------------------------------------------------- */
 /* Automate the complete creation based on the initial data such as profession and culture. */
 /* ---------------------------------------------------------------------------------------- */
-	void AutoCharacterBuilder::autoCreate(CharacterBuilder& builder) {
-		if (builder.built_) {
-			throw std::runtime_error("CharacterBuilder: Cannot auto create after character has been built.");
-		}
-		autoPrimaryChoices(builder);
-	    autoStats(builder);
-	    builder.recalculateAggregatedState();
-	    builder.auto_build_modifier_ = true;
-	    builder.auto_height_ = true;
-	    builder.generatePhysique();
-		autoHobbyChoices(builder);
-	    builder.recalculateAggregatedState();
-	    autoBackgroundChoices(builder);
-	    builder.recalculateAggregatedState();
-    }
+void AutoCharacterBuilder::autoCreate(CharacterBuilder& builder) {
+	if (builder.built_) {
+		throw std::runtime_error("CharacterBuilder: Cannot auto create after character has been built.");
+	}
+	autoPrimaryChoices(builder);
+	autoStats(builder);
+	builder.recalculateAggregatedState();
+	builder.auto_build_modifier_ = true;
+	builder.auto_height_ = true;
+	builder.generatePhysique();
+	autoHobbyChoices(builder);
+	builder.recalculateAggregatedState();
+	autoBackgroundChoices(builder);
+	builder.recalculateAggregatedState();
+}
 
 /* --------------------------------------------------------------------------------- */
 /* Automate the choices based on the initial data such as profession and culture.    */
@@ -40,8 +40,10 @@ void AutoCharacterBuilder::autoPrimaryChoices(CharacterBuilder& builder) {
 	// Set any racial everyman skill categories.
 	// These define one of more skill categories where a defined number of skills within the category should be defined as Everyman skills and populate the builder.race_category_everyman_choices_ member
 	setRaceCategoryEverymanChoices(builder);
+
 	// Set the culture type weapon category/skill choices, populating the builder.culture_type_category_skill_ranks_ member
-	setCultureTypeCategorySkillRanks(builder);
+	// setCultureTypeCategorySkillRanks(builder); // Superseded by assignWeaponPreferences
+
 	// Set skills whose development type is chosen based on the profession choice, populating the builder.prof_skill_development_type_choices_ member
 	setProfessionSkillDevelopmentTypes(builder);
 	// Set skills whose development type is chosen based on the profession category choice, populating the builder.prof_category_development_type_choices_ member
@@ -50,86 +52,18 @@ void AutoCharacterBuilder::autoPrimaryChoices(CharacterBuilder& builder) {
 	setProfessionGroupDevelopmentTypes(builder);
 	// Set the base spell lists for the character based on the profession choice, populating the builder.prof_base_spell_list_choices_ member
 	setBaseSpellLists(builder);
+
 	// Update the 7 weapon category costs from the profession choice, populating the builder.weapon_category_costs_ member
-	allocateWeaponCosts(builder);
+	// allocateWeaponCosts(builder); // Superseded by assignWeaponPreferences
+
+	// Assign culture weapon category/skill ranks, preferred weapons and weapon category costs.
+	assignWeaponPreferences(builder);
 
 	setPreferredArmour(builder);
 
 	/* Culture choices */
 	const CultureData* culture = builder.culture_;
 	std::map<const SkillCategoryData*, int> culture_category_skill_ranks = culture->cultureType().skillCategorySkillRanks();
-}
-
-void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& builder) {
-	builder.culture_type_category_skill_ranks_.clear();
-
-	// Get any culture preferences for individual weapon skills
-	std::vector<const SubcategoriedSkillData*> culture_preferred_weapon_skills;
-	for (const WeaponTypeData* weapon_data : builder.culture_->cultureType().preferredWeapons()) {
-		for (const SkillData* skill_data : weapon_data->skills()) {
-			std::string id = skill_data->id();
-			SubcategoriedSkillData* subcategoried_skill_data = &builder.object_factory_->subcategoriedSkillData(id, weapon_data->name());
-			if (!std::ranges::contains(culture_preferred_weapon_skills, subcategoried_skill_data)) {
-				culture_preferred_weapon_skills.push_back(subcategoried_skill_data);
-			}
-		}
-	}
-
-	// We store the biggest ranks for the main weapon types to set the preferred weapon for the character.
-	int max_ranged{0};
-	int max_melee{0};
-	const SubcategoriedSkillData* current_weapon{nullptr};
-	for (const auto& [skill_category_data, skill_rank] : builder.culture_->cultureType().skillCategorySkillRanks()) {
-		std::vector<const SkillData*> category_skills = getCategorySkills(*skill_category_data, *builder.object_factory_);
-		if (category_skills.empty()) {
-			LOG_WARN("AutoCharacterBuilder: No skills found for culture preferred skill category {}. Skipping.", skill_category_data->name());
-			continue;
-		}
-
-		// Check for any intersection between the culture preferred weapon skills and the skills in this category. If there is an intersection then we pick one at random for now.
-		// TODO Perform some weighting based on the character traits.
-		std::vector<const SubcategoriedSkillData*> intersection;
-		for (const SubcategoriedSkillData* preferred_weapon_skill : culture_preferred_weapon_skills) {
-			if (std::ranges::contains(category_skills, &preferred_weapon_skill->skillData())) {
-				intersection.push_back(preferred_weapon_skill);
-			}
-		}
-
-		int num_intersections = intersection.size();
-		if (num_intersections > 0) {
-			current_weapon = intersection[Random::get(0, num_intersections - 1)];
-			builder.culture_type_category_skill_ranks_.emplace(current_weapon, skill_rank);
-			LOG_TRACE("AutoCharacterBuilder: Setting {} skill ranks to weapon category {} for culture preferred weapon {}.", skill_rank, skill_category_data->name(), current_weapon->subcategory().value());
-		} else {
-			int num_category_skills = category_skills.size();
-			const SkillData* chosen_skill = category_skills[Random::get(0, num_category_skills - 1)];
-			std::string skill_id = chosen_skill->id();
-			// Pick a random weapon that uses the skill
-			std::vector<const WeaponTypeData*> skill_weapons = getSkillWeapons(*chosen_skill, *builder.object_factory_);
-			int num_skill_weapons = skill_weapons.size();
-			const WeaponTypeData* chosen_weapon = skill_weapons[Random::get(0, num_skill_weapons - 1)];
-			current_weapon = &builder.object_factory_->subcategoriedSkillData(skill_id, chosen_weapon->name());
-			builder.culture_type_category_skill_ranks_.emplace(current_weapon, skill_rank);
-			LOG_TRACE("AutoCharacterBuilder: Setting {} skill ranks to weapon category {} with no culture preferred weapon {}.", skill_rank, skill_category_data->name(), current_weapon->subcategory().value());
-		}
-
-		// We set this as the characters preferred weapon of the appropriate type if it is the strongest so far.
-		std::string skill_id = current_weapon->skillData().id();
-		bool ranged = (skill_id == "SKILL_WEAPON_MISSILE" || skill_id == "SKILL_WEAPON_THROWN");
-		if (ranged && skill_rank > max_ranged) {
-			preferred_ranged_ = current_weapon;
-			max_ranged = skill_rank;
-		} else if (!ranged && skill_rank > max_melee) {
-			preferred_melee_ = current_weapon;
-			max_melee = skill_rank;
-		}
-	}
-	if (preferred_ranged_) {
-		LOG_DEBUG("AutoCharacterBuilder: Setting preferred ranged weapon to {} based on cultural preferences.", preferred_ranged_->name());
-	}
-	if (preferred_melee_) {
-		LOG_DEBUG("AutoCharacterBuilder: Setting preferred melee weapon to {} based on cultural preferences.", preferred_melee_->name());
-	}
 }
 
 void AutoCharacterBuilder::setRaceCategoryEverymanChoices(CharacterBuilder& builder) {
@@ -249,6 +183,78 @@ void AutoCharacterBuilder::setBaseSpellLists(CharacterBuilder& builder) {
 	LOG_DEBUG("Spell Lists:{}", buffer);
 }
 
+void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& builder) {
+	builder.culture_type_category_skill_ranks_.clear();
+
+	// Get any culture preferences for individual weapon skills
+	std::vector<const SubcategoriedSkillData*> culture_preferred_weapon_skills;
+	for (const WeaponTypeData* weapon_data : builder.culture_->cultureType().preferredWeapons()) {
+		for (const SkillData* skill_data : weapon_data->skills()) {
+			std::string id = skill_data->id();
+			SubcategoriedSkillData* subcategoried_skill_data = &builder.object_factory_->subcategoriedSkillData(id, weapon_data->name());
+			if (!std::ranges::contains(culture_preferred_weapon_skills, subcategoried_skill_data)) {
+				culture_preferred_weapon_skills.push_back(subcategoried_skill_data);
+			}
+		}
+	}
+
+	// We store the biggest ranks for the main weapon types to set the preferred weapon for the character.
+	int max_ranged{0};
+	int max_melee{0};
+	const SubcategoriedSkillData* current_weapon{nullptr};
+	for (const auto& [skill_category_data, skill_rank] : builder.culture_->cultureType().skillCategorySkillRanks()) {
+		std::vector<const SkillData*> category_skills = getCategorySkills(*skill_category_data, *builder.object_factory_);
+		if (category_skills.empty()) {
+			LOG_WARN("AutoCharacterBuilder: No skills found for culture preferred skill category {}. Skipping.", skill_category_data->name());
+			continue;
+		}
+
+		// Check for any intersection between the culture preferred weapon skills and the skills in this category. If there is an intersection then we pick one at random for now.
+		// TODO Perform some weighting based on the character traits.
+		std::vector<const SubcategoriedSkillData*> intersection;
+		for (const SubcategoriedSkillData* preferred_weapon_skill : culture_preferred_weapon_skills) {
+			if (std::ranges::contains(category_skills, &preferred_weapon_skill->skillData())) {
+				intersection.push_back(preferred_weapon_skill);
+			}
+		}
+
+		int num_intersections = intersection.size();
+		if (num_intersections > 0) {
+			current_weapon = intersection[Random::get(0, num_intersections - 1)];
+			builder.culture_type_category_skill_ranks_.emplace(current_weapon, skill_rank);
+			LOG_TRACE("AutoCharacterBuilder: Setting {} skill ranks to weapon category {} for culture preferred weapon {}.", skill_rank, skill_category_data->name(), current_weapon->subcategory().value());
+		} else {
+			int num_category_skills = category_skills.size();
+			const SkillData* chosen_skill = category_skills[Random::get(0, num_category_skills - 1)];
+			std::string skill_id = chosen_skill->id();
+			// Pick a random weapon that uses the skill
+			std::vector<const WeaponTypeData*> skill_weapons = getSkillWeapons(*chosen_skill, *builder.object_factory_);
+			int num_skill_weapons = skill_weapons.size();
+			const WeaponTypeData* chosen_weapon = skill_weapons[Random::get(0, num_skill_weapons - 1)];
+			current_weapon = &builder.object_factory_->subcategoriedSkillData(skill_id, chosen_weapon->name());
+			builder.culture_type_category_skill_ranks_.emplace(current_weapon, skill_rank);
+			LOG_TRACE("AutoCharacterBuilder: Setting {} skill ranks to weapon category {} with no culture preferred weapon {}.", skill_rank, skill_category_data->name(), current_weapon->subcategory().value());
+		}
+
+		// We set this as the characters preferred weapon of the appropriate type if it is the strongest so far.
+		std::string skill_id = current_weapon->skillData().id();
+		bool ranged = (skill_id == "SKILL_WEAPON_MISSILE" || skill_id == "SKILL_WEAPON_THROWN");
+		if (ranged && skill_rank > max_ranged) {
+			preferred_ranged_ = current_weapon;
+			max_ranged = skill_rank;
+		} else if (!ranged && skill_rank > max_melee) {
+			preferred_melee_ = current_weapon;
+			max_melee = skill_rank;
+		}
+	}
+	if (preferred_ranged_) {
+		LOG_DEBUG("AutoCharacterBuilder: Setting preferred ranged weapon to {} based on cultural preferences.", preferred_ranged_->name());
+	}
+	if (preferred_melee_) {
+		LOG_DEBUG("AutoCharacterBuilder: Setting preferred melee weapon to {} based on cultural preferences.", preferred_melee_->name());
+	}
+}
+
 void AutoCharacterBuilder::allocateWeaponCosts(CharacterBuilder& builder) const {
 	PersistentObjectManager& object_manager = *builder.object_factory_;
 
@@ -298,8 +304,8 @@ void AutoCharacterBuilder::allocateWeaponCosts(CharacterBuilder& builder) const 
 
 	// First pass is based on the caster type of the profession as this will have the biggest impact on the weapon category used.
 	SpellUserType::Type spell_user_type = builder.profession_->spellUserType();
-	if (spell_user_type == SpellUserType::kPure || spell_user_type == SpellUserType::kHybrid) {
-		// Pure casters are more likely to want to use quarterstaffs as they are a good weapon for casters which come under the 2-handed category.
+	if ((spell_user_type == SpellUserType::kPure || spell_user_type == SpellUserType::kHybrid) && std::ranges::contains(builder.magical_realms_, RealmType::kEssence)) {
+		// Essence casters are more likely to want to use quarterstaffs as they are a good weapon for casters which come under the 2-handed category.
 		for (const SkillCategoryData* weapon_category : weapon_categories) {
 			int weight = archid::Dice(10).roll().result(); // We give a small random weight to the categories to ensure we don't always end up with the same category at the top.
 			if (weapon_category == &two_handed) {
@@ -408,6 +414,150 @@ void AutoCharacterBuilder::allocateWeaponCosts(CharacterBuilder& builder) const 
 		}
 	}
 	LOG_DEBUG("Weapon Skill Category Costs:{}", buffer);
+}
+
+void AutoCharacterBuilder::assignWeaponPreferences(CharacterBuilder& builder) {
+	// This function is used to process weapon choices for the character in one place. Previously the cultural category/skill ranks were defined seperately from the weapon category costs. This led to mismatches where the culture preferred
+	// weapon category was allocated a worse cost than other categories which meant the character was less likely to use their culture preferred weapon. By processing all the weapon choices in one place we can ensure that the culture
+	// preferences are properly weighted in the cost allocation and that the allocations between chosen adolescent ranks and category costs are more aligned.
+
+	rm::PersistentObjectManager& object_manager = *builder.object_factory_;
+
+	///////////////////////////
+	//
+	// 1. Define some constants for use later on
+	const SkillCategoryData& concussion = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_1_H_CONCUSSION");
+	const SkillCategoryData& edged = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_1_H_EDGED");
+	const SkillCategoryData& two_handed = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_2_HANDED");
+	const SkillCategoryData& missile = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_MISSILE");
+	const SkillCategoryData& pole_arms = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_POLE_ARMS");
+	const SkillCategoryData& thrown = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_THROWN");
+	const SkillCategoryData& missile_artillery = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_MISSILE_ARTILLERY");
+
+	///////////////////////////
+	//
+	// 2. Gather some initial data that will be used to make the decisions about the weapon preferences and costs.
+
+	// Start by clearing rge culture category skill ranks as we will be re-populating this based on the culture preferences and the allocated costs.
+	builder.culture_type_category_skill_ranks_.clear();
+
+	// Get the weapon categories.
+	int expected_weapon_categories = 7; // We expect there to be 7 weapon categories as of the current game rules
+	std::vector<const SkillCategoryData*> weapon_categories = getGroupCategories(object_manager.get<SkillGroupData>("SKILLGROUP_WEAPON"), object_manager);
+	if (weapon_categories.size() != expected_weapon_categories) {
+		LOG_ERROR("AutoCharacterBuilder: Expected {} Weapon categories, but found {} for profession {}. Skipping weapon cost allocation.", expected_weapon_categories, weapon_categories.size(), builder.profession_->name());
+		return;
+	}
+
+	// Sort the costs that we have to allocate and store how many categeories can be allocated to each.
+	std::map<const SkillDevelopmentCost, int> weapon_category_cost_count;
+	for (const SkillCategoryData* weapon_category : weapon_categories) {
+		weapon_category_cost_count[builder.profession_->skillCategoryDevelopmentCost(*weapon_category)]++;
+	}
+	logSkillCategoryCosts(weapon_category_cost_count);
+
+	// Missile Artillery is a very niche category and will never be used for the initial weapon choice as it is only used for siege weapons, so we can remove this from the options and allocate it the worst cost at the end.
+	// We need to erase it after we have stored the costs to get all of them.
+	std::erase(weapon_categories, &missile_artillery);
+
+	// Get any culture preferences for individual weapon skills
+	std::vector<const SubcategoriedSkillData*> culture_preferred_weapon_skills;
+	for (const WeaponTypeData* weapon_data : builder.culture_->cultureType().preferredWeapons()) {
+		for (const SkillData* skill_data : weapon_data->skills()) {
+			std::string id = skill_data->id();
+			SubcategoriedSkillData* subcategoried_skill_data = &object_manager.subcategoriedSkillData(id, weapon_data->name());
+			if (!std::ranges::contains(culture_preferred_weapon_skills, subcategoried_skill_data)) {
+				culture_preferred_weapon_skills.push_back(subcategoried_skill_data);
+			}
+		}
+	}
+
+	// get the spell user type
+	SpellUserType::Type spell_user_type = builder.profession_->spellUserType();
+
+	////////////////////////////
+	//
+	// 3. Deal with some edge cases that are handled differently to the main weighting process.
+
+	// Essence users have specific restrictions that require dedicated handliing
+	if (spell_user_type != SpellUserType::kNone && std::ranges::contains(builder.magical_realms_, RealmType::kEssence)) {
+		assignWeaponPreferencesForEssenceCaster(builder, weapon_categories, weapon_category_cost_count, culture_preferred_weapon_skills);
+		return; // We can return here as we have handled the essence caster case and the rest of the code is for non essence casters.
+	}
+}
+
+void AutoCharacterBuilder::assignWeaponPreferencesForEssenceCaster(CharacterBuilder& builder, std::vector<const SkillCategoryData*>& weapon_categories, std::map<const SkillDevelopmentCost, int>& weapon_category_cost_count,
+                                                                   std::vector<const SubcategoriedSkillData*>& culture_preferred_weapon_skills) {
+	// This function is used to process weapon choices for the character in one place. Previously the cultural category/skill ranks were defined seperately from the weapon category costs. This led to mismatches where the culture preferred
+	// weapon category was allocated a worse cost than other categories which meant the character was less likely to use their culture preferred weapon. By processing all the weapon choices in one place we can ensure that the culture
+	// preferences are properly weighted in the cost allocation and that the allocations between chosen adolescent ranks and category costs are more aligned.
+
+	rm::PersistentObjectManager& object_manager = *builder.object_factory_;
+
+	///////////////////////////
+	//
+	// 1. Define some constants for use later on
+	const SkillCategoryData& concussion = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_1_H_CONCUSSION");
+	const SkillCategoryData& edged = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_1_H_EDGED");
+	const SkillCategoryData& two_handed = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_2_HANDED");
+	const SkillCategoryData& missile = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_MISSILE");
+	const SkillCategoryData& pole_arms = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_POLE_ARMS");
+	const SkillCategoryData& thrown = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_THROWN");
+	const SkillCategoryData& missile_artillery = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_MISSILE_ARTILLERY");
+
+	///////////////////////////
+	//
+	// 2. Gather some initial data that will be used to make the decisions about the weapon preferences and costs.
+
+	// Start by clearing rge culture category skill ranks as we will be re-populating this based on the culture preferences and the allocated costs.
+	builder.culture_type_category_skill_ranks_.clear();
+
+	// get the spell user type
+	SpellUserType::Type spell_user_type = builder.profession_->spellUserType();
+
+	// Essence users are unable to use weapons with large amounts of inorganic metal so for melee are limited to dagger sized weapons which have minimal material or wooden weapons like or staves. For ranged weapons slings and bows are the
+	// natural choice as they aremade from leather or wood, but daggers are again an option as they may be thrown.
+	SubcategoriedSkillData* dagger = &object_manager.subcategoriedSkillData("SKILL_WEAPON_1_H_EDGED", "Dagger");
+	SubcategoriedSkillData* staff = &object_manager.subcategoriedSkillData("SKILL_WEAPON_2_HANDED", "Quarterstaff");
+	SubcategoriedSkillData* blow_gun = &object_manager.subcategoriedSkillData("SKILL_WEAPON_MISSILE", "Blow Gun (Small)");
+	SubcategoriedSkillData* composite_bow = &object_manager.subcategoriedSkillData("SKILL_WEAPON_MISSILE", "Composite Bow");
+	SubcategoriedSkillData* long_bow = &object_manager.subcategoriedSkillData("SKILL_WEAPON_MISSILE", "Long Bow");
+	SubcategoriedSkillData* short_bow = &object_manager.subcategoriedSkillData("SKILL_WEAPON_MISSILE", "Short Bow");
+	SubcategoriedSkillData* sling = &object_manager.subcategoriedSkillData("SKILL_WEAPON_MISSILE", "Sling");
+	std::map<const SubcategoriedSkillData*, int> essence_weapon_weights; // We will use this to weight the essence appropriate weapons based on the culture preferences and character traits.
+
+	// Check whether the culture prefers any of the essence appropriate weapons and if so then we can just allocate the costs based on that preference. If not then we need to weight the options towards those weapons.
+	for (const SubcategoriedSkillData* preferred_weapon_skill : culture_preferred_weapon_skills) {
+		essence_weapon_weights[preferred_weapon_skill] = Random::get(45, 55); // Start with a decent base weight for culture preferred weapons.
+	}
+
+	// Handle the melee case first as if the character fights at close range they will want that to be their best weapon skill with the lowest cost allocation.
+	// If the character fights at close range then they will want this weapon to be their best so allocate high weights.
+	if (combat_closeness_ > 6) {
+		if (traits_.stealth_ > 3) {
+			// We add a weight to the dagger for melee as this is a strong preference for stealthy characters and also has value as a ranged weapon.
+			// This value is in a range that would allow a culturally preferred staff to be used as the best weapon if the culture preferences are strong enough, but otherwise it will likely be the best option for a stealthy character.
+			essence_weapon_weights[dagger] += Random::get(50, 60);
+		}
+		// We add a weight to both melee options
+		essence_weapon_weights[dagger] += Random::get(95, 105);
+		essence_weapon_weights[staff] += Random::get(95, 105);
+	} else if (combat_closeness_ < 4) {
+		// Handle the long ranged case
+		essence_weapon_weights[blow_gun] += Random::get(70, 80);
+		essence_weapon_weights[composite_bow] += Random::get(70, 80);
+		essence_weapon_weights[long_bow] += Random::get(70, 80);
+		essence_weapon_weights[short_bow] += Random::get(70, 80);
+		essence_weapon_weights[sling] += Random::get(70, 80);
+	} else {
+		// Handle the medium range case where the character is likely to want a mix of melee and ranged options so we give a smaller weight to all of the essence appropriate weapons.
+		essence_weapon_weights[dagger] += Random::get(15, 25); // Dagger can be thrown so is more useful for a medium range character than the staff so we give it a slightly higher weight.
+	}
+
+	// Now we have the weights we have several things to populate:
+	// 1. The preferred melee & ranged weapons for the character which will be used to guide the weapon choices during level up and also the weapon choice for the starting equipment.
+	// 2. The culture category skill ranks
+	// 3. The category development cost allocation for the weapon categories which will determine how expensive it is for the character to develop skills in each category.
 }
 
 void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
@@ -917,7 +1067,7 @@ void AutoCharacterBuilder::autoBackgroundChoices(CharacterBuilder& builder) {
 	// 3. Extra item
 	// 4. Spell List bonus (for casters only)
 	int range = (traits_.caster_ > 5 && Random::get(1, 100) <= 10) ? 4 : 3; // Casters have a 10% chance of an extra option for spell list bonus so we need to adjust the range of our random selection accordingly.
-	bool used_combat_bonus{false};           // We don't want to give multiple combat bonuses so we track it here.
+	bool used_combat_bonus{false};                                          // We don't want to give multiple combat bonuses so we track it here.
 	while (num_options > 0) {
 		int choice = Random::get(1, range);
 		if (choice == 1) {
@@ -1118,6 +1268,16 @@ std::vector<const SpellListData*> getSpellLists(SpellListType::Type type, const 
 	}
 
 	return spell_lists;
+}
+
+SkillDevelopmentCost popCategoryCost(std::map<const SkillDevelopmentCost, int>& category_costs) {
+	auto it = category_costs.begin();
+	auto& [cost, count] = *it;
+	count--;
+	if (count == 0) {
+		category_costs.erase(it);
+	}
+	return cost;
 }
 
 int traitComparisonWeighting(const CharacterTraits& creature, const CharacterTraits& other) {
