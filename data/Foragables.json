@@ -1,0 +1,3014 @@
+{
+    "foragables" : [
+        {
+            "id" : "FORAGABLE_ACAANA",
+            "name" : "Acaana",
+            "effectType" : "Nerve Poison",
+            "form" : "Flower",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Paste",
+            "addictionFactor" : 0,
+            "cost" : "600 gp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Level 10E poison.\nBlack paste affects nervous system.\nExtreme effect destroys nervous system and kills instantly."
+        },
+        {
+            "id" : "FORAGABLE_AGAATH",
+            "name" : "Agaath",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Berry",
+            "difficulty" : "Easy",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 3,
+            "cost" : "5 gp",
+            "location" : {
+                "waterSources" : [
+                    "Glacier"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_WET",
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Respiratory Stimulant: Breathe with low oxygen (25%+) for 12 hours.\nUsing this herb more than once every other day is lethal (no RR)"
+        },
+        {
+            "id" : "FORAGABLE_AKBUTEGE",
+            "name" : "Akbutege",
+            "effectType" : "Concussion Relief",
+            "form" : "Leaf",
+            "difficulty" : "Easy",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 1,
+            "cost" : "3 sp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Heals 1-10"
+        },
+        {
+            "id" : "FORAGABLE_ALAMBAS",
+            "name" : "Alambas",
+            "effectType" : "Burn & Exposure Relief",
+            "form" : "Grass",
+            "difficulty" : "Medium",
+            "preparationType" : "Apply",
+            "addictionFactor" : 4,
+            "cost" : "66 sp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Heals 4 sq feet of burns"
+        },
+        {
+            "id" : "FORAGABLE_ALOE",
+            "name" : "Aloe",
+            "effectType" : "Burn & Exposure Relief",
+            "form" : "Leaf",
+            "difficulty" : "Medium",
+            "preparationType" : "Apply",
+            "addictionFactor" : 0,
+            "cost" : "5 bp",
+            "location" : {
+                "vegetation" : [
+                    "Heath"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            },
+            "effect" : "Doubles healing rate for burns and minor cuts (5 hits from burns)"
+        },
+        {
+            "id" : "FORAGABLE_ANKIL",
+            "name" : "Ankil",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Berry",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 9,
+            "cost" : "100 gp",
+            "location" : {
+                "waterSources" : [
+                    "Breaks"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Sleep Aid: Restores good sleep.\nUse in given week results in (once: 1 pt loss of Temp CO) (twice: 5 pt loss of Temp CO) (thrice: 25 pt loss of Temp CO)"
+        },
+        {
+            "id" : "FORAGABLE_ANSERKE",
+            "name" : "Anserke",
+            "effectType" : "Circulatory Repair",
+            "form" : "Root",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Apply",
+            "addictionFactor" : 7,
+            "cost" : "75 gp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID"
+                ]
+            },
+            "effect" : "Stops bleeding by clotting and sealing wound.  Takes 3 rnds to take effect (patient cannot move)"
+        },
+        {
+            "id" : "FORAGABLE_ARFANDAS",
+            "name" : "Arfandas",
+            "effectType" : "Bone Repair",
+            "form" : "Stem",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Apply",
+            "addictionFactor" : 1,
+            "cost" : "2 sp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE"
+                ]
+            },
+            "effect" : "Doubles rate of healing for fractures"
+        },
+        {
+            "id" : "FORAGABLE_ARGSBARGIES",
+            "name" : "Argsbargies",
+            "effectType" : "Antidote",
+            "form" : "Flower",
+            "difficulty" : "Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 7,
+            "cost" : "38 gp",
+            "location" : {
+                "features" : [
+                    "Rural"
+                ],
+                "terrains" : [
+                    "Alpine"
+                ],
+                "vegetation" : [
+                    "Heath",
+                    "Jungle"
+                ],
+                "waterSources" : [
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Lvl 4 antidote for Muscle Poison"
+        },
+        {
+            "id" : "FORAGABLE_ARKASU",
+            "name" : "Arkasu",
+            "effectType" : "General Purpose",
+            "form" : "Sap",
+            "difficulty" : "Medium",
+            "preparationType" : "Apply",
+            "addictionFactor" : 2,
+            "cost" : "12 gp",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Doubles rate of healing for major wounds (heals 2-12)"
+        },
+        {
+            "id" : "FORAGABLE_ARLAN",
+            "name" : "Arlan",
+            "effectType" : "Concussion Relief",
+            "form" : "Leaf",
+            "difficulty" : "Easy",
+            "preparationType" : "Apply",
+            "addictionFactor" : 1,
+            "cost" : "13 sp",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            },
+            "effect" : "Heals 4-9, (wild heals 1-6)"
+        },
+        {
+            "id" : "FORAGABLE_ARNUMINAS",
+            "name" : "Arnuminas",
+            "effectType" : "Muscle Cartilage & Tendon Repair",
+            "form" : "Leaf",
+            "difficulty" : "Easy",
+            "preparationType" : "Apply",
+            "addictionFactor" : 8,
+            "cost" : "6 bp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Doubles rate of healing for sprains, torn ligaments and cartilage damage"
+        },
+        {
+            "id" : "FORAGABLE_ARTHOND",
+            "name" : "Arthond",
+            "effectType" : "General Purpose",
+            "form" : "Root",
+            "difficulty" : "Easy",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 3,
+            "cost" : "1 bp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            },
+            "effect" : "Decongestant.\n+20 to resistance vs common cold.\nRecovery from respiratory illness x5"
+        },
+        {
+            "id" : "FORAGABLE_ARUNYA",
+            "name" : "Arunya",
+            "effectType" : "Intoxicant",
+            "form" : "Root",
+            "difficulty" : "Light",
+            "preparationType" : "Brew",
+            "addictionFactor" : 50,
+            "cost" : "2 bp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET",
+                    "CLIMATE_WARM_TEMPERATE",
+                    "CLIMATE_WARM_WET"
+                ]
+            },
+            "effect" : "Causes sleep and quick unconsciousness (1 hour sleep = 4)"
+        },
+        {
+            "id" : "FORAGABLE_ASGURASH",
+            "name" : "Asgurash",
+            "effectType" : "Nerve Poison",
+            "form" : "Snake",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Paste",
+            "addictionFactor" : 1,
+            "cost" : "31 gp",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            },
+            "effect" : "Level 3F poison.\nBrownish red snake venom.\nMax of Moderate effects (upper body paralysis)"
+        },
+        {
+            "id" : "FORAGABLE_ASPSUSAR",
+            "name" : "Aspsusar",
+            "effectType" : "Muscle Cartilage & Tendon Repair",
+            "form" : "Stalk",
+            "difficulty" : "Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 15,
+            "cost" : "30 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            },
+            "effect" : "Mends muscle damage"
+        },
+        {
+            "id" : "FORAGABLE_ATHELAS",
+            "name" : "Athelas",
+            "effectType" : "General Purpose",
+            "form" : "Leaf",
+            "difficulty" : "Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 20,
+            "cost" : "300 gp",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous",
+                    "Heath"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            },
+            "effect" : "Capable of curing anything while patient still alive, but healing only as effective as the healer.\nFull effect only in hands of an “ordained” king.\nWill not keep or give life."
+        },
+        {
+            "id" : "FORAGABLE_ATIGAX",
+            "name" : "Atigax",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Root",
+            "difficulty" : "Medium",
+            "preparationType" : "Brew",
+            "addictionFactor" : 12,
+            "cost" : "40 gp",
+            "location" : {
+                "vegetation" : [
+                    "Heath",
+                    "Tundra"
+                ],
+                "climates" : [
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Optical Alteration: Protects eyes in intense light or glare.\nAllows sight despite sudden or blinding light.\nLasts 9 hours."
+        },
+        {
+            "id" : "FORAGABLE_ATTANAR",
+            "name" : "Attanar",
+            "effectType" : "General Purpose",
+            "form" : "Moss",
+            "difficulty" : "Medium",
+            "preparationType" : "Apply",
+            "addictionFactor" : 1,
+            "cost" : "8 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Cures fever"
+        },
+        {
+            "id" : "FORAGABLE_BAALAK",
+            "name" : "Baalak",
+            "effectType" : "Bone Repair",
+            "form" : "Reed",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Brew",
+            "addictionFactor" : 12,
+            "cost" : "160 gp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE"
+                ]
+            },
+            "effect" : "Shatter Repairs"
+        },
+        {
+            "id" : "FORAGABLE_BALDAKUR",
+            "name" : "Baldakur",
+            "effectType" : "Organ Repair & Preservation",
+            "form" : "Root",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Brew",
+            "addictionFactor" : 7,
+            "cost" : "102 gp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Restores sight"
+        },
+        {
+            "id" : "FORAGABLE_BARGOLITH",
+            "name" : "Bargolith",
+            "effectType" : "Conversion Poison",
+            "form" : "Firefly",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 4,
+            "cost" : "120 gp",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Level 5B poison from a phosphorescent green firefly\nBluish juice causes victim's body to heat up.\nSevere effects results in spontaneous combustion."
+        },
+        {
+            "id" : "FORAGABLE_BELRAMBA",
+            "name" : "Belramba",
+            "effectType" : "Nerve Repair",
+            "form" : "Lichen",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 20,
+            "cost" : "60 gp",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Nerve repairs"
+        },
+        {
+            "id" : "FORAGABLE_BERTERIN",
+            "name" : "Berterin",
+            "effectType" : "Organ Repair & Preservation",
+            "form" : "Moss",
+            "difficulty" : "Light",
+            "preparationType" : "Brew",
+            "addictionFactor" : 20,
+            "cost" : "19 gp",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Preservation of organic material for 1 day"
+        },
+        {
+            "id" : "FORAGABLE_BLUEEYES",
+            "name" : "Blue Eyes",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Flower",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 25,
+            "cost" : "15 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Vision Enhancement:  Vision triple range, +25 perception, plus mild infra-vision (50') for 3 hours.\nUsing more than 1/day is lethal (no RR)"
+        },
+        {
+            "id" : "FORAGABLE_BRELDIAR",
+            "name" : "Breldiar",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Flower",
+            "difficulty" : "Medium",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 7,
+            "cost" : "25 gp",
+            "location" : {
+                "features" : [
+                    "Volcanic"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Essence Attunement: Subtracts 30 from manoeuvre and melee.\nAdds 50 to spells and missile attacks.\nEuphoria.  Lasts 1 hour."
+        },
+        {
+            "id" : "FORAGABLE_BRITHAGRUTH",
+            "name" : "Brithagruth",
+            "effectType" : "Conversion Poison",
+            "form" : "Fish",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 0,
+            "cost" : "25 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast",
+                    "Lake"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Level 2A poison.\nBlack venom causes hardening of tendons in 1-4 appendages.\nSevere effects make appendage useless"
+        },
+        {
+            "id" : "FORAGABLE_BRORKWILB",
+            "name" : "Brorkwilb",
+            "effectType" : "Intoxicant",
+            "form" : "Flower",
+            "difficulty" : "Light",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 45,
+            "cost" : "9 gp",
+            "location" : {
+                "features" : [
+                    "Volcanic"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Euphoric: Allows for shared dreams with family member who is also sleeping"
+        },
+        {
+            "id" : "FORAGABLE_BURSTHELAS",
+            "name" : "Bursthelas",
+            "effectType" : "Bone Repair",
+            "form" : "Stalk",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Brew",
+            "addictionFactor" : 22,
+            "cost" : "110 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            },
+            "effect" : "Shatter Repairs"
+        },
+        {
+            "id" : "FORAGABLE_CARCATU",
+            "name" : "Carcatu",
+            "effectType" : "Life Preservation",
+            "form" : "Grass",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Apply",
+            "addictionFactor" : 25,
+            "cost" : "89 gp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Lifekeeping (1 day)"
+        },
+        {
+            "id" : "FORAGABLE_CARNEGURTH",
+            "name" : "Carnegurth",
+            "effectType" : "Circulatory Poison",
+            "form" : "Flower",
+            "difficulty" : "Medium",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 0,
+            "cost" : "53 gp",
+            "location" : {
+                "waterSources" : [
+                    "Desert",
+                    "Oasis"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Level 1C poison.\nReddish juice causes massive blood clotting"
+        },
+        {
+            "id" : "FORAGABLE_CATHAANA",
+            "name" : "Cathaana",
+            "effectType" : "Nerve Poison",
+            "form" : "Nut",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Powder",
+            "addictionFactor" : 1,
+            "cost" : "36 gp",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Level 1D poison.\nWhite powder instantly causes mild euphoria (victim at -50 action for 1-10 rounds).\nExtreme effects is that brain is destroyed after 1-10 minutes"
+        },
+        {
+            "id" : "FORAGABLE_CULKAS",
+            "name" : "Culkas",
+            "effectType" : "Bone Repair",
+            "form" : "Leaf",
+            "difficulty" : "Medium",
+            "preparationType" : "Apply",
+            "addictionFactor" : 0,
+            "cost" : "35 gp",
+            "location" : {
+                "waterSources" : [
+                    "Desert"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY"
+                ]
+            },
+            "effect" : "Heals 10 sq feet of burns"
+        },
+        {
+            "id" : "FORAGABLE_CURFALAKA",
+            "name" : "Curfalaka",
+            "effectType" : "Muscle Cartilage & Tendon Repair",
+            "form" : "Fruit",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 6,
+            "cost" : "40 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Mends muscle damage"
+        },
+        {
+            "id" : "FORAGABLE_CUSAMAR",
+            "name" : "Cusamar",
+            "effectType" : "Concussion Relief",
+            "form" : "Flower",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 3,
+            "cost" : "30 gp",
+            "location" : {
+                "vegetation" : [
+                    "Heath"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            },
+            "effect" : "Heals 15-60"
+        },
+        {
+            "id" : "FORAGABLE_DAGMATHER",
+            "name" : "Dagmather",
+            "effectType" : "Muscle Cartilage & Tendon Repair",
+            "form" : "Spine",
+            "difficulty" : "Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 12,
+            "cost" : "28 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Heals cartilage damage"
+        },
+        {
+            "id" : "FORAGABLE_DARSURION",
+            "name" : "Darsurion",
+            "effectType" : "Concussion Relief",
+            "form" : "Leaf",
+            "difficulty" : "Light",
+            "preparationType" : "Apply",
+            "addictionFactor" : 1,
+            "cost" : "35 bp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Heals 1-6"
+        },
+        {
+            "id" : "FORAGABLE_DEGIIK",
+            "name" : "Degiik",
+            "effectType" : "Life Preservation",
+            "form" : "Leaf",
+            "difficulty" : "Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 10,
+            "cost" : "100 gp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Lifekeeping (1 day)"
+        },
+        {
+            "id" : "FORAGABLE_DELREAN",
+            "name" : "Delrean",
+            "effectType" : "General Purpose",
+            "form" : "Bark",
+            "difficulty" : "Easy",
+            "preparationType" : "Apply",
+            "addictionFactor" : 1,
+            "cost" : "3 sp",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE"
+                ]
+            },
+            "effect" : "Repels any insect"
+        },
+        {
+            "id" : "FORAGABLE_DRAAF",
+            "name" : "Draaf",
+            "effectType" : "Concussion Relief",
+            "form" : "Leaf",
+            "difficulty" : "Easy",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 1,
+            "cost" : "7 sp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Heals 1-10 for each of 2 consecutive rounds"
+        },
+        {
+            "id" : "FORAGABLE_DUGMUTHUR",
+            "name" : "Dugmuthur",
+            "effectType" : "Concussion Relief",
+            "form" : "Cone",
+            "difficulty" : "Light",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 2,
+            "cost" : "9 sp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            },
+            "effect" : "Heals 10 instantly"
+        },
+        {
+            "id" : "FORAGABLE_DYNALLCA",
+            "name" : "Dynallca",
+            "effectType" : "Muscle Poison",
+            "form" : "Leaf",
+            "difficulty" : "Light",
+            "preparationType" : "Paste",
+            "addictionFactor" : 3,
+            "cost" : "14 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast",
+                    "Marsh"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Level 3B poison.\nTan paste affects hearing and gives 1-10 hits.\nMax of Severity General effects (destroys hearing)"
+        },
+        {
+            "id" : "FORAGABLE_EBUR",
+            "name" : "Ebur",
+            "effectType" : "Muscle Cartilage & Tendon Repair",
+            "form" : "Flower",
+            "difficulty" : "Medium",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 18,
+            "cost" : "22 gp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Repairs sprains"
+        },
+        {
+            "id" : "FORAGABLE_EDRAM",
+            "name" : "Edram",
+            "effectType" : "Bone Repair",
+            "form" : "Moss",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 10,
+            "cost" : "31 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Mends Bones"
+        },
+        {
+            "id" : "FORAGABLE_ELBENSBASKET",
+            "name" : "Elben's Basket",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Root",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 15,
+            "cost" : "10 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            },
+            "effect" : "Heart Stimulant:  Doubles speed for 2 rounds.\nUsing this herb more than 1/hour is lethal (no RR)"
+        },
+        {
+            "id" : "FORAGABLE_ELDAANA",
+            "name" : "Eldaana",
+            "effectType" : "Antidote",
+            "form" : "Leaf",
+            "difficulty" : "Medium",
+            "preparationType" : "Brew",
+            "addictionFactor" : 0,
+            "cost" : "",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Level 9 antidote for Reduction Poison"
+        },
+        {
+            "id" : "FORAGABLE_FEBFENDU",
+            "name" : "Febfendu",
+            "effectType" : "Organ Repair & Preservation",
+            "form" : "Root",
+            "difficulty" : "Medium",
+            "preparationType" : "Brew",
+            "addictionFactor" : 24,
+            "cost" : "90 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Restores hearing"
+        },
+        {
+            "id" : "FORAGABLE_FEK",
+            "name" : "Fek",
+            "effectType" : "Circulatory Repair",
+            "form" : "Nut",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 5,
+            "cost" : "50 gp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE"
+                ]
+            },
+            "effect" : "Stops any bleeding.  Takes 10 rounds to take effect (patient cannot move)"
+        },
+        {
+            "id" : "FORAGABLE_FELMATHER",
+            "name" : "Felmather",
+            "effectType" : "General Purpose",
+            "form" : "Leaf",
+            "difficulty" : "Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 15,
+            "cost" : "105 gp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Coma relief.\nMental summons of one 'friend' range 300' x user's level"
+        },
+        {
+            "id" : "FORAGABLE_GALENAANA",
+            "name" : "Galenaana",
+            "effectType" : "Respitory Poison",
+            "form" : "Leaf",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Powder",
+            "addictionFactor" : 0,
+            "cost" : "179 gp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Level 9D poison.\nGreen powder.\nMax of Severe effects (except for elves who can suffer Extreme effects)"
+        },
+        {
+            "id" : "FORAGABLE_GALENAS",
+            "name" : "Galenas",
+            "effectType" : "Intoxicant",
+            "form" : "Leaf",
+            "difficulty" : "Medium",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 10,
+            "cost" : "5 sp",
+            "location" : {
+                "vegetation" : [
+                    "Heath"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_TEMPERATE"
+                ]
+            },
+            "effect" : "Leaf produces smoke which affects 20' radius.\nRelaxes for 10-20 rounds (-75 all actions)"
+        },
+        {
+            "id" : "FORAGABLE_GARIIG",
+            "name" : "Gariig",
+            "effectType" : "Concussion Relief",
+            "form" : "Cactus",
+            "difficulty" : "Light",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 3,
+            "cost" : "55 gp",
+            "location" : {
+                "waterSources" : [
+                    "Desert"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY"
+                ]
+            },
+            "effect" : "Heals 30"
+        },
+        {
+            "id" : "FORAGABLE_GEFNUL",
+            "name" : "Gefnul",
+            "effectType" : "Concussion Relief",
+            "form" : "Lichen",
+            "difficulty" : "Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 10,
+            "cost" : "90 gp",
+            "location" : {
+                "features" : [
+                    "Volcanic"
+                ],
+                "climates" : [
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Heals 100"
+        },
+        {
+            "id" : "FORAGABLE_GORT",
+            "name" : "Gort",
+            "effectType" : "General Purpose",
+            "form" : "Leaf",
+            "difficulty" : "Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 20,
+            "cost" : "10 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID"
+                ]
+            },
+            "effect" : "Euphoric Hallucinogen:  +10 to Appearance for 2 hours but afterwards causes user to be weak -50 for 1-10 hours"
+        },
+        {
+            "id" : "FORAGABLE_GRAPELEAF",
+            "name" : "Grapeleaf",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Nectar",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 18,
+            "cost" : "7 sp",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Sleeping Aid:  Intoxication and dreams (actions at -50) for 2 hours.\nActs as 1 day's nutrition."
+        },
+        {
+            "id" : "FORAGABLE_GURSAMEL",
+            "name" : "Gursamel",
+            "effectType" : "Bone Repair",
+            "form" : "Stalk",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Apply",
+            "addictionFactor" : 5,
+            "cost" : "30 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            },
+            "effect" : "Mends Bones"
+        },
+        {
+            "id" : "FORAGABLE_GYLVIR",
+            "name" : "Gylvir",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Algae",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 20,
+            "cost" : "45 gp",
+            "location" : {
+                "waterSources" : [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Respiratory Alteration: Breathe under water (only) for 4 hours"
+        },
+        {
+            "id" : "FORAGABLE_HARFY",
+            "name" : "Harfy",
+            "effectType" : "Circulatory Repair",
+            "form" : "Resin",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Apply",
+            "addictionFactor" : 9,
+            "cost" : "175 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Immediately stops any form of bleeding"
+        },
+        {
+            "id" : "FORAGABLE_HEGHEG",
+            "name" : "Hegheg",
+            "effectType" : "Muscle Cartilage & Tendon Repair",
+            "form" : "Root",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Paste",
+            "addictionFactor" : 5,
+            "cost" : "25 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Heals cartilage damage"
+        },
+        {
+            "id" : "FORAGABLE_HENUIAL",
+            "name" : "Henuial",
+            "effectType" : "Conversion Poison",
+            "form" : "Bee",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 1,
+            "cost" : "80 gp",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Level 6E poison.\nYellow venom acts on victim's eyes.\nSevere effect converts optic juices to honey"
+        },
+        {
+            "id" : "FORAGABLE_HITHIGIRITH",
+            "name" : "Hith-I-Girith",
+            "effectType" : "Respitory Poison",
+            "form" : "Leaf",
+            "difficulty" : "Hard",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 2,
+            "cost" : "12 gp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Level 4C poison.\nMist/vapour from tree acts as depressant causing immediate and continuing sleep.\nThere are no other effects."
+        },
+        {
+            "id" : "FORAGABLE_HOAKFOER",
+            "name" : "Hoak-foer",
+            "effectType" : "Intoxicant",
+            "form" : "Flower",
+            "difficulty" : "Easy",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 30,
+            "cost" : "67 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Hallucinogen: Cures mind loss and mental diseases, but prevents all movement for 1-10 weeks"
+        },
+        {
+            "id" : "FORAGABLE_HUGAR",
+            "name" : "Hugar",
+            "effectType" : "Intoxicant",
+            "form" : "Root",
+            "difficulty" : "Medium",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 33,
+            "cost" : "1 sp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE"
+                ]
+            },
+            "effect" : "Causes sleep and quick unconsciousness (1 hour sleep = 6)"
+        },
+        {
+            "id" : "FORAGABLE_HUMBURTUN",
+            "name" : "Humburtun",
+            "effectType" : "Circulatory Repair",
+            "form" : "Fruit",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Apply",
+            "addictionFactor" : 6,
+            "cost" : "180 gp",
+            "location" : {
+                "waterSources" : [
+                    "Desert"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Immediately stops any form of bleeding"
+        },
+        {
+            "id" : "FORAGABLE_JANUKTY",
+            "name" : "Januk-ty",
+            "effectType" : "Stun Relief",
+            "form" : "Root",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 2,
+            "cost" : "100 sp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Removes 3 rounds of stun"
+        },
+        {
+            "id" : "FORAGABLE_JEGGA",
+            "name" : "Jegga",
+            "effectType" : "Respitory Poison",
+            "form" : "Bats",
+            "difficulty" : "Hard",
+            "preparationType" : "Paste",
+            "addictionFactor" : 0,
+            "cost" : "92 gp",
+            "location" : {
+                "terrains" : [
+                    "Underground"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Level 7B poison.\nBrown paste gives 1-100 hits.\nMax of Mild effects."
+        },
+        {
+            "id" : "FORAGABLE_JEGGARUKH",
+            "name" : "Jeggarukh",
+            "effectType" : "Circulatory Poison",
+            "form" : "Bat",
+            "difficulty" : "Hard",
+            "preparationType" : "Powder",
+            "addictionFactor" : 3,
+            "cost" : "71 gp",
+            "location" : {
+                "terrains" : [
+                    "Underground"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Level 6B poison.\nBlack powder gives 10-100 hits.\nMax of Moderate General effects"
+        },
+        {
+            "id" : "FORAGABLE_JITSU",
+            "name" : "Jitsu",
+            "effectType" : "Respitory Poison",
+            "form" : "Clams",
+            "difficulty" : "Medium",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 0,
+            "cost" : "34 gp",
+            "location" : {
+                "waterSources" : [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET",
+                    "CLIMATE_WARM_TEMPERATE",
+                    "CLIMATE_WARM_WET"
+                ]
+            },
+            "effect" : "Level 5B poison.\nYellow venom gives 1-50 hits.\nMax of Mild effects."
+        },
+        {
+            "id" : "FORAGABLE_JITSUTYR",
+            "name" : "Jitsutyr",
+            "effectType" : "Respitory Poison",
+            "form" : "Clams",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Paste",
+            "addictionFactor" : 4,
+            "cost" : "145 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast",
+                    "Lake"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Level 2A poison.\nTan paste.\nExtreme effects destroys lungs and kills in 1-100 rounds"
+        },
+        {
+            "id" : "FORAGABLE_JOEF",
+            "name" : "Joef",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Powder",
+            "difficulty" : "Light",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 23,
+            "cost" : "35 gp",
+            "location" : {
+                "waterSources" : [
+                    "Breaks"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            },
+            "effect" : "Psychic Stimulant: Allows mental summons of one known sentient friend (up to half mile away)"
+        },
+        {
+            "id" : "FORAGABLE_JOJOJOPO",
+            "name" : "Jojojopo",
+            "effectType" : "Burn & Exposure Relief",
+            "form" : "Leaf",
+            "difficulty" : "Medium",
+            "preparationType" : "Apply",
+            "addictionFactor" : 0,
+            "cost" : "9 sp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Cures frostbite (2-20 hits from cold)"
+        },
+        {
+            "id" : "FORAGABLE_JUTH",
+            "name" : "Juth",
+            "effectType" : "Nerve Poison",
+            "form" : "Scorpion",
+            "difficulty" : "Hard",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 0,
+            "cost" : "41 gp",
+            "location" : {
+                "waterSources" : [
+                    "Desert",
+                    "Oasis"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Level 2B poison.\nMaximum of severe effect (insanity in 1-100 weeks)"
+        },
+        {
+            "id" : "FORAGABLE_KAKDURAM",
+            "name" : "Kakduram",
+            "effectType" : "Organ Repair & Preservation",
+            "form" : "Fruit",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 6,
+            "cost" : "90 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Restores hearing"
+        },
+        {
+            "id" : "FORAGABLE_KAKTU",
+            "name" : "Kaktu",
+            "effectType" : "Muscle Poison",
+            "form" : "Flower",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 3,
+            "cost" : "29 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Level 1A poison.\nAffects 1-4 appendages.\n Max of Severe General. (loss of 1-100 in temp Agility)"
+        },
+        {
+            "id" : "FORAGABLE_KARFAR",
+            "name" : "Karfar",
+            "effectType" : "Circulatory Poison",
+            "form" : "Leaf",
+            "difficulty" : "Medium",
+            "preparationType" : "Paste",
+            "addictionFactor" : 0,
+            "cost" : "142 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Level 7C poison.\nReddish paste causes heart to malfunction.\nAll effects begin in 2-12 rounds"
+        },
+        {
+            "id" : "FORAGABLE_KATHKUSA",
+            "name" : "Kathkusa",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Leaf",
+            "difficulty" : "Light",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 35,
+            "cost" : "50 gp",
+            "location" : {
+                "terrains" : [
+                    "Waste"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Steroid: Increase strength +10 for d10 rounds.\nDouble concussion hits delivered."
+        },
+        {
+            "id" : "FORAGABLE_KELVENTARI",
+            "name" : "Kelventari",
+            "effectType" : "Burn & Exposure Relief",
+            "form" : "Berry",
+            "difficulty" : "Light",
+            "preparationType" : "Apply",
+            "addictionFactor" : 0,
+            "cost" : "19 gp",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            },
+            "effect" : "Heals 1st and 2nd degree burns (1-10 hits from heat)"
+        },
+        {
+            "id" : "FORAGABLE_KILMAKUR",
+            "name" : "Kilmakur",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Root",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 33,
+            "cost" : "65 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Coolant: Protects versus natural flame and heat for 1-10 hours"
+        },
+        {
+            "id" : "FORAGABLE_KLAGUL",
+            "name" : "Klagul",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Bud",
+            "difficulty" : "Light",
+            "preparationType" : "Brew",
+            "addictionFactor" : 7,
+            "cost" : "25 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Optical Alteration: Night vision (100' for 6 hours)"
+        },
+        {
+            "id" : "FORAGABLE_KLY",
+            "name" : "Kly",
+            "effectType" : "Respitory Poison",
+            "form" : "Berry",
+            "difficulty" : "Medium",
+            "preparationType" : "Paste",
+            "addictionFactor" : 0,
+            "cost" : "154 gp",
+            "location" : {
+                "vegetation" : [
+                    "Heath"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Level 3F poison.\nBrown juice gives 3-300 hits.\nMax of Mild effects"
+        },
+        {
+            "id" : "FORAGABLE_KLYTUN",
+            "name" : "Klytun",
+            "effectType" : "Circulatory Poison",
+            "form" : "Root",
+            "difficulty" : "Medium",
+            "preparationType" : "Paste",
+            "addictionFactor" : 0,
+            "cost" : "53 gp",
+            "location" : {
+                "waterSources" : [
+                    "Breaks"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Level 5A poison.\nGolden paste causes 1-10 day coma.\nEffects begin after all general effects have begun"
+        },
+        {
+            "id" : "FORAGABLE_LATHA",
+            "name" : "Latha",
+            "effectType" : "General Purpose",
+            "form" : "Stem",
+            "difficulty" : "Medium",
+            "preparationType" : "Brew",
+            "addictionFactor" : 4,
+            "cost" : "9 sp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Cures common cold.\n+10 to resist disease.\nHeals 1-2 hits"
+        },
+        {
+            "id" : "FORAGABLE_LAURELIN",
+            "name" : "Laurelin",
+            "effectType" : "Life Preservation",
+            "form" : "Leaf",
+            "difficulty" : "Absurd",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 21,
+            "cost" : "999 gp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Lifekeeping for Elves if given within 28 days of death"
+        },
+        {
+            "id" : "FORAGABLE_LESTAGLI",
+            "name" : "Lestagli",
+            "effectType" : "Stat Modifier",
+            "form" : "Cryst",
+            "difficulty" : "Absurd",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 45,
+            "cost" : "520 gp",
+            "location" : {
+                "waterSources" : [
+                    "Desert",
+                    "Oasis"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Restores any stat losses other than those due to age (only 1 stat / use)"
+        },
+        {
+            "id" : "FORAGABLE_LHUGRUTH",
+            "name" : "Lhugruth",
+            "effectType" : "Reduction Poison",
+            "form" : "Dragon",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 11,
+            "cost" : "300 gp",
+            "location" : {
+                "terrains" : [
+                    "Underground"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_WET",
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Level 10B poison.\nGrey/black blood affects exposed areas.\nMax of Severe effects (dissolves inflicted area in 1-10 rnds).\nAffects metal and organic material, not glass, sand and pottery"
+        },
+        {
+            "id" : "FORAGABLE_MARKU",
+            "name" : "Marku",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Nut",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 5,
+            "cost" : "30 gp",
+            "location" : {
+                "vegetation" : [
+                    "Heath"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Optical Alteration: Dark vision (30' for 6 hours)"
+        },
+        {
+            "id" : "FORAGABLE_MEGILLOS",
+            "name" : "Megillos",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Leaf",
+            "difficulty" : "Light",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 19,
+            "cost" : "12 sp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Vision Enhancement:  Vision double range, +25 perception for 10 minutes."
+        },
+        {
+            "id" : "FORAGABLE_MENELAR",
+            "name" : "Menelar",
+            "effectType" : "Antidote",
+            "form" : "Cone",
+            "difficulty" : "Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 4,
+            "cost" : "65 gp",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous"
+                ],
+                "climates" : [
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Level 7 antidote for Circulatory Poison"
+        },
+        {
+            "id" : "FORAGABLE_MERRIG",
+            "name" : "Merrig",
+            "effectType" : "Stat Modifier",
+            "form" : "Thorn",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Brew",
+            "addictionFactor" : 50,
+            "cost" : "90 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Daily use increase appearance (Presence) by 5.\nInterruption of use will not reverse addictive resistance, but results in loss of benefit.\nWithdrawal means loss of 15 from Reasoning and Memory"
+        },
+        {
+            "id" : "FORAGABLE_MIRENNA",
+            "name" : "Mirenna",
+            "effectType" : "Concussion Relief",
+            "form" : "Berry",
+            "difficulty" : "Light",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 1,
+            "cost" : "10 gp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Heals 10 instantly"
+        },
+        {
+            "id" : "FORAGABLE_MOOK",
+            "name" : "Mook",
+            "effectType" : "Antidote",
+            "form" : "Berry",
+            "difficulty" : "Light",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 5,
+            "cost" : "30 gp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            },
+            "effect" : "Level 3 antidote for Respiratory Poison"
+        },
+        {
+            "id" : "FORAGABLE_MUILFANA",
+            "name" : "Muilfana",
+            "effectType" : "Conversion Poison",
+            "form" : "Sap",
+            "difficulty" : "Medium",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 0,
+            "cost" : "52 gp",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            },
+            "effect" : "Level 2C poison.\nOrange tree sap affects mucous membranes.\nSevere affects turns mucous to acid (blinds, or destroys windpipe and oesophagus)"
+        },
+        {
+            "id" : "FORAGABLE_NELISSE",
+            "name" : "Nelisse",
+            "effectType" : "Intoxicant",
+            "form" : "Leaf",
+            "difficulty" : "Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 15,
+            "cost" : "9 sp",
+            "location" : {
+                "features" : [
+                    "Volcanic"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Euphoria for 1 hour (all action -50).\nGives 1 day's nutrition"
+        },
+        {
+            "id" : "FORAGABLE_NIMNAUR",
+            "name" : "Nimnaur",
+            "effectType" : "Reduction Poison",
+            "form" : "Spider",
+            "difficulty" : "Hard",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 0,
+            "cost" : "23 gp",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            },
+            "effect" : "Level 3A poison.\nMilky white juices affect organs.\nMax of Severe effects (liquefies one organ in 1-10 minutes)"
+        },
+        {
+            "id" : "FORAGABLE_NUROIOLOSSE",
+            "name" : "Nur-oiolosse",
+            "effectType" : "Life Preservation",
+            "form" : "Clove",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 13,
+            "cost" : "200 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Lifekeeping (1 day)\nKills one day later unless Sorul Nut is ingested"
+        },
+        {
+            "id" : "FORAGABLE_OIOLOSSE",
+            "name" : "Oiolosse",
+            "effectType" : "Life Preservation",
+            "form" : "Clove",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 22,
+            "cost" : "600 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Lifekeeping for Elves if given within 7 days of death"
+        },
+        {
+            "id" : "FORAGABLE_OLVAR",
+            "name" : "Olvar",
+            "effectType" : "Life Preservation",
+            "form" : "Flower",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 20,
+            "cost" : "200 gp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Lifekeeping (2-20 days)"
+        },
+        {
+            "id" : "FORAGABLE_ONDOHITHUI",
+            "name" : "Ondohithui",
+            "effectType" : "Reduction Poison",
+            "form" : "Lichen",
+            "difficulty" : "Hard",
+            "preparationType" : "Paste",
+            "addictionFactor" : 0,
+            "cost" : "60 gp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_WET",
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Level 3D poison.\nBlue/grey paste causes dehydration.\nExtreme effect is fatal in 1-10 minutes"
+        },
+        {
+            "id" : "FORAGABLE_ONKOKAMBA",
+            "name" : "Onkokamba",
+            "effectType" : "Conversion Poison",
+            "form" : "Bat",
+            "difficulty" : "Light",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 2,
+            "cost" : "29 gp",
+            "location" : {
+                "terrains" : [
+                    "Underground"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Level 2C poison.\nGreen venom acts on appendages.\nSevere effect turns 1-4 appendages into stone"
+        },
+        {
+            "id" : "FORAGABLE_PASAMAR",
+            "name" : "Pasamar",
+            "effectType" : "Organ Repair & Preservation",
+            "form" : "Grass",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Brew",
+            "addictionFactor" : 40,
+            "cost" : "75 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Preserves organic material"
+        },
+        {
+            "id" : "FORAGABLE_PATHUR",
+            "name" : "Pathur",
+            "effectType" : "Life Preservation",
+            "form" : "Nodule",
+            "difficulty" : "Medium",
+            "preparationType" : "Brew",
+            "addictionFactor" : 7,
+            "cost" : "35 gp",
+            "location" : {
+                "vegetation" : [
+                    "Heath"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Lifekeeping (1 hour)"
+        },
+        {
+            "id" : "FORAGABLE_QUILMUFUR",
+            "name" : "Quilmufur",
+            "effectType" : "Antidote",
+            "form" : "Root",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 1,
+            "cost" : "40 gp",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Level 8 antidote for Conversion Poison"
+        },
+        {
+            "id" : "FORAGABLE_REDTEKMA",
+            "name" : "Red-tekma",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Fruit",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 10,
+            "cost" : "25 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Essence Attunement: Subtracts 20 from manoeuvre and melee.\nAdds 20 to spells attacks.\n10% chance target spell will hit wrong target"
+        },
+        {
+            "id" : "FORAGABLE_REGLEN",
+            "name" : "Reglen",
+            "effectType" : "Concussion Relief",
+            "form" : "Moss",
+            "difficulty" : "Light",
+            "preparationType" : "Brew",
+            "addictionFactor" : 7,
+            "cost" : "75 gp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Heals 50"
+        },
+        {
+            "id" : "FORAGABLE_REWK",
+            "name" : "Rewk",
+            "effectType" : "Concussion Relief",
+            "form" : "Nodule",
+            "difficulty" : "Light",
+            "preparationType" : "Brew",
+            "addictionFactor" : 1,
+            "cost" : "9 sp",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            },
+            "effect" : "Heals 2-20"
+        },
+        {
+            "id" : "FORAGABLE_RUTHIIAUR",
+            "name" : "Ruth-I-Iaur",
+            "effectType" : "Nerve Poison",
+            "form" : "Drake",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 1,
+            "cost" : "56 gp",
+            "location" : {
+                "terrains" : [
+                    "Underground"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Level 4C poison.\nBrownish cave-drake saliva.\nMax of Severe effects (erosion of nervous system in 1-20 rounds.  Victim left at -50 to -100 activity)"
+        },
+        {
+            "id" : "FORAGABLE_SHARDUVAAK",
+            "name" : "Sharduvaak",
+            "effectType" : "Circulatory Poison",
+            "form" : "Berry",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 6,
+            "cost" : "36 gp",
+            "location" : {
+                "waterSources" : [
+                    "Desert",
+                    "Oasis"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Level 3E poison.\nBrown liquid slows blood flow and victim needs double usual sleep until fully recovered.\nMax of Moderate General effects"
+        },
+        {
+            "id" : "FORAGABLE_SHARKASAR",
+            "name" : "Sharkasar",
+            "effectType" : "Circulatory Poison",
+            "form" : "Root",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Paste",
+            "addictionFactor" : 0,
+            "cost" : "2 gp",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Level 10D poison.\nBrown paste gives 1-10 hits.\nMax of Moderate effects"
+        },
+        {
+            "id" : "FORAGABLE_SHEN",
+            "name" : "Shen",
+            "effectType" : "Antidote",
+            "form" : "Leaf",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 3,
+            "cost" : "27 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast",
+                    "Islet"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            },
+            "effect" : "Level 4 antidote for Nerve Poison"
+        },
+        {
+            "id" : "FORAGABLE_SILMAANA",
+            "name" : "Silmaana",
+            "effectType" : "Reduction Poison",
+            "form" : "Stalk",
+            "difficulty" : "Easy",
+            "preparationType" : "Powder",
+            "addictionFactor" : 0,
+            "cost" : "4 gp",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET",
+                    "CLIMATE_WARM_TEMPERATE",
+                    "CLIMATE_WARM_WET"
+                ]
+            },
+            "effect" : "Level 9C poison.\nSilver powder scars skin.\nGives 2-20 hits.\nMax of Moderate effects"
+        },
+        {
+            "id" : "FORAGABLE_SIRAN",
+            "name" : "Siran",
+            "effectType" : "Organ Repair & Preservation",
+            "form" : "Clove",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 31,
+            "cost" : "80 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Restoration of 1 organ or area.\nSide effect: skin disease (loss 1-10 appearance)"
+        },
+        {
+            "id" : "FORAGABLE_SIRIEAN",
+            "name" : "Siriean",
+            "effectType" : "Organ Repair & Preservation",
+            "form" : "Grass",
+            "difficulty" : "Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 27,
+            "cost" : "70 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Preservation of any organic material (lasts 1 hour)"
+        },
+        {
+            "id" : "FORAGABLE_SLIRD",
+            "name" : "Slird",
+            "effectType" : "Nerve Poison",
+            "form" : "Fruit",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Paste",
+            "addictionFactor" : 1,
+            "cost" : "13 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_WET"
+                ]
+            },
+            "effect" : "Level 2C poison.\nActs in 1-2 rounds.\nMaximum of moderate effects (victim loses feeling in 1-6 extremities (head, hands, genitals…) for 1-100 days"
+        },
+        {
+            "id" : "FORAGABLE_SLOTA",
+            "name" : "Slota",
+            "effectType" : "Reduction Poison",
+            "form" : "Spider",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Paste",
+            "addictionFactor" : 0,
+            "cost" : "36 gp",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Level 5A poison.\nExtreme effect is slow (1 day) paralysis and death (1-10 days)"
+        },
+        {
+            "id" : "FORAGABLE_SORELNUT",
+            "name" : "Sorel Nut",
+            "effectType" : "Antidote",
+            "form" : "Nut",
+            "difficulty" : "Easy",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 0,
+            "cost" : "1 sp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast",
+                    "Islet"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE"
+                ]
+            },
+            "effect" : "Level 20 antidote for Nur-oiolosse"
+        },
+        {
+            "id" : "FORAGABLE_SPLAYFOOT",
+            "name" : "Splayfoot",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Seed",
+            "difficulty" : "Medium",
+            "preparationType" : "Brew",
+            "addictionFactor" : 16,
+            "cost" : "23 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Mental Stimulant:  Instils confidence and singleness of purpose +25 to all actions for 1-4 hours."
+        },
+        {
+            "id" : "FORAGABLE_SURANIE",
+            "name" : "Suranie",
+            "effectType" : "Stun Relief",
+            "form" : "Berry",
+            "difficulty" : "Light",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 3,
+            "cost" : "2 gp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast",
+                    "Marsh"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Removes 1 round of stun"
+        },
+        {
+            "id" : "FORAGABLE_SWIGMAKRIL",
+            "name" : "Swigmakril",
+            "effectType" : "Intoxicant",
+            "form" : "Flower",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 25,
+            "cost" : "50 gp",
+            "location" : {
+                "waterSources" : [
+                    "Breaks",
+                    "Desert",
+                    "Oasis"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Relaxant lasting 1-2 hours.\nUser takes double usual hits before passing out.\nAll actions at -30."
+        },
+        {
+            "id" : "FORAGABLE_SWUTH",
+            "name" : "Swuth",
+            "effectType" : "Intoxicant",
+            "form" : "Leaf",
+            "difficulty" : "Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 3,
+            "cost" : "4 sp",
+            "location" : {
+                "waterSources" : [
+                    "Ocean"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Invisible smoke relaxes (-75 to all actions) for 1-10 rounds"
+        },
+        {
+            "id" : "FORAGABLE_TARFEG",
+            "name" : "Tarfeg",
+            "effectType" : "Muscle Cartilage & Tendon Repair",
+            "form" : "Flower",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 3,
+            "cost" : "23 gp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Repairs sprains"
+        },
+        {
+            "id" : "FORAGABLE_TARNAS",
+            "name" : "Tarnas",
+            "effectType" : "Organ Repair & Preservation",
+            "form" : "Nodule",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Brew",
+            "addictionFactor" : 60,
+            "cost" : "220 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_WET"
+                ]
+            },
+            "effect" : "Repairs organ damage.\nNausea for 1-10 hours (-50)"
+        },
+        {
+            "id" : "FORAGABLE_TAYNAGA",
+            "name" : "Taynaga",
+            "effectType" : "Conversion Poison",
+            "form" : "Bark",
+            "difficulty" : "Hard",
+            "preparationType" : "Powder",
+            "addictionFactor" : 0,
+            "cost" : "27 gp",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET",
+                    "CLIMATE_COOL_DRY"
+                ]
+            },
+            "effect" : "Level 8D poison.\nBrownish powder sterilises and gives 5-50 hits.\nMax of Moderate General effects"
+        },
+        {
+            "id" : "FORAGABLE_TERBAS",
+            "name" : "Terbas",
+            "effectType" : "Nerve Repair",
+            "form" : "Leaf",
+            "difficulty" : "Light",
+            "preparationType" : "Apply",
+            "addictionFactor" : 4,
+            "cost" : "2 gp",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Doubles healing rate for nerve damage"
+        },
+        {
+            "id" : "FORAGABLE_THURL",
+            "name" : "Thurl",
+            "effectType" : "Concussion Relief",
+            "form" : "Clove",
+            "difficulty" : "Routine",
+            "preparationType" : "Brew",
+            "addictionFactor" : 1,
+            "cost" : "2 sp",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            },
+            "effect" : "Heals 1-4 (brew keeps 1-2 weeks)"
+        },
+        {
+            "id" : "FORAGABLE_TRUDURS",
+            "name" : "Trudurs",
+            "effectType" : "General Purpose",
+            "form" : "Moss",
+            "difficulty" : "Medium",
+            "preparationType" : "Brew",
+            "addictionFactor" : 8,
+            "cost" : "12 sp",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE"
+                ]
+            },
+            "effect" : "Disease resistance +10 for 1-10 days"
+        },
+        {
+            "id" : "FORAGABLE_TRUSA",
+            "name" : "Trusa",
+            "effectType" : "Muscle Poison",
+            "form" : "Frog",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Paste",
+            "addictionFactor" : 6,
+            "cost" : "31 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Level 4C poison.\nActs in 1-10 rounds.\nMild effect is blindness in 1-2 eyes.\nModerate effect is complete blindness and coma.\nSevere effect is death."
+        },
+        {
+            "id" : "FORAGABLE_TRYFIRA",
+            "name" : "Try-fira",
+            "effectType" : "Life Preservation",
+            "form" : "Leaf",
+            "difficulty" : "Absurd",
+            "preparationType" : "Apply",
+            "addictionFactor" : 33,
+            "cost" : "1200 gp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Lifekeeping if given within 56 days"
+        },
+        {
+            "id" : "FORAGABLE_TUKAMUR",
+            "name" : "Tukamur",
+            "effectType" : "Intoxicant",
+            "form" : "Grass",
+            "difficulty" : "Medium",
+            "preparationType" : "Brew",
+            "addictionFactor" : 100,
+            "cost" : "38 sp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Euphoric:  Allows for shared dreams with friend similarly affected."
+        },
+        {
+            "id" : "FORAGABLE_UKUR",
+            "name" : "Ukur",
+            "effectType" : "General Purpose",
+            "form" : "Nut",
+            "difficulty" : "Medium",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 1,
+            "cost" : "34 sp",
+            "location" : {
+                "vegetation" : [
+                    "Heath"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "One days nutrition"
+        },
+        {
+            "id" : "FORAGABLE_ULACAANA",
+            "name" : "Ul-acaana",
+            "effectType" : "Nerve Poison",
+            "form" : "Flower",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Paste",
+            "addictionFactor" : 0,
+            "cost" : "",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_FRIGID"
+                ]
+            },
+            "effect" : "Level 20A poison.\nExtreme effects result in destruction of nervous system (paralysed instantly; dead in 1-10 minutes)"
+        },
+        {
+            "id" : "FORAGABLE_ULNAZA",
+            "name" : "Ul-Naza",
+            "effectType" : "Antidote",
+            "form" : "Leaf",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 9,
+            "cost" : "430 gp",
+            "location" : {
+                "terrains" : [
+                    "Waste"
+                ],
+                "climates" : [
+                    "CLIMATE_",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Level 50 antidote for any poison"
+        },
+        {
+            "id" : "FORAGABLE_URAANA",
+            "name" : "Uraana",
+            "effectType" : "Respitory Poison",
+            "form" : "Leaf",
+            "difficulty" : "Light",
+            "preparationType" : "Paste",
+            "addictionFactor" : 6,
+            "cost" : "12 gp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Level 6A poison.\nCreamy paste gives 3-30 hits.\nMax of Mild effects"
+        },
+        {
+            "id" : "FORAGABLE_VELDURAK",
+            "name" : "Veldurak",
+            "effectType" : "Burn & Exposure Relief",
+            "form" : "Kelp",
+            "difficulty" : "Hard",
+            "preparationType" : "Apply",
+            "addictionFactor" : 2,
+            "cost" : "8 sp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE"
+                ]
+            },
+            "effect" : "Cures frostbite (1-50 hits from cold)"
+        },
+        {
+            "id" : "FORAGABLE_VINUK",
+            "name" : "Vinuk",
+            "effectType" : "Stun Relief",
+            "form" : "Root",
+            "difficulty" : "Medium",
+            "preparationType" : "Brew",
+            "addictionFactor" : 4,
+            "cost" : "12 sp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Removes 1-10 rounds of stun"
+        },
+        {
+            "id" : "FORAGABLE_VULCURAX",
+            "name" : "Vulcurax",
+            "effectType" : "Life Preservation",
+            "form" : "Berry",
+            "difficulty" : "Absurd",
+            "preparationType" : "Apply",
+            "addictionFactor" : 0,
+            "cost" : "1000 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_WET"
+                ]
+            },
+            "effect" : "Lifekeeping if given within 30 days"
+        },
+        {
+            "id" : "FORAGABLE_VURAANA",
+            "name" : "Vuraana",
+            "effectType" : "Respitory Poison",
+            "form" : "Flower",
+            "difficulty" : "Medium",
+            "preparationType" : "Paste",
+            "addictionFactor" : 6,
+            "cost" : "42 gp",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Level 2A poison.\nPinkish paste delivers 1-100 hits.\nMax of Mild effects."
+        },
+        {
+            "id" : "FORAGABLE_WEKBAAS",
+            "name" : "Wek-baas",
+            "effectType" : "Nerve Poison",
+            "form" : "Fish",
+            "difficulty" : "Absurd",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 0,
+            "cost" : "70 gp",
+            "location" : {
+                "waterSources" : [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Level 5D poison.\nActs in 1-100 rounds:\nMild effects is deep sleep.\nModerate effect is degeneration of balance and hearing (-1 - -100 Agility and -50 to perception).\nSevere effect is total paralysis."
+        },
+        {
+            "id" : "FORAGABLE_WEKWEK",
+            "name" : "Wek-wek",
+            "effectType" : "Organ Repair & Preservation",
+            "form" : "Nodule",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Brew",
+            "addictionFactor" : 50,
+            "cost" : "220 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_WET"
+                ]
+            },
+            "effect" : "Repairs organ damage."
+        },
+        {
+            "id" : "FORAGABLE_WELWAL",
+            "name" : "Welwal",
+            "effectType" : "Stun Relief",
+            "form" : "Leaf",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 3,
+            "cost" : "12 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Removes 3 rounds of stun"
+        },
+        {
+            "id" : "FORAGABLE_WIFURWIF",
+            "name" : "Wifurwif",
+            "effectType" : "Nerve Repair",
+            "form" : "Lichen",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 15,
+            "cost" : "55 gp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Nerve repairs"
+        },
+        {
+            "id" : "FORAGABLE_WINCLAMIT",
+            "name" : "Winclamit",
+            "effectType" : "Concussion Relief",
+            "form" : "Fruit",
+            "difficulty" : "Extremely Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 12,
+            "cost" : "100 gp",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Heals 3-300"
+        },
+        {
+            "id" : "FORAGABLE_WITAV",
+            "name" : "Witav",
+            "effectType" : "Stun Relief",
+            "form" : "Leaf",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 5,
+            "cost" : "12 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
+                ]
+            },
+            "effect" : "Removes 2 rounds of stun"
+        },
+        {
+            "id" : "FORAGABLE_YARN",
+            "name" : "Yarn",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Pollen",
+            "difficulty" : "Easy",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 7,
+            "cost" : "9 sp",
+            "location" : {
+                "vegetation" : [
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            },
+            "effect" : "Olfactory Stimulant: Acute smell and taste (+50 perception) for 1 hour."
+        },
+        {
+            "id" : "FORAGABLE_YAVETHALION",
+            "name" : "Yavethalion",
+            "effectType" : "Concussion Relief",
+            "form" : "Fruit",
+            "difficulty" : "Hard",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 4,
+            "cost" : "45 gp",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            },
+            "effect" : "Heals 5-50"
+        },
+        {
+            "id" : "FORAGABLE_YUTH",
+            "name" : "Yuth",
+            "effectType" : "Antidote",
+            "form" : "Flower",
+            "difficulty" : "Sheer Folly",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 8,
+            "cost" : "29 gp",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID"
+                ]
+            },
+            "effect" : "Level 20 antidote for Nerve Poison"
+        },
+        {
+            "id" : "FORAGABLE_ZAGANZAR",
+            "name" : "Zaganzar",
+            "effectType" : "Reduction Poison",
+            "form" : "Root",
+            "difficulty" : "Very Hard",
+            "preparationType" : "Liquid",
+            "addictionFactor" : 0,
+            "cost" : "139 gp",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            },
+            "effect" : "Level 5H poison.\nBluish extract.\nMaximum of Severe effects (blinds by reducing optic nerve to water.  Gives 1-10 hits"
+        },
+        {
+            "id" : "FORAGABLE_ZULSENDURA",
+            "name" : "Zulsendura",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Mushroom",
+            "difficulty" : "Medium",
+            "preparationType" : "Ingest",
+            "addictionFactor" : 22,
+            "cost" : "70 sp",
+            "location" : {
+                "terrains" : [
+                    "Underground"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            },
+            "effect" : "Mental/Physical Stimulant: Haste for 3 rounds"
+        },
+        {
+            "id" : "FORAGABLE_ZUR",
+            "name" : "Zur",
+            "effectType" : "Physical Alteration & Enhancement",
+            "form" : "Fungus",
+            "difficulty" : "Medium",
+            "preparationType" : "Brew",
+            "addictionFactor" : 8,
+            "cost" : "12 gp",
+            "location" : {
+                "terrains" : [
+                    "Underground"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            },
+            "effect" : "Audio stimulant: Enhances hearing (triple range, +50 perception) for 1 hour."
+        }
+    ]
+}
