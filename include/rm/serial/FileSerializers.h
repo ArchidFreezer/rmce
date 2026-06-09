@@ -14,6 +14,7 @@
 #include <CultureTypeSerializer.h>
 #include <DiseaseSerializer.h>
 #include <DiseaseTypeSerializer.h>
+#include <ForagableSerializer.h>
 #include <LanguageCategorySerializer.h>
 #include <LanguageSerializer.h>
 #include <PoisonSerializer.h>

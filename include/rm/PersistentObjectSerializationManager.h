@@ -455,6 +455,8 @@ std::unique_ptr<	serial::PersistentJsonSerializer<T>> PersistentObjectSerializat
 		return std::make_unique<DiseaseSerializer>(object_manager_);
 	} else if constexpr (std::is_same_v<T, DiseaseTypeData>) {
 		return std::make_unique<DiseaseTypeSerializer>(object_manager_);
+	} else if constexpr (std::is_same_v<T, ForagableData>) {
+		return std::make_unique<ForagableSerializer>(object_manager_);
 	} else if constexpr (std::is_same_v<T, LanguageCategoryData>) {
 		return std::make_unique<LanguageCategorySerializer>(object_manager_);
 	} else if constexpr (std::is_same_v<T, LanguageData>) {

@@ -25,6 +25,7 @@ void PersistentObjectSerializationManager::load() {
 	deserializeAllObjects<rm::rule::CultureTypeData>("CultureTypes.json", "culturetypes");
 	deserializeAllObjects<rm::rule::DiseaseData>("Diseases.json", "diseases");
 	deserializeAllObjects<rm::rule::DiseaseTypeData>("DiseaseTypes.json", "diseasetypes");
+	deserializeAllObjects<rm::rule::ForagableData>("Foragables.json", "foragables");
 	deserializeAllObjects<rm::rule::LanguageData>("Languages.json", "languages");
 	deserializeAllObjects<rm::rule::LanguageCategoryData>("LanguageCategories.json", "languagecategories");
 	deserializeAllObjects<rm::rule::PoisonData>("Poisons.json", "poisons");
@@ -60,6 +61,7 @@ void PersistentObjectSerializationManager::save() {
 	serializeAllObjects<rm::rule::CultureTypeData>("CultureTypes.json", "culturetypes");
 	serializeAllObjects<rm::rule::DiseaseData>("Diseases.json", "diseases");
 	serializeAllObjects<rm::rule::DiseaseTypeData>("DiseaseTypes.json", "diseasetypes");
+	serializeAllObjects<rm::rule::ForagableData>("Foragables.json", "foragables");
 	serializeAllObjects<rm::rule::LanguageData>("Languages.json", "languages");
 	serializeAllObjects<rm::rule::LanguageCategoryData>("LanguageCategories.json", "languagecategories");
 	serializeAllObjects<rm::rule::PoisonData>("Poisons.json", "poisons");
@@ -102,6 +104,7 @@ void PersistentObjectSerializationManager::save(std::string_view prefix) {
 	if (clean_prefix == "culturetype") serializeAllObjects<rm::rule::CultureTypeData>("CultureTypes.json", "culturetypes");
 	if (clean_prefix == "disease") serializeAllObjects<rm::rule::DiseaseData>("Diseases.json", "diseases");
 	if (clean_prefix == "diseasetype") serializeAllObjects<rm::rule::DiseaseTypeData>("DiseaseTypes.json", "diseasetypes");
+	if (clean_prefix == "foragable") serializeAllObjects<rm::rule::ForagableData>("Foragables.json", "foragables");
 	if (clean_prefix == "language") serializeAllObjects<rm::rule::LanguageData>("Languages.json", "languages");
 	if (clean_prefix == "languagecategory") serializeAllObjects<rm::rule::LanguageCategoryData>("LanguageCategories.json", "languagecategories");
 	if (clean_prefix == "poison") serializeAllObjects<rm::rule::PoisonData>("Poisons.json", "poisons");
@@ -144,6 +147,8 @@ std::string PersistentObjectSerializationManager::serializeAnyDataObject(const s
 		return serializeObject(*disease);
 	} else if (auto disease_type = dynamic_cast<const rule::DiseaseTypeData*>(obj)) {
 		return serializeObject(*disease_type);
+	} else if (auto foragable = dynamic_cast<const rule::ForagableData*>(obj)) {
+		return serializeObject(*foragable);
 	} else if (auto language = dynamic_cast<const rule::LanguageData*>(obj)) {
 		return serializeObject(*language);
 	} else if (auto language_category = dynamic_cast<const rule::LanguageCategoryData*>(obj)) {
@@ -221,6 +226,8 @@ std::string PersistentObjectSerializationManager::serializeAllObjects(std::strin
 		return serializeAllObjects_Impl<rm::rule::DiseaseData>(root_key);
 	} else if (lower_prefix == "diseasetype") {
 		return serializeAllObjects_Impl<rm::rule::DiseaseTypeData>(root_key);
+	} else if (lower_prefix == "foragable") {
+		return serializeAllObjects_Impl<rm::rule::ForagableData>(root_key);
 	} else if (lower_prefix == "language") {
 		return serializeAllObjects_Impl<rm::rule::LanguageData>(root_key);
 	} else if (lower_prefix == "languagecategory") {
@@ -285,6 +292,8 @@ const std::string PersistentObjectSerializationManager::deserializeObject(json::
 		obj_ptr = &deserializeObject<rm::rule::DiseaseData>(obj);
 	} else if (lower_prefix == "diseasetype") {
 		obj_ptr = &deserializeObject<rm::rule::DiseaseTypeData>(obj);
+	} else if (lower_prefix == "foragable") {
+		obj_ptr = &deserializeObject<rm::rule::ForagableData>(obj);
 	} else if (lower_prefix == "language") {
 		obj_ptr = &deserializeObject<rm::rule::LanguageData>(obj);
 	} else if (lower_prefix == "languagecategory") {
