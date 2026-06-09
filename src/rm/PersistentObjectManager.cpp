@@ -19,6 +19,7 @@ const std::set<std::string> PersistentObjectManager::getAllDataPrefixes() const 
 	result.insert("culturetype");
 	result.insert("disease");
 	result.insert("diseasetype");
+	result.insert("foragable");
 	result.insert("languagecategory");
 	result.insert("language");
 	result.insert("poison");
@@ -87,6 +88,8 @@ const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 		result = &cache_.get<DiseaseData>(id);
 	} else if (prefix == "diseasetype") {
 		result = &cache_.get<DiseaseTypeData>(id);
+	} else if (prefix == "foragable") {
+		result = &cache_.get<ForagableData>(id);
 	} else if (prefix == "languagecategory") {
 		result = &cache_.get<LanguageCategoryData>(id);
 	} else if (prefix == "language") {
@@ -153,6 +156,8 @@ const std::set<std::string> PersistentObjectManager::getAllIds(std::string_view 
 		cache_.keys<DiseaseData>(result);
 	} else if (lprefix == "diseasetype") {
 		cache_.keys<DiseaseTypeData>(result);
+	} else if (lprefix == "foragable") {
+		cache_.keys<ForagableData>(result);
 	} else if (lprefix == "languagecategory") {
 		cache_.keys<LanguageCategoryData>(result);
 	} else if (lprefix == "language") {

@@ -10,6 +10,7 @@
 #include <CultureTypeData.h>
 #include <DiseaseData.h>
 #include <DiseaseTypeData.h>
+#include <ForagableData.h>
 #include <LanguageData.h>
 #include <LanguageCategoryData.h>
 #include <PoisonData.h>
