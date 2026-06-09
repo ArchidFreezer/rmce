@@ -409,7 +409,7 @@ rm::game::Location JsonConverter::getLocation(const json::object& obj, std::stri
 		fromString(terrain_str, terrain);
 		location.addTerrain(terrain);
 	}
-	std::set<std::string> vegetation_str = JsonConverter::getStringSet(*location_obj, "	vegetation");
+	std::set<std::string> vegetation_str = JsonConverter::getStringSet(*location_obj, "vegetation");
 	for (const auto& vegetation_str : vegetation_str) {
 		EnvironmentType::Vegetation vegetation{};
 		fromString(vegetation_str, vegetation);
