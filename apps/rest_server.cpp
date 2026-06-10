@@ -67,6 +67,13 @@ int main(int argc, char* argv[]) {
 		LOG_INFO("  GET     /rmce/save                   - Save game data");
 		LOG_INFO("  GET     /rmce/version                - API version");
 		LOG_INFO("  GET     /rmce/prefixes               - Get game object prefixes");
+		LOG_INFO("  GET     /rmce/data/{prefix}          - Get all game data objects");
+		LOG_INFO("  GET     /rmce/data/{prefix}?count    - Count of game data objects");
+		LOG_INFO("  GET     /rmce/data/{prefix}?ids      - List of game data object IDs");
+		LOG_INFO("  POST    /rmce/data/{prefix}          - Create game data object");
+		LOG_INFO("  GET     /rmce/data/{prefix}/{id}     - Get game data object");
+		LOG_INFO("  PUT     /rmce/data/{prefix}/{id}     - Update game data object");
+		LOG_INFO("  DELETE  /rmce/data/{prefix}/{id}     - Delete game data object");
 		LOG_INFO("  GET     /rmce/objects/{prefix}       - Get all game objects");
 		LOG_INFO("  GET     /rmce/objects/{prefix}?count - Count of game objects");
 		LOG_INFO("  GET     /rmce/objects/{prefix}?ids   - List of game object IDs");
