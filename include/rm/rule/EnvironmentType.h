@@ -112,7 +112,8 @@ namespace rm::rule::enums {
 		 * such as pockets of waste land in a rough region.
 		 */
 		enum class Terrain {
-			kAlpine, /**< Alpine, high altitude or mountainous */
+			kAlpine, /**< Alpine, high altitude above the tree line */
+	        kMountainous, /**< Mountainous or high hills */
 			kRough, /**< Rough, rugged or rocky hills */
 			kUnderground, /**< Underground */
 			kWaste, /**< Waste, barren */

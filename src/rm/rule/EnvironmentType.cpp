@@ -67,6 +67,7 @@ namespace rm::rule::enums {
 
 		switch (terrain) {
 		case kAlpine: return "Alpine";
+	    case kMountainous: return "Mountainous";
 		case kRough: return "Rough";
 		case kUnderground: return "Underground";
 		case kWaste: return "Waste";
@@ -78,7 +79,8 @@ namespace rm::rule::enums {
 		using enum EnvironmentType::Terrain;
 
 		switch (terrain) {
-		case kAlpine: return "Alpine, high altitude or mountainous";
+		case kAlpine: return "Alpine, high altitude above the tree line";
+		case kMountainous: return "Mountainous or high hills";
 		case kRough: return "Rough, rugged or rocky hills";
 		case kUnderground: return "Underground";
 		case kWaste: return "Waste, barren";
@@ -91,6 +93,7 @@ namespace rm::rule::enums {
 
 		const std::string val = archid::lcaseconcat(sv);
 		if (val == "alpine") return kAlpine;
+	    if (val == "mountainous") return kMountainous;
 		if (val == "rough") return kRough;
 		if (val == "underground") return kUnderground;
 		if (val == "waste") return kWaste;
