@@ -143,7 +143,7 @@ void Character::updateDevelopmentPoints() {
 			development_points_ += stat.temporary();
 		}
 	}
-	development_points_ = (development_points_ / 5);
+	development_points_ = (development_points_ + 4) / 5; // Round up to the nearest whole number, as per the rules for development points.
 }
 
 void Character::updateAllDerivedData() {
