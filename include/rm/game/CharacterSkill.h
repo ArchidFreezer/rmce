@@ -47,7 +47,6 @@ private:
 	const SubcategoriedSkillData* skill_data_{nullptr};
 	const SkillProgressionTypeData* progression_type_{nullptr};
 	SkillDevelopmentType::Type development_type_{SkillDevelopmentType::kStandard};
-	int profession_bonus_{0};
 	int ranks_{0};
 	int special_bonus_{0}; /**< Any special bonus for the skill, such as from a training package or other source. This is added to the total bonus for the skill after calculating the bonus from ranks and category. */
 };

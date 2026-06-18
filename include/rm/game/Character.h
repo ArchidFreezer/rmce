@@ -452,9 +452,9 @@ public:
 	}
 
 	/**
-	 * @brief Get the bonus for a given skill based on the number of ranks allocated to it and the category.
+	 * @brief Get the bonus for a given skill.
 	 *
-	 * This includes the bonus from ranks from the category and the applicable stats.
+	 * This includes the number of ranks allocated to the skill, the category bonus, stats and any applicable specials. It does not include any bonus from items that the character may have.
 	 *
 	 * @param skill The `SubcategoriedSkillData` object representing the skill to calculate the bonus for.
 	 * @return The total rank bonus for the specified skill.
@@ -462,9 +462,10 @@ public:
 	int skillBonus(const SubcategoriedSkillData& skill) const;
 
 	/**
-	 * @brief Get the bonus for a given skill category based on the applicable stats.
+	 * @brief Get the bonus for a given skill category.
 	 *
-	 * This includes the bonus from ranks from the category and the applicable stats.
+	 * This includes the bonus from ranks for the category, profession bonus, any specials and the applicable stats.
+	 * This value is included in the #skillBonus for each skill in the category, so it is not necessary to add it again when calculating the total bonus for a skill.
 	 *
 	 * @param category The `SkillCategoryData` object representing the skill category to calculate the bonus for.
 	 * @return The total rank bonus for the specified skill category.
@@ -472,7 +473,7 @@ public:
 	int categoryBonus(const SkillCategoryData& category) const;
 
 	/**
-	 * @brief Get the bonus for a given spell list based on the applicable stats.
+	 * @brief Get the bonus for a given spell list based on the number of ranks.
 	 *
 	 * This includes the bonus from ranks from the spell list and the applicable stats.
 	 *
@@ -482,7 +483,8 @@ public:
 	int spellListBonus(const SpellListData& spell_list) const;
 
 	/**
-	 * @brief Get the bonus for the somatic component of a given language based on the applicable stats.
+	 * @brief Get the bonus for the somatic component of a given language based on the number of ranks.
+
 	 *
 	 * This includes the bonus from ranks from the language and the applicable stats.
 	 *
