@@ -147,12 +147,6 @@ Character& CharacterBuilder::build() {
 		skill.ranks_ = ranks;
 	}
 
-	for (const auto& [skill_data, prof_bonus] : skill_professional_bonuses_) {
-		auto [it, inserted] = character.skills_.try_emplace(skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
-		Skill& skill = it->second;
-		skill.profession_bonus_ = prof_bonus;
-	}
-
 	for (const auto& [skill_data, special_bonus] : skill_special_bonuses_) {
 		auto [it, inserted] = character.skills_.try_emplace(skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
 		Skill& skill = it->second;

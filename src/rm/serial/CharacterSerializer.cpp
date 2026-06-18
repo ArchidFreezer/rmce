@@ -163,7 +163,6 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 			skill_obj["skillData"] = std::move(skill_data_obj);
 			JsonConverter::setString(skill_obj, "progression", char_skill.progression_type_->id());
 			JsonConverter::setString(skill_obj, "developmentType", toString(char_skill.development_type_));
-			JsonConverter::setInt(skill_obj, "professionBonus", char_skill.profession_bonus_);
 			JsonConverter::setInt(skill_obj, "ranks", char_skill.ranks_);
 			JsonConverter::setInt(skill_obj, "specialBonus", char_skill.special_bonus_);
 			JsonConverter::setInt(skill_obj, "totalBonus", ref.skillBonus(*sub_skill));
@@ -311,7 +310,6 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 				char_skill.category_ = &ref.categories_.at(&sub_skill_data->skillData().category());
 				char_skill.progression_type_ = &manager_.get<SkillProgressionTypeData>(JsonConverter::getString(skill_obj, "progression"));
 				fromString(JsonConverter::getString(skill_obj, "developmentType"), char_skill.development_type_);
-				char_skill.profession_bonus_ = JsonConverter::getInt(skill_obj, "professionBonus", 0);
 				char_skill.ranks_ = JsonConverter::getInt(skill_obj, "ranks", 0);
 				char_skill.special_bonus_ = JsonConverter::getInt(skill_obj, "specialBonus", 0);
 				// We do not need to set the total bonus as this is derived data that is calculated from the other values, so it will be generated when the character's data is updated after deserialization.
