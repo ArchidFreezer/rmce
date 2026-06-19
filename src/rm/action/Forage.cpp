@@ -79,6 +79,8 @@ std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::
 	// Get the characters herb lore skill bonus
 	const rm::rule::SubcategoriedSkillData& herb_lore_skill = config.object_factory.subcategoriedSkillData("SKILL_HERB_LORE");
 	int herb_lore_skill_bonus = forager.skillBonus(herb_lore_skill);
+	const rm::rule::SubcategoriedSkillData& poison_lore_skill = config.object_factory.subcategoriedSkillData("SKILL_POISON_LORE");
+	int poison_lore_skill_bonus = forager.skillBonus(poison_lore_skill);
 
 	LOG_INFO("Foraged resources: Roll ({})", foraging_roll);
 	LOG_INFO("{:-<{}}", "", 52);
@@ -87,14 +89,19 @@ std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::
 
 
 	for (auto& [foragable, num_doses] : foraged_resources) {
-		int herb_lore_roll = d100.roll().result();
-		herb_lore_roll += herb_lore_skill_bonus;
-		herb_lore_roll += config.herb_lore_bonus; // Add any generic herb lore skill bonus from items (book)
-		herb_lore_roll += config.herb_lore_bonuses[foragable]; // Add any specific herb lore skill bonus from familiarity with specific plants
-		if (herb_lore_roll < (foragable->difficultyRating() * 10)) {
-			LOG_INFO("| {:<17} | {:^5} | {:^5} | {:^5} | {:^5} |", foragable->name(), foragable->difficultyModifier(), herb_lore_roll, num_doses, "No");
+		int lore_roll = d100.roll().result();
+		if (foragable->loreSkill() == &herb_lore_skill) {
+			lore_roll += herb_lore_skill_bonus;
+			lore_roll += config.herb_lore_bonus; // Add any generic herb lore skill bonus from items (book)
+		} else if (foragable->loreSkill() == &poison_lore_skill) {
+			lore_roll += poison_lore_skill_bonus;
+			lore_roll += config.poison_lore_bonus; // Add any generic poison lore skill bonus from items (book)
+		}
+		lore_roll += config.lore_bonuses[foragable]; // Add any specific herb lore skill bonus from familiarity with specific plants
+		if (lore_roll < (foragable->difficultyRating() * 10)) {
+			LOG_INFO("| {:<17} | {:^5} | {:^5} | {:^5} | {:^5} |", foragable->name(), foragable->difficultyModifier(), lore_roll, num_doses, "No");
 		} else {
-			LOG_INFO("| {:<17} | {:^5} | {:^5} | {:^5} | {:^5} |", foragable->name(), foragable->difficultyModifier(), herb_lore_roll, num_doses, "Yes");
+			LOG_INFO("| {:<17} | {:^5} | {:^5} | {:^5} | {:^5} |", foragable->name(), foragable->difficultyModifier(), lore_roll, num_doses, "Yes");
 			identified_resources[foragable] = num_doses;
 		}
 	}

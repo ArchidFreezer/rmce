@@ -241,6 +241,22 @@ public:
 		return effect_;
 	}
 
+	/**
+	 * @brief Get the skill used to identify the herb
+	 * @return The skill used to identify the herb
+	 */
+	const SubcategoriedSkillData* loreSkill() const {
+		return lore_skill_;
+	}
+
+	/**
+	 * @brief Set the skill used to identify the herb
+	 * @param lore_skill The skill used to identify the herb
+	 */
+	void setLoreSkill(const SubcategoriedSkillData* lore_skill) {
+		lore_skill_ = lore_skill;
+	}
+
 private:
 	std::string name_{};                                /**< The name of the foragable resource. */
 	ForagableEffectType::Type effect_type_{};           /**< The effect type of the foragable resource, used to determine the type of effect that the prepared resource has when used. */
@@ -251,6 +267,7 @@ private:
 	int addiction_factor_{};                            /**< The addiction factor of the resource, optionally used to determine how addictive the resource is when consumed. */
 	std::string cost_{};                                /**< The cost of the foragable resource, used to determine how much it is worth when bought or sold. This is more a relative guide compared to other resources. */
 	std::string effect_{};                              /**< The effect that the prepared resource has when used. */
+	const SubcategoriedSkillData* lore_skill_{nullptr}; /**< The skill used to identify the herb. */
 };
 
 } // namespace rm::rule
