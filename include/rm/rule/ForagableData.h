@@ -133,6 +133,35 @@ public:
 	}
 
 	/**
+	 * @brief Get the difficulty rating for the resource, used to determine the number of doses found when looking for specific resources. This is a relative rating compared to other resources and is not used for skill checks.
+	 * @return Difficulty rating for the resource, used to determine the number of doses found when looking for specific resources
+	 */
+	int difficultyRating() const {
+		switch (difficulty()) {
+		case SkillDifficultyType::kRoutine:
+			return 1;
+		case SkillDifficultyType::kEasy:
+			return 2;
+		case SkillDifficultyType::kLight:
+			return 3;
+		case SkillDifficultyType::kMedium:
+			return 4;
+		case SkillDifficultyType::kHard:
+			return 5;
+		case SkillDifficultyType::kVeryHard:
+			return 6;
+		case SkillDifficultyType::kExtremelyHard:
+			return 7;
+		case SkillDifficultyType::kSheerFolly:
+			return 8;
+		case SkillDifficultyType::kAbsurd:
+			return 9;
+		default:
+			return 0;
+		}
+	}
+
+	/**
 	 * @brief Set the form of the resource, used to determine how the resource is found in its raw state
 	 * @param form The form of the resource, used to determine how the resource is found in its raw state
 	 */	
