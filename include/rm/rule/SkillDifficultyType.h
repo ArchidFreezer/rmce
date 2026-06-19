@@ -76,6 +76,20 @@ const std::optional<Type> fromString(std::string_view sv);
  */
 void fromString(std::string_view sv, SkillDifficultyType::Type& type);
 
+/**
+ * @brief Get the difficulty modifier for a given SkillDifficultyType::Type
+ * @param type The SkillDifficultyType::Type to get the difficulty modifier for
+ * @return The difficulty modifier as an integer
+ */
+int difficultyModifier(Type type);
+
+/**
+ * @brief Get the difficulty rating for a given SkillDifficultyType::Type
+ * @param type The SkillDifficultyType::Type to get the difficulty rating for
+ * @return The difficulty rating as an integer
+ */
+int difficultyRating(Type type);
+
 } // namespace SkillDifficultyType
 
 } // namespace rm::rule::enums

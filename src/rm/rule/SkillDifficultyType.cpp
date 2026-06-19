@@ -63,4 +63,56 @@ void SkillDifficultyType::fromString(std::string_view sv, SkillDifficultyType::T
 		throw std::invalid_argument("Invalid string value for SkillDifficultyType::Type: " + std::string(sv));
 }
 
+int difficultyModifier(SkillDifficultyType::Type type) {
+	using enum SkillDifficultyType::Type;
+	switch (type) {
+	case kRoutine:
+		return 30;
+	case kEasy:
+		return 20;
+	case kLight:
+		return 10;
+	case kMedium:
+		return 0;
+	case kHard:
+		return -10;
+	case kVeryHard:
+		return -20;
+	case kExtremelyHard:
+		return -30;
+	case kSheerFolly:
+		return -50;
+	case kAbsurd:
+		return -70;
+	default:
+		throw std::invalid_argument("Invalid SkillDifficultyType::Type value");
+	}
+}
+
+int difficultyRating(SkillDifficultyType::Type type) {
+	using enum SkillDifficultyType::Type;
+	switch (type) {
+	case kRoutine:
+		return 1;
+	case kEasy:
+		return 2;
+	case kLight:
+		return 3;
+	case kMedium:
+		return 4;
+	case kHard:
+		return 5;
+	case kVeryHard:
+		return 6;
+	case kExtremelyHard:
+		return 7;
+	case kSheerFolly:
+		return 8;
+	case kAbsurd:
+		return 9;
+	default:
+		throw std::invalid_argument("Invalid SkillDifficultyType::Type value");
+	}
+}
+
 } // namespace rm::rule::enums
