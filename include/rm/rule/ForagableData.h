@@ -108,28 +108,7 @@ public:
 	 * @return Difficulty modifier for the resource, used to determine the skill check difficulty when foraging for the resource
 	 */
 	int difficultyModifier() const {
-		switch (difficulty()) {
-		case SkillDifficultyType::kRoutine:
-			return 30;
-		case SkillDifficultyType::kEasy:
-			return 20;
-		case SkillDifficultyType::kLight:
-			return 10;
-		case SkillDifficultyType::kMedium:
-			return 0;
-		case SkillDifficultyType::kHard:
-			return -10;
-		case SkillDifficultyType::kVeryHard:
-			return -20;
-		case SkillDifficultyType::kExtremelyHard:
-			return -30;
-		case SkillDifficultyType::kSheerFolly:
-			return -50;
-		case SkillDifficultyType::kAbsurd:
-			return -70;
-		default:
-			return 0;
-		}
+		return SkillDifficultyType::difficultyModifier(difficulty_);
 	}
 
 	/**
@@ -137,28 +116,7 @@ public:
 	 * @return Difficulty rating for the resource, used to determine the number of doses found when looking for specific resources
 	 */
 	int difficultyRating() const {
-		switch (difficulty()) {
-		case SkillDifficultyType::kRoutine:
-			return 1;
-		case SkillDifficultyType::kEasy:
-			return 2;
-		case SkillDifficultyType::kLight:
-			return 3;
-		case SkillDifficultyType::kMedium:
-			return 4;
-		case SkillDifficultyType::kHard:
-			return 5;
-		case SkillDifficultyType::kVeryHard:
-			return 6;
-		case SkillDifficultyType::kExtremelyHard:
-			return 7;
-		case SkillDifficultyType::kSheerFolly:
-			return 8;
-		case SkillDifficultyType::kAbsurd:
-			return 9;
-		default:
-			return 0;
-		}
+		return SkillDifficultyType::difficultyRating(difficulty_);
 	}
 
 	/**
