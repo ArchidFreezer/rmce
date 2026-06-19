@@ -133,6 +133,35 @@ public:
 	}
 
 	/**
+	 * @brief Get the difficulty rating for the resource, used to determine the number of doses found when looking for specific resources. This is a relative rating compared to other resources and is not used for skill checks.
+	 * @return Difficulty rating for the resource, used to determine the number of doses found when looking for specific resources
+	 */
+	int difficultyRating() const {
+		switch (difficulty()) {
+		case SkillDifficultyType::kRoutine:
+			return 1;
+		case SkillDifficultyType::kEasy:
+			return 2;
+		case SkillDifficultyType::kLight:
+			return 3;
+		case SkillDifficultyType::kMedium:
+			return 4;
+		case SkillDifficultyType::kHard:
+			return 5;
+		case SkillDifficultyType::kVeryHard:
+			return 6;
+		case SkillDifficultyType::kExtremelyHard:
+			return 7;
+		case SkillDifficultyType::kSheerFolly:
+			return 8;
+		case SkillDifficultyType::kAbsurd:
+			return 9;
+		default:
+			return 0;
+		}
+	}
+
+	/**
 	 * @brief Set the form of the resource, used to determine how the resource is found in its raw state
 	 * @param form The form of the resource, used to determine how the resource is found in its raw state
 	 */	
@@ -212,6 +241,22 @@ public:
 		return effect_;
 	}
 
+	/**
+	 * @brief Get the skill used to identify the herb
+	 * @return The skill used to identify the herb
+	 */
+	const SubcategoriedSkillData* loreSkill() const {
+		return lore_skill_;
+	}
+
+	/**
+	 * @brief Set the skill used to identify the herb
+	 * @param lore_skill The skill used to identify the herb
+	 */
+	void setLoreSkill(const SubcategoriedSkillData* lore_skill) {
+		lore_skill_ = lore_skill;
+	}
+
 private:
 	std::string name_{};                                /**< The name of the foragable resource. */
 	ForagableEffectType::Type effect_type_{};           /**< The effect type of the foragable resource, used to determine the type of effect that the prepared resource has when used. */
@@ -222,6 +267,7 @@ private:
 	int addiction_factor_{};                            /**< The addiction factor of the resource, optionally used to determine how addictive the resource is when consumed. */
 	std::string cost_{};                                /**< The cost of the foragable resource, used to determine how much it is worth when bought or sold. This is more a relative guide compared to other resources. */
 	std::string effect_{};                              /**< The effect that the prepared resource has when used. */
+	const SubcategoriedSkillData* lore_skill_{nullptr}; /**< The skill used to identify the herb. */
 };
 
 } // namespace rm::rule

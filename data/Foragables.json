@@ -3,6 +3,7 @@
         {
             "id" : "FORAGABLE_ACAANA",
             "name" : "Acaana",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Nerve Poison",
             "form" : "Flower",
             "difficulty" : "Extremely Hard",
@@ -22,6 +23,7 @@
         {
             "id" : "FORAGABLE_AGAATH",
             "name" : "Agaath",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Berry",
             "difficulty" : "Easy",
@@ -43,6 +45,7 @@
         {
             "id" : "FORAGABLE_AKBUTEGE",
             "name" : "Akbutege",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Leaf",
             "difficulty" : "Easy",
@@ -63,6 +66,7 @@
         {
             "id" : "FORAGABLE_ALAMBAS",
             "name" : "Alambas",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Burn & Exposure Relief",
             "form" : "Grass",
             "difficulty" : "Medium",
@@ -83,6 +87,7 @@
         {
             "id" : "FORAGABLE_ALOE",
             "name" : "Aloe",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Burn & Exposure Relief",
             "form" : "Leaf",
             "difficulty" : "Medium",
@@ -103,6 +108,7 @@
         {
             "id" : "FORAGABLE_ANKIL",
             "name" : "Ankil",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Berry",
             "difficulty" : "Extremely Hard",
@@ -123,6 +129,7 @@
         {
             "id" : "FORAGABLE_ANSERKE",
             "name" : "Anserke",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Circulatory Repair",
             "form" : "Root",
             "difficulty" : "Very Hard",
@@ -143,6 +150,7 @@
         {
             "id" : "FORAGABLE_ARFANDAS",
             "name" : "Arfandas",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Bone Repair",
             "form" : "Stem",
             "difficulty" : "Very Hard",
@@ -163,6 +171,7 @@
         {
             "id" : "FORAGABLE_ARGSBARGIES",
             "name" : "Argsbargies",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Antidote",
             "form" : "Flower",
             "difficulty" : "Hard",
@@ -194,6 +203,7 @@
         {
             "id" : "FORAGABLE_ARKASU",
             "name" : "Arkasu",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "General Purpose",
             "form" : "Sap",
             "difficulty" : "Medium",
@@ -214,6 +224,7 @@
         {
             "id" : "FORAGABLE_ARLAN",
             "name" : "Arlan",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Leaf",
             "difficulty" : "Easy",
@@ -234,6 +245,7 @@
         {
             "id" : "FORAGABLE_ARNUMINAS",
             "name" : "Arnuminas",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Muscle Cartilage & Tendon Repair",
             "form" : "Leaf",
             "difficulty" : "Easy",
@@ -254,6 +266,7 @@
         {
             "id" : "FORAGABLE_ARTHOND",
             "name" : "Arthond",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "General Purpose",
             "form" : "Root",
             "difficulty" : "Easy",
@@ -275,6 +288,7 @@
         {
             "id" : "FORAGABLE_ARUNYA",
             "name" : "Arunya",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Intoxicant",
             "form" : "Root",
             "difficulty" : "Light",
@@ -297,6 +311,7 @@
         {
             "id" : "FORAGABLE_ASGURASH",
             "name" : "Asgurash",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Nerve Poison",
             "form" : "Snake",
             "difficulty" : "Extremely Hard",
@@ -318,6 +333,7 @@
         {
             "id" : "FORAGABLE_ASPSUSAR",
             "name" : "Aspsusar",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Muscle Cartilage & Tendon Repair",
             "form" : "Stalk",
             "difficulty" : "Hard",
@@ -338,6 +354,7 @@
         {
             "id" : "FORAGABLE_ATHELAS",
             "name" : "Athelas",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "General Purpose",
             "form" : "Leaf",
             "difficulty" : "Hard",
@@ -360,6 +377,7 @@
         {
             "id" : "FORAGABLE_ATIGAX",
             "name" : "Atigax",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Root",
             "difficulty" : "Medium",
@@ -380,6 +398,7 @@
         {
             "id" : "FORAGABLE_ATTANAR",
             "name" : "Attanar",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "General Purpose",
             "form" : "Moss",
             "difficulty" : "Medium",
@@ -401,6 +420,7 @@
         {
             "id" : "FORAGABLE_BAALAK",
             "name" : "Baalak",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Bone Repair",
             "form" : "Reed",
             "difficulty" : "Sheer Folly",
@@ -421,6 +441,7 @@
         {
             "id" : "FORAGABLE_BALDAKUR",
             "name" : "Baldakur",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Organ Repair & Preservation",
             "form" : "Root",
             "difficulty" : "Sheer Folly",
@@ -442,6 +463,7 @@
         {
             "id" : "FORAGABLE_BARGOLITH",
             "name" : "Bargolith",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Conversion Poison",
             "form" : "Firefly",
             "difficulty" : "Sheer Folly",
@@ -463,6 +485,7 @@
         {
             "id" : "FORAGABLE_BELRAMBA",
             "name" : "Belramba",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Nerve Repair",
             "form" : "Lichen",
             "difficulty" : "Very Hard",
@@ -483,6 +506,7 @@
         {
             "id" : "FORAGABLE_BERTERIN",
             "name" : "Berterin",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Organ Repair & Preservation",
             "form" : "Moss",
             "difficulty" : "Light",
@@ -503,6 +527,7 @@
         {
             "id" : "FORAGABLE_BLUEEYES",
             "name" : "Blue Eyes",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Flower",
             "difficulty" : "Extremely Hard",
@@ -523,6 +548,7 @@
         {
             "id" : "FORAGABLE_BRELDIAR",
             "name" : "Breldiar",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Flower",
             "difficulty" : "Medium",
@@ -543,6 +569,7 @@
         {
             "id" : "FORAGABLE_BRITHAGRUTH",
             "name" : "Brithagruth",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Conversion Poison",
             "form" : "Fish",
             "difficulty" : "Sheer Folly",
@@ -564,6 +591,7 @@
         {
             "id" : "FORAGABLE_BRORKWILB",
             "name" : "Brorkwilb",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Intoxicant",
             "form" : "Flower",
             "difficulty" : "Light",
@@ -584,6 +612,7 @@
         {
             "id" : "FORAGABLE_BURSTHELAS",
             "name" : "Bursthelas",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Bone Repair",
             "form" : "Stalk",
             "difficulty" : "Sheer Folly",
@@ -604,6 +633,7 @@
         {
             "id" : "FORAGABLE_CARCATU",
             "name" : "Carcatu",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Life Preservation",
             "form" : "Grass",
             "difficulty" : "Extremely Hard",
@@ -624,6 +654,7 @@
         {
             "id" : "FORAGABLE_CARNEGURTH",
             "name" : "Carnegurth",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Circulatory Poison",
             "form" : "Flower",
             "difficulty" : "Medium",
@@ -645,6 +676,7 @@
         {
             "id" : "FORAGABLE_CATHAANA",
             "name" : "Cathaana",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Nerve Poison",
             "form" : "Nut",
             "difficulty" : "Very Hard",
@@ -665,6 +697,7 @@
         {
             "id" : "FORAGABLE_CULKAS",
             "name" : "Culkas",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Bone Repair",
             "form" : "Leaf",
             "difficulty" : "Medium",
@@ -684,6 +717,7 @@
         {
             "id" : "FORAGABLE_CURFALAKA",
             "name" : "Curfalaka",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Muscle Cartilage & Tendon Repair",
             "form" : "Fruit",
             "difficulty" : "Extremely Hard",
@@ -704,6 +738,7 @@
         {
             "id" : "FORAGABLE_CUSAMAR",
             "name" : "Cusamar",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Flower",
             "difficulty" : "Extremely Hard",
@@ -724,6 +759,7 @@
         {
             "id" : "FORAGABLE_DAGMATHER",
             "name" : "Dagmather",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Muscle Cartilage & Tendon Repair",
             "form" : "Spine",
             "difficulty" : "Hard",
@@ -744,6 +780,7 @@
         {
             "id" : "FORAGABLE_DARSURION",
             "name" : "Darsurion",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Leaf",
             "difficulty" : "Light",
@@ -764,6 +801,7 @@
         {
             "id" : "FORAGABLE_DEGIIK",
             "name" : "Degiik",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Life Preservation",
             "form" : "Leaf",
             "difficulty" : "Hard",
@@ -784,6 +822,7 @@
         {
             "id" : "FORAGABLE_DELREAN",
             "name" : "Delrean",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "General Purpose",
             "form" : "Bark",
             "difficulty" : "Easy",
@@ -804,6 +843,7 @@
         {
             "id" : "FORAGABLE_DRAAF",
             "name" : "Draaf",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Leaf",
             "difficulty" : "Easy",
@@ -824,6 +864,7 @@
         {
             "id" : "FORAGABLE_DUGMUTHUR",
             "name" : "Dugmuthur",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Cone",
             "difficulty" : "Light",
@@ -844,6 +885,7 @@
         {
             "id" : "FORAGABLE_DYNALLCA",
             "name" : "Dynallca",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Muscle Poison",
             "form" : "Leaf",
             "difficulty" : "Light",
@@ -865,6 +907,7 @@
         {
             "id" : "FORAGABLE_EBUR",
             "name" : "Ebur",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Muscle Cartilage & Tendon Repair",
             "form" : "Flower",
             "difficulty" : "Medium",
@@ -885,6 +928,7 @@
         {
             "id" : "FORAGABLE_EDRAM",
             "name" : "Edram",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Bone Repair",
             "form" : "Moss",
             "difficulty" : "Sheer Folly",
@@ -906,6 +950,7 @@
         {
             "id" : "FORAGABLE_ELBENSBASKET",
             "name" : "Elben's Basket",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Root",
             "difficulty" : "Extremely Hard",
@@ -926,6 +971,7 @@
         {
             "id" : "FORAGABLE_ELDAANA",
             "name" : "Eldaana",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Antidote",
             "form" : "Leaf",
             "difficulty" : "Medium",
@@ -947,6 +993,7 @@
         {
             "id" : "FORAGABLE_FEBFENDU",
             "name" : "Febfendu",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Organ Repair & Preservation",
             "form" : "Root",
             "difficulty" : "Medium",
@@ -967,6 +1014,7 @@
         {
             "id" : "FORAGABLE_FEK",
             "name" : "Fek",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Circulatory Repair",
             "form" : "Nut",
             "difficulty" : "Very Hard",
@@ -987,6 +1035,7 @@
         {
             "id" : "FORAGABLE_FELMATHER",
             "name" : "Felmather",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "General Purpose",
             "form" : "Leaf",
             "difficulty" : "Hard",
@@ -1007,6 +1056,7 @@
         {
             "id" : "FORAGABLE_GALENAANA",
             "name" : "Galenaana",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Respitory Poison",
             "form" : "Leaf",
             "difficulty" : "Very Hard",
@@ -1028,6 +1078,7 @@
         {
             "id" : "FORAGABLE_GALENAS",
             "name" : "Galenas",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Intoxicant",
             "form" : "Leaf",
             "difficulty" : "Medium",
@@ -1048,6 +1099,7 @@
         {
             "id" : "FORAGABLE_GARIIG",
             "name" : "Gariig",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Cactus",
             "difficulty" : "Light",
@@ -1067,6 +1119,7 @@
         {
             "id" : "FORAGABLE_GEFNUL",
             "name" : "Gefnul",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Lichen",
             "difficulty" : "Hard",
@@ -1086,6 +1139,7 @@
         {
             "id" : "FORAGABLE_GORT",
             "name" : "Gort",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "General Purpose",
             "form" : "Leaf",
             "difficulty" : "Hard",
@@ -1105,6 +1159,7 @@
         {
             "id" : "FORAGABLE_GRAPELEAF",
             "name" : "Grapeleaf",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Nectar",
             "difficulty" : "Very Hard",
@@ -1125,6 +1180,7 @@
         {
             "id" : "FORAGABLE_GURSAMEL",
             "name" : "Gursamel",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Bone Repair",
             "form" : "Stalk",
             "difficulty" : "Extremely Hard",
@@ -1145,6 +1201,7 @@
         {
             "id" : "FORAGABLE_GYLVIR",
             "name" : "Gylvir",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Algae",
             "difficulty" : "Very Hard",
@@ -1166,6 +1223,7 @@
         {
             "id" : "FORAGABLE_HARFY",
             "name" : "Harfy",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Circulatory Repair",
             "form" : "Resin",
             "difficulty" : "Very Hard",
@@ -1186,6 +1244,7 @@
         {
             "id" : "FORAGABLE_HEGHEG",
             "name" : "Hegheg",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Muscle Cartilage & Tendon Repair",
             "form" : "Root",
             "difficulty" : "Sheer Folly",
@@ -1206,6 +1265,7 @@
         {
             "id" : "FORAGABLE_HENUIAL",
             "name" : "Henuial",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Conversion Poison",
             "form" : "Bee",
             "difficulty" : "Sheer Folly",
@@ -1227,6 +1287,7 @@
         {
             "id" : "FORAGABLE_HITHIGIRITH",
             "name" : "Hith-I-Girith",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Respitory Poison",
             "form" : "Leaf",
             "difficulty" : "Hard",
@@ -1247,6 +1308,7 @@
         {
             "id" : "FORAGABLE_HOAKFOER",
             "name" : "Hoak-foer",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Intoxicant",
             "form" : "Flower",
             "difficulty" : "Easy",
@@ -1267,6 +1329,7 @@
         {
             "id" : "FORAGABLE_HUGAR",
             "name" : "Hugar",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Intoxicant",
             "form" : "Root",
             "difficulty" : "Medium",
@@ -1287,6 +1350,7 @@
         {
             "id" : "FORAGABLE_HUMBURTUN",
             "name" : "Humburtun",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Circulatory Repair",
             "form" : "Fruit",
             "difficulty" : "Very Hard",
@@ -1307,6 +1371,7 @@
         {
             "id" : "FORAGABLE_JANUKTY",
             "name" : "Januk-ty",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Stun Relief",
             "form" : "Root",
             "difficulty" : "Very Hard",
@@ -1327,6 +1392,7 @@
         {
             "id" : "FORAGABLE_JEGGA",
             "name" : "Jegga",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Respitory Poison",
             "form" : "Bats",
             "difficulty" : "Hard",
@@ -1349,6 +1415,7 @@
         {
             "id" : "FORAGABLE_JEGGARUKH",
             "name" : "Jeggarukh",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Circulatory Poison",
             "form" : "Bat",
             "difficulty" : "Hard",
@@ -1369,6 +1436,7 @@
         {
             "id" : "FORAGABLE_JITSU",
             "name" : "Jitsu",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Respitory Poison",
             "form" : "Clams",
             "difficulty" : "Medium",
@@ -1392,6 +1460,7 @@
         {
             "id" : "FORAGABLE_JITSUTYR",
             "name" : "Jitsutyr",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Respitory Poison",
             "form" : "Clams",
             "difficulty" : "Very Hard",
@@ -1414,6 +1483,7 @@
         {
             "id" : "FORAGABLE_JOEF",
             "name" : "Joef",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Powder",
             "difficulty" : "Light",
@@ -1434,6 +1504,7 @@
         {
             "id" : "FORAGABLE_JOJOJOPO",
             "name" : "Jojojopo",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Burn & Exposure Relief",
             "form" : "Leaf",
             "difficulty" : "Medium",
@@ -1453,6 +1524,7 @@
         {
             "id" : "FORAGABLE_JUTH",
             "name" : "Juth",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Nerve Poison",
             "form" : "Scorpion",
             "difficulty" : "Hard",
@@ -1474,6 +1546,7 @@
         {
             "id" : "FORAGABLE_KAKDURAM",
             "name" : "Kakduram",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Organ Repair & Preservation",
             "form" : "Fruit",
             "difficulty" : "Extremely Hard",
@@ -1494,6 +1567,7 @@
         {
             "id" : "FORAGABLE_KAKTU",
             "name" : "Kaktu",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Muscle Poison",
             "form" : "Flower",
             "difficulty" : "Extremely Hard",
@@ -1514,6 +1588,7 @@
         {
             "id" : "FORAGABLE_KARFAR",
             "name" : "Karfar",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Circulatory Poison",
             "form" : "Leaf",
             "difficulty" : "Medium",
@@ -1534,6 +1609,7 @@
         {
             "id" : "FORAGABLE_KATHKUSA",
             "name" : "Kathkusa",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Leaf",
             "difficulty" : "Light",
@@ -1554,6 +1630,7 @@
         {
             "id" : "FORAGABLE_KELVENTARI",
             "name" : "Kelventari",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Burn & Exposure Relief",
             "form" : "Berry",
             "difficulty" : "Light",
@@ -1574,6 +1651,7 @@
         {
             "id" : "FORAGABLE_KILMAKUR",
             "name" : "Kilmakur",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Root",
             "difficulty" : "Extremely Hard",
@@ -1594,6 +1672,7 @@
         {
             "id" : "FORAGABLE_KLAGUL",
             "name" : "Klagul",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Bud",
             "difficulty" : "Light",
@@ -1614,6 +1693,7 @@
         {
             "id" : "FORAGABLE_KLY",
             "name" : "Kly",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Respitory Poison",
             "form" : "Berry",
             "difficulty" : "Medium",
@@ -1634,6 +1714,7 @@
         {
             "id" : "FORAGABLE_KLYTUN",
             "name" : "Klytun",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Circulatory Poison",
             "form" : "Root",
             "difficulty" : "Medium",
@@ -1654,6 +1735,7 @@
         {
             "id" : "FORAGABLE_LATHA",
             "name" : "Latha",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "General Purpose",
             "form" : "Stem",
             "difficulty" : "Medium",
@@ -1674,6 +1756,7 @@
         {
             "id" : "FORAGABLE_LAURELIN",
             "name" : "Laurelin",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Life Preservation",
             "form" : "Leaf",
             "difficulty" : "Absurd",
@@ -1694,6 +1777,7 @@
         {
             "id" : "FORAGABLE_LESTAGLI",
             "name" : "Lestagli",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Stat Modifier",
             "form" : "Cryst",
             "difficulty" : "Absurd",
@@ -1715,6 +1799,7 @@
         {
             "id" : "FORAGABLE_LHUGRUTH",
             "name" : "Lhugruth",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Reduction Poison",
             "form" : "Dragon",
             "difficulty" : "Very Hard",
@@ -1735,6 +1820,7 @@
         {
             "id" : "FORAGABLE_MARKU",
             "name" : "Marku",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Nut",
             "difficulty" : "Very Hard",
@@ -1755,6 +1841,7 @@
         {
             "id" : "FORAGABLE_MEGILLOS",
             "name" : "Megillos",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Leaf",
             "difficulty" : "Light",
@@ -1775,6 +1862,7 @@
         {
             "id" : "FORAGABLE_MENELAR",
             "name" : "Menelar",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Antidote",
             "form" : "Cone",
             "difficulty" : "Hard",
@@ -1794,6 +1882,7 @@
         {
             "id" : "FORAGABLE_MERRIG",
             "name" : "Merrig",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Stat Modifier",
             "form" : "Thorn",
             "difficulty" : "Sheer Folly",
@@ -1814,6 +1903,7 @@
         {
             "id" : "FORAGABLE_MIRENNA",
             "name" : "Mirenna",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Berry",
             "difficulty" : "Light",
@@ -1834,6 +1924,7 @@
         {
             "id" : "FORAGABLE_MOOK",
             "name" : "Mook",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Antidote",
             "form" : "Berry",
             "difficulty" : "Light",
@@ -1853,6 +1944,7 @@
         {
             "id" : "FORAGABLE_MUILFANA",
             "name" : "Muilfana",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Conversion Poison",
             "form" : "Sap",
             "difficulty" : "Medium",
@@ -1873,6 +1965,7 @@
         {
             "id" : "FORAGABLE_NELISSE",
             "name" : "Nelisse",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Intoxicant",
             "form" : "Leaf",
             "difficulty" : "Hard",
@@ -1893,6 +1986,7 @@
         {
             "id" : "FORAGABLE_NIMNAUR",
             "name" : "Nimnaur",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Reduction Poison",
             "form" : "Spider",
             "difficulty" : "Hard",
@@ -1914,6 +2008,7 @@
         {
             "id" : "FORAGABLE_NUROIOLOSSE",
             "name" : "Nur-oiolosse",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Life Preservation",
             "form" : "Clove",
             "difficulty" : "Sheer Folly",
@@ -1933,6 +2028,7 @@
         {
             "id" : "FORAGABLE_OIOLOSSE",
             "name" : "Oiolosse",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Life Preservation",
             "form" : "Clove",
             "difficulty" : "Sheer Folly",
@@ -1952,6 +2048,7 @@
         {
             "id" : "FORAGABLE_OLVAR",
             "name" : "Olvar",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Life Preservation",
             "form" : "Flower",
             "difficulty" : "Very Hard",
@@ -1971,6 +2068,7 @@
         {
             "id" : "FORAGABLE_ONDOHITHUI",
             "name" : "Ondohithui",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Reduction Poison",
             "form" : "Lichen",
             "difficulty" : "Hard",
@@ -1992,6 +2090,7 @@
         {
             "id" : "FORAGABLE_ONKOKAMBA",
             "name" : "Onkokamba",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Conversion Poison",
             "form" : "Bat",
             "difficulty" : "Light",
@@ -2013,6 +2112,7 @@
         {
             "id" : "FORAGABLE_PASAMAR",
             "name" : "Pasamar",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Organ Repair & Preservation",
             "form" : "Grass",
             "difficulty" : "Sheer Folly",
@@ -2033,6 +2133,7 @@
         {
             "id" : "FORAGABLE_PATHUR",
             "name" : "Pathur",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Life Preservation",
             "form" : "Nodule",
             "difficulty" : "Medium",
@@ -2053,6 +2154,7 @@
         {
             "id" : "FORAGABLE_QUILMUFUR",
             "name" : "Quilmufur",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Antidote",
             "form" : "Root",
             "difficulty" : "Extremely Hard",
@@ -2073,6 +2175,7 @@
         {
             "id" : "FORAGABLE_REDTEKMA",
             "name" : "Red-tekma",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Fruit",
             "difficulty" : "Very Hard",
@@ -2093,6 +2196,7 @@
         {
             "id" : "FORAGABLE_REGLEN",
             "name" : "Reglen",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Moss",
             "difficulty" : "Light",
@@ -2113,6 +2217,7 @@
         {
             "id" : "FORAGABLE_REWK",
             "name" : "Rewk",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Nodule",
             "difficulty" : "Light",
@@ -2134,6 +2239,7 @@
         {
             "id" : "FORAGABLE_RUTHIIAUR",
             "name" : "Ruth-I-Iaur",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Nerve Poison",
             "form" : "Drake",
             "difficulty" : "Extremely Hard",
@@ -2154,6 +2260,7 @@
         {
             "id" : "FORAGABLE_SHARDUVAAK",
             "name" : "Sharduvaak",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Circulatory Poison",
             "form" : "Berry",
             "difficulty" : "Extremely Hard",
@@ -2175,6 +2282,7 @@
         {
             "id" : "FORAGABLE_SHARKASAR",
             "name" : "Sharkasar",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Circulatory Poison",
             "form" : "Root",
             "difficulty" : "Very Hard",
@@ -2195,6 +2303,7 @@
         {
             "id" : "FORAGABLE_SHEN",
             "name" : "Shen",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Antidote",
             "form" : "Leaf",
             "difficulty" : "Very Hard",
@@ -2215,6 +2324,7 @@
         {
             "id" : "FORAGABLE_SILMAANA",
             "name" : "Silmaana",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Reduction Poison",
             "form" : "Stalk",
             "difficulty" : "Easy",
@@ -2237,6 +2347,7 @@
         {
             "id" : "FORAGABLE_SIRAN",
             "name" : "Siran",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Organ Repair & Preservation",
             "form" : "Clove",
             "difficulty" : "Very Hard",
@@ -2257,6 +2368,7 @@
         {
             "id" : "FORAGABLE_SIRIEAN",
             "name" : "Siriean",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Organ Repair & Preservation",
             "form" : "Grass",
             "difficulty" : "Hard",
@@ -2277,6 +2389,7 @@
         {
             "id" : "FORAGABLE_SLIRD",
             "name" : "Slird",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Nerve Poison",
             "form" : "Fruit",
             "difficulty" : "Sheer Folly",
@@ -2297,6 +2410,7 @@
         {
             "id" : "FORAGABLE_SLOTA",
             "name" : "Slota",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Reduction Poison",
             "form" : "Spider",
             "difficulty" : "Extremely Hard",
@@ -2319,6 +2433,7 @@
         {
             "id" : "FORAGABLE_SORELNUT",
             "name" : "Sorel Nut",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Antidote",
             "form" : "Nut",
             "difficulty" : "Easy",
@@ -2340,6 +2455,7 @@
         {
             "id" : "FORAGABLE_SPLAYFOOT",
             "name" : "Splayfoot",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Seed",
             "difficulty" : "Medium",
@@ -2360,6 +2476,7 @@
         {
             "id" : "FORAGABLE_SURANIE",
             "name" : "Suranie",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Stun Relief",
             "form" : "Berry",
             "difficulty" : "Light",
@@ -2382,6 +2499,7 @@
         {
             "id" : "FORAGABLE_SWIGMAKRIL",
             "name" : "Swigmakril",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Intoxicant",
             "form" : "Flower",
             "difficulty" : "Very Hard",
@@ -2404,6 +2522,7 @@
         {
             "id" : "FORAGABLE_SWUTH",
             "name" : "Swuth",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Intoxicant",
             "form" : "Leaf",
             "difficulty" : "Hard",
@@ -2424,6 +2543,7 @@
         {
             "id" : "FORAGABLE_TARFEG",
             "name" : "Tarfeg",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Muscle Cartilage & Tendon Repair",
             "form" : "Flower",
             "difficulty" : "Extremely Hard",
@@ -2444,6 +2564,7 @@
         {
             "id" : "FORAGABLE_TARNAS",
             "name" : "Tarnas",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Organ Repair & Preservation",
             "form" : "Nodule",
             "difficulty" : "Very Hard",
@@ -2464,6 +2585,7 @@
         {
             "id" : "FORAGABLE_TAYNAGA",
             "name" : "Taynaga",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Conversion Poison",
             "form" : "Bark",
             "difficulty" : "Hard",
@@ -2486,6 +2608,7 @@
         {
             "id" : "FORAGABLE_TERBAS",
             "name" : "Terbas",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Nerve Repair",
             "form" : "Leaf",
             "difficulty" : "Light",
@@ -2506,6 +2629,7 @@
         {
             "id" : "FORAGABLE_THURL",
             "name" : "Thurl",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Clove",
             "difficulty" : "Routine",
@@ -2527,6 +2651,7 @@
         {
             "id" : "FORAGABLE_TRUDURS",
             "name" : "Trudurs",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "General Purpose",
             "form" : "Moss",
             "difficulty" : "Medium",
@@ -2547,6 +2672,7 @@
         {
             "id" : "FORAGABLE_TRUSA",
             "name" : "Trusa",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Muscle Poison",
             "form" : "Frog",
             "difficulty" : "Sheer Folly",
@@ -2567,6 +2693,7 @@
         {
             "id" : "FORAGABLE_TRYFIRA",
             "name" : "Try-fira",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Life Preservation",
             "form" : "Leaf",
             "difficulty" : "Absurd",
@@ -2586,6 +2713,7 @@
         {
             "id" : "FORAGABLE_TUKAMUR",
             "name" : "Tukamur",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Intoxicant",
             "form" : "Grass",
             "difficulty" : "Medium",
@@ -2606,6 +2734,7 @@
         {
             "id" : "FORAGABLE_UKUR",
             "name" : "Ukur",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "General Purpose",
             "form" : "Nut",
             "difficulty" : "Medium",
@@ -2626,6 +2755,7 @@
         {
             "id" : "FORAGABLE_ULACAANA",
             "name" : "Ul-acaana",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Nerve Poison",
             "form" : "Flower",
             "difficulty" : "Sheer Folly",
@@ -2646,6 +2776,7 @@
         {
             "id" : "FORAGABLE_ULNAZA",
             "name" : "Ul-Naza",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Antidote",
             "form" : "Leaf",
             "difficulty" : "Sheer Folly",
@@ -2667,6 +2798,7 @@
         {
             "id" : "FORAGABLE_URAANA",
             "name" : "Uraana",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Respitory Poison",
             "form" : "Leaf",
             "difficulty" : "Light",
@@ -2689,6 +2821,7 @@
         {
             "id" : "FORAGABLE_VELDURAK",
             "name" : "Veldurak",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Burn & Exposure Relief",
             "form" : "Kelp",
             "difficulty" : "Hard",
@@ -2709,6 +2842,7 @@
         {
             "id" : "FORAGABLE_VINUK",
             "name" : "Vinuk",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Stun Relief",
             "form" : "Root",
             "difficulty" : "Medium",
@@ -2729,6 +2863,7 @@
         {
             "id" : "FORAGABLE_VULCURAX",
             "name" : "Vulcurax",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Life Preservation",
             "form" : "Berry",
             "difficulty" : "Absurd",
@@ -2749,6 +2884,7 @@
         {
             "id" : "FORAGABLE_VURAANA",
             "name" : "Vuraana",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Respitory Poison",
             "form" : "Flower",
             "difficulty" : "Medium",
@@ -2770,6 +2906,7 @@
         {
             "id" : "FORAGABLE_WEKBAAS",
             "name" : "Wek-baas",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Nerve Poison",
             "form" : "Fish",
             "difficulty" : "Absurd",
@@ -2791,6 +2928,7 @@
         {
             "id" : "FORAGABLE_WEKWEK",
             "name" : "Wek-wek",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Organ Repair & Preservation",
             "form" : "Nodule",
             "difficulty" : "Sheer Folly",
@@ -2811,6 +2949,7 @@
         {
             "id" : "FORAGABLE_WELWAL",
             "name" : "Welwal",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Stun Relief",
             "form" : "Leaf",
             "difficulty" : "Extremely Hard",
@@ -2831,6 +2970,7 @@
         {
             "id" : "FORAGABLE_WIFURWIF",
             "name" : "Wifurwif",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Nerve Repair",
             "form" : "Lichen",
             "difficulty" : "Extremely Hard",
@@ -2851,6 +2991,7 @@
         {
             "id" : "FORAGABLE_WINCLAMIT",
             "name" : "Winclamit",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Fruit",
             "difficulty" : "Extremely Hard",
@@ -2872,6 +3013,7 @@
         {
             "id" : "FORAGABLE_WITAV",
             "name" : "Witav",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Stun Relief",
             "form" : "Leaf",
             "difficulty" : "Very Hard",
@@ -2892,6 +3034,7 @@
         {
             "id" : "FORAGABLE_YARN",
             "name" : "Yarn",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Pollen",
             "difficulty" : "Easy",
@@ -2912,6 +3055,7 @@
         {
             "id" : "FORAGABLE_YAVETHALION",
             "name" : "Yavethalion",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Concussion Relief",
             "form" : "Fruit",
             "difficulty" : "Hard",
@@ -2932,6 +3076,7 @@
         {
             "id" : "FORAGABLE_YUTH",
             "name" : "Yuth",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Antidote",
             "form" : "Flower",
             "difficulty" : "Sheer Folly",
@@ -2951,6 +3096,7 @@
         {
             "id" : "FORAGABLE_ZAGANZAR",
             "name" : "Zaganzar",
+            "loreSkill" : "SKILL_POISON_LORE",
             "effectType" : "Reduction Poison",
             "form" : "Root",
             "difficulty" : "Very Hard",
@@ -2972,6 +3118,7 @@
         {
             "id" : "FORAGABLE_ZULSENDURA",
             "name" : "Zulsendura",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Mushroom",
             "difficulty" : "Medium",
@@ -2992,6 +3139,7 @@
         {
             "id" : "FORAGABLE_ZUR",
             "name" : "Zur",
+            "loreSkill" : "SKILL_HERB_LORE",
             "effectType" : "Physical Alteration & Enhancement",
             "form" : "Fungus",
             "difficulty" : "Medium",
