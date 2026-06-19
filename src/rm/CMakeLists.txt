@@ -1,6 +1,7 @@
 find_package(boost_json REQUIRED CONFIG)
 add_library(rm STATIC)
 target_sources(rm PRIVATE "AppConfig.cpp" "PersistentObjectManager.cpp" "PersistentObjectSerializationManager.cpp")
+add_subdirectory("action")
 add_subdirectory("game")
 add_subdirectory("rule")
 add_subdirectory("serial")
@@ -9,6 +10,7 @@ target_compile_features(rm PUBLIC cxx_std_23)
 target_include_directories(rm PUBLIC ${Boost_INCLUDE_DIRS}
                                      "${PROJECT_SOURCE_DIR}/include/archid"
                                      "${PROJECT_SOURCE_DIR}/include/rm"
+                                     "${PROJECT_SOURCE_DIR}/include/rm/action"
                                      "${PROJECT_SOURCE_DIR}/include/rm/game"
                                      "${PROJECT_SOURCE_DIR}/include/rm/rule"
                                      "${PROJECT_SOURCE_DIR}/include/rm/rule/table"
@@ -43,6 +45,7 @@ target_include_directories(rmce_rest
         ${Boost_INCLUDE_DIRS}
         "${PROJECT_SOURCE_DIR}/include/archid"
         "${PROJECT_SOURCE_DIR}/include/rm"
+        "${PROJECT_SOURCE_DIR}/include/rm/action"
         "${PROJECT_SOURCE_DIR}/include/rm/game"
         "${PROJECT_SOURCE_DIR}/include/rm/rest"
         "${PROJECT_SOURCE_DIR}/include/rm/rule"
