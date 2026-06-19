@@ -63,7 +63,7 @@ void SkillDifficultyType::fromString(std::string_view sv, SkillDifficultyType::T
 		throw std::invalid_argument("Invalid string value for SkillDifficultyType::Type: " + std::string(sv));
 }
 
-int difficultyModifier(SkillDifficultyType::Type type) {
+int SkillDifficultyType::difficultyModifier(SkillDifficultyType::Type type) {
 	using enum SkillDifficultyType::Type;
 	switch (type) {
 	case kRoutine:
@@ -89,7 +89,7 @@ int difficultyModifier(SkillDifficultyType::Type type) {
 	}
 }
 
-int difficultyRating(SkillDifficultyType::Type type) {
+int SkillDifficultyType::difficultyRating(SkillDifficultyType::Type type) {
 	using enum SkillDifficultyType::Type;
 	switch (type) {
 	case kRoutine:
@@ -115,7 +115,7 @@ int difficultyRating(SkillDifficultyType::Type type) {
 	}
 }
 
-SkillDifficultyType::Type incrementDifficulty(SkillDifficultyType::Type type, int increment) {
+SkillDifficultyType::Type SkillDifficultyType::incrementDifficulty(SkillDifficultyType::Type type, int increment) {
 	using enum SkillDifficultyType::Type;
 	int new_difficulty = static_cast<int>(type) + increment;
 	if (new_difficulty > static_cast<int>(kAbsurd)) {
