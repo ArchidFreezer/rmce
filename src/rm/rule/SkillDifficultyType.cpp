@@ -3,7 +3,7 @@
 namespace rm::rule::enums {
 
 const std::string SkillDifficultyType::toString(Type type) {
-	using enum Type;
+	using enum SkillDifficultyType::Type;
 
 	switch (type) {
 	case kRoutine:
@@ -30,7 +30,7 @@ const std::string SkillDifficultyType::toString(Type type) {
 }
 
 const std::optional<SkillDifficultyType::Type> SkillDifficultyType::fromString(std::string_view sv) {
-	using enum Type;
+	using enum SkillDifficultyType::Type;
 
 	const std::string& val = archid::lcaseconcat(sv);
 	if (val == "routine")
@@ -113,6 +113,17 @@ int difficultyRating(SkillDifficultyType::Type type) {
 	default:
 		throw std::invalid_argument("Invalid SkillDifficultyType::Type value");
 	}
+}
+
+SkillDifficultyType::Type incrementDifficulty(SkillDifficultyType::Type type, int increment) {
+	using enum SkillDifficultyType::Type;
+	int new_difficulty = static_cast<int>(type) + increment;
+	if (new_difficulty > static_cast<int>(kAbsurd)) {
+		new_difficulty = static_cast<int>(kAbsurd);
+	} else if (new_difficulty < static_cast<int>(kRoutine)) {
+		new_difficulty = static_cast<int>(kRoutine);
+	}
+	return static_cast<SkillDifficultyType::Type>(new_difficulty);
 }
 
 } // namespace rm::rule::enums

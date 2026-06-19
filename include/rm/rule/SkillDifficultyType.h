@@ -90,6 +90,14 @@ int difficultyModifier(Type type);
  */
 int difficultyRating(Type type);
 
+/**
+ * @brief Increment the difficulty of a given SkillDifficultyType::Type by a specified amount
+ * @param type The SkillDifficultyType::Type to increment
+ * @param increment The amount to increment the difficulty by (default is 1)
+ * @return The new SkillDifficultyType::Type after incrementing
+ */
+Type incrementDifficulty(Type type, int increment = 1);
+
 } // namespace SkillDifficultyType
 
 } // namespace rm::rule::enums
