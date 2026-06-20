@@ -215,8 +215,25 @@ public:
 		lore_skill_ = lore_skill;
 	}
 
+	/**
+	 * @brief Get the notes for the foragable resource, used to provide additional information about the resource
+	 * @return The notes for the foragable resource, used to provide additional information about the resource as a string reference
+	 */
+	const std::string& notes() const {
+		return notes_;
+	}
+
+	/**
+	 * @brief Set the notes for the foragable resource, used to provide additional information about the resource
+	 * @param notes The notes for the foragable resource, used to provide additional information about the resource
+	 */
+	void setNotes(std::string_view notes) {
+		notes_ = notes;
+	}
+
 private:
 	std::string name_{};                                /**< The name of the foragable resource. */
+	std::string notes_{};                               /**< The notes for the foragable resource, used to provide additional information about the resource. */
 	ForagableEffectType::Type effect_type_{};           /**< The effect type of the foragable resource, used to determine the type of effect that the prepared resource has when used. */
 	std::unique_ptr<rm::game::Location> location_{};    /**< The location of the foragable resource. */
 	SkillDifficultyType::Type difficulty_{};            /**< The difficulty of foraging the resource, used to determine the skill check difficulty when foraging for the resource. */

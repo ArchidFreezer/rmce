@@ -8,6 +8,7 @@ json::value ForagableSerializer::serializeObject(const ForagableData& ref) const
 
 	JsonConverter::setString(obj, "id", ref.id());
 	JsonConverter::setString(obj, "name", ref.name());
+	JsonConverter::setString(obj, "notes", ref.notes());
 	JsonConverter::setString(obj, "loreSkill", ref.loreSkill() ? ref.loreSkill()->id() : "");
 	JsonConverter::setString(obj, "effectType", ForagableEffectType::toString(ref.effectType()));
 	JsonConverter::setString(obj, "form", ref.form());
@@ -28,7 +29,8 @@ const ForagableData& ForagableSerializer::deserializeObject(json::object& jsonOb
 	std::string id = JsonConverter::getString(jsonObj, "id");
 	ForagableData& ref = manager_.get<ForagableData>(id);
 	ref.setName(JsonConverter::getString(jsonObj, "name"));
-	
+	ref.setNotes(JsonConverter::getString(jsonObj, "notes"));
+
 	std::string lore_skill_id = JsonConverter::getString(jsonObj, "loreSkill");
 	if (!lore_skill_id.empty()) {
 		const SubcategoriedSkillData& lore_skill = manager_.subcategoriedSkillData(lore_skill_id);
