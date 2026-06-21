@@ -1,8 +1,8 @@
 {
     "poisons" : [
         {
-            "id" : "POISON_ACAANA",
-            "name" : "Acaana",
+            "id" : "POISON_ACANA",
+            "name" : "Acána",
             "type" : "POISONTYPE_NERVE",
             "level" : 10,
             "levelVariance" : "E",
