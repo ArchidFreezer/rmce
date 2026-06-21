@@ -53,7 +53,7 @@ std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::
 		// Handle specific resource forage
 		if (foragable.location().matches(search_location)) {
 			int doses_roll = archid::Dice(20).roll().result();
-			int num_doses = std::max(1, 1 + doses_roll + foragable.difficultyRating());
+			int num_doses = std::max(1, 1 + doses_roll + foragable.findDifficultyRating());
 			foraged_resources[&foragable] = num_doses;
 		}
 	} else {
@@ -62,7 +62,7 @@ std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::
 			const rm::rule::ForagableData& foragable = foragable_wrapper.get();
 			if (foragable.location().matches(search_location)) {
 				int doses_roll = d100.roll().result();
-				int num_doses = std::max(0, (foraging_roll + doses_roll + foragable.difficultyModifier() - 150) / 10);
+				int num_doses = std::max(0, (foraging_roll + doses_roll + foragable.findDifficultyModifier() - 150) / 10);
 				if (num_doses > 0) {
 					foraged_resources[&foragable] = num_doses;
 				}
@@ -98,10 +98,10 @@ std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::
 			lore_roll += modifiers.poison_lore_bonus; // Add any generic poison lore skill bonus from items (book)
 		}
 		lore_roll += modifiers.lore_bonuses[foragable]; // Add any specific herb lore skill bonus from familiarity with specific plants
-		if (lore_roll < (foragable->difficultyRating() * 10)) {
-			LOG_INFO("| {:<17} | {:^5} | {:^5} | {:^5} | {:^5} |", foragable->name(), foragable->difficultyModifier(), lore_roll, num_doses, "No");
+		if (lore_roll < (foragable->findDifficultyRating() * 10)) {
+			LOG_INFO("| {:<17} | {:^5} | {:^5} | {:^5} | {:^5} |", foragable->name(), foragable->findDifficultyModifier(), lore_roll, num_doses, "No");
 		} else {
-			LOG_INFO("| {:<17} | {:^5} | {:^5} | {:^5} | {:^5} |", foragable->name(), foragable->difficultyModifier(), lore_roll, num_doses, "Yes");
+			LOG_INFO("| {:<17} | {:^5} | {:^5} | {:^5} | {:^5} |", foragable->name(), foragable->findDifficultyModifier(), lore_roll, num_doses, "Yes");
 			identified_resources[foragable] = num_doses;
 		}
 	}

@@ -91,48 +91,48 @@ public:
 	 * @brief Set the difficulty of foraging the resource, used to determine the skill check difficulty when foraging for the resource
 	 * @param difficulty Difficulty of foraging the resource, used to determine the skill check difficulty when foraging for the resource
 	 */
-	void setDifficulty(SkillDifficultyType::Type difficulty) {
-		difficulty_ = difficulty;
+	void setFindDifficulty(SkillDifficultyType::Type difficulty) {
+		find_difficulty_ = difficulty;
 	}
 
 	/**
 	 * @brief Get the difficulty of foraging the resource, used to determine the skill check difficulty when foraging for the resource
 	 * @return Difficulty of foraging the resource, used to determine the skill check difficulty when foraging for the resource
 	 */
-	SkillDifficultyType::Type difficulty() const {
-		return difficulty_;
+	SkillDifficultyType::Type findDifficulty() const {
+		return find_difficulty_;
 	}
 
 	/**
 	 * @brief Get the difficulty modifier for the resource, used to modify the skill check roll when foraging for the resource based on its difficulty.
 	 * @return Difficulty modifier for the resource, used to determine the skill check difficulty when foraging for the resource
 	 */
-	int difficultyModifier() const {
-		return SkillDifficultyType::difficultyModifier(difficulty_);
+	int findDifficultyModifier() const {
+		return SkillDifficultyType::difficultyModifier(find_difficulty_);
 	}
 
 	/**
 	 * @brief Get the difficulty rating for the resource, used to determine the number of doses found when looking for specific resources. This is a relative rating compared to other resources and is not used for skill checks.
 	 * @return Difficulty rating for the resource, used to determine the number of doses found when looking for specific resources
 	 */
-	int difficultyRating() const {
-		return SkillDifficultyType::difficultyRating(difficulty_);
+	int findDifficultyRating() const {
+		return SkillDifficultyType::difficultyRating(find_difficulty_);
 	}
 
 	/**
-	 * @brief Set the form of the resource, used to determine how the resource is found in its raw state
-	 * @param form The form of the resource, used to determine how the resource is found in its raw state
+	 * @brief Set the other uses of the resource, such as detrimental or cultural
+	 * @param other_uses The other uses of the resource, such as detrimental or cultural
 	 */	
-	void setForm(std::string_view form) {
-		form_ = form;
+	void setOtherUses(std::string_view other_uses) {
+		other_uses_ = other_uses;
 	}
 
 	/**
-	 * @brief Get the form of the resource, used to determine how the resource is found in its raw state
-	 * @return The form of the resource, used to determine how the resource is found in its raw state as a string reference
+	 * @brief Get the other uses of the resource, such as detrimental or cultural
+	 * @return The other uses of the resource, such as detrimental or cultural, as a string reference
 	 */
-	const std::string& form() const {
-		return form_;
+	const std::string& otherUses() const {
+		return other_uses_;
 	}
 
 	/**
@@ -184,19 +184,19 @@ public:
 	}
 
 	/**
-	 * @brief Set the effect the prepared form of the resource has when used
-	 * @param effect The effect of the foragable resource
+	 * @brief Set the medicinal uses of the resource, describing the effect the prepared form of the resource has when used
+	 * @param medicinal_uses The medicinal uses of the foragable resource
 	 */
-	void setEffect(std::string_view effect) {
-		effect_ = effect;
+	void setMedicinalUses(std::string_view medicinal_uses) {
+		medicinal_uses_ = medicinal_uses;
 	}
 
 	/**
-	 * @brief Get the effect of the prepared form of the foragable resource
-	 * @return The effect of the prepared foragable resource as a string reference
+	 * @brief Get the medicinal uses of the prepared form of the foragable resource
+	 * @return The medicinal uses of the prepared foragable resource as a string reference
 	 */
-	const std::string& effect() const {
-		return effect_;
+	const std::string& medicinalUses() const {
+		return medicinal_uses_;
 	}
 
 	/**
@@ -216,33 +216,50 @@ public:
 	}
 
 	/**
-	 * @brief Get the notes for the foragable resource, used to provide additional information about the resource
-	 * @return The notes for the foragable resource, used to provide additional information about the resource as a string reference
+	 * @brief Get the characteristics for the foragable resource, describing its visual appearance, smell, taste, and other notable features. This is used to provide additional information about the resource.
+	 * @return The characteristics for the foragable resource as a string reference
 	 */
-	const std::string& notes() const {
-		return notes_;
+	const std::string& characteristics() const {
+		return characteristics_;
 	}
 
 	/**
-	 * @brief Set the notes for the foragable resource, used to provide additional information about the resource
-	 * @param notes The notes for the foragable resource, used to provide additional information about the resource
+	 * @brief Set the characteristics for the foragable resource, describing its visual appearance, smell, taste, and other notable features. This is used to provide additional information about the resource.
+	 * @param characteristics The characteristics for the foragable resource.
 	 */
-	void setNotes(std::string_view notes) {
-		notes_ = notes;
+	void setCharacteristics(std::string_view characteristics) {
+		characteristics_ = characteristics;
+	}
+
+	/**
+	 * @brief Get any warnings for the foragable resource, describing any potential dangers or precautions. This is used to provide additional information about the resource.
+	 * @return Any warnings for the foragable resource as a string reference
+	 */
+	const std::string& warning() const {
+		return warning_;
+	}
+
+	/**
+	 * @brief Set any warnings for the foragable resource, describing any potential dangers or precautions. This is used to provide additional information about the resource.
+	 * @param warning Any warnings for the foragable resource.
+	 */
+	void setWarning(std::string_view warning) {
+		warning_ = warning;
 	}
 
 private:
 	std::string name_{};                                /**< The name of the foragable resource. */
-	std::string notes_{};                               /**< The notes for the foragable resource, used to provide additional information about the resource. */
-	ForagableEffectType::Type effect_type_{};           /**< The effect type of the foragable resource, used to determine the type of effect that the prepared resource has when used. */
+	ForagableEffectType::Type effect_type_{}; /**< The effect type of the foragable resource, used to determine the type of effect that the prepared resource has when used. */
+	const SubcategoriedSkillData* lore_skill_{nullptr}; /**< The skill used to identify the herb. */
 	std::unique_ptr<rm::game::Location> location_{};    /**< The location of the foragable resource. */
-	SkillDifficultyType::Type difficulty_{};            /**< The difficulty of foraging the resource, used to determine the skill check difficulty when foraging for the resource. */
-	std::string form_{};                                /**< The form of the resource, used to determine how the resource is found in its raw state. */
 	ForagablePreparationType::Type preparation_type_{}; /**< The preparation type of the resource, used to determine how the resource can be prepared and used after it is foraged. */
+	SkillDifficultyType::Type find_difficulty_{};       /**< The difficulty of foraging the resource, used to determine the skill check difficulty when foraging for the resource. */
 	int addiction_factor_{};                            /**< The addiction factor of the resource, optionally used to determine how addictive the resource is when consumed. */
 	std::string cost_{};                                /**< The cost of the foragable resource, used to determine how much it is worth when bought or sold. This is more a relative guide compared to other resources. */
-	std::string effect_{};                              /**< The effect that the prepared resource has when used. */
-	const SubcategoriedSkillData* lore_skill_{nullptr}; /**< The skill used to identify the herb. */
+	std::string characteristics_{};                     /**< The characteristics for the foragable resource, used to provide additional information about the resource. */
+	std::string medicinal_uses_{};                              /**< The medicinal uses of the foragable resource, describing the effect the prepared form of the resource has when used. */
+	std::string other_uses_{};                                /**< The other uses of the resource, such as detrimental or cultural. */
+	std::string warning_{};                                  /**< Any warnings for the resource, describing any potential dangers or precautions. */
 };
 
 } // namespace rm::rule

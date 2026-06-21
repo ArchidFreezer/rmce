@@ -8,19 +8,21 @@ json::value ForagableSerializer::serializeObject(const ForagableData& ref) const
 
 	JsonConverter::setString(obj, "id", ref.id());
 	JsonConverter::setString(obj, "name", ref.name());
-	JsonConverter::setString(obj, "notes", ref.notes());
 	JsonConverter::setString(obj, "loreSkill", ref.loreSkill() ? ref.loreSkill()->id() : "");
-	JsonConverter::setString(obj, "effectType", ForagableEffectType::toString(ref.effectType()));
-	JsonConverter::setString(obj, "form", ref.form());
-	JsonConverter::setString(obj, "difficulty", SkillDifficultyType::toString(ref.difficulty()));
+	JsonConverter::setString(obj, "characteristics", ref.characteristics());
+	JsonConverter::setString(obj, "medicinalUses", ref.medicinalUses());
+	JsonConverter::setString(obj, "otherUses", ref.otherUses());
+	JsonConverter::setString(obj, "warning", ref.warning());
 	JsonConverter::setString(obj, "preparationType", ForagablePreparationType::toString(ref.preparationType()));
+
+	JsonConverter::setString(obj, "effectType", ForagableEffectType::toString(ref.effectType()));
+	JsonConverter::setString(obj, "findDifficulty", SkillDifficultyType::toString(ref.findDifficulty()));
 	JsonConverter::setInt(obj, "addictionFactor", ref.addictionFactor());
 	JsonConverter::setString(obj, "cost", ref.cost());
 
 	// Location data
 	JsonConverter::nestLocation(obj, "location", ref.location());
 
-	JsonConverter::setString(obj, "effect", ref.effect());
 
 	return obj;
 }
@@ -29,18 +31,19 @@ const ForagableData& ForagableSerializer::deserializeObject(json::object& jsonOb
 	std::string id = JsonConverter::getString(jsonObj, "id");
 	ForagableData& ref = manager_.get<ForagableData>(id);
 	ref.setName(JsonConverter::getString(jsonObj, "name"));
-	ref.setNotes(JsonConverter::getString(jsonObj, "notes"));
-
 	std::string lore_skill_id = JsonConverter::getString(jsonObj, "loreSkill");
 	if (!lore_skill_id.empty()) {
 		const SubcategoriedSkillData& lore_skill = manager_.subcategoriedSkillData(lore_skill_id);
 		ref.setLoreSkill(&lore_skill);
 	}
 
-	ref.setForm(JsonConverter::getString(jsonObj, "form"));
+	std::string find_difficulty_str = JsonConverter::getString(jsonObj, "findDifficulty");
+	ref.setFindDifficulty(SkillDifficultyType::fromString(find_difficulty_str).value());
 
-	std::string difficulty_str = JsonConverter::getString(jsonObj, "difficulty");
-	ref.setDifficulty(SkillDifficultyType::fromString(difficulty_str).value());
+	ref.setCharacteristics(JsonConverter::getString(jsonObj, "characteristics"));
+	ref.setMedicinalUses(JsonConverter::getString(jsonObj, "medicinalUses"));
+	ref.setOtherUses(JsonConverter::getString(jsonObj, "otherUses"));
+	ref.setWarning(JsonConverter::getString(jsonObj, "warning"));
 
 	std::string preparation_type_str = JsonConverter::getString(jsonObj, "preparationType");
 	ref.setPreparationType(ForagablePreparationType::fromString(preparation_type_str).value());
@@ -55,7 +58,6 @@ const ForagableData& ForagableSerializer::deserializeObject(json::object& jsonOb
 	rm::game::Location location = JsonConverter::getLocation(jsonObj, "location", manager_);
 	ref.setLocation(location);
 
-	ref.setEffect(JsonConverter::getString(jsonObj, "effect"));
 
 	return ref;
 }

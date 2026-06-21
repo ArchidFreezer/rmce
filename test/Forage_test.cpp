@@ -118,7 +118,7 @@ TEST_F(ForageTest, ForageHerbs_AdditionalSearchers_AppliesBonus) {
 	ForagableData& herb = manager->get<ForagableData>("TEST_HERB");
 	herb.setName("Test Herb");
 	herb.setLocation(*test_location);
-	herb.setDifficulty(SkillDifficultyType::kLight);
+	herb.setFindDifficulty(SkillDifficultyType::kLight);
 	herb.setLoreSkill(herb_lore_skill);
 
 	// Test with additional searchers - should increase success rate
@@ -156,7 +156,7 @@ TEST_F(ForageTest, ForageHerbs_HuntedPenalty_ReducesSuccessRate) {
 	ForagableData& herb = manager->get<ForagableData>("TEST_HERB_2");
 	herb.setName("Test Herb 2");
 	herb.setLocation(*test_location);
-	herb.setDifficulty(SkillDifficultyType::kLight);
+	herb.setFindDifficulty(SkillDifficultyType::kLight);
 	herb.setLoreSkill(herb_lore_skill);
 
 	// Test with and without hunted penalty
@@ -194,7 +194,7 @@ TEST_F(ForageTest, ForageHerbs_HoursSpent_AffectsResults) {
 	ForagableData& herb = manager->get<ForagableData>("TEST_HERB_3");
 	herb.setName("Test Herb 3");
 	herb.setLocation(*test_location);
-	herb.setDifficulty(SkillDifficultyType::kLight);
+	herb.setFindDifficulty(SkillDifficultyType::kLight);
 	herb.setLoreSkill(herb_lore_skill);
 
 	// Test with more hours vs fewer hours
@@ -232,13 +232,13 @@ TEST_F(ForageTest, ForageHerbs_TargetResource_SearchesSpecificHerb) {
 	ForagableData& target_herb = manager->get<ForagableData>("TARGET_HERB");
 	target_herb.setName("Target Herb");
 	target_herb.setLocation(*test_location);
-	target_herb.setDifficulty(SkillDifficultyType::kLight);
+	target_herb.setFindDifficulty(SkillDifficultyType::kLight);
 	target_herb.setLoreSkill(herb_lore_skill);
 
 	ForagableData& other_herb = manager->get<ForagableData>("OTHER_HERB");
 	other_herb.setName("Other Herb");
 	other_herb.setLocation(*test_location);
-	other_herb.setDifficulty(SkillDifficultyType::kLight);
+	other_herb.setFindDifficulty(SkillDifficultyType::kLight);
 	other_herb.setLoreSkill(herb_lore_skill);
 
 	// Test with target resource specified
@@ -267,7 +267,7 @@ TEST_F(ForageTest, ForageHerbs_HerbLoreBonus_AffectsIdentification) {
 	ForagableData& rare_herb = manager->get<ForagableData>("RARE_HERB");
 	rare_herb.setName("Rare Herb");
 	rare_herb.setLocation(*test_location);
-	rare_herb.setDifficulty(SkillDifficultyType::kVeryHard);  // High difficulty
+	rare_herb.setFindDifficulty(SkillDifficultyType::kVeryHard);  // High difficulty
 	rare_herb.setLoreSkill(herb_lore_skill);
 
 	// Test with and without herb lore bonus
@@ -305,7 +305,7 @@ TEST_F(ForageTest, ForageHerbs_PoisonLoreBonus_AffectsPoison) {
 	ForagableData& poison_herb = manager->get<ForagableData>("POISON_HERB");
 	poison_herb.setName("Poison Herb");
 	poison_herb.setLocation(*test_location);
-	poison_herb.setDifficulty(SkillDifficultyType::kHard);
+	poison_herb.setFindDifficulty(SkillDifficultyType::kHard);
 	poison_herb.setLoreSkill(poison_lore_skill);
 
 	// Test with poison lore bonus
@@ -347,13 +347,13 @@ TEST_F(ForageTest, ForageHerbs_LocationMatching_OnlyFindsMatchingHerbs) {
 	ForagableData& forest_herb = manager->get<ForagableData>("FOREST_HERB");
 	forest_herb.setName("Forest Herb");
 	forest_herb.setLocation(forest_location);
-	forest_herb.setDifficulty(SkillDifficultyType::kLight);
+	forest_herb.setFindDifficulty(SkillDifficultyType::kLight);
 	forest_herb.setLoreSkill(herb_lore_skill);
 
 	ForagableData& desert_herb = manager->get<ForagableData>("DESERT_HERB");
 	desert_herb.setName("Desert Herb");
 	desert_herb.setLocation(desert_location);
-	desert_herb.setDifficulty(SkillDifficultyType::kLight);
+	desert_herb.setFindDifficulty(SkillDifficultyType::kLight);
 	desert_herb.setLoreSkill(herb_lore_skill);
 
 	// Search in forest location
