@@ -57,11 +57,20 @@
         {
             "id" : "POISON_BRITHAGURTH",
             "name" : "Brithagurth",
-            "type" : "POISONTYPE_CONVERSION",
-            "level" : 2,
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 4,
             "levelVariance" : "A",
-            "notes" : "Black venom causes hardening of tendons in 1-4 appendages.\nSevere effects make appendage useless",
+            "notes" : "Black venom causing severe, rapid calcification and hardening of the skeletal tendons. Severe effects cause affected tendons freeze up entirely, making the limbs completely useless. The victim loses the physical ability to hold weapons, stand, or bend their joints, rendering them paralysed by their own rigid musculature.",
             "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_CAMADARCH",
+            "name" : "Camadarch",
+            "type" : "POISONTYPE_CONVERSION",
+            "level" : 4,
+            "levelVariance" : "B",
+            "notes" : "Camadarch is a liquid poison turning a victim's skin blue over the course of a day. After 24 hours, each external feature of the body must then make an RR or rot off in 1-10 hours. If mixed with alcohol, camadarch becomes an acidic contact poison that causes burns: 1-2 'E' heat criticals on the 1st round, 1-2 'C' criticals on the 3rd, and 1-2 'A' criticals on the 5th.",
+            "maxSeverity" : "Severe"
         },
         {
             "id" : "POISON_CARNEGURTH",

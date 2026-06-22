@@ -1190,18 +1190,42 @@
             }
         },
         {
+            "id" : "FORAGABLE_BRITHAGRUTH",
+            "name" : "Brithagruth",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Brithagruth is a flower that grows to around 8\" in height with a small, bright yellow flower on a thick pulpy stem. It grows in clusters in barren, rocky terrain with the flowers lasting for most of the year.",
+            "medicinalUses" : "The thick, pulpy stem must be chewed raw or squeezed to ingest the bitter, milk-like internal sap which halves the total recovery time required for broken bones to knit back together naturally. It does not instantly snap bones back into place or heal lost concussion hits (HP). It must be paired with physical splinting, and if the patient engages in heavy combat before the accelerated timeline finishes, the half-healed fracture instantly re-shatters, dealing additional damage.",
+            "otherUses" : "None",
+            "warning" : "None",
+            "preparationType" : "Ingest",
+            "effectType" : "Bone Repair",
+            "findDifficulty" : "Routine",
+            "addictionFactor" : 1,
+            "cost" : "4 sp/dose",
+            "location" : {
+                "terrains" : [
+                    "Rough",
+                    "Waste"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_TEMPERATE"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_BRITHAGURTH",
             "name" : "Brithagurth",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 2A poison.\nBlack venom causes hardening of tendons in 1-4 appendages.\nSevere effects make appendage useless",
-            "otherUses" : "Fish",
-            "warning" : "",
-            "preparationType" : "Liquid",
-            "effectType" : "Conversion Poison",
-            "findDifficulty" : "Sheer Folly",
+            "characteristics" : "Brithagurth is a black, condensed venom extracted natively from the sharp protective spines of several predatory species of stickleback fish. These fish inhabit the freezing, rapid, fresh-water rivers of the northern mountains.",
+            "medicinalUses" : "None.",
+            "otherUses" : "The raw venom is boiled down into a thick, black, condensed paste (4A poison) causing severe, rapid calcification and hardening of the skeletal tendons. The affected tendons freeze up entirely, making the limbs completely useless. The victim loses the physical ability to hold weapons, stand, or bend their joints, rendering them paralysed by their own rigid musculature.",
+            "warning" : "None",
+            "preparationType" : "Paste",
+            "effectType" : "Muscle Poison",
+            "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
-            "cost" : "25 gp",
+            "cost" : "40-45 gp/dose",
             "location" : {
                 "waterSources" : [
                     "Freshwater Coast",
@@ -1215,12 +1239,12 @@
         },
         {
             "id" : "FORAGABLE_BRORKWILB",
-            "name" : "Brorkwilb",
+            "name" : "Brôrkwilb",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Euphoric: Allows for shared dreams with family member who is also sleeping",
-            "otherUses" : "Flower",
-            "warning" : "",
+            "characteristics" : "Brôrkwilb is a rare variant of a rose that is incredibly geothermally dependent. It is found exclusively growing in the ash-rich, warm soil near active volcanoes. It is highly seasonal, blooming and available only from late winter to early summer.",
+            "medicinalUses" : "None",
+            "otherUses" : "When the flowers petals are ingested, Brôrkwilb acts as a powerful psychic narcotic that alters the user's subconscious sleep state inducing a deep, euphoric state of relaxation. If a character consumes Brôrkwilb and goes to sleep, it allows them to enter a shared, interactive dream state with a family member who is also sleeping at the same time.",
+            "warning" : "There is an extremely high risk of chemical dependency; an alchemist can cast the Major Poison spell from the Liquid/Gas Skills list to extract the pure essence without the addictive substance.",
             "preparationType" : "Ingest",
             "effectType" : "Intoxicant",
             "findDifficulty" : "Light",
@@ -1238,12 +1262,12 @@
         },
         {
             "id" : "FORAGABLE_BURSTHELAS",
-            "name" : "Bursthelas",
+            "name" : "Bûrsthelas",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Shatter Repairs",
+            "characteristics" : "Bûrsthelas is an enchanted grass featuring very dark green leaves marked by a distinct, single golden vein running down the centre. It is notoriously selective about where it grows, usually found only in the damp, shaded soil near wild willow groves.",
+            "medicinalUses" : "The stalks must be boiled in water for 20 rounds before the liquid is consumed. Bûrsthelas possesses near-magical restorative properties. When the tea is drunk, it completely repairs shattered, crushed, or splintered bones acting as an instant fix for severe skeletal critical strikes that would otherwise take months to heal naturally or require high-level clerical magic.",
             "otherUses" : "Stalk",
-            "warning" : "",
+            "warning" : "There is an incredibly high risk of psychological and physical dependency upon use, which effectively incapacitates the imbiber for a month to 6 weeks who suffers hallucinations and a string craving for more of the drug to the point of using physical violence. Patients are often kept in secure rooms when this is administered in case of this.",
             "preparationType" : "Brew",
             "effectType" : "Bone Repair",
             "findDifficulty" : "Sheer Folly",
@@ -1256,6 +1280,92 @@
                 "climates" : [
                     "CLIMATE_COOL_TEMPERATE",
                     "CLIMATE_COOL_WET"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_BUTTERFOOT",
+            "name" : "Butterfoot",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This small flower is easily distinguished when in bloom because of its small, bright yellow flower and matching, vibrant petals at its base.",
+            "medicinalUses" : "If ground up, mixed with a small amount of water and dripped into the eye of someone blind because of an injury, daily administrations of butterfoot over the course of 1 week restore sight.",
+            "otherUses" : "None",
+            "warning" : "None",
+            "preparationType" : "Liquid",
+            "effectType" : "Organ Repair & Preservation",
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
+            "cost" : "25 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands",
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_BUTTONHEAD",
+            "name" : "Buttonhead",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "his small fungus resembles the traditional toadstool, except that its hard, button-sized head is solid black and its stalk stark white. Buttonheads usually grow in patches of up to 100 in dark caves away from daylight.",
+            "medicinalUses" : "The head is too hard to eat; swallowing it whole results in severe indigestion that causes the consumer to function at -10 for 4 hours. If the buttonhead stalk is eaten, it dispels weariness in the consumer, making him feel totally refreshed for 12 hours. At the end of that time, however, he must rest for another 12 hours (usually sleeping straight through). Refusal to rest reduces all rolls by -SO.",
+            "otherUses" : "None",
+            "warning" : "Whilst not addictive, the amount of rest required to recover is cumulative if more than 1 dose is taken within a 3 day period (i.e, the second requires 24 hours rest; 36 hours for the third, and so on).",
+            "preparationType" : "Ingest",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "10 gp/dose",
+            "location" : {
+                "features" : [
+                    "Cave",
+                    "Cavern"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_CAJ",
+            "name" : "Caj",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "A small, woody shrub, caj grows low to the ground with spiny, stiff branches adorned with thorns and small, red leaves year round. Around the trunk, well within its defences, are several small (pea sized) nodules of sap that ooze a small quantity of brown resin when punctured.",
+            "medicinalUses" : "Those wishing to die sometimes seek out this plant because of the cumulative effects of brewing tea from the nodule resin, setting them on what the Bozishnarod call the Long Path. In such cases, the user reaches a state of perfect community with the Essence; as the enlightened soul perceives that all is one, the urge to live is lost and replaced by\na desire to return to the earth. The death by starvation that invariably follows is perfectly pleasant to the victim, so there is an additional market for the tea among those who wish to die, but fear death.",
+            "otherUses" : "Caj tea is said to be the best tasting in all of Middle-earth. It also has a beneficial effect on Essence spell casters,  allowing them to recoup their normal Power Points\nin half their usual recovery period. This is achieved through a temporary (two day) elevation of the drinker's attunement to the forces of nature.",
+            "warning" : "Each time the tea is swallowed within the course of a month, there is a 5% chance (cumulative) of embarking on what the Southrons call \"The Long Path\".",
+            "preparationType" : "Ingest",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
+            "cost" : "10 gp/resin nodule",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_CAMADARCH",
+            "name" : "Camadarch",
+            "loreSkill" : "SKILL_POISON_LORE",
+            "characteristics" : "This small mushroom is about 1\" tall with a cap ½\" in diameter. It is distinguished by its black, star pattern of pigment on the cap.",
+            "medicinalUses" : "None",
+            "otherUses" : "Camadarch is a liquid poison prepared from a mushroom found in the caves of the fells of eastern Eriador and in the Underdeeps. It turns a victim’s skin blue over the course of a day. After 24 hours, each external feature of the body must then make an RR or rot off in 1-10 hours. If mixed with alcohol, camadarch becomes an acidic contact poison that causes burns: 1-2 'E' heat criticals on the 1st round, 1-2 'C' criticals on the 3rd, and 1-2 'A' criticals on the 5th.",
+            "warning" : "Care must be taken when preparing this poison or the assassin could end up its victim.",
+            "preparationType" : "Liquid",
+            "effectType" : "Conversion Poison",
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
+            "cost" : "33 gp/dose",
+            "location" : {
+                "terrains" : [
+                    "Underground"
                 ]
             }
         },
