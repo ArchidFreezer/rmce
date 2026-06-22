@@ -19,17 +19,44 @@
             "maxSeverity" : "Moderate"
         },
         {
+            "id" : "POISON_ASP_VENOM",
+            "name" : "Asp Venom",
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 5,
+            "levelVariance" : "C",
+            "notes" : "When struck with an envenomed blade, the victim loses the use of the location for 3 days, during which time the limb is totally useless, alternately numb, aching or throbbing. If sandclaw leaves are crushed and packed into the wound within an hour of being hit, the herb neutralises the venom.",
+            "maxSeverity" : "Moderate"
+        },
+        {
             "id" : "POISON_BARGOLITH",
             "name" : "Bargolith",
             "type" : "POISONTYPE_CONVERSION",
-            "level" : 5,
+            "level" : 8,
             "levelVariance" : "B",
-            "notes" : "Bluish juice causes victim's body to heat up.\nSevere effects results in spontaneous combustion.\nComes from a phosphorescent green firefly",
+            "notes" : "Bargolist causes permanent loss of sight (Blinding) or permanent paralysis in one or more limbs, accompanied by excruciating, burning pain. Standard healing spells often cannot reverse the neural damage caused by Bargolith; it usually requires high-level magical restoration or rare specialised herbs (like Ankil) to repair the destroyed sensory pathways.",
             "maxSeverity" : "Extreme"
         },
         {
-            "id" : "POISON_BRITHAGRUTH",
-            "name" : "Brithagruth",
+            "id" : "POISON_BLACK_CLOVER",
+            "name" : "Black Clover",
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 5,
+            "levelVariance" : "B",
+            "notes" : "Made from a paste from the pollen spores of the black clover plant, this poison was used by the Woses to coat their darts.",
+            "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_BOGLOCK",
+            "name" : "Boglock",
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 7,
+            "levelVariance" : "C",
+            "notes" : "Extracted from a desert cactus, if the poison reaches the bloodstream of a victim through food, drink or blade, it triggers muscle spasms of such a magnitude that the victim's heart is affected, killing them in 1-10 rounds",
+            "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_BRITHAGURTH",
+            "name" : "Brithagurth",
             "type" : "POISONTYPE_CONVERSION",
             "level" : 2,
             "levelVariance" : "A",
