@@ -162,6 +162,15 @@ public:
 	void load();
 
 	/**
+	 * @brief Reset the cache, clearing all stored game objects and mutexes
+	 *
+	 * This is used to reset the cache to a clean state, typically when starting a new game or loading a saved game. It will clear all stored game objects and mutexes, and clear the deleted flags.
+	 */
+	void resetCache() {
+		object_manager_.resetCache();
+	}
+
+	/**
 	 * @brief Serialize all known data objects to file
 	 *
 	 * This function is a convenience wrapper around the template serializeAllObjects function that uses the default filename and root key for each type.

@@ -320,6 +320,16 @@ public:
 		non_serialized_objects_.erase(id);
 	}
 
+	/**
+	 * @brief Reset the cache, clearing all stored game objects and mutexes
+	 *
+	 * This is used to reset the cache to a clean state, typically when starting a new game or loading a saved game. It will clear all stored game objects and mutexes, and clear the deleted flags.
+	 */
+	void resetCache() {
+		cache_.reset();
+		deleted_objects_.clear();
+	}
+
 private:
 	PersistentCache& cache_;                     /**< Reference to a cache to store the objects. */
 	std::set<std::string> deleted_objects_{};    /**< Set of IDs of objects that have been deleted. This is used to flag an object as delted without invalidating existing references. */

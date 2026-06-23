@@ -39,16 +39,17 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 			response.set(http::field::content_type, "application/json");
 			response.body() = R"({"error": "Save Failed", "message": ")" + std::string(e.what()) + R"("})";
 		}
-	} else if (request.method() == http::verb::get && path.matchExact("/rmce/load")) {
+	} else if (request.method() == http::verb::get && path.matchExact("/rmce/reload")) {
 		try {
+			serial_manager_.resetCache();
 			serial_manager_.load();
 			response.result(http::status::ok);
 			response.set(http::field::content_type, "application/json");
-			response.body() = R"({"load": "successful"})";
+			response.body() = R"({"reload": "successful"})";
 		} catch (const std::exception& e) {
 			response.result(http::status::internal_server_error);
 			response.set(http::field::content_type, "application/json");
-			response.body() = R"({"error": "Load Failed", "message": ")" + std::string(e.what()) + R"("})";
+			response.body() = R"({"error": "Reload Failed", "message": ")" + std::string(e.what()) + R"("})";
 		}
 	} else if (path.match("/rmce/data/")) {
 		DataRequestHandler handler {serial_manager_};

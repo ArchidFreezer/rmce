@@ -123,6 +123,14 @@ namespace rm {
 		template <persistent_object T>
 		int size();
 
+		/**
+	     * @brief Reset the cache, clearing all stored game objects and mutexes
+	     */
+		void reset() {
+		    state.clear();
+		    mutexes.clear();
+	    }
+
 	private:
 		/**
 		 * @brief Stores the state of the cache
