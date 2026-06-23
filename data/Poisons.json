@@ -78,7 +78,7 @@
             "type" : "POISONTYPE_CIRCULATORY",
             "level" : 1,
             "levelVariance" : "C",
-            "notes" : "Reddish juice causes massive blood clotting",
+            "notes" : "The Primary Effect: It is classified as a Level 1 Circulatory Poison. If a character ingests it and fails their Resistance Roll (RR), the toxin enters the bloodstream.\n\nThe Consequences: The reddish juice causes widespread, massive blood clotting inside the victim's veins and arteries.\n\nThe Timeline: The target suffers excruciating internal blockages, culminating in total circulatory failure and death within 1 to 100 hours (determined by a rolling interval or GM discretion). Because it is a Level 1 poison, the Resistance Roll is easier to beat than high-tier poisons, but if the save is failed, finding an antidote (like Argsbargie) within the variable time window becomes an immediate priority.",
             "maxSeverity" : "Extreme"
         },
         {
