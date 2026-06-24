@@ -108,12 +108,21 @@
             "maxSeverity" : "Severe"
         },
         {
+            "id" : "POISON_FANGORTH",
+            "name" : "Fangorth",
+            "type" : "POISONTYPE_RESPIRATORY",
+            "level" : 5,
+            "levelVariance" : "C",
+            "notes" : "This poison is harvested from a moss and stored in powder form, which may be blown into a victims face or deposited in food or drink.\nIngestion causes sleep for 1-4 hours, along with the typical respiratory effects.",
+            "maxSeverity" : "Severe"
+        },
+        {
             "id" : "POISON_GALENAANA",
             "name" : "Galenaana",
             "type" : "POISONTYPE_RESPIRATORY",
             "level" : 9,
             "levelVariance" : "D",
-            "notes" : "Green powder.\nMax of Severe effects (except for elves who can suffer Extreme effects)",
+            "notes" : "A distinct green powder, that when ingested, the poison triggers a delayed or immediate systemic failure depending on the race of the victim:<ul>\n<li>Elves: Galenaana causes severe, fatal reactions in Elven biology. Failing the Resistance Roll results in extreme respiratory failure and death.  \n<li>non-Elven targets (such as Men, Dwarves, or Hobbits), the maximum severity of the toxin is slightly mitigated but still catastrophic. A failed save drops the victim into a prolonged, deep coma lasting 1 to 100 weeks (1d100 weeks).\n</ul>",
             "maxSeverity" : "Extreme"
         },
         {
@@ -130,6 +139,15 @@
             "type" : "POISONTYPE_NERVE",
             "level" : 3,
             "levelVariance" : "B",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_GONHITHUI",
+            "name" : "Gonhithui",
+            "type" : "POISONTYPE_CONVERSION",
+            "level" : 7,
+            "levelVariance" : "B",
+            "notes" : "The paste causes dehydration over the next 24 hours for anyone who ingests it. In the most severe cases (failure by 101+), the victim dies from dysentery the following day. There is no known antidote for this toxin, but if the victim is kept warm and drinks nearly every waking moment, he may stave off its effects.",
             "maxSeverity" : "Extreme"
         },
         {
@@ -216,7 +234,7 @@
             "type" : "POISONTYPE_NERVE",
             "level" : 2,
             "levelVariance" : "B",
-            "notes" : "Severe effect is insanity in 1-100 weeks",
+            "notes" : "Juth is only effective if administered by the edge or tip of a weapon. Orally ingested, it serves only to steal away the appetite of its intended victim. Anyone wounded with a juth-venomed blade finds his world eroding as he gradually goes insane, a hideous process that takes up to 1 week, First, the victim experiences 2-20 hits as the venom works its way into his system. An hour later, he suspects that friends are plotting to kill him. Yet another hour later, he becomes convinced of this and begins to hallucinate, usually about monsters or important figures, all of them out to “get” him. By the next day, the victim is violent if touched and paranoid about his possessions, fearing for thieves. The following morning finds he hears voices telling him to flee (50%) or kill everyone around him before they kill him first (50%). By the fourth day, the victim is a berserking, frothing, raving fool who either attacks or flees whenever contact is initiated by anyone else, From his perspective, the entire world is out to get him; he acts on this paranoia as if possessed until he either dies or is forcibly cured. Besides legendary cures, such as athelas or others, a brewed mixture of snowdragon and true tarnas, administered orally 3 times a day for 1 week is rumoured to be capable of reversing the insanity. A healer should be consulted in any case.",
             "maxSeverity" : "Severe"
         },
         {
@@ -225,8 +243,17 @@
             "type" : "POISONTYPE_MUSCLE",
             "level" : 1,
             "levelVariance" : "A",
-            "notes" : "Affects 1-4 appendages, with Severe inflicting loss of 1-100 in temp Agility",
+            "notes" : "If consumed, kaktu acts as a powerful toxin, inducing numbness in all bodily extremities. If boiled and concentrated into liquid form, the flower becomes a more powerful poison that impairs a person's dexterity; this effect is permanent until an antidote is administered. The resulting palsy interferes with the victim's movement.\nThe poison affects 1-4 appendages, with Severe inflicting loss of 1-100 in temp Agility.",
             "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_KALMOGS_SPOOR",
+            "name" : "Kalmog's Spoor",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 8,
+            "levelVariance" : "B",
+            "notes" : "The poison reacts with blood, causing a burning sensation on the skin (2-20 hits over the next hour) that may become more severe, depending on where the paste touches the skin (i.e., more severe on the eyes and face). After a 24 hour incubation period, festering sores appear where the poison touched the skin. These sores hinder movement by -10 to -50, depending again on where they touched the victim.",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_KARFAR",

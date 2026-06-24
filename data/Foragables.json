@@ -2014,18 +2014,66 @@
             }
         },
         {
+            "id" : "FORAGABLE_DINFUIN",
+            "name" : "Dinfuin",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Dinfuin is a dark green moss that is often found in large (man-sized) patches on the rocks and forest slopes of Mirkwood, It is very soft, and reclining on it is akin to lying back in a feather bed.",
+            "medicinalUses" : "",
+            "otherUses" : "Dinfuin may be harvested by cutting it up into 1' squares and steaming them—a dangerous but necessary procedure to render the moss safe to touch. Mattresses stuffed with these patches of moss are highly prized and sought after. They retain their luxurious touch for years.",
+            "warning" : "When pressure is exerted upon it, dinfuin exudes a volatile oil that causes amnesia. Depending on the victim's Intellect, this condition lasts for 1-100 days and is rarely\n(5%) permanent. Harvesters of the moss should always wear gloves.",
+            "preparationType" : "Paste",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "2 gp/dose of oil; 250+ gp/ mattress.",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_DOGMALLOW",
+            "name" : "Dogmallow",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Dogmallow is one of the largest members of the reed family, routinely growing to a height of over 10'. It is also distinguishable by the thick coating of golden hair\nsurrounding the lowest 3' of the stem.",
+            "medicinalUses" : "Dogmallow reeds are not hollow in the upper third of their length. If the centre of that part of the stem is scraped out, boiled in water for ½ hour and consumed, it slows the effect of poisons (10 x normal speed).",
+            "otherUses" : "",
+            "warning" : "A person to whom dogmallow has been administered often feels so much better that he neglects to obtain an antidote for the poison still raging in his veins. When the dogmallow wears off, however, the poison continues to run its course.",
+            "preparationType" : "Ingest",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "15 gp/dose",
+            "location" : {
+                "waterSources" : [
+                    "Marsh"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET",
+                    "CLIMATE_WARM_TEMPERATE",
+                    "CLIMATE_WARM_WET"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_DRAAF",
             "name" : "Draaf",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Heals 1-10 for each of 2 consecutive rounds",
-            "otherUses" : "Leaf",
+            "characteristics" : "This small, stubby herb looks as though it was constructed of small globs of green clay plopped together, so ugly is its appearance. It has a few leaves, but they too resemble something that’s been washed in by the tide. Despite its appearances, however, draaf is a hardy survivor. Draaf is salty but pleasant to the taste.",
+            "medicinalUses" : "If its consumer remains quiet, a draaf leaf restores 1-10 hits over 2 consecutive rounds. Another dose brings on the same restrictions, but the total healing is only ½ of the previous dose, and so on with further doses. Draf keeps for up to 3 days after being picked.",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Ingest",
             "effectType" : "Concussion Relief",
             "findDifficulty" : "Easy",
-            "addictionFactor" : 1,
-            "cost" : "7 sp",
+            "addictionFactor" : 0,
+            "cost" : "5 sp/dose",
             "location" : {
                 "waterSources" : [
                     "Saltwater Coast"
@@ -2037,12 +2085,57 @@
             }
         },
         {
+            "id" : "FORAGABLE_DRAGON_GRASS",
+            "name" : "Dragon Grass",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Dragon grass sprouts from seeds in early spring and by mid-summer reaches heights of 8-10'. Its stems are brownish green (at their base, thick as a man’s wrist; at their tip, a man’s finger-width). Its leaves are long (3-4'), green and erupt from the entire length of the stalk. When rustled by the wind, dragon grass produces an incredible amount of noise. It is easily hacked with a sword, but anyone without a cutting implement finds travel impossible.",
+            "medicinalUses" : "If the seeds which appear in autumn are ground up and spread over a burn, they relieve pain for 12 hours. The seeds may be stored for up to a year.",
+            "otherUses" : "",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Burn & Exposure Relief",
+            "findDifficulty" : "Easy",
+            "addictionFactor" : 0,
+            "cost" : "3 sp/ dose; 5 sp/ stalk.",
+            "location" : {
+                "waterSources" : [
+                    "Marsh"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_DRAGUL",
+            "name" : "Dragul",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This small shrub blooms bright with silvery flowers. It is unremarkable in appearance, save for its small flowers which bloom for most of the spring and summer. Its roots are thick and plentiful.",
+            "medicinalUses" : "When the roots are ground up and made into a tea a most remarkable effect overcomes the imbiber. The consumer experiences a state of heightened awareness (+10 to all manoeuvres that require observation — combat, tumbling, perception, but usually not fletching, dance or hiding). The effect lasts for I hour, but more doses only result in a headache so powerful that it cancels any other effects.",
+            "otherUses" : "",
+            "warning" : "Dragul root is addictive if used more than 3 times/2 weeks or 10 times/year, and withdrawal pangs are quite severe, usually leaving the victim impaired in all of the activities it once enhanced (-11 to 20) for 7-12 months. Regular use also forces the addict to drink ever-increasing quantities of the brew to forgo withdrawal symptoms, resulting in inevitable financial ruin",
+            "preparationType" : "Brew",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 5,
+            "cost" : "25 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_DUGMUTHUR",
             "name" : "Dugmuthur",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Heals 10 instantly",
-            "otherUses" : "Cone",
+            "characteristics" : "This is a thorny vine with blue-green leaves that grows up sheltered rocky faces of foothills and mountains. Blight blue berries are produced from mid summer to late autumn.",
+            "medicinalUses" : "The berries are eaten or swallowed raw for an immediate effect of healing exactly 10 hits. Dried berries last for up to 6 months.",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Ingest",
             "effectType" : "Concussion Relief",
@@ -2051,11 +2144,56 @@
             "cost" : "9 sp",
             "location" : {
                 "terrains" : [
-                    "Alpine"
+                    "Mountainous",
+                    "Rough"
                 ],
                 "climates" : [
-                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
                     "CLIMATE_COOL_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_DUNG_REVELLING_PSARCH",
+            "name" : "Dung-revelling Psarch",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This mushroom has an 8\" brownish cap, brown gills and a 1' yellowish-brown stalk. It is found in colonies covering an area of up to 6' square, composed of dozens of individual fungi.",
+            "medicinalUses" : "",
+            "otherUses" : "If consumed, the flesh of this mushroom confers a mind-altering experience. The consumer's Perception skills function at -15 for 24 hours, but Intelligence related rolls (with regard to everything except themselves) increase by +5. The fungi may be dried and still retain its properties for up to a month.",
+            "warning" : "There is no antidote for the effects of eating this fungus.",
+            "preparationType" : "Ingest",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
+            "cost" : "22 gp/dose",
+            "location" : {
+                "terrains" : [
+                    "Underground"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_DWARVES_EYEBRIGHT",
+            "name" : "Dwarves Eyebright",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This small, trumpet-shaped flower usually grows to a height of no more than 1'. Its leaves are small and tear-drop shaped; its petals are white and violet.",
+            "medicinalUses" : "",
+            "otherUses" : "When brewed into a tea and consumed, its flowers improve vision in dim and dark conditions (+50 sighting bonus; up to 50' night vision for Men). They produce no effect in total darkness, but miners and other dark-dwellers are grateful for any improvement in their limited vision.",
+            "warning" : "Habitual users develop a violet hue to the whites of their eyes.",
+            "preparationType" : "Ingest",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "3 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             }
         },
@@ -2063,8 +2201,8 @@
             "id" : "FORAGABLE_DYNALLCA",
             "name" : "Dynallca",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 3B poison.\nTan paste affects hearing and gives 1-10 hits.\nMax of Severity General effects (destroys hearing)",
+            "characteristics" : "This herb resembles a small palm tree with a large number of long, leafy fronds that usually bend to touch the ground. It has roots like a mangrove, and is usually about 5' in height. The roots are strong and, once intertwined among the rocks on which it grows, virtually impossible to pull free. If the leaves are crushed the aroma of hot metal is prevalent.",
+            "medicinalUses" : "If ground into a paste, dynallca leaves become an ingestive poison that robs its victims-of hearing and delivers 10 hits to the aural nerves of the head. The poison is only effective if ingested orally and takes about 10 minutes for the aural damage to become permanent, while its victim writhes in pain. Treatment is available in the form of a mixture of zur and puff-spice. If administered before hearing loss becomes permanent, this treatment reverses the course of the poison, enabling the victim to recover in 1 hour. Puff-spice combined with nelluin, ingested orally, is the only remedy for dynallca which has taken full effect. Restoration of hearing takes 1 week.",
             "otherUses" : "Leaf",
             "warning" : "",
             "preparationType" : "Paste",
@@ -2084,25 +2222,78 @@
             }
         },
         {
+            "id" : "FORAGABLE_EARTHBREAD",
+            "name" : "Earthbread",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This chunky, brown, knobby root grows thick and plentifully in the loamy soils of temperate climes where mixed woodlands occur.",
+            "medicinalUses" : "",
+            "otherUses" : "This root is used to make Dwarven waybread. It may be easily grown in many different soils (though not underground) by slicing and drying thick sections, which are then directly planted in rows. The root begins to grow in perhaps 1 month, yielding a crop in about 5-7 months. It keeps for up to a month in a dried wafer state.",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Easy",
+            "addictionFactor" : 0,
+            "cost" : "3 sp/ration",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_EBUR",
             "name" : "Ebur",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Repairs sprains",
-            "otherUses" : "Flower",
+            "characteristics" : "This vine snakes its way across dunes near the sea, burrowing its roots deep into the sand and helping to prevent wind erosion. In spring, it produces small white and purple flowers.",
+            "medicinalUses" : "If collected fresh and eaten, ebur flowers work to repair sprained joints while the subject is immobilized. It takes a full day for the healing process to work, and only one sprain can be repaired at a time. Any flowers eaten after the first appear to have no effect, leaving the consumer to complain of a bad taste in his mouth for several hours.",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Ingest",
             "effectType" : "Muscle Cartilage & Tendon Repair",
             "findDifficulty" : "Medium",
             "addictionFactor" : 18,
-            "cost" : "22 gp",
+            "cost" : "22 gp/flower",
             "location" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
                 "climates" : [
+                    "CLIMATE_COOL_DRY",
                     "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                    "CLIMATE_COOL_WET",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE",
+                    "CLIMATE_WARM_WET"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_EDDIJ",
+            "name" : "Eddij",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This small shrub is hard to spot because it resembles so many other species. It is distinguished by the golden colour of its roots, which manifests itself if they are dug up within minutes of the end of a rainstorm when the new sun hits its leaves, In spring, the eddij plant produce dozens of small red berries.",
+            "medicinalUses" : "If placed on the eyes of a person threatened with imminent death, juice squeezed from eddij berries preserves life for several hours.",
+            "otherUses" : "",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Life Preservation",
+            "findDifficulty" : "Sheer Folly",
+            "addictionFactor" : 0,
+            "cost" : "560 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous",
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE",
+                    "CLIMATE_WARM_WET"
                 ]
             }
         },
@@ -2110,15 +2301,15 @@
             "id" : "FORAGABLE_EDRAM",
             "name" : "Edram",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Mends Bones",
-            "otherUses" : "Moss",
+            "characteristics" : "This silvery grey moss grows in large patches, some covering areas of up to 10' in width. It is soft, plush and comfortable to recline on.",
+            "medicinalUses" : "If ingested, edram aids in the mending of broken bones. The process takes 2 hours. The broken bones must be properly set before ingestion or they heal improperly, possibly leading to impaired movement. Unfortunately for anyone seeking the benefits of this moss, it must be eaten within a minute of being picked or it becomes worthless.",
+            "otherUses" : "Natives of the regions where edram is found stuff their mattresses with the soft moss. Its sweet fragrance lasts for years.",
             "warning" : "",
             "preparationType" : "Ingest",
             "effectType" : "Bone Repair",
-            "findDifficulty" : "Sheer Folly",
+            "findDifficulty" : "Very Hard",
             "addictionFactor" : 10,
-            "cost" : "31 gp",
+            "cost" : "31 gp/dose",
             "location" : {
                 "waterSources" : [
                     "Freshwater Coast"
@@ -2131,25 +2322,54 @@
             }
         },
         {
+            "id" : "FORAGABLE_EELDRAKE",
+            "name" : "Eeldrake",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Eeldrake resembles the weeds that line the bottoms of lakes and rivers, with the exception that the tip of each leaf is notched and resembles a tiny mouth. In fact, in dim light the plant is easily mistaken for a waiting eel. It can grow to a length of up to 3.",
+            "medicinalUses" : "Although nearly impossible to uproot, eeldrake is easily cut. If a large handful of still-dripping eeldrake is placed on a roaring fire, the steam that pours forth (10 minutes/lb of eeldrake placed on the fire) has the capacity to heal any muscular injury if the affected region is held over the steam for 10 minutes. Once the plant dries out, it is useless, For this reason, healers usually keep it in covered crocks of water.",
+            "otherUses" : "",
+            "warning" : "If inhaled, eeldrake steam causes light-headedness and disorientation. Care must be exercised by others to keep the patient from accidentally stumbling into the fire.",
+            "preparationType" : "Apply",
+            "effectType" : "Muscle Cartilage & Tendon Repair",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "5 gp/lb",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_ELBENSBASKET",
             "name" : "Elben's Basket",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Heart Stimulant:  Doubles speed for 2 rounds.\nUsing this herb more than 1/hour is lethal (no RR)",
-            "otherUses" : "Root",
-            "warning" : "",
+            "characteristics" : "Elben’s basket is a small, pink, basket-shaped flower, usually only 6\" in height, with 3 large leaves situated at the base of the stem.",
+            "medicinalUses" : "",
+            "otherUses" : "When its root is ground up and boiled, the resulting liquid may be imbibed as a heart stimulant. The extraction process is long and laborious — 3 days/dose, regardless of the number of flowers used. These oils, when imbibed, double the speed of the drinker’s actions for 10 seconds, after which the user must rest for an hour.",
+            "warning" : "If more than 1 dose is taken at a time, the consumer must rest for 24 hours, too exhausted to engage in any serious activity. More than 2 doses at a time causes the drinker to drop dead of a heart attack.",
             "preparationType" : "Brew",
             "effectType" : "Physical Alteration & Enhancement",
-            "findDifficulty" : "Extremely Hard",
-            "addictionFactor" : 15,
-            "cost" : "10 gp",
+            "findDifficulty" : "Sheer Folly",
+            "addictionFactor" : 5,
+            "cost" : "10 gp/dose",
             "location" : {
                 "vegetation" : [
+                    "Grasslands",
                     "Plains"
                 ],
                 "climates" : [
                     "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                    "CLIMATE_COOL_WET",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             }
         },
@@ -2157,15 +2377,15 @@
             "id" : "FORAGABLE_ELDAANA",
             "name" : "Eldaana",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 9 antidote for Reduction Poison",
-            "otherUses" : "Leaf",
+            "characteristics" : "This shrub grows to around 1' high with distinctive heart shaped leaves that are dark blue on the edges to pale green inners with golden threads running through them.",
+            "medicinalUses" : "The leaves must be boiled in water for 20 rounds before the liquid is consumed which then acts as a potent Level 9 antidote for Reduction Poisons (toxins that actively waste away, deteriorate, or reduce the physical attributes and tissues of the victim).",
+            "otherUses" : "Consuming a brew of Eldaana completely reverses the physical degradation caused by the high-level Channeling spell/curse known as \"Ugliness of Orn\" (a Level 15 curse from the master Curses list).",
             "warning" : "",
             "preparationType" : "Brew",
             "effectType" : "Antidote",
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
-            "cost" : "",
+            "cost" : "10-99 gp/dose depending on regional availability",
             "location" : {
                 "waterSources" : [
                     "Saltwater Coast"
@@ -2178,25 +2398,154 @@
             }
         },
         {
+            "id" : "FORAGABLE_ELENDILS_BASKET",
+            "name" : "Elendil's Basket",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This rare, brown, reed-like plant is tall (up to 8' in height). Its bright red, spike-shaped flower may reach up to ½ its height and appears during summer thaws.",
+            "medicinalUses" : "If ground or chopped into small pieces, the root may be boiled to yield a powerful antagonist to many poisons. If imbibed, it slows the effects of poisons tenfold. It also purifies foul, tainted water. The effects lasts 12 hours after use. The root keeps for up to 6 months if undamaged.",
+            "otherUses" : "",
+            "warning" : "",
+            "preparationType" : "Brew",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "8 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Tundra"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_EREDENA",
+            "name" : "Eredena",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Eredena is a small, bush-like tree that forms the hedges surrounding the meeting places of the Ents. They are evergreens, but have large, shiny, dark green leaves instead of needles. In addition, their long branches give them an almost spherical appearance (instead of the traditional conical shape of most evergreens). Eredena usually mature at around 5' in height. Its lower limbs sprout fruits that rise as buds from the lower branches on spikes (which flower in late winter or early spring into large, white blossoms), These buds follow a few weeks later, and the fruit a few weeks after that. The buds are about the size of a man’s thumb; the fruits resemble pine cones, but are smoother and lighter in\ncolour.",
+            "medicinalUses" : "Eredena buds are the main ingredient of Ent-draughts. If consumed by a Man, they stimulate a sudden increase in heart rate, respiration, muscle strength, quickness and speed of thought.",
+            "otherUses" : "Eredena bushes are pleasant and unusual additions to a topiary garden,",
+            "warning" : "The effect of eating a bud is so great that an RR must be made vs a 20th level poison to determine its effects. If the RR is made, the consumer feels dizzy for 5 minutes before becoming capable of incredible feats of coordination, strength and deduction for another 5 minutes (after which they require 48 hours of sleep). If the consumer fails by less than 20, he faints and remains unconscious for 72 hours. If he fails by 20-40, he suffers a mild heart attack, requiring a 6 month recovery period of near-total inactivity. A failure of greater than 40 means a massive cerebral hemorrhage takes place, followed immediately by death. Ents refine eredena buds for use in their draughts, never using them in their raw form. The Ents are unaware of eredena buds' effects on Men, but discourage any from consuming it all the same.",
+            "preparationType" : "Ingest",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "1 sp/bud",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_ESTESALQUE",
+            "name" : "Estesalquë",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This small shrub has thick, waxy stems which, if punctured, release a sticky, white sap. Its leaves are long and pointed, resembling aloe, but are easily differentiated by the presence of small white flowers on their tips. Except during winter, the flowers are always in bloom. Estesalquë is difficult to distinguish in the wild because it is\nunremarkable in appearance. One of the few things that sets it apart from other weeds is a stem that is rigidly pentagonal in shape.",
+            "medicinalUses" : "Diluted in water, the juice of estesalquë acts as a powerful analgesic, reducing the general effects of intense pain. The juice keeps for up to a year if placed in a tightly stoppered bottle.",
+            "otherUses" : "",
+            "warning" : "stesalquë acts as a powerful analgesic, quartering the effects of intense pain. Its side effect, drowsiness, gives the user a -10 penalty to Intuition and Agility bonuses for 4-5 hours.",
+            "preparationType" : "Ingest",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "7 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET",
+                    "CLIMATE_WARM_TEMPERATE",
+                    "CLIMATE_WARM_WET"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_FAGHUI",
+            "name" : "Faghui",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This small plant grows only a few inches high, but is easily found when in bloom because of its small but outstanding blue-white flower. The beauty of the faghiu blossom is said to be greater than any other in Middle-earth, and the young men of Rhudaur often think of faghiu when recalling the beauty of some woman who has caught their eye but spurned their advances.",
+            "medicinalUses" : "",
+            "otherUses" : "It is said that the juice of the full-blooming faghiu petals may be used to make a love potion. The tales are true, but it is an endeavour only for the most diligent. A bucketful of petals must be gathered and pressed to yield a thimbleful of extract. This must be allowed to sit in a shallow dish under a full moon overnight and, if undisturbed, placed in a waterproof bag and worn close to the heart of the user for the next month. Once prepared in this way, it must be ingested by the object of the user’s affections.\nAnyone consuming the prepared elixir does no harm to the one who had worn the potion close to their heart. This effect lasts 1-100 days. Imbibers also faithfully serve their\nbeloved in any way, short of endangering their own lives. If the imbiber is of the opposite sex, they may even feel lust for their new love.",
+            "warning" : "If administered to anyone of Elven blood, the elixir induces animosity instead of love.",
+            "preparationType" : "Ingest",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Absurd",
+            "addictionFactor" : 0,
+            "cost" : "330-350 gp/dose",
+            "location" : {
+                "terrains" : [
+                    "Mountainous"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_FAIRYHAIR",
+            "name" : "Fairyhair",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This small herb has 3-4 leaves and dozens of thin, bright, golden tendrils extending from its 1\" stem, giving it the appearance of a tuft of golden hair lying on the ground. It blooms early in the year, even before the snows have gone; its small flower is light blue in colour.",
+            "medicinalUses" : "If collected, packed into a pipe and smoked, fairyhair bestows total protection from the cold on the inhaler for a period of 6 hours. The hairs last for several months before losing their virtue.",
+            "otherUses" : "",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "65 gp/dose",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_FANGORTH",
+            "name" : "Fangorth",
+            "loreSkill" : "SKILL_POISON_LORE",
+            "characteristics" : "This red or purple moss grows in hair-like clumps of up to 6\" in height, typically in high places out of reach.",
+            "medicinalUses" : "",
+            "otherUses" : "When disturbed, fangorth emits a reddish mist that causes sleep for 4-12 hours. If the mist is collected on a waxed sheet and dried it is possible, though extremely dangerous, to scrape it off and store the resulting powder, which is a 5C respiratory poison.\nIt takes 1 week to regenerate its poison after discharging it, so it is possible to harvest the complete plant after the mist has died down in about 1 hour.",
+            "warning" : "Handling fangorth is dangerous, as contact with its juice may prove fatal.",
+            "preparationType" : "Powder",
+            "effectType" : "Respitory Poison",
+            "findDifficulty" : "Extremely Hard",
+            "addictionFactor" : 0,
+            "cost" : "",
+            "location" : {
+                "features" : [
+                    "Volcanic"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_FEBFENDU",
             "name" : "Febfendu",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Restores hearing",
-            "otherUses" : "Root",
-            "warning" : "",
+            "characteristics" : "This small, white fungus grows to the size of a man’s nose, preferring to sprout at the base of its reeds. It does not have the traditional toadstool shape, instead resembling a tiny finger with no cap.",
+            "medicinalUses" : "The fungus may be chopped, boiled and (after the brew has cooled) poured into the ear of someone who has suffered hearing damage, restoring hearing within 1 week.",
+            "otherUses" : "Febfendu is a tasty addition to any salad, but only if served raw. If cooked, it becomes bitter to the point of being unpalatable",
+            "warning" : "If imbibed, febfendu brew causes a ringing in the ears, obscuring all other sounds. This effect may last up to 1 week.",
             "preparationType" : "Brew",
             "effectType" : "Organ Repair & Preservation",
             "findDifficulty" : "Medium",
             "addictionFactor" : 24,
-            "cost" : "90 gp",
+            "cost" : "90 gp/dose",
             "location" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
                 "climates" : [
                     "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                    "CLIMATE_COLD_WET",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
                 ]
             }
         },
@@ -2204,9 +2553,9 @@
             "id" : "FORAGABLE_FEK",
             "name" : "Fek",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Stops any bleeding.  Takes 10 rounds to take effect (patient cannot move)",
-            "otherUses" : "Nut",
+            "characteristics" : "Fék is a medium-sized tree native to humid, tropical ocean shores. It grows up to 60' tall as a single straight trunk. It has dull green, narrow leaves about 3\" long, and small white flowers with five petals. It produces nuts throughout the year that are around ½\" in size.",
+            "medicinalUses" : "If the nut is boiled in a little water the viscous fluid created, when applied on a wound, will stop any bleeding in 1-10 rounds. The patient must not move appreciably for 1 hour after treatment otherwise the coagulant fails and the bleeding resumes.",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Brew",
             "effectType" : "Circulatory Repair",
@@ -2227,17 +2576,18 @@
             "id" : "FORAGABLE_FELMATHER",
             "name" : "Felmather",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Coma relief.\nMental summons of one 'friend' range 300' x user's level",
-            "otherUses" : "Leaf",
+            "characteristics" : "This algae occasionally washes up onto beaches after a storm, but is otherwise rarely seen by Man. Most beached specimens are too old to be of use. In its marine habitat, felmather is a leafy, brown plant that grows to a length of 2' in depths from 30' to 90'. Elastic and springy, felmather is difficult to consume, typically requiring 1 hour/leaf to chew.",
+            "medicinalUses" : "If eaten, a felmather leaf gives the consumer the ability to send a mental summons to 1 friend within a radius of 300'/level. The message is received as a vague feeling that the sender is in need. The summons does not reveal the sender’s location. The premonition of urgent need fades after 1 hour.",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Ingest",
-            "effectType" : "General Purpose",
-            "findDifficulty" : "Hard",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 15,
-            "cost" : "105 gp",
+            "cost" : "12 sp/dose",
             "location" : {
                 "waterSources" : [
+                    "Ocean",
                     "Saltwater Coast"
                 ],
                 "climates" : [
@@ -2247,12 +2597,223 @@
             }
         },
         {
+            "id" : "FORAGABLE_FINCHFEATHER",
+            "name" : "Finchfeather",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This homely little orchid has brown and black leaves that resemble nothing so much as the feathers of a finch, right down to having laid-back edges. The flower is brown and white and largely unremarkable, appearing in spring and lasting for much of the summer. It lasts for 2 weeks after being picked.",
+            "medicinalUses" : "",
+            "otherUses" : "When the flower is eaten, the consumer gains the ability to discern true North simply by closing his eyes and concentrating. This power does not manifest itself unless tested (accidentally or otherwise) and lasts for 4-7 days.",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "",
+            "location" : {
+                "vegetation" : [
+                    "Coniferous"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_FIREBREATH",
+            "name" : "Firebreath",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Firebreath is a member of the chilli family, producing a fruit similar to hot peppers. These small, toe-shaped fruits range in colour from orange to deep red. Firebreath flowers are small and white, appearing in spring after the plant has reached a height of 2'.",
+            "medicinalUses" : "If cut in half, rubbed with blood and placed on a wound, firebreath produces a surprisingly cool sensation, halting bleeding, closing wounds, and instantly healing 1-10 hits; if not pre-seasoned with blood, however, the resulting pain is so intense as to nearly raise the dead. Firebreath fruit must be fresh for its healing to be effective; dried fruit is only going to elicit curses, no matter how much pre-seasoning is performed",
+            "otherUses" : "The firebreath fruit is a favourite among those who enjoy spicy cuisine, adding it to food in fresh or dried form. Many carry a small stash with them in case their innkeeper has run out.) Ingestion of the fruit has no medicinal effect except to relieve constipation.",
+            "warning" : "If anyone handles a cut up firebreath fruit with their bare hands and touches their eyes, they are blinded for 2-6 minutes and in such pain as to be unable to do anything besides scramble for water with which to bathe their eyes.",
+            "preparationType" : "Apply",
+            "effectType" : "Circulatory Repair",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "4 gp/ dose (fresh); 4 sp (dried).",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE",
+                    "CLIMATE_WARM_WET"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_FISHFEATHER",
+            "name" : "Fishfeather",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This water plant resembles a feather-duster with the handle buried in the bottom of its aquatic environment. The feathers (brown with a white dot toward the terminal end) are actually leaves. There are also small black stripes running along its length from the midline of the leaf to the margin. The leaves never grow to more than a few inches in length.",
+            "medicinalUses" : "Each plume heals 1-4 hits when eaten.\nHarvested leaves should be wrapped in a damp cloth, which preserves their abilities for up to 3 weeks as long as the cloth is kept moist",
+            "otherUses" : "",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Concussion Relief",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "3 gp/dose",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast",
+                    "Lake"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_FLAMEROOT",
+            "name" : "Flameroot",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Flameroots are short, red, spiky tufts growing upwards on other dead fungi, wood or plants above ground or underground. The tufts typically reach 6\" in height",
+            "medicinalUses" : "Flameroot may be imbibed in infusion as a general healer of ailments or wounds. Doing so doubles the rate of healing for concussion hits.",
+            "otherUses" : "",
+            "warning" : "Flameroot has a bitter acidic taste when eaten, leading some to believe it is poisonous.",
+            "preparationType" : "Brew",
+            "effectType" : "Concussion Relief",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_FLEABANE",
+            "name" : "Fleabane",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "The fleabane plant seldom grows more than 2' in height, usually sprouting no more than 3 arrowhead-shaped leaves. Its upper half is oblong, blunt and covered with beige coloured hair. When crushed it has a strong, but not unpleasant, scent.",
+            "medicinalUses" : "If dried, ground and partially dissolved in water, fleabane rids its consumer of internal parasites",
+            "otherUses" : "Fleabane has the power to repel bloodsucking insects and related pests (including fleas, ticks and lice). Its fresh-squeezed juice is generally more effective (95%) than its ground and dried form (80%). The juice keeps for up to 1 week; the powder last several months",
+            "warning" : "Imbibing fleabane as a means of keeping pests away for more than 5 consecutive days causes the consumer to adopt its odour for 1 week. While this does not bestow the pest-repelling abilities, it does mark the person as a wimp in many areas.",
+            "preparationType" : "Ingest",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "3 bp/dose juice; 2 bp/dose powder.",
+            "location" : {
+                "terrains" : [
+                    "Mountainous",
+                    "Waste"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_FLUR_ROIRT",
+            "name" : "Flûr Roirt",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This small flower is unique in that the tops of its petals are blue, while the underside is pink. It grows to a height of about 6\" and sports several long leaves with serrated edges. It blooms only in the spring.",
+            "medicinalUses" : "Flûr roirt may be ground into a paste, mixed with wine and filtered to yield an antidote (12th level) for all nerve poisons. The concoction keeps for up to a year.",
+            "otherUses" : "A gift of a small bouquet of this flower is a subtle way of telling someone they're on your nerves.",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Nerve Repair",
+            "findDifficulty" : "Easy",
+            "addictionFactor" : 0,
+            "cost" : "44 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_FOXROSE",
+            "name" : "Foxrose",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "A member of the rose family, foxrose is distinguished by its dusky red flowers and reddish-green leaves and stem, which can reach several feet in height.",
+            "medicinalUses" : "Eating a petal has the effect of curing 2-12 hits.",
+            "otherUses" : "Renown for its beauty in many lands, foxrose is a symbol of love; the gift of a bouquet may signify romantic intentions.",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Concussion Relief",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "5 gp/dose",
+            "location" : {
+                "waterSources" : [
+                    "Marsh"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_FROSTHEAL",
+            "name" : "Frostheal",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Frostheal is a small succulent plant, usually growing no more than 4\" in height just above and below the tree line. It produces a small, blue flower which yields a hundred tiny, black seeds. It requires a harsh climate with a short, moderate growing season to survive. The plant does not die off when the snows return, but instead remains green under the snows where it may be uncovered and put to medicinal use at any time during the winter.",
+            "medicinalUses" : "If ground and mixed with water, the fresh plant may be applied as a thick paste to areas of the body afflicted with frostbite. If dried, it loses its curative properties.",
+            "otherUses" : "If it is eaten, frostheal gives its consumer a sense of warmth.",
+            "warning" : "",
+            "preparationType" : "Paste",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "25-40 gp/dose",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_WET"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_GAIFAS",
+            "name" : "Gaifas",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This annual grows to 2' in height, with numerous spreading branches. Its lower leaves are slender, the upper ones broader and slitted. The stem and branches are usually covered with rough hairs. Gaifas’ yellow flowers are borne in terminal clusters (at the end of a stem or branch) and the seeds are small and dark brown, maturing later in summer.",
+            "medicinalUses" : "When ground to a powder, mixed with vinegar into a paste and ingested, gaifas flowers counteract the poisons slota, karfar, and saewedbil, In the case of non-Elven saewedbil victims, however, they must be made to swallow the paste (which may present a problem, as it can paralyse). Any Elf ingesting saewedbil would die before the antidote could be\nadministered.",
+            "otherUses" : "",
+            "warning" : "Ingestion of raw leaves causes internal bleeding (5th level; 1-50 hits). If the leaves are boiled, however, they are a tasty addition to any meal and freshen the breath for 2 days.",
+            "preparationType" : "Paste",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
+            "cost" : "9 sp/ handful of the seeds (which last for years).",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_GALENAANA",
             "name" : "Galenaana",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 9D poison.\nGreen powder.\nMax of Severe effects (except for elves who can suffer Extreme effects)",
-            "otherUses" : "Leaf",
+            "characteristics" : "A low-lying plant with variegated leaves with small purple flowers that bloom in late summer. The plant spreads in patches of up to 3' on the floor of its native coniferous forests at the edge of the tree-line in mountains.",
+            "medicinalUses" : "",
+            "otherUses" : "A distinct green powder, that when ingested, the poison triggers a delayed or immediate systemic failure depending on the race of the victim:<ul>\n<li>Elves: Galenaana causes severe, fatal reactions in Elven biology. Failing the Resistance Roll results in extreme respiratory failure and death.  \n<li>non-Elven targets (such as Men, Dwarves, or Hobbits), the maximum severity of the toxin is slightly mitigated but still catastrophic. A failed save drops the victim into a prolonged, deep coma lasting 1 to 100 weeks (1d100 weeks).\n</ul>",
             "warning" : "",
             "preparationType" : "Powder",
             "effectType" : "Respitory Poison",
@@ -2261,7 +2822,10 @@
             "cost" : "179 gp",
             "location" : {
                 "terrains" : [
-                    "Alpine"
+                    "Mountainous"
+                ],
+                "vegetation" : [
+                    "Coniferous"
                 ],
                 "climates" : [
                     "CLIMATE_COLD_DRY",
@@ -2274,22 +2838,22 @@
             "id" : "FORAGABLE_GALENAS",
             "name" : "Galenas",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Leaf produces smoke which affects 20' radius.\nRelaxes for 10-20 rounds (-75 all actions)",
-            "otherUses" : "Leaf",
+            "characteristics" : "A tall plant belonging to the Nicotiana family, with large leaves and sweet fragrant flowers that is heavily cultivated in some regions. The cultivated varieties are known as sweet galenas and are commonly found in markets where it is known and popular.",
+            "medicinalUses" : "",
+            "otherUses" : "When dried and burned slowly, Galenas leaves produce an incense-like, fragrant smoke cloud that immediately fills a 20-foot radius around the smoker. All characters standing within that 20-foot cloud become intensely relaxed for 1 to 10 rounds. Mechanically, this induces a massive -75 penalty to all active, aggressive, or high-alert actions for those caught in the radius.",
             "warning" : "",
             "preparationType" : "Ingest",
             "effectType" : "Intoxicant",
             "findDifficulty" : "Medium",
             "addictionFactor" : 10,
-            "cost" : "5 sp",
+            "cost" : "4 bp to 5 sp depending on the quality of the strain.",
             "location" : {
                 "vegetation" : [
                     "Heath"
                 ],
                 "climates" : [
                     "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_HOT_TEMPERATE"
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             }
         },
@@ -2297,15 +2861,15 @@
             "id" : "FORAGABLE_GARIIG",
             "name" : "Gariig",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Heals 30",
-            "otherUses" : "Cactus",
-            "warning" : "",
+            "characteristics" : "This member of the cactus family is unremarkable in appearance, standing several feet in height, with sharp, long, but widely spaced spines. It is green with tiny yellow stripes running vertically up its trunk. The entire plant forms a single trunk without side branches (up to 1' in diameter). Once a year, in the spring, a single white flower appears on its top, remaining there for several weeks.",
+            "medicinalUses" : "Pieces of gariig may be sliced from the trunk without harming it. (The cactus usually regenerates within a year.) If consumed, a piece the size of a man’s thumb restores 30 hits, Also, if the thin and spindly roots are dug up, they may be mashed and squeezed to produce an oral serum that restores the same amount of damage instantaneously. This\ntreatment is only good 1/day on a given individual. The serum loses its potency within 1 hour of being harvested.",
+            "otherUses" : "",
+            "warning" : "The scent of fresh gariig is so foul that no one with a sense of smell takes it voluntarily. It is used by healers in desperate situations—and usually when help is available to\nhold the patient down. Anyone under the effects of yaran or zur cannot approach closer than 100' to a gariig cactus without gagging.",
             "preparationType" : "Ingest",
             "effectType" : "Concussion Relief",
             "findDifficulty" : "Light",
             "addictionFactor" : 3,
-            "cost" : "55 gp",
+            "cost" : "55 gp/dose",
             "location" : {
                 "waterSources" : [
                     "Desert"
@@ -2338,24 +2902,136 @@
             }
         },
         {
+            "id" : "FORAGABLE_GENFUL",
+            "name" : "Genful",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "his white lichen grows in patches up to 1' square on long dead or inactive volcanoes. It clings to the rock on which it grows determinedly and cannot be scraped off without a knife.",
+            "medicinalUses" : "If removed and consumed, a genful patch equal in size to a man’s palm restores 90 hits over the next 24 hours. Gefnul keeps for up to a month after being harvested, though it is rumoured that some healers have found a way to preserve its virtue indefinitely.",
+            "otherUses" : "",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Concussion Relief",
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
+            "cost" : "90 gp/dose",
+            "location" : {
+                "features" : [
+                    "Volcanic"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_GNOSH",
+            "name" : "Gnosh",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Gnosh is a plant-based body paint which the Drughu apply to their skin in various ritual designs. In pigmentation, gnosh tends towards neutral browns, greens and greys—colours that readily assist their wearer meld into his wilderness surroundings.",
+            "medicinalUses" : "",
+            "otherUses" : "Gnosh contains a slow-acting drug that enhances the wearer's physical endurance over long periods. The active agent is triggered by the natural perspiration of the wearer, so that the enhancement only takes effect when actually needed (i.e., when the wearer is expending sufficient energy to be sweating). Gnosh is most frequently used by the Drughu when hunting, fleeing or undertaking lengthy, physically demanding magical rituals (such as enchanting a watchstone). Generally doubles the users endurance. When using gnosh to travel quickly or over rough terrain, fatigue should be reckoned as per a walk in open country.",
+            "warning" : "",
+            "preparationType" : "Apply",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "he Drughu only share gnosh with trusted friends and allies (of which they have very few). Under no circumstances do they reveal the secret of its making to outsiders.",
+            "location" : {
+                "terrains" : [
+                    "Mountainous",
+                    "Rough"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_GOLDENMINT",
+            "name" : "Goldenmint",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This herb grows to a height of 2' and has a long, spindly stalk. Its leaves, running the entire length of the stem, are pear-shaped with serrated edges. There are dozens of tiny, yellow flowers at the top of the plant which have a mint-like smell. This is often cultivated in gardens.",
+            "medicinalUses" : "If placed in scalding (but not boiling) water and allowed to steep for 10 minutes, goldenmint leaves may be brewed into a tea capable of relieving (though not actually healing) all but the worst pain.",
+            "otherUses" : "",
+            "warning" : "If prepared with boiling water, the calming agents in goldenmint are neutralised, leaving only a pleasant minty aftertaste.",
+            "preparationType" : "Brew",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Light",
+            "addictionFactor" : 0,
+            "cost" : "2 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands",
+                    "Plains"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_GOLDEN_CRESS",
+            "name" : "Golden Cress",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This fern-like plant is normally dark green on top, light green underneath. When dried, it turns a bright reddish-gold.",
+            "medicinalUses" : "If dried, ground and mixed with purified tallow to make an ointment, golden cress closes and heals bleeding flesh wounds (1-5 hits in 1-5 rounds), Wounds so healed do not reopen.",
+            "otherUses" : "",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Circulatory Repair",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "8 sp/fresh plant; 1 gp/dried plant; 4 gp/dose ointment.",
+            "location" : {
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_GONHITHUI",
+            "name" : "Gonhithui",
+            "loreSkill" : "SKILL_POISON_LORE",
+            "characteristics" : "This small, blue lichen appears on damp (though not wet) rocks in patches about the size of a man’s hand.",
+            "medicinalUses" : "",
+            "otherUses" : "If ground into a powder and mixed with a small amount of water, the lichen causes dehydration over the next 24 hours for anyone who ingests it. In the most severe cases (failure by 101+), the victim dies from dysentery the following day. There is no known antidote for this toxin, but if the victim is kept warm and drinks nearly every waking moment, he may stave off its effects.",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Conversion Poison",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "34 gp/dose",
+            "location" : {
+                "terrains" : [
+                    "Waste"
+                ],
+                "waterSources" : [
+                    "Freshwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_GORFON",
             "name" : "Gorfon",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "Gorfon is a plant resembling the thistle in its flower and prickly leaves, but growing to almost 2' in height. It is very hard to find as it only grows in high mountain glens within volcanic ranges and is impossible to domesticate. A single fruit grows on each plant, covered by a thorny shell. If its shell is broken, the Gorfon fruit can be dried and saved for up to a year.",
-            "medicinalUses" : "The fruit induces sleep lasting 10-20 hours and speeds up the healing of nerve damage.",
-            "otherUses" : "Fruit",
-            "warning" : "",
+            "characteristics" : "This plant resembles the thistle in its flower and prickly leaves, but grows to almost 2' in height. A single fruit grows on each plant, covered by a thorny shell.",
+            "medicinalUses" : "If its shell is broken, the gorfon fruit may be dried and saved for up to a year. The fruit usually induces sleep that lasts 10-20 hours (resist vs Sth level), healing all nerve damage.",
+            "otherUses" : "",
+            "warning" : "Gorfon is impossible to domesticate and grows only in high volcanic mountain glens.",
             "preparationType" : "Ingest",
             "effectType" : "Nerve Repair",
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
-            "cost" : "5 gp",
+            "cost" : "101 gp/dose",
             "location" : {
                 "features" : [
                     "Volcanic"
                 ],
                 "terrains" : [
-                    "Alpine"
+                    "Mountainous"
                 ]
             }
         },
@@ -2363,21 +3039,22 @@
             "id" : "FORAGABLE_GORT",
             "name" : "Gort",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Euphoric Hallucinogen:  +10 to Appearance for 2 hours but afterwards causes user to be weak -50 for 1-10 hours",
-            "otherUses" : "Leaf",
+            "characteristics" : "Gort is a small water-loving bush that grows to 2' high in a ball shape with small spear shaped leaves. It is easy to find when foraging in marshes where it grows, though navigating the marsh may be another matter.",
+            "medicinalUses" : "",
+            "otherUses" : "The standard way to use Gort is to harvest its fresh leaves, crush them, and inhale/snuff the aromatic vapours. However, it can also be refined by alchemists into a highly concentrated, yellowish powder that functions much like standard snuff, making it very easy for rogues and smugglers to conceal.<p>\nGort provides an incredible, immediate boost to a character's social and magical presence, but features a brutal physical hangover:<ul>\n<li>The High: Instantly upon inhaling the crushed leaves, the user experiences a rush of intense euphoria. Mechanically, this grants a temporary +10 to the user's Presence (PR) attribute for exactly 2 hours. This is highly useful for Bards, Animists, or Mages trying to pass difficult social manipulation rolls or amplify their spellcasting influence.\n<li>The Crash: Once the 2-hour window expires, the drug leaves the system violently. The user immediately crashes and suffers a massive -50 penalty to all actions that lasts for 1 to 10 hours (1d10 hours), representing extreme physical exhaustion, paranoia, and mental fatigue.\n</ul>",
             "warning" : "",
             "preparationType" : "Ingest",
             "effectType" : "General Purpose",
-            "findDifficulty" : "Hard",
+            "findDifficulty" : "Easy",
             "addictionFactor" : 20,
-            "cost" : "10 gp",
+            "cost" : "4 sp/pouch of leaf (5 doses), 1 gp/ 5 doses powder",
             "location" : {
-                "vegetation" : [
-                    "Jungle"
+                "waterSources" : [
+                    "Marsh"
                 ],
                 "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             }
         },
@@ -2385,9 +3062,9 @@
             "id" : "FORAGABLE_GRAPELEAF",
             "name" : "Grapeleaf",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Sleeping Aid:  Intoxication and dreams (actions at -50) for 2 hours.\nActs as 1 day's nutrition.",
-            "otherUses" : "Nectar",
+            "characteristics" : "This is a rare sub-species of magnolia bush found tucked away inside old growth forests. The nectar is produced in late spring. It's foraging difficulty is due to its deep forest preference, though it is cultivated by specific high-tier wilderness factions.",
+            "medicinalUses" : "Grapeleaf is used in two ways:<ul>\n<li>The Euphoric Effect: If the raw nectar is ingested directly, it acts as a very mild, non-harmful euphoric relaxant that aid sleep.\n<li>Brewing Potency: When used as a reagent by alchemists or skilled brewers, it drastically increases the quality and potency of standard mead or herbal drafts, granting special bonuses to stamina or long-term fatigue recovery for characters who consume the finished drink during a rest period. When used this way the effect or duration of the standard potion is doubled.\n</ul>",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Ingest",
             "effectType" : "Physical Alteration & Enhancement",
@@ -2405,12 +3082,118 @@
             }
         },
         {
+            "id" : "FORAGABLE_GREDELNAR",
+            "name" : "Gredelnar",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This glossy white flower grows close to the ground in large patches at higher altitudes. It blooms from late spring until well after harvest time. It may be readily distinguished  y its scent, which vaguely reminds one of green apples.",
+            "medicinalUses" : "",
+            "otherUses" : "",
+            "warning" : "he touch of gredelnar causes a rash and prolonged discomfort, while ingestion of its pollen can lead to severe illness. Treat contact with the blossom as a 2nd level poison (RR failure = -15 to all actions for I-5 days). Ingestion attacks the system as a 5th level venom, with the victim suffering -5 to -50 in all actions for I-10 days as he copes with cramps and diarrhoea. A variety of special herbs may rid the body of this toxin, but they vary from region to region, and specialised healers know best how to deal with this plant.",
+            "preparationType" : "Ingest",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_GRODLOTH",
+            "name" : "Grodloth",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This small, white plant blooms year round and is found wherever there is subterranean light. In darkness, its 7 petals (3\" long) curl up to form a false bud; the petals’ brown undersides, like the stem, are coated with a resin which protects the flower and preserves it indefinitely.\nGrodloth has been known to last for centuries, growing to a height of 7\" in groups of 3 or 7.\nThey keep for 2 days after being picked, or for 5 minutes after being exposed to direct sunlight.",
+            "medicinalUses" : "If the resin is cleaned off, the flowers may be ingested with startling results. The flowers have the power to preserve life on the brink of death and co eliminate pain.\nFor this reason grodloth features in a number of Dwarven legends.",
+            "otherUses" : "",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Life Preservation",
+            "findDifficulty" : "Absurd",
+            "addictionFactor" : 0,
+            "cost" : "1000 gp/dose",
+            "location" : {
+                "terrains" : [
+                    "Underground"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_GULFBRAKE",
+            "name" : "Gulfbrake",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This algae grows far offshore, but occasionally fragments wash ashore after a storm. Gulfbreak keeps quite well and may be dried for long term storage. Its thick, rubbery, pointed, light brown fronds are about the size of a man’s foot, while its stalk (also brown and rubbery) is as thick as a man’s finger. It cannot be broken, and must be cut with a knife or some other sharp edge.",
+            "medicinalUses" : "If heated in scalding (but not boiling) water, gulfbreak leaves become adhesive and may be wrapped around a broken bone, thus enabling a cast or covering to totally encompass the wound. The juices of the fronds soak into the flesh of the broken limb, accelerate its healing (5x normal rate), The gulfbreak wrapping hardens in 2 hours, becoming as strong as steel yet light as paper. Once the injury is healed, the cast may be shattered with a blunt instrument. If the cast is removed or otherwise shattered before the full healing process has taken place, the limb may heal wrong and the patient may find himself permanently impaired. Preparing dried gulfbreak leaves takes over 2 hours; fresh ones take only 20 minutes.",
+            "otherUses" : "",
+            "warning" : "If boiling water is used to prepare the fronds, no healing benefits result and the cast hardens to the shatter-proof strength of leather, Suits of armour have been made this way, but unfortunately they are susceptible to decay after several weeks, usually at inopportune times. Mis-prepared in this fashion, the fronds gradually absorb water from the atmosphere, eventually rendering the cast as heavy as plate mail before rotting away.",
+            "preparationType" : "Apply",
+            "effectType" : "Bone Repair",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "20 gp/dose (enough to cover an arm)",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_GULPERWASH",
+            "name" : "Gulperwash",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Gulperwash is a slimy mould that is nearly transparent and thus practically invisible. It adheres to rocks in side-pools and eddies where the flow of water is slower (or, better yet, nonexistent). If a light is shined on it, gulperwash shows a slightly yellow colouration, shot through-out with what appear to be thousands of incredibly tiny black dots. The mould feels sticky to the touch, like mucus.\nGulperwash colonies rarely get larger than a man’s hand in\nsize.",
+            "medicinalUses" : "If spread on the forehead of a feverish individual, gulperwash almost immediately alleviates the affliction. If swallowed raw, it heals any organ damage. If cooked or processed in any way, it becomes only a slimy mess, It generally cannot be preserved",
+            "otherUses" : "",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Extremely Hard",
+            "addictionFactor" : 0,
+            "cost" : "12gp/dose",
+            "location" : {
+                "terrains" : [
+                    "Underground"
+                ],
+                "waterSources" : [
+                    "Freshwater Coast",
+                    "Lake"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_GUMUMITI",
+            "name" : "Gumumiti",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Gumumiti trees can reach a height of 120' and are known for their resinous, yellow-brown hardwood.",
+            "medicinalUses" : "The fresh leaves of the gumumiti relieve or reduce the effects of being stunned by 20 seconds if chewed or eaten.",
+            "otherUses" : "This tree is valued for its lumber, which is water resistant and highly prized for making boats, ships and furniture exposed to the elements.",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Stun Relief",
+            "findDifficulty" : "Light",
+            "addictionFactor" : 0,
+            "cost" : "1 gp/dose of leaves, which must be gathered by a talented climber (Hard)",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous",
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_GURSAMEL",
             "name" : "Gursamel",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Mends Bones",
-            "otherUses" : "Stalk",
+            "characteristics" : "This grass stands up to 2' tall, with a fleshy stalk topped by a 3\" seed head.",
+            "medicinalUses" : "If the stalks must be lightly crushed and the fibres aligned (1-10 rnds) then wrapped round a limb with a broken bone it will mend the bone in an hour for fractures, up to 24 hours for a clean break and 3 days for a shattered bone. The limb must be set before application and must remain unstressed for the duration otherwise the bone will revert to its original state.",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Apply",
             "effectType" : "Bone Repair",
@@ -2419,11 +3202,14 @@
             "cost" : "30 gp",
             "location" : {
                 "vegetation" : [
+                    "Grasslands",
                     "Plains"
                 ],
                 "climates" : [
                     "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                    "CLIMATE_COOL_WET",
+                    "CLIMATE_WARM_TEMPERATE",
+                    "CLIMATE_WARM_WET"
                 ]
             }
         },
@@ -2431,17 +3217,18 @@
             "id" : "FORAGABLE_GYLVIR",
             "name" : "Gylvir",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Respiratory Alteration: Breathe under water (only) for 4 hours",
-            "otherUses" : "Algae",
-            "warning" : "",
+            "characteristics" : "This small algae resembles duckweed, boasting small green lily pads, each the size of a fly’s head. These float on the water's surface in groups of tens to\nhundreds of thousands, sometimes obscuring the surface. They thrive only in salty, still water",
+            "medicinalUses" : "",
+            "otherUses" : "If gathered (using a blanket or a cloth, for example), placed in a bowl with some freshwater and heated gently until they just begin to boil, these algae cool into a green gel which may be eaten, bestowing on the consumer the ability to breathe underwater for 4 hours. As the mixture is processed by the body, it is extruded into the lining of the lungs.",
+            "warning" : "Once consumed, the subject must wait 5-10 rounds for the gylvir gel to take effect. The presence of the gel in the subject’s lungs prevents him from breathing air; he must be placed in water within 3 minutes or he loses consciousness and dies. By the end of the 4 hours, the subject suffers severe chills and shivers uncontrollably as the gel begins to dissolve. Once extracted from the water, the subject must be held upside down and his back pounded on to remove the last of the water and gel. Without others to assist in this, there is a 75% chance that the subject suffocates. If he survives, he becomes helpless for 8 hours due to hypothermia (even if warmed). If no remedy for hypothermia is available, he dies in 12-14 hours.",
             "preparationType" : "Ingest",
             "effectType" : "Physical Alteration & Enhancement",
-            "findDifficulty" : "Very Hard",
-            "addictionFactor" : 20,
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
             "cost" : "45 gp",
             "location" : {
                 "waterSources" : [
+                    "Marsh",
                     "Ocean",
                     "Saltwater Coast"
                 ],
@@ -2455,18 +3242,18 @@
             "id" : "FORAGABLE_HARFY",
             "name" : "Harfy",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Immediately stops any form of bleeding",
-            "otherUses" : "Resin",
-            "warning" : "",
+            "characteristics" : "Harfy is the resin from the yellow hemlock tree, which is a magnificent evergreen that can grow to 75' and displays the pyramidal shape characteristic of its species. Its cones are yellowish, and it produces the yellow resin that often streams down its trunk.",
+            "medicinalUses" : "When applied to a wound (no matter how severe), harfy immediately halts the bleeding. The resin keeps for up to a year if kept in a tightly sealed container.",
+            "otherUses" : "The lumber of this tree is soft, white and easily workable.",
+            "warning" : "Though beneficial to wounds, harfy is also very sticky (which may be annoying at best, maddening at worst). Objects covered in the resin must be washed extensively in warm water to remove it.",
             "preparationType" : "Apply",
             "effectType" : "Circulatory Repair",
-            "findDifficulty" : "Very Hard",
-            "addictionFactor" : 9,
+            "findDifficulty" : "Light",
+            "addictionFactor" : 0,
             "cost" : "175 gp",
             "location" : {
                 "vegetation" : [
-                    "Plains"
+                    "Coniferous"
                 ],
                 "climates" : [
                     "CLIMATE_HOT_DRY",
@@ -2475,13 +3262,108 @@
             }
         },
         {
-            "id" : "FORAGABLE_HEGHEG",
-            "name" : "Hegheg",
+            "id" : "FORAGABLE_HARTS_GLORY",
+            "name" : "Hart's Glory",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Heals cartilage damage",
-            "otherUses" : "Root",
+            "characteristics" : "This small, light blue wildflower opens in spring, remaining in bloom through the summer. Its thumbnail-sized petals grow from its base, bending upward like the harmonic curve of a harp.",
+            "medicinalUses" : "Each petal restores 2-8 hits when consumed fresh. The flowers may be dried if first soaked in a little blood from the person who intends to later use them; to anyone else they have no value. Fresh petals last for up to 2 weeks if kept moist. If a flower dries without being soaked in blood, its power to heal diminishes to 1-2 hits each,",
+            "otherUses" : "",
             "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Concussion Relief",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "4 gp/dose (fresh); 1 gp/dose (dried)",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous",
+                    "Grasslands",
+                    "Plains"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_HARUELLA",
+            "name" : "Haruella",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Haruella is an orange, brownish powder blended from several secret ingredients.",
+            "medicinalUses" : "",
+            "otherUses" : "This mix of herbs, lichens and aphids from certain tree roots is made by the Eriadorians of Cardolan. The teiwawitans of the ancient Eriadorians used this mixture in their dealings with the undead, and its use has seen a resurgence in reaction to the recent invasion of the Barrow-downs by evil spirits. Getting hold of some is Very Hard to Absurd (depending on who you talk to, your own attitude and the depths of your pockets).",
+            "warning" : "Trying to make this mixture yourself can have fatal (or worse) consequences if it is not exactly right. Dealing with the undead should never be left to chance. The price, whatever that is, is worth it.",
+            "preparationType" : "Ingest",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Sheer Folly",
+            "addictionFactor" : 0,
+            "cost" : "35+ gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous",
+                    "Heath"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_HARWITE",
+            "name" : "Harwite",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Harwite is a thick, deep green moss that grows in roughly rectangular patches measuring up to 4\" in length. It has a pleasant taste when chewed, reminiscent of chestnuts roasting on a wintry evening, while the remains of a hearty, bloody roast grow cold on a nearby table in a room filled with lengthening shadows and the memories of long-dead friends. Some people, though, claim it tastes like mint. It is only known to grow in Fangorn forest.",
+            "medicinalUses" : "Strips of harwite may be cut and used as bandages. When used as such, it heals small wounds in less than an hour; if chewed, it restores 10-50 concussion hits: The moss is only useful while fresh, a period lasting up to 1 week after it is picked.",
+            "otherUses" : "Harwite is used by Ents to make their draughts (both as a filter and as an ingredient), The steaming mixture is poured through several layers of harwite, which purifies it and adds some of its own properties to the mixture.",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Concussion Relief",
+            "findDifficulty" : "Easy",
+            "addictionFactor" : 0,
+            "cost" : "1 sp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_HEALERS_CHAMOMILE",
+            "name" : "Healer's Chamomile",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This meadow plant has lacy leaves and clusters of small, daisy-like flowers, each with a large, black centre and very few, small petals.",
+            "medicinalUses" : "When brewed into a tea, the flowers of chamomile induce a deep sleep, during which all healing is hastened (3x normal rate). The patient awakens ravenously hungry and usually in a bad mood.",
+            "otherUses" : "A bouquet of these flowers is a sign of mourning in many communities, The local feeling is that they represent the sleep of death from which a loved one may awaken in another life.",
+            "warning" : "Imbibing more than 2 doses in 3 days result in blurred vision, trembling and violent mood changes, a condition lasting 1-4 days (-5O to all actions). This impairment runs a chance (01-25) of becoming permanent every time another dose is ingested during the same 3 day period.",
+            "preparationType" : "Ingest",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Medium",
+            "addictionFactor" : 0,
+            "cost" : "7 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_HEGHEG",
+            "name" : "Hégheg",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "The Hégheg is a thorny bush native to tropical grasslands or savannas. It had small grey-green leaves, 1.5\" reddish-yellow flowers with eight petals, and 2\" seed pods.",
+            "medicinalUses" : "When the raw root is crushed and mashed into a paste, which is then applied directly to the injured joint or area it will rebuild the cartilage damage over 1-5 hours.",
+            "otherUses" : "",
+            "warning" : "If a character uses it frequently within a single week there is a chance of a physical dependency.",
             "preparationType" : "Paste",
             "effectType" : "Muscle Cartilage & Tendon Repair",
             "findDifficulty" : "Sheer Folly",
@@ -2501,10 +3383,10 @@
             "id" : "FORAGABLE_HENUIAL",
             "name" : "Henuial",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 6E poison.\nYellow venom acts on victim's eyes.\nSevere effect converts optic juices to honey",
-            "otherUses" : "Bee",
-            "warning" : "",
+            "characteristics" : "This is the venom of a honeybee.",
+            "medicinalUses" : "",
+            "otherUses" : "This venom has a very unique effect where if the victim fails their Resistance Roll (RR), the venom converts the optic juices of 1 or 2 eyes into thick honey, permanently blinding them.",
+            "warning" : "This is very time consuming to harvest due to the difficulty in extracting the venom from bees without being stung.",
             "preparationType" : "Liquid",
             "effectType" : "Conversion Poison",
             "findDifficulty" : "Sheer Folly",
@@ -2522,12 +3404,57 @@
             }
         },
         {
+            "id" : "FORAGABLE_HIAM_MOSS",
+            "name" : "Hiam Moss",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Hiam is not actually a moss; rather, it is a parasitic fungus that feeds off the beech trees of Rhudaur. It is brownish-red and thick enough to create unsightly patches on the sides of the trees. Most patches range from coin-sized to that of a man’s torso. When it encircles a tree, its host is not long for the world, usually succumbing within a few\nmonths. Hiam feels like stiff wool to the touch. It keeps for months.",
+            "medicinalUses" : "The <em>ful biam</em> or Hillman berserkers have long known of this fungus, brewing a tea that endows them with extraordinary abilities, The tea functions as a mood elevator and can sustain an individual for a whole day without any other nourishment. Most who ingest the tea find themselves alert and vigorous for 24 hours, However, it can not be used more than 4 consecutive days; after that, the imbiber must rest (-75) for a period equal to 2x the time they were sustained. During this time they are capable of little or no activity.",
+            "otherUses" : "",
+            "warning" : "Some people (01-25) are allergic to hiam and suffer greatly after ingesting the tea brewed from it, going through convulsions and eventually dying a horribly torturous death, No allergic Hillmen remain, the weak having been painfully weeded out long ago.",
+            "preparationType" : "Brew",
+            "effectType" : "Physical Alteration & Enhancement",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "9 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_COOL_WET"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_HILLBROOM",
+            "name" : "Hillbroom",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Hillbroom is a tree that grows in mountain foothills, never growing taller than 10'. Its rough, tan bark and perfectly vertical trunk are distinctive, as is its spiral growth cycle, twisting the trunk as it grows. In late summer, it produces fruit strongly reminiscent of small purple plums. Left-handed trees are 10 times mote common than the right-handed variety. The difficulty rating below is for the right handed variety, left is Medium.",
+            "medicinalUses" : "The way that the trunk twists determines the effect of the fruit:<ul>\n<li>If the trunk twists to the right (or clockwise, as seen from above), the fruit may be used for great good. Eating a fruit raw restores 1-6 hits, make the consumer feel full and content, greatly alleviating any mental suffering they may be experiencing. In addition, it repairs damage to one organ, removes any body odour for 1 day and freshens the breath. If cooked, the hillbroom fruit is delicious but has no other properties.\n<li>If taken from a tree that twists to the left (or counter-clockwise), the fruit can cause great harm to the consumer, inducing intense nausea and cramps for i-4 days (operate at -5O during this time), diarrhoea and vomiting every time the subject attempts to eat anything. During this time, the victim also has extremely bad breath and his face breaks out in hives. Cooking these only halves the duration of the torture.\n</ul>",
+            "otherUses" : "Cut and polished, hillbroom staves are carvings of great workmanship and are often worth a great deal. Fruit from the right-handed tree is delicious when baked into a popover, tasting like a cross between a sweet, purple grape and a ripe, sweet apple.",
+            "warning" : "Although it is possible to tell the two types of trees apart, the fruits from either are identical to the eye. Care must be taken when purchasing them from vendors whose scruples are unknown.",
+            "preparationType" : "Ingest",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Extremely Hard",
+            "addictionFactor" : 0,
+            "cost" : "",
+            "location" : {
+                "terrains" : [
+                    "Mountainous",
+                    "Rough"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_HITHIGIRITH",
             "name" : "Hith-I-Girith",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 4C poison.\nMist/vapour from tree acts as depressant causing immediate and continuing sleep.\nThere are no other effects.",
-            "otherUses" : "Leaf",
+            "characteristics" : "This is unusual in that it is a gas-based Nerve Poison given off as a mist or vapour from a pine tree as an environmental hazard.",
+            "medicinalUses" : "",
+            "otherUses" : "The mist/vapour from the tree acts as depressant causing immediate and continuing sleep, there are no other effects.",
             "warning" : "",
             "preparationType" : "Liquid",
             "effectType" : "Respitory Poison",
@@ -2536,26 +3463,27 @@
             "cost" : "12 gp",
             "location" : {
                 "terrains" : [
-                    "Alpine"
+                    "Alpine",
+                    "Mountainous"
                 ],
                 "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_FRIGID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE"
                 ]
             }
         },
         {
             "id" : "FORAGABLE_HOAKFOER",
-            "name" : "Hoak-foer",
+            "name" : "Hôak-fôer",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Hallucinogen: Cures mind loss and mental diseases, but prevents all movement for 1-10 weeks",
-            "otherUses" : "Flower",
+            "characteristics" : "The Hôak-fôer is a wildflower of the composite family native to semiarid to temperate short grass prairies which resembles the daisy.",
+            "medicinalUses" : "If the flower is eaten or chewed raw it cures \"mind loss\" and mental diseases. However, it also causes profound hallucination and completely prevents any physical movement for 1 to 10 weeks.",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Ingest",
             "effectType" : "Intoxicant",
-            "findDifficulty" : "Easy",
-            "addictionFactor" : 30,
+            "findDifficulty" : "Light",
+            "addictionFactor" : 10,
             "cost" : "67 gp",
             "location" : {
                 "vegetation" : [
@@ -2568,13 +3496,79 @@
             }
         },
         {
-            "id" : "FORAGABLE_HUGAR",
-            "name" : "Hugar",
+            "id" : "FORAGABLE_HOPPERFOOT",
+            "name" : "Hopperfoot",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Causes sleep and quick unconsciousness (1 hour sleep = 6)",
-            "otherUses" : "Root",
+            "characteristics" : "Resembling hopper mushrooms in that they are small and grey, hopperfoots are distinctly different because they have small, black dots on their cap, Without more than a glance, however, the difference is easy to miss.",
+            "medicinalUses" : "Hopperfoot mushrooms cure 2-20 hits, but also put the consumer into a deep sleep for 8 hours, during which time they become subject to uncontrollable flatulence.",
+            "otherUses" : "",
             "warning" : "",
+            "preparationType" : "Brew",
+            "effectType" : "Concussion Relief",
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
+            "cost" : "45 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_HOPPER_MUSHROOMS",
+            "name" : "Hopper Mushrooms",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Hopper mushrooms are a relatively rare, benign fungus that attacks lainimit trees. It forms small, grey nodules on exposed areas of lainimit tree trunks, each the size of a man’s eye.",
+            "medicinalUses" : "When dried and crushed the nodules may be steeped in boiling water to produce a tea that repairs any organ damage as well as producing 1-10 hours of nausea (leaving the imbiber at -5O).",
+            "otherUses" : "",
+            "warning" : "",
+            "preparationType" : "Brew",
+            "effectType" : "Organ Repair & Preservation",
+            "findDifficulty" : "Extremely Hard",
+            "addictionFactor" : 0,
+            "cost" : "220-250 gp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Jungle"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_HUMID"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_HRAST",
+            "name" : "Hrast",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Like other trees of the Gaj, hrast has strong, sinuous wood and dry, silver-green leaves, It also bears fruit in abundance year round. Hrast fruits are about the size of a clenched fist and are grey when ripe. They are routinely sold in the markets of Bozisha-miraz for inflated prices. Dried, the delicious fruits may be bought throughout Gondor as\ndelicacies, Extremely nutritious and favoured by desert travellers. The fruits keep quite well, thanks to their thick skin, which maintains its edibility for up to 3 weeks after being picked. Once the skin is punctured, however, the fruits must be split and set out to dry (which takes 3 days) or they spoil in only a few hours, Each hrast tree is likely (01-40) to hold 1-6 fruits at any given time.",
+            "medicinalUses" : "",
+            "otherUses" : "One hrast fruit can sustain a man for nearly 1 day under a hot sun (provided he also has water).",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "3 gp/fruit",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_HUGAR",
+            "name" : "Hûgar",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "he Hûgar is a dandelion related to Orrain, originally native to humid, tropical ocean shores, later cultivated. It had dark green leaves, orange to red flowers, and a root system which frequently grows 2'-4' deep.",
+            "medicinalUses" : "Its edible roots caused sleep and quick unconsciousness; one hour of hûgar-induced sleep was equivalent to six hours of normal sleep.",
+            "otherUses" : "",
+            "warning" : "Hûgar roots contain an addictive barbiturate. A serious overdose (3 or more doses at once) acts as a very strong respiratory poison.",
             "preparationType" : "Ingest",
             "effectType" : "Intoxicant",
             "findDifficulty" : "Medium",
@@ -2594,9 +3588,9 @@
             "id" : "FORAGABLE_HUMBURTUN",
             "name" : "Humburtun",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Immediately stops any form of bleeding",
-            "otherUses" : "Fruit",
+            "characteristics" : "The Humburtun (Har. \"hunchbacked conjurer\") is a cactus of semiarid to arid deserts, related to the prickly pear. It had large pink flowers which produced a reddish-purple fruit.",
+            "medicinalUses" : "When prepared by laceration and applied to a wound, this fruit immediately stops all forms of bleeding.",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Apply",
             "effectType" : "Circulatory Repair",
@@ -2614,12 +3608,126 @@
             }
         },
         {
+            "id" : "FORAGABLE_IAUTHALION",
+            "name" : "Iauthalion",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This small, gnarled and twisted tree does not grow beyond 20! in height. For the most part, its branches are barren of leaves or fruit. What leaves it does possess are small, oval-shaped and black spotted with serrated edges. Iauthalion's hard, sour, light green fruits (which the tree bears only once every S years) are the size of a man’s\neyeball and may also display black spots. The fruits keep for about 1 month before spoiling.",
+            "medicinalUses" : "When eaten, iauthalion fruits instantly restore 5-50 hits.",
+            "otherUses" : "",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Concussion Relief",
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
+            "cost" : "45 gp/fruit",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_ILYALMA",
+            "name" : "Ilyalma",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This enchanted medicinal is composed of several rare substances, known only to the few who possess the secret recipe. It is never sold publicly, but is prepared by a select few Elvish healers and Mannish apothecaries. It keeps indefinitely.",
+            "medicinalUses" : "Sprinkled on a wound, ilyalma repairs all damaged organs, arteries, and veins in 1-3 minutes.",
+            "otherUses" : "",
+            "warning" : "Healers prefer to offer this special mixture.\nComing right out and asking a healer about it almost certainly makes them want to keep it to themselves.",
+            "preparationType" : "Apply",
+            "effectType" : "Organ Repair & Preservation",
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
+            "cost" : "312 gp/dose",
+            "location" : {
+                "climates" : [
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_IRONBINE",
+            "name" : "Ironbine",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This small plant is a member of the onion family and grows to a height of about 1'. It has several leaves, all sprouting from its base; its flowers are small and yellow.",
+            "medicinalUses" : "When eaten, ironbine instantly restores 2-10 hits. If ground, the ironbine bulb reverses the effects of the poison acána. The flower is good for 1 week after being picked. The powder, if dried, keeps for years.",
+            "otherUses" : "Coastal peoples recognise that this plant, along with many others, plays an important role in helping to forestall dune erosion, and many seaside communities have planted it intentionally — not only to keep their beaches where they are, but also to have a handy source of this herb.",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "Concussion Relief",
+            "findDifficulty" : "Light",
+            "addictionFactor" : 0,
+            "cost" : "3 gp/dose",
+            "location" : {
+                "waterSources" : [
+                    "Saltwater Coast"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_TEMPERATE"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_IRONLEAF",
+            "name" : "Ironleaf",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This hearty bush is only about 4\" in height. Its grey-green leaves are elongated with a vein down the middle and 8 points along the sides (including the end), Stiff and hard to bend, the leaf-edges can leave formidable scratches,",
+            "medicinalUses" : "If dried, ground and mixed with water, ironleaf may be applied as a poultice to heal any burn.",
+            "otherUses" : "The above mentioned poultice also soothes the pain of poison willow, curing the injury within 1 hour.",
+            "warning" : "",
+            "preparationType" : "Apply",
+            "effectType" : "Burn & Exposure Relief",
+            "findDifficulty" : "Very Hard",
+            "addictionFactor" : 0,
+            "cost" : "4 gp/dose",
+            "location" : {
+                "terrains" : [
+                    "Alpine"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COLD_WET"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_JANAR_GRASS",
+            "name" : "Janar Grass",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "This grass is unremarkable except that it grows in very thick patches: anyone walking through does not touch the ground, and instead has the sensation of walking on a billowing cloud. Janar is primarily identified, though, by the oily sheen of its blades, something impossible to see in the dark.",
+            "medicinalUses" : "",
+            "otherUses" : "If processed into a concentrated brew, the toxic properties of the grass can actually be used as a weaponised fluid.",
+            "warning" : "Contact with this grass causes the dreaded disease jadaras, which causes the victim's Agility temporary stat to instantly drop by 5 points. This effect lasts for 1-100 days. The effects of sheep-plume are said to counteract the toxin.",
+            "preparationType" : "Liquid",
+            "effectType" : "Muscle Poison",
+            "findDifficulty" : "Light",
+            "addictionFactor" : 0,
+            "cost" : "1 sp/dose",
+            "location" : {
+                "vegetation" : [
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_TEMPERATE",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_TEMPERATE"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_JANUKTY",
             "name" : "Januk-ty",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Removes 3 rounds of stun",
-            "otherUses" : "Root",
+            "characteristics" : "This is a low growing tough plant that rarely reaches 4\" in height, spreading in clumps across an area, typically of 6'. In the late summer small blue bell shaped flowers appear.",
+            "medicinalUses" : "The root can be brewed into a liquid that when consumed acts as a nervous system stimulant, removing 3 accumulated rounds of stun.",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Brew",
             "effectType" : "Stun Relief",
@@ -2640,9 +3748,9 @@
             "id" : "FORAGABLE_JEGGA",
             "name" : "Jegga",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 7B poison.\nBrown paste gives 1-100 hits.\nMax of Mild effects.",
-            "otherUses" : "Bats",
+            "characteristics" : "This compound is not a plant, but rather a putrid mixture of the guano, blood and brains of a bat, well-mixed and incubated for a month within the stomach cavity of a freshly dead horse. The goo is allowed to rot in place until the organ bursts from excess gas, usually after at least 4 weeks. At this point, it must be scooped out and mixed with\nfresh blood and left out in a bowl overnight. If scavengers or insects attempt to get at the mixture (and they do) they may be kept away only by constant surveillance. At this point the poisonous concoction is ready.",
+            "medicinalUses" : "",
+            "otherUses" : "The mixture itself is not poisonous, but the combination of elements results in a pathogenic bloom of bacteria the likes of which hasn’t been seen since the Plague.\nThe mixture is so noxious that it may be detected by anyone with a normal sense of smell from several feet away. In tiny doses, such as an invisible coating on a fork or a blade, jegga is undetectable except by close scrutiny. Anyone under the effects of zur or yaran detect it immediately. Anyone inoculated by this mixture takes 1-100 hits over the next 12\nhours, as the bacteria multiply within the host's system, The wondrous herb mothernel seems to have been created just for this circumstance, and a tea made from its leaves counteracts jegga sickness. The tea also destroys the bacteria if any tainted objects are dipped into it.",
             "warning" : "",
             "preparationType" : "Paste",
             "effectType" : "Respitory Poison",
@@ -2665,9 +3773,9 @@
             "id" : "FORAGABLE_JEGGARUKH",
             "name" : "Jeggarukh",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 6B poison.\nBlack powder gives 10-100 hits.\nMax of Moderate General effects",
-            "otherUses" : "Bat",
+            "characteristics" : "Rather than a modern chemical fluid, it is traditionally encountered as a refined black powder or paste processed from the concentrated guano or venom of specialised cave bats (like the Yegga bat).",
+            "medicinalUses" : "",
+            "otherUses" : "The guano is dried and crushed into a powder that is then applied to food or drink. If the target fails their Resistance Roll (RR), it attacks the cardiovascular system, dealing a massive, flat hit of 10 to 100 concussion hits (or 5 to 50 hits on a partial save/depending on the specific version table).",
             "warning" : "",
             "preparationType" : "Powder",
             "effectType" : "Circulatory Poison",
@@ -2688,9 +3796,9 @@
             "id" : "FORAGABLE_JITSU",
             "name" : "Jitsu",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 5B poison.\nYellow venom gives 1-50 hits.\nMax of Mild effects.",
-            "otherUses" : "Clams",
+            "characteristics" : "This poison is made from a clam shaped like a straight razor growing up to 6\" in length.",
+            "medicinalUses" : "",
+            "otherUses" : "Eaten raw, the jitsu clam is sometimes used as seafood; as soon as the flesh becomes firm and pink through cooking, however, it becomes poisonous. If the shell is opened, its small, black organ may be squeezed for the foul-smelling substance which is the essence of the legendary poison. Placed on a blade or ingested, its victim suffers 1-50 hits over the next several minutes, A tea made from shadowvine neutralises any remaining poison, but only if administered in time",
             "warning" : "",
             "preparationType" : "Liquid",
             "effectType" : "Respitory Poison",
@@ -2714,9 +3822,9 @@
             "id" : "FORAGABLE_JITSUTYR",
             "name" : "Jitsutyr",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 2A poison.\nTan paste.\nExtreme effects destroys lungs and kills in 1-100 rounds",
-            "otherUses" : "Clams",
+            "characteristics" : "This is the freshwater variety of the jitsu razor clam",
+            "medicinalUses" : "",
+            "otherUses" : "The raw tissue is crushed into a thick, tan-coloured paste that completely destroys the lungs, causing death in 1 to 100 rounds via asphyxiation.",
             "warning" : "",
             "preparationType" : "Paste",
             "effectType" : "Respitory Poison",
@@ -2739,15 +3847,15 @@
             "id" : "FORAGABLE_JOEF",
             "name" : "Joef",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Psychic Stimulant: Allows mental summons of one known sentient friend (up to half mile away)",
-            "otherUses" : "Powder",
+            "characteristics" : "Joef is a poppy like plan that grows to 3' high and has large 4 petalled yellow flowers on top of a large seed pod.",
+            "medicinalUses" : "The seed in the pod are dried a ground into a powder, or mixed with wine to make a paste. Ingesting this psychic stimulant allows the mental summons of one known sentient friend. The telepathic range of the summons spans 100 feet multiplied by the character level of the user.",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Ingest",
             "effectType" : "Physical Alteration & Enhancement",
             "findDifficulty" : "Light",
             "addictionFactor" : 23,
-            "cost" : "35 gp",
+            "cost" : "35 sp",
             "location" : {
                 "waterSources" : [
                     "Breaks"
@@ -2759,34 +3867,12 @@
             }
         },
         {
-            "id" : "FORAGABLE_JOJOJOPO",
-            "name" : "Jojojopo",
-            "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Cures frostbite (2-20 hits from cold)",
-            "otherUses" : "Leaf",
-            "warning" : "",
-            "preparationType" : "Apply",
-            "effectType" : "Burn & Exposure Relief",
-            "findDifficulty" : "Medium",
-            "addictionFactor" : 0,
-            "cost" : "9 sp",
-            "location" : {
-                "terrains" : [
-                    "Alpine"
-                ],
-                "climates" : [
-                    "CLIMATE_FRIGID"
-                ]
-            }
-        },
-        {
             "id" : "FORAGABLE_JUTH",
             "name" : "Juth",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 2B poison.\nMaximum of severe effect (insanity in 1-100 weeks)",
-            "otherUses" : "Scorpion",
+            "characteristics" : "Juth is the poison which has been squeezed from the freshly killed carcass of a black scorpion.",
+            "medicinalUses" : "",
+            "otherUses" : "Juth is only effective if administered by the edge or tip of a weapon. Orally ingested, it serves only to steal away the appetite of its intended victim. Anyone wounded with a juth-venomed blade finds his world eroding as he gradually goes insane, a hideous process that takes up to 1 week, First, the victim experiences 2-20 hits as the venom works its way into his system. An hour later, he suspects that friends are plotting to kill him. Yet another hour later, he becomes convinced of this and begins to hallucinate, usually about monsters or important figures, all of them out to “get” him. By the next day, the victim is violent if touched and paranoid about his possessions, fearing for thieves. The following morning finds he hears voices telling him to flee (50%) or kill everyone around him before they kill him first (50%). By the fourth day, the victim is a berserking, frothing, raving fool who either attacks or flees whenever contact is initiated by anyone else, From his perspective, the entire world is out to get him; he acts on this paranoia as if possessed until he either dies or is forcibly cured. Besides legendary cures, such as athelas or others, a brewed mixture of snowdragon and true tarnas, administered orally 3 times a day for 1 week is rumoured to be capable of reversing the insanity. A healer should be consulted in any case.",
             "warning" : "",
             "preparationType" : "Liquid",
             "effectType" : "Nerve Poison",
@@ -2806,11 +3892,11 @@
         },
         {
             "id" : "FORAGABLE_KAKDURAM",
-            "name" : "Kakduram",
+            "name" : "Kakdúram",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Restores hearing",
-            "otherUses" : "Fruit",
+            "characteristics" : "The Kakdúram is a rare mid-level tree of tropical rain forests with fig-shaped brown fruit.",
+            "medicinalUses" : "Eating the fruit restores hearing loss short of complete destruction of the inner ear.",
+            "otherUses" : "",
             "warning" : "",
             "preparationType" : "Ingest",
             "effectType" : "Organ Repair & Preservation",
@@ -2831,13 +3917,13 @@
             "id" : "FORAGABLE_KAKTU",
             "name" : "Kaktu",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 1A poison.\nAffects 1-4 appendages.\n Max of Severe General. (loss of 1-100 in temp Agility)",
-            "otherUses" : "Flower",
-            "warning" : "",
+            "characteristics" : "The kaktu is only about 4\" high, boasting a single white flower for most of the growing season. It has only 2 leaves, both banana-shaped and edged in yellow with jagged margins.",
+            "medicinalUses" : "",
+            "otherUses" : "If consumed, kaktu acts as a powerful toxin, inducing numbness in all bodily extremities. If boiled and concentrated into liquid form, the flower becomes a more powerful poison that impairs a person's dexterity; this effect is permanent until an antidote is administered. The resulting palsy interferes with the victim's movement.",
+            "warning" : "The only known antidote is a brew made from slimy gorkin.",
             "preparationType" : "Liquid",
             "effectType" : "Muscle Poison",
-            "findDifficulty" : "Extremely Hard",
+            "findDifficulty" : "Hard",
             "addictionFactor" : 3,
             "cost" : "29 gp",
             "location" : {
@@ -2851,18 +3937,40 @@
             }
         },
         {
+            "id" : "FORAGABLE_KALMOGS_SPOOR",
+            "name" : "Kalmog's Spoor",
+            "loreSkill" : "SKILL_POISON_LORE",
+            "characteristics" : "This small, delicate shrub grows to a height of 3,' It has perfectly round leaves and silvery thorns.",
+            "medicinalUses" : "When ground, the thorns produce an antidote to the poison from its leaves (See below.), but only if the mixture is slowly roasted over a low fire for 3 hours while being kept moist, This is a tedious process, since the entire batch is ruined if allowed to burn or dry out.",
+            "otherUses" : "When ground into a paste, the leaves of kalmog’s spoor form a potent poison that is typically spread upon the edged weapons used by Orcs (for battle or torture). The poison reacts with blood, causing a burning sensation on the skin (2-20 hits over the next hour) that may become more severe, depending on where the paste touches the skin (i.e., more severe on the eyes and face). After a 24 hour incubation period, festering sores appear where the poison touched the skin. These sores hinder movement by -10 to -50, depending again on where they touched the victim. The sores remain until the antidote is applied to the wound. (See above.)",
+            "warning" : "When grinding up the leaves, the preparer should be very careful not to get any of the mixture on themselves, lest they fall prey to the poison.",
+            "preparationType" : "Apply",
+            "effectType" : "Reduction Poison",
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
+            "cost" : "3 gp/dose",
+            "location" : {
+                "terrains" : [
+                    "Mountainous"
+                ],
+                "climates" : [
+                    "CLIMATE_COLD_WET"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_KARFAR",
             "name" : "Karfar",
             "loreSkill" : "SKILL_POISON_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Level 7C poison.\nReddish paste causes heart to malfunction.\nAll effects begin in 2-12 rounds",
-            "otherUses" : "Leaf",
-            "warning" : "",
+            "characteristics" : "This tree sprouts and grows as a non-poisonous plant for many years. By the time it gains its deadly properties, it is already tall (over 20') and its first leaves are sprouting from the lowest branches (which open near its top). More branches and leaves sprout (always at a great height above the ground) as the tree reaches its maximum height of about 80'. Those who harvest the leaves demand a high price for their efforts. Karfar leaves are broad and large (the size of shield) and dark green.",
+            "medicinalUses" : "",
+            "otherUses" : "The leaves of the karfar tree may be gathered and ground into a poisonous paste, mixed with blood and allowed to sit for a month at the bottom of a well or grave.\nThe paste may be applied to weapons or food without fear, as it is only effective when taken internally or through a weapon cut; Death generally follows within 2-12 rounds.\nPowdered monk hair neutralises karfar, but only if administered within 1 minute of poisoning.",
+            "warning" : "After handling karfar paste, one must take care to wash one’s hands carefully and thoroughly. Many would-be, careless assassins have been found dead, their own meal in front of them.",
             "preparationType" : "Paste",
             "effectType" : "Circulatory Poison",
-            "findDifficulty" : "Medium",
+            "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
-            "cost" : "142 gp",
+            "cost" : "150 gp/leaf; 350 gp/dose poison",
             "location" : {
                 "vegetation" : [
                     "Jungle"
@@ -2874,48 +3982,71 @@
             }
         },
         {
+            "id" : "FORAGABLE_KARGIJAK",
+            "name" : "Kargîjak",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "Kargîjak forms a thick, often impenetrable wall of thorny bushes. During its very short growing season (which lasts for the month of Gwirith), its blood-red berries form and ripen, They are bitter, juicy and about the size of a man’s eyeball.",
+            "medicinalUses" : "If ground into a paste and applied directly to a wound, the kargîjak berry immediately restores 20 concussion hits and hastens recovery (2x normal rate). Kargîjak berries are eagerly sought after by Orkish soldiers, who know that they retain their powers for up to 60 days.",
+            "otherUses" : "",
+            "warning" : "Kargîjak paste stings tremendously when applied to skin (stunning the subject for 1-10 rounds) and guarantees a scar.",
+            "preparationType" : "Apply",
+            "effectType" : "Concussion Relief",
+            "findDifficulty" : "Easy",
+            "addictionFactor" : 0,
+            "cost" : "8 gp/berry",
+            "location" : {
+                "terrains" : [
+                    "Waste"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY"
+                ]
+            }
+        },
+        {
+            "id" : "FORAGABLE_KASAI",
+            "name" : "Kasai",
+            "loreSkill" : "SKILL_HERB_LORE",
+            "characteristics" : "he kasia tree is small (no taller than 10'), that grows where grasslands and woodland meet. Its branches are delicate, its bark brownish-green. Kasia leaves are hourglass-shaped. In spring, small nuts resembling black thimbles form on this tree. Their meat is white and tasty.",
+            "medicinalUses" : "",
+            "otherUses" : "When the nut is ground into a powder and consumed in large quantities, kasia spice produces a mild euphoria that lasts 2-6 hours. The drug is non-addictive and imparts a spicy flavour to food it is added to.",
+            "warning" : "",
+            "preparationType" : "Ingest",
+            "effectType" : "General Purpose",
+            "findDifficulty" : "Hard",
+            "addictionFactor" : 0,
+            "cost" : "3 gp/nut",
+            "location" : {
+                "vegetation" : [
+                    "Deciduous",
+                    "Grasslands"
+                ],
+                "climates" : [
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE"
+                ]
+            }
+        },
+        {
             "id" : "FORAGABLE_KATHKUSA",
             "name" : "Kathkusa",
             "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Steroid: Increase strength +10 for d10 rounds.\nDouble concussion hits delivered.",
-            "otherUses" : "Leaf",
-            "warning" : "",
+            "characteristics" : "This tiny plant grows no bigger than a man’s finger and resembles a flower from a warmer clime. Its several, tiny leaves are shaped like elongated tear-drops with jagged edges. The 4-petalled kathkusa flower has a soft orange colour and blooms late in the short summer season of the far North.",
+            "medicinalUses" : "",
+            "otherUses" : "If ingested, the kathkusa leaf doubles the consumer's strength and combative skills (+10 OB; 2x normal damage) for 1-10 rounds.",
+            "warning" : "If more than 2 doses are taken within 1 week's time, the user finds himself reduced to ½ strength for 2-4 days.",
             "preparationType" : "Ingest",
             "effectType" : "Physical Alteration & Enhancement",
             "findDifficulty" : "Light",
             "addictionFactor" : 35,
             "cost" : "50 gp",
             "location" : {
-                "terrains" : [
-                    "Waste"
+                "vegetation" : [
+                    "Tundra"
                 ],
                 "climates" : [
                     "CLIMATE_COLD_DRY",
                     "CLIMATE_FRIGID"
-                ]
-            }
-        },
-        {
-            "id" : "FORAGABLE_KELVENTARI",
-            "name" : "Kelventari",
-            "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "",
-            "medicinalUses" : "Heals 1st and 2nd degree burns (1-10 hits from heat)",
-            "otherUses" : "Berry",
-            "warning" : "",
-            "preparationType" : "Apply",
-            "effectType" : "Burn & Exposure Relief",
-            "findDifficulty" : "Light",
-            "addictionFactor" : 0,
-            "cost" : "19 gp",
-            "location" : {
-                "vegetation" : [
-                    "Grasslands"
-                ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
                 ]
             }
         },

@@ -8,6 +8,13 @@
             "levelVariance" : "A"
         },
         {
+            "id" : "DISEASE_JADARAS",
+            "name" : "Jadaras",
+            "type" : "DISEASETYPE_BUBONIC",
+            "level" : 2,
+            "levelVariance" : "B"
+        },
+        {
             "id" : "DISEASE_RAT_BITE",
             "name" : "Rat Bite",
             "type" : "DISEASETYPE_BUBONIC",
