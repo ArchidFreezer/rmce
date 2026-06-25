@@ -46,6 +46,15 @@
             "maxSeverity" : "Severe"
         },
         {
+            "id" : "POISON_BLADE_HEMLOCK",
+            "name" : "Blade Hemlock",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 6,
+            "levelVariance" : "A",
+            "notes" : "This green paste may be applied to a blade with the following RR failure effects:<ul>\n<li>01-25: abdominal cramps, nausea and vomiting, incapacitating them for 1-10 hours\n<li>25+: convulsions and death in 6-10 rounds\n</ul>",
+            "maxSeverity" : "Extreme"
+        },
+        {
             "id" : "POISON_BOGLOCK",
             "name" : "Boglock",
             "type" : "POISONTYPE_MUSCLE",
@@ -148,6 +157,24 @@
             "level" : 7,
             "levelVariance" : "B",
             "notes" : "The paste causes dehydration over the next 24 hours for anyone who ingests it. In the most severe cases (failure by 101+), the victim dies from dysentery the following day. There is no known antidote for this toxin, but if the victim is kept warm and drinks nearly every waking moment, he may stave off its effects.",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_GRELNIXAR",
+            "name" : "Grelnixar",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 45,
+            "levelVariance" : "A",
+            "notes" : "Grelnixar hijacks the victim's nervous and circulatory systems, physically forcing them into a state of endless, fatal exhaustion.\nIf the victim fails their RR, the \"Running Death\" overrides the victim's willpower and motor controls. The character will bolt at top speed, sprint across the landscape, and cannot stop themselves until their body physically gives out and they die.",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_HEMLOCK",
+            "name" : "Hemlock",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 3,
+            "levelVariance" : "A",
+            "notes" : "It may be deadly based on the RR failure:<ul>\n<li>01-25: abdominal cramps, nausea and vomiting, incapacitating them for 1-10 hours\n<li>25+ : convulsions and death in 6-10 rounds\n</ul>",
             "maxSeverity" : "Extreme"
         },
         {
@@ -265,12 +292,21 @@
             "maxSeverity" : "Extreme"
         },
         {
+            "id" : "POISON_KENNESANK",
+            "name" : "Kennesank",
+            "type" : "POISONTYPE_RESPIRATORY",
+            "level" : 7,
+            "levelVariance" : "A",
+            "notes" : "In it's native form this is a greenish gas, but may be dried to powder and blown into the face of a victim that burns the eyes, throat and lungs, delivering 3-30 hits.\nRespiratory impairment continues to affect victims for a full 30 days, leaving them unable to exert themselves. Folklore maintains that sweet sorrel can remedy the damage.",
+            "maxSeverity" : "Mild"
+        },
+        {
             "id" : "POISON_KLY",
             "name" : "Kly",
             "type" : "POISONTYPE_RESPIRATORY",
             "level" : 3,
             "levelVariance" : "F",
-            "notes" : "Brown juice gives 3-300 hits.",
+            "notes" : "Anyone exposed to the toxin paste receives 3-300 hits over the next minute.",
             "maxSeverity" : "Mild"
         },
         {
@@ -283,6 +319,15 @@
             "maxSeverity" : "Extreme"
         },
         {
+            "id" : "POISON_LAWRIM",
+            "name" : "Lawrim",
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 7,
+            "levelVariance" : "B",
+            "notes" : "When absorbed through the skin, the poison brings on a brief agony (all activities at -20) before causing paralysis (-01 to -100) which eventually wears off (1-100 hours).",
+            "maxSeverity" : "Mild"
+        },
+        {
             "id" : "POISON_LHUGRUTH",
             "name" : "Lhugruth",
             "type" : "POISONTYPE_REDUCTION",
@@ -290,6 +335,60 @@
             "levelVariance" : "B",
             "notes" : "Grey/black blood affects exposed areas. \nSevere effects (dissolves inflicted area in 1-10 rounds)\nAffects metal and organic material, not glass, sand and pottery",
             "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_LIMHEREG",
+            "name" : "Limhereg",
+            "type" : "POISONTYPE_CONVERSION",
+            "level" : 1,
+            "levelVariance" : "B",
+            "notes" : "Contact with limhereg paste causes varying effects based on the RR failure<ul>\n<li>01-50: skin peals away continually for 1-100 weeks, until the effects wane, the victim is at -25 and has ½ Presence\n<li>51+: victim also bleeds through pores at a rate of 3 hits/round whenever he moves faster than half his base rate (a slow walk)\n</ul>",
+            "maxSeverity" : "Mild"
+        },
+        {
+            "id" : "POISON_LUS",
+            "name" : "Lus",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 6,
+            "levelVariance" : "B",
+            "notes" : "Lus paste is a contact poison with the following RR failure effects<ul>\n<li>01-10: victim is temporarily blinded for 1-4 days\n<li>11-20: blinded in either or both eyes\n<li>21-50: slips into a coma and is blinded\n<li>51+: dies within 1-12 rounds\n</ul>\nThe only known antidote is a mixture of atigax, klagul, megilloth and aldaka (which restores sight, removes the victim from a coma or reverses the effect of the poison if given within the first 12 rounds)",
+            "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_MADWORT",
+            "name" : "Madwort",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 4,
+            "levelVariance" : "B",
+            "notes" : "The effects based on RR failure are<ul>\n<li>1-25: induces madness for 11-20 rounds, causing him to tun about aimlessly, babble, attack friend and foe alike, etc.\n<li>26-50: the poison inflicts 1-10 rounds of sensory disturbance, leaving the victim at -5O.\n<li>51+: the resulting brain damage produce much more severe effects (10 to 20 points lost from the victim's potential Reasoning stat).\n</ul>",
+            "maxSeverity" : "Moderate"
+        },
+        {
+            "id" : "POISON_MALODOROUS_MILKCAP",
+            "name" : "Malodorous Milkcap",
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 2,
+            "levelVariance" : "A",
+            "notes" : "This poison is a paralytic, with no other effects.\nThere is no antidote to this poison, but its effects wear off in 12 hours.",
+            "maxSeverity" : "Moderate"
+        },
+        {
+            "id" : "POISON_METSASTAJAN_KUKKA",
+            "name" : "Metsästäjän Kukka",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 10,
+            "levelVariance" : "A",
+            "notes" : "This poison is extremely virulent and kills instantly.",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_MORHEGEN",
+            "name" : "Morhegen",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 1,
+            "levelVariance" : "A",
+            "notes" : "Its victim's veins temporarily run with kalirion, a black liquid that serves as imperfect blood, sustaining life, but incapacitating.\nTemporary mental stats (Em, In, Me, Pr, Re) fall by 50 but do not sink below I. The black-skinned victim returns to normal after 1-10 hours, but stats recuperate at rate of only 1/day. Some slave traders favour morhereg as a means of subduing their victims.",
+            "maxSeverity" : "Mild"
         },
         {
             "id" : "POISON_MUILFANA",
@@ -301,12 +400,21 @@
             "maxSeverity" : "Extreme"
         },
         {
+            "id" : "POISON_NEN_CALGALEN",
+            "name" : "Nen Calgalen",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 5,
+            "levelVariance" : "B",
+            "notes" : "Once it enters the bloodstream, it spreads a searing fire and disabling torment. The victim glows green and is often unable to move; some simply die, as their minds are torn apart by awful pain.",
+            "maxSeverity" : "Severe"
+        },
+        {
             "id" : "POISON_NIMNAUR",
             "name" : "Nimnaur",
             "type" : "POISONTYPE_REDUCTION",
             "level" : 3,
             "levelVariance" : "A",
-            "notes" : "Milky white juices affect organs.\nSevere effects (liquefies one organ in 1-10 minutes)",
+            "notes" : "Milky white juices affect organs.\nSevere effects: liquefies one organ in 1-10 minutes, usually closest to entry point",
             "maxSeverity" : "Severe"
         },
         {
@@ -319,12 +427,12 @@
             "maxSeverity" : "Extreme"
         },
         {
-            "id" : "POISON_ONKOKAMBA",
-            "name" : "Onkokamba",
+            "id" : "POISON_ONDOKAMBA",
+            "name" : "Ondokamba",
             "type" : "POISONTYPE_CONVERSION",
             "level" : 2,
             "levelVariance" : "C",
-            "notes" : "Green venom acts on appendages.\nSevere effects turns 1-4 appendages into stone",
+            "notes" : "Green venom acts on appendages.\nMilder effects cause a mild temporary loss of dexterity in hands and/or feet.\nSevere effects turns 1-4 appendages into stone",
             "maxSeverity" : "Extreme"
         },
         {
@@ -334,6 +442,15 @@
             "level" : 5,
             "levelVariance" : "B",
             "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_POISON_WILLOW",
+            "name" : "Poison Willow",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 2,
+            "levelVariance" : "A",
+            "notes" : "Contact with this oily poison causes painful blisters within an hour that last for a week.\nIt is more an environmental hazard than an assassins tool.",
+            "maxSeverity" : "Mild"
         },
         {
             "id" : "POISON_PORTUGUESE_MAN_OF_WAR_VENOM",
@@ -351,6 +468,24 @@
             "levelVariance" : "C",
             "notes" : "Brownish cave-drake saliva.\nSevere effects include erosion of nervous system in 1-20 rounds and victim left at -50 to -100 activity",
             "maxSeverity" : "Severe"
+        },
+        {
+            "id" : "POISON_RUTHIN",
+            "name" : "Rúthin",
+            "type" : "POISONTYPE_CONVERSION",
+            "level" : 2,
+            "levelVariance" : "B",
+            "notes" : "Used as an ingested poison, an RR failure turns the contents of the victim's stomach into jagged shards of glass, causing death in 6-12 rounds. (There is no effect if the victim has\nnot eaten within the last 6 hours.)",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_SAEWEDHIL",
+            "name" : "Saewedhil",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 9,
+            "levelVariance" : "B",
+            "notes" : "A powder usually administered orally, it takes effect within seconds with deadly accuracy: Elves are killed instantly; all others are placed in a coma for 2-6 weeks.",
+            "maxSeverity" : "Extreme"
         },
         {
             "id" : "POISON_SCORPION_VENOM",
@@ -385,12 +520,30 @@
             "maxSeverity" : "Extreme"
         },
         {
+            "id" : "POISON_SHAGU_BITTER",
+            "name" : "Shagu-bitter",
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 9,
+            "levelVariance" : "B",
+            "notes" : "This paste is an extremely toxic paralytic poison, which Orcish trackers sometimes place on their weapons.",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_SHARAG",
+            "name" : "Sharag",
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 5,
+            "levelVariance" : "B",
+            "notes" : "As a poison, sharag may be administered through food or drink—not at sword-point. Taking effect within I minute, its victim feels his extremities go limp, one by one, until his lungs and finally his heart stops over the space of the next minute.",
+            "maxSeverity" : "Extreme"
+        },
+        {
             "id" : "POISON_SHARDUVAAK",
             "name" : "Sharduvaak",
             "type" : "POISONTYPE_CIRCULATORY",
             "level" : 3,
             "levelVariance" : "E",
-            "notes" : "Brown liquid slows blood flow and victim needs double usual sleep until fully recovered.",
+            "notes" : "Brown liquid slows blood flow and victim needs double usual sleep until fully recovered.\nThese effects could last several weeks or months.",
             "maxSeverity" : "Moderate"
         },
         {
@@ -412,9 +565,18 @@
             "maxSeverity" : "Moderate"
         },
         {
+            "id" : "POISON_SKULL_CAP",
+            "name" : "Skull Cap",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 5,
+            "levelVariance" : "B",
+            "notes" : "Skull cap is a deadly ingestive poison whose virulence operates upon its victim for a full 24 hours before abating.",
+            "maxSeverity" : "Severe"
+        },
+        {
             "id" : "POISON_SLIRD",
             "name" : "Slird",
-            "type" : "POISONTYPE_NERVE",
+            "type" : "POISONTYPE_CIRCULATORY",
             "level" : 2,
             "levelVariance" : "C",
             "notes" : "Acts in 1-2 rounds.  \nModerate effects: victim loses feeling in 1-6 extremities (head, hands, genitals…) for 1-100 days",
@@ -479,6 +641,15 @@
             "maxSeverity" : "Extreme"
         },
         {
+            "id" : "POISON_TRAITORS_GOBLET",
+            "name" : "Traitor's Goblet",
+            "type" : "POISONTYPE_REDUCTION",
+            "level" : 8,
+            "levelVariance" : "A",
+            "notes" : "The flesh of a mushroom when eaten strikes its victim so quickly that no antidote may be administered in time.\nIf the flesh is dried the effect diminished to an attack level of 5.",
+            "maxSeverity" : "Extreme"
+        },
+        {
             "id" : "POISON_TRUSA",
             "name" : "Trusa",
             "type" : "POISONTYPE_MUSCLE",
@@ -493,7 +664,7 @@
             "type" : "POISONTYPE_NERVE",
             "level" : 20,
             "levelVariance" : "A",
-            "notes" : "Extreme effects result in destruction of nervous system (paralysed instantly; dead in 1-10 minutes)",
+            "notes" : "This is a 20th level nerve poison with the following effect:<ul>\n<li>Instant Paralysis: Upon failing the Resistance Roll, the poison immediately attacks the victim's central nervous system. The character is completely paralysed on the spot.\n<li>The Glassy Death: The poison works with horrifying speed, destroying the body's nerves. Mechanically, the target is struck into a coma or paralysed instantly, and they die within 1 to 10 minutes as their nervous system completely collapses as the poison literally hardens the victim's nerves into \"glassy filaments.\"\n</ul>",
             "maxSeverity" : "Extreme"
         },
         {
@@ -502,7 +673,7 @@
             "type" : "POISONTYPE_RESPIRATORY",
             "level" : 6,
             "levelVariance" : "A",
-            "notes" : "Creamy paste gives 3-30 hits.",
+            "notes" : "Creamy paste gives 3-30 hits.\n\nAlso known as Urána",
             "maxSeverity" : "Mild"
         },
         {
@@ -530,6 +701,51 @@
             "levelVariance" : "D",
             "notes" : "Acts in 1-100 rounds\nMild effect is deep sleep.\nModerate effect is degeneration of balance and hearing (-1 - -100 Agility and -50 to perception).\nSevere effect is total paralysis.",
             "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_WHITE_BERRIED_YEW",
+            "name" : "White-Berried Yew",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 2,
+            "levelVariance" : "A",
+            "notes" : "Mature yew berries are extremely toxic, causing a quick and painless death in 1-10 rounds.",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_WHITE_DESTROYER",
+            "name" : "White Destroyer",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 5,
+            "levelVariance" : "B",
+            "notes" : "If the target fails their RR the following effects occur:<ul>\n<li>01-25: Slowness (-20) in limb closest to impact point\n<li>26-50: 1-4 limbs become useless\n<li>51+: Total paralysis\n</ul>",
+            "maxSeverity" : "Moderate"
+        },
+        {
+            "id" : "POISON_WITCHS_PIE",
+            "name" : "Witch's Pie",
+            "type" : "POISONTYPE_MUSCLE",
+            "level" : 4,
+            "levelVariance" : "A",
+            "notes" : "The flesh of witch's pie tastes fine; however, 1 hour after consumption, the eater falls victim to its paralytic poison.",
+            "maxSeverity" : "Moderate"
+        },
+        {
+            "id" : "POISON_WOLFSTOOTH",
+            "name" : "Wolfstooth",
+            "type" : "POISONTYPE_CIRCULATORY",
+            "level" : 3,
+            "levelVariance" : "B",
+            "notes" : "It causes the heart to beat irregularly, incapacitating the victim for 10-20 rounds. Even if only moderately affected (RR failure of 26-50), the heart is damaged (-15 to 20 points from temporary Constitution). In some cases (RR failure of 51+), death results from heart failure.",
+            "maxSeverity" : "Extreme"
+        },
+        {
+            "id" : "POISON_WORLCLIVUR",
+            "name" : "Worlclivur",
+            "type" : "POISONTYPE_NERVE",
+            "level" : 2,
+            "levelVariance" : "A",
+            "notes" : "Worlcivur paste may be used as a contact or blade poison:<ul>\n<li>01-30: blinded eye (-50) for 1-100 minutes\n<li>31-60: induces random eye spasms for 1-100 days (on any roll of 01-25, the victim’s eyes flutter for 1-10 rounds, during which time he is at -75)\n<li>61+: blinded in both eyes (-100) for 1-100 weeks\n</ul>",
+            "maxSeverity" : "Moderate"
         },
         {
             "id" : "POISON_ZAGANZAR",
