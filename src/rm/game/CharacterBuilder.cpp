@@ -141,6 +141,9 @@ Character& CharacterBuilder::build() {
 
 	/* Apply skill data */
 	for (const auto& [skill_data, ranks] : skill_ranks_) {
+		if (skill_data == nullptr) {
+			throw std::runtime_error("CharacterBuilder: Skill data is null when building character. This should not happen as the builder should prevent this from happening when adding skill ranks.");
+		}
 		auto [it, inserted] = character.skills_.try_emplace(skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
 		Skill& skill = it->second;
 		skill.skill_data_ = skill_data;
@@ -148,12 +151,18 @@ Character& CharacterBuilder::build() {
 	}
 
 	for (const auto& [skill_data, special_bonus] : skill_special_bonuses_) {
+		if (skill_data == nullptr) {
+			throw std::runtime_error("CharacterBuilder: Skill data is null when building character. This should not happen as the builder should prevent this from happening when adding skill special bonuses.");
+		}
 		auto [it, inserted] = character.skills_.try_emplace(skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
 		Skill& skill = it->second;
 		skill.special_bonus_ = special_bonus;
 	}
 
 	for (const auto& [skill_data, dev_type] : skill_development_types_) {
+		if (skill_data == nullptr) {
+			throw std::runtime_error("CharacterBuilder: Skill data is null when building character. This should not happen as the builder should prevent this from happening when adding skill development types.");
+		}
 		auto [it, inserted] = character.skills_.try_emplace(skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
 		Skill& skill = it->second;
 		skill.development_type_ = dev_type;
@@ -161,6 +170,9 @@ Character& CharacterBuilder::build() {
 
 	// Now we have all the modified skills we can iterate through them and add the appropriate category.
 	for (auto& [skill_data, skill] : character.skills_) {
+		if (skill_data == nullptr) {
+			throw std::runtime_error("CharacterBuilder: Skill data is null when building character. This should not happen as the builder should prevent this from happening when adding skill data.");
+		}
 		const SkillCategoryData& category_data = skill_data->skillData().category();
 		auto category_it = character.categories_.find(&category_data);
 		if (category_it != character.categories_.end()) {

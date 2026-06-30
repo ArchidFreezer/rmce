@@ -1072,14 +1072,16 @@ void AutoCharacterBuilder::autoBackgroundChoices(CharacterBuilder& builder) {
 		int choice = Random::get(1, range);
 		if (choice == 1) {
 			if (traits_.combat_ > 5 && !used_combat_bonus) { // If the character is combat focussed use that for the bonus
-				if (combat_closeness_ > 5) {
+				if (combat_closeness_ > 5 && preferred_melee_ != nullptr) {
 					builder.addBackgroundSkillSpecialBonus(preferred_melee_, 10);
 					used_combat_bonus = true;
 					LOG_DEBUG("AutoCharacterBuilder: Made background skill bonus for preferred melee weapon.");
-				} else {
+					num_options--;
+				} else if (preferred_ranged_ != nullptr) {
 					builder.addBackgroundSkillSpecialBonus(preferred_ranged_, 10);
 					used_combat_bonus = true;
 					LOG_DEBUG("AutoCharacterBuilder: Made background skill bonus for preferred ranged weapon.");
+					num_options--;
 				}
 			} else {
 				// Pick a random skill from those that have ranks.
@@ -1090,17 +1092,20 @@ void AutoCharacterBuilder::autoBackgroundChoices(CharacterBuilder& builder) {
 				std::ranges::advance(it, random_index);
 				builder.addBackgroundSkillSpecialBonus(it->first, 10);
 				LOG_DEBUG("AutoCharacterBuilder: Made background skill bonus for {}.", it->first->name());
+				num_options--;
 			}
 		} else if (choice == 2) {
 			if (traits_.combat_ > 5 && !used_combat_bonus) { // If the character is combat focussed use that for the bonus
-				if (combat_closeness_ > 5) {
+				if (combat_closeness_ > 5 && preferred_melee_ != nullptr) {
 					builder.addBackgroundCategorySpecialBonus(&preferred_melee_->skillData().category(), 10);
 					used_combat_bonus = true;
 					LOG_DEBUG("AutoCharacterBuilder: Made background category bonus for preferred melee weapon.");
-				} else {
+					num_options--;
+				} else if (preferred_ranged_ != nullptr) {
 					builder.addBackgroundCategorySpecialBonus(&preferred_ranged_->skillData().category(), 10);
 					used_combat_bonus = true;
 					LOG_DEBUG("AutoCharacterBuilder: Made background category bonus for preferred ranged weapon.");
+					num_options--;
 				}
 			} else {
 				// Pick a random skill from those that have ranks.
@@ -1111,10 +1116,12 @@ void AutoCharacterBuilder::autoBackgroundChoices(CharacterBuilder& builder) {
 				std::ranges::advance(it, random_index);
 				builder.addBackgroundCategorySpecialBonus(it->first, 10);
 				LOG_DEBUG("AutoCharacterBuilder: Made background category bonus for {}.", it->first->name());
+				num_options--;
 			}
 		} else if (choice == 3) {
 			builder.generateBackgroundItems(1); // Make a random roll for an extra item
 			LOG_DEBUG("AutoCharacterBuilder: Made background item roll for {} options.", num_options);
+			num_options--;
 		} else if (choice == 4) { // This should be rare even for casters
 			// Pick a random list formn those known.
 			size_t random_index = Random::get(0, builder.spell_list_ranks_.size() - 1);
@@ -1130,8 +1137,8 @@ void AutoCharacterBuilder::autoBackgroundChoices(CharacterBuilder& builder) {
 			range--;
 
 			LOG_DEBUG("AutoCharacterBuilder: Made background spell list roll for {} options.", num_options);
+			num_options--;
 		}
-		num_options--;
 	}
 }
 
