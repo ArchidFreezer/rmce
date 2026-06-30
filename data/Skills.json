@@ -20,12 +20,12 @@
             "exhaustion" : 1.666666716337204E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 2,
-                "stealth" : 4,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 20,
+                "stealth" : 40,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -48,12 +48,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 6,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 60,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -76,12 +76,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -104,12 +104,12 @@
             "exhaustion" : 5E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -132,12 +132,12 @@
             "exhaustion" : 5E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 2,
-                "support" : 3,
-                "utility" : 2
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 20,
+                "support" : 30,
+                "utility" : 20
             }
         },
         {
@@ -155,12 +155,12 @@
             "exhaustion" : 1E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -183,12 +183,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -211,12 +211,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -239,12 +239,12 @@
             "exhaustion" : 5E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -267,12 +267,12 @@
             "exhaustion" : 5E0,
             "distanceMultiplier" : 5E-1,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -298,12 +298,12 @@
             "exhaustion" : 5E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -321,12 +321,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 10
             }
         },
         {
@@ -349,12 +349,12 @@
             "exhaustion" : 5E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -377,12 +377,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 10
             }
         },
         {
@@ -405,12 +405,12 @@
             "exhaustion" : 5E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -428,12 +428,12 @@
             "exhaustion" : 5E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 10
             }
         },
         {
@@ -456,12 +456,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -487,12 +487,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -515,12 +515,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 4,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 5,
-                "utility" : 3
+                "caster" : 40,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 50,
+                "utility" : 30
             }
         },
         {
@@ -543,12 +543,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 3,
-                "information" : 5,
-                "stealth" : 7,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 30,
+                "information" : 50,
+                "stealth" : 70,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -571,12 +571,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 6,
-                "information" : 1,
-                "stealth" : 8,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 60,
+                "information" : 10,
+                "stealth" : 80,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -599,12 +599,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 8,
-                "stealth" : 1,
-                "support" : 6,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 80,
+                "stealth" : 10,
+                "support" : 60,
+                "utility" : 40
             }
         },
         {
@@ -630,12 +630,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 3,
-                "information" : 2,
-                "stealth" : 3,
-                "support" : 4,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 30,
+                "information" : 20,
+                "stealth" : 30,
+                "support" : 40,
+                "utility" : 40
             }
         },
         {
@@ -661,12 +661,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 5,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 50,
+                "utility" : 20
             }
         },
         {
@@ -692,12 +692,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 4,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 40,
+                "utility" : 20
             }
         },
         {
@@ -723,12 +723,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 2,
-                "support" : 4,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 20,
+                "support" : 40,
+                "utility" : 30
             }
         },
         {
@@ -751,12 +751,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -779,12 +779,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -807,12 +807,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -835,12 +835,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -863,12 +863,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -894,12 +894,12 @@
             "exhaustion" : 3E0,
             "distanceMultiplier" : 1.3333333730697632E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -925,12 +925,12 @@
             "exhaustion" : 5E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -956,12 +956,12 @@
             "exhaustion" : 2.5E-1,
             "distanceMultiplier" : 5E-1,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -984,12 +984,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 9,
-                "combat" : 3,
-                "information" : 4,
-                "stealth" : 4,
-                "support" : 4,
-                "utility" : 5
+                "caster" : 90,
+                "combat" : 30,
+                "information" : 40,
+                "stealth" : 40,
+                "support" : 40,
+                "utility" : 50
             }
         },
         {
@@ -1012,12 +1012,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 2,
-                "information" : 7,
-                "stealth" : 2,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 20,
+                "information" : 70,
+                "stealth" : 20,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -1040,12 +1040,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 30
             }
         },
         {
@@ -1068,12 +1068,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 2
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 20
             }
         },
         {
@@ -1096,12 +1096,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -1124,12 +1124,12 @@
             "exhaustion" : 2.5E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -1155,12 +1155,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -1183,12 +1183,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 4,
-                "combat" : 9,
-                "information" : 3,
-                "stealth" : 5,
-                "support" : 5,
-                "utility" : 5
+                "caster" : 40,
+                "combat" : 90,
+                "information" : 30,
+                "stealth" : 50,
+                "support" : 50,
+                "utility" : 50
             }
         },
         {
@@ -1211,12 +1211,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 2,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 2
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 20,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 20
             }
         },
         {
@@ -1239,12 +1239,12 @@
             "exhaustion" : 5E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -1267,12 +1267,12 @@
             "exhaustion" : 5E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -1295,12 +1295,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 6,
-                "support" : 2,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 60,
+                "support" : 20,
+                "utility" : 50
             }
         },
         {
@@ -1323,12 +1323,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -1351,12 +1351,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 7,
-                "support" : 6,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 70,
+                "support" : 60,
+                "utility" : 30
             }
         },
         {
@@ -1379,12 +1379,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -1407,12 +1407,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 3,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 30,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -1435,12 +1435,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -1463,12 +1463,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 2
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 20
             }
         },
         {
@@ -1518,12 +1518,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -1630,12 +1630,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -1796,12 +1796,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -1880,12 +1880,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -2076,12 +2076,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -2104,12 +2104,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -2132,12 +2132,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 1
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 10
             }
         },
         {
@@ -2160,12 +2160,12 @@
             "exhaustion" : 1E0,
             "distanceMultiplier" : 2.0000000298023224E-1,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 6,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 60,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -2188,12 +2188,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 4,
-                "support" : 2,
-                "utility" : 6
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 40,
+                "support" : 20,
+                "utility" : 60
             }
         },
         {
@@ -2216,12 +2216,12 @@
             "exhaustion" : 8.33333358168602E-2,
             "distanceMultiplier" : 1.0000000149011612E-1,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 6,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 60,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -2275,12 +2275,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 3,
-                "stealth" : 2,
-                "support" : 4,
-                "utility" : 5
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 30,
+                "stealth" : 20,
+                "support" : 40,
+                "utility" : 50
             }
         },
         {
@@ -2303,12 +2303,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -2331,12 +2331,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 4,
-                "support" : 3,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 40,
+                "support" : 30,
+                "utility" : 30
             }
         },
         {
@@ -2362,12 +2362,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 4,
-                "combat" : 4,
-                "information" : 7,
-                "stealth" : 4,
-                "support" : 4,
-                "utility" : 4
+                "caster" : 40,
+                "combat" : 40,
+                "information" : 70,
+                "stealth" : 40,
+                "support" : 40,
+                "utility" : 40
             }
         },
         {
@@ -2390,12 +2390,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -2446,12 +2446,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 4,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 40,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -2474,12 +2474,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 2,
-                "stealth" : 8,
-                "support" : 3,
-                "utility" : 5
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 20,
+                "stealth" : 80,
+                "support" : 30,
+                "utility" : 50
             }
         },
         {
@@ -2505,12 +2505,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 6,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 60,
+                "utility" : 10
             }
         },
         {
@@ -2533,12 +2533,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 2,
-                "information" : 5,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 20,
+                "information" : 50,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -2564,12 +2564,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 8,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 80,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -2592,12 +2592,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 3,
-                "stealth" : 4,
-                "support" : 4,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 30,
+                "stealth" : 40,
+                "support" : 40,
+                "utility" : 40
             }
         },
         {
@@ -2620,12 +2620,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 7,
-                "support" : 6,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 70,
+                "support" : 60,
+                "utility" : 30
             }
         },
         {
@@ -2651,12 +2651,12 @@
             "exhaustion" : 5E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -2682,12 +2682,12 @@
             "exhaustion" : 5E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -2710,12 +2710,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 8,
-                "support" : 5,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 80,
+                "support" : 50,
+                "utility" : 10
             }
         },
         {
@@ -2738,12 +2738,12 @@
             "exhaustion" : 5E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -2769,12 +2769,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -2800,12 +2800,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -2828,12 +2828,12 @@
             "exhaustion" : 3.333333507180214E-2,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -2856,12 +2856,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -2884,12 +2884,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -2912,12 +2912,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -2968,12 +2968,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -3027,12 +3027,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -3058,12 +3058,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 4,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 40,
+                "utility" : 20
             }
         },
         {
@@ -3114,12 +3114,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 6,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 60,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -3142,12 +3142,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -3170,12 +3170,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 2,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 20,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -3198,12 +3198,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -3226,12 +3226,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -3254,12 +3254,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -3282,12 +3282,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -3313,12 +3313,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -3341,12 +3341,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 6,
-                "stealth" : 3,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 60,
+                "stealth" : 30,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -3369,12 +3369,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -3397,12 +3397,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -3425,12 +3425,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 4,
-                "information" : 2,
-                "stealth" : 3,
-                "support" : 8,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 40,
+                "information" : 20,
+                "stealth" : 30,
+                "support" : 80,
+                "utility" : 40
             }
         },
         {
@@ -3453,12 +3453,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -3481,12 +3481,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 6,
-                "stealth" : 3,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 60,
+                "stealth" : 30,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -3509,12 +3509,12 @@
             "exhaustion" : 8.33333358168602E-2,
             "distanceMultiplier" : 2E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -3537,12 +3537,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 5,
-                "support" : 6,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 50,
+                "support" : 60,
+                "utility" : 30
             }
         },
         {
@@ -3568,12 +3568,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 6
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 60
             }
         },
         {
@@ -3624,12 +3624,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -3652,12 +3652,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -3680,12 +3680,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -3739,12 +3739,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 3,
-                "information" : 7,
-                "stealth" : 3,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 30,
+                "information" : 70,
+                "stealth" : 30,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -3767,12 +3767,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 6,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 60,
+                "utility" : 30
             }
         },
         {
@@ -3798,12 +3798,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 20
             }
         },
         {
@@ -3826,12 +3826,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 9,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 90,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -3854,12 +3854,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 7,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 70,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -3913,12 +3913,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 30
             }
         },
         {
@@ -3941,12 +3941,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 2,
-                "stealth" : 5,
-                "support" : 6,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 20,
+                "stealth" : 50,
+                "support" : 60,
+                "utility" : 30
             }
         },
         {
@@ -3969,12 +3969,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 5,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 50,
+                "utility" : 10
             }
         },
         {
@@ -3997,12 +3997,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 2,
-                "information" : 7,
-                "stealth" : 3,
-                "support" : 2,
-                "utility" : 6
+                "caster" : 30,
+                "combat" : 20,
+                "information" : 70,
+                "stealth" : 30,
+                "support" : 20,
+                "utility" : 60
             }
         },
         {
@@ -4025,12 +4025,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 20
             }
         },
         {
@@ -4053,12 +4053,12 @@
             "exhaustion" : 5E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4081,12 +4081,12 @@
             "exhaustion" : 3.333333507180214E-2,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -4109,12 +4109,12 @@
             "exhaustion" : 1E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 6,
-                "support" : 2,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 60,
+                "support" : 20,
+                "utility" : 50
             }
         },
         {
@@ -4141,12 +4141,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 6,
-                "combat" : 5,
-                "information" : 9,
-                "stealth" : 5,
-                "support" : 6,
-                "utility" : 7
+                "caster" : 60,
+                "combat" : 50,
+                "information" : 90,
+                "stealth" : 50,
+                "support" : 60,
+                "utility" : 70
             }
         },
         {
@@ -4169,12 +4169,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 3,
-                "information" : 2,
-                "stealth" : 2,
-                "support" : 4,
-                "utility" : 2
+                "caster" : 20,
+                "combat" : 30,
+                "information" : 20,
+                "stealth" : 20,
+                "support" : 40,
+                "utility" : 20
             }
         },
         {
@@ -4197,12 +4197,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -4225,12 +4225,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 6,
-                "stealth" : 5,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 60,
+                "stealth" : 50,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -4253,12 +4253,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -4279,12 +4279,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4305,12 +4305,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 4,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 40,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4331,12 +4331,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4357,12 +4357,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4383,12 +4383,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4409,12 +4409,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 4,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 40,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4435,12 +4435,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 4,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 40,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4461,12 +4461,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4487,12 +4487,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4513,12 +4513,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4539,12 +4539,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 9,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 90,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4565,12 +4565,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4593,12 +4593,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 3,
-                "stealth" : 7,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 30,
+                "stealth" : 70,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -4621,12 +4621,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4649,12 +4649,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 8,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 80,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -4680,12 +4680,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -4708,12 +4708,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 4,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 40,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -4736,12 +4736,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -4764,12 +4764,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -4792,12 +4792,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4823,12 +4823,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4854,12 +4854,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4882,12 +4882,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -4910,12 +4910,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4941,12 +4941,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -4997,12 +4997,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -5025,12 +5025,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -5053,12 +5053,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 20
             }
         },
         {
@@ -5084,12 +5084,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -5112,12 +5112,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 4,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 40,
+                "utility" : 20
             }
         },
         {
@@ -5140,12 +5140,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -5168,12 +5168,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 30
             }
         },
         {
@@ -5196,12 +5196,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -5224,12 +5224,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 2,
-                "stealth" : 6,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 20,
+                "stealth" : 60,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -5255,12 +5255,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -5283,12 +5283,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -5339,12 +5339,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -5370,12 +5370,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -5398,12 +5398,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -5426,12 +5426,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -5454,12 +5454,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 6,
-                "support" : 4,
-                "utility" : 5
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 60,
+                "support" : 40,
+                "utility" : 50
             }
         },
         {
@@ -5482,12 +5482,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -5510,12 +5510,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 50
             }
         },
         {
@@ -5538,12 +5538,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 20
             }
         },
         {
@@ -5566,12 +5566,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 2
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 20
             }
         },
         {
@@ -5594,12 +5594,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -5622,12 +5622,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 8,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 80,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -5650,12 +5650,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 7,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 70,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -5678,12 +5678,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -5706,12 +5706,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -5737,12 +5737,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -5765,12 +5765,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -5821,12 +5821,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 4,
-                "support" : 6,
-                "utility" : 2
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 40,
+                "support" : 60,
+                "utility" : 20
             }
         },
         {
@@ -5849,12 +5849,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 3,
-                "stealth" : 3,
-                "support" : 6,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 30,
+                "stealth" : 30,
+                "support" : 60,
+                "utility" : 40
             }
         },
         {
@@ -5877,12 +5877,12 @@
             "exhaustion" : 1E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 20
             }
         },
         {
@@ -5905,12 +5905,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 3,
-                "support" : 2,
-                "utility" : 2
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 30,
+                "support" : 20,
+                "utility" : 20
             }
         },
         {
@@ -5928,12 +5928,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 9,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 90,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -5956,12 +5956,12 @@
             "exhaustion" : 1E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -5984,12 +5984,12 @@
             "exhaustion" : 1E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -6012,12 +6012,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 3,
-                "support" : 7,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 30,
+                "support" : 70,
+                "utility" : 20
             }
         },
         {
@@ -6040,12 +6040,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 6,
-                "support" : 4,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 60,
+                "support" : 40,
+                "utility" : 30
             }
         },
         {
@@ -6068,12 +6068,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -6099,12 +6099,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 8,
-                "stealth" : 1,
-                "support" : 6,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 80,
+                "stealth" : 10,
+                "support" : 60,
+                "utility" : 10
             }
         },
         {
@@ -6127,12 +6127,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -6155,12 +6155,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -6186,12 +6186,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -6214,12 +6214,12 @@
             "exhaustion" : 2.0000000298023224E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -6242,12 +6242,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 6,
-                "support" : 3,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 60,
+                "support" : 30,
+                "utility" : 30
             }
         },
         {
@@ -6270,12 +6270,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 8,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 5
+                "caster" : 80,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 50
             }
         },
         {
@@ -6298,12 +6298,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -6329,12 +6329,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 3,
-                "information" : 5,
-                "stealth" : 3,
-                "support" : 3,
-                "utility" : 3
+                "caster" : 30,
+                "combat" : 30,
+                "information" : 50,
+                "stealth" : 30,
+                "support" : 30,
+                "utility" : 30
             }
         },
         {
@@ -6357,12 +6357,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 2
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 20
             }
         },
         {
@@ -6385,12 +6385,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -6416,12 +6416,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -6447,12 +6447,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 5,
-                "combat" : 5,
-                "information" : 5,
-                "stealth" : 5,
-                "support" : 5,
-                "utility" : 7
+                "caster" : 50,
+                "combat" : 50,
+                "information" : 50,
+                "stealth" : 50,
+                "support" : 50,
+                "utility" : 70
             }
         },
         {
@@ -6475,12 +6475,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -6503,12 +6503,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 2,
-                "stealth" : 6,
-                "support" : 5,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 20,
+                "stealth" : 60,
+                "support" : 50,
+                "utility" : 50
             }
         },
         {
@@ -6531,12 +6531,12 @@
             "exhaustion" : 1.666666716337204E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 4,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 40,
+                "utility" : 40
             }
         },
         {
@@ -6559,12 +6559,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -6590,12 +6590,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 4,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 40,
+                "utility" : 10
             }
         },
         {
@@ -6618,12 +6618,12 @@
             "exhaustion" : 8.33333358168602E-2,
             "distanceMultiplier" : 1.0000000149011612E-1,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 6,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 60,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -6646,12 +6646,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -6674,12 +6674,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 3,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 30,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -6702,12 +6702,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -6730,12 +6730,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 6,
-                "utility" : 3
+                "caster" : 30,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 60,
+                "utility" : 30
             }
         },
         {
@@ -6758,12 +6758,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 3,
-                "stealth" : 2,
-                "support" : 3,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 30,
+                "stealth" : 20,
+                "support" : 30,
+                "utility" : 30
             }
         },
         {
@@ -6786,12 +6786,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 5,
-                "information" : 3,
-                "stealth" : 8,
-                "support" : 3,
-                "utility" : 6
+                "caster" : 20,
+                "combat" : 50,
+                "information" : 30,
+                "stealth" : 80,
+                "support" : 30,
+                "utility" : 60
             }
         },
         {
@@ -6817,12 +6817,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -6845,12 +6845,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 20
             }
         },
         {
@@ -6873,12 +6873,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 4,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 40,
+                "utility" : 40
             }
         },
         {
@@ -6901,12 +6901,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 2,
-                "stealth" : 2,
-                "support" : 3,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 20,
+                "stealth" : 20,
+                "support" : 30,
+                "utility" : 30
             }
         },
         {
@@ -6929,12 +6929,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 4,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 40,
+                "utility" : 30
             }
         },
         {
@@ -6957,12 +6957,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -6985,12 +6985,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -7013,12 +7013,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -7041,12 +7041,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 7,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 70,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -7072,12 +7072,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -7103,12 +7103,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 4,
-                "combat" : 6,
-                "information" : 3,
-                "stealth" : 6,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 40,
+                "combat" : 60,
+                "information" : 30,
+                "stealth" : 60,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -7131,12 +7131,12 @@
             "exhaustion" : 1.666666753590107E-2,
             "distanceMultiplier" : 2E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -7159,12 +7159,12 @@
             "exhaustion" : 1.666666753590107E-2,
             "distanceMultiplier" : 2E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -7187,12 +7187,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 4,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 40,
+                "utility" : 40
             }
         },
         {
@@ -7243,12 +7243,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 1,
-                "stealth" : 6,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 10,
+                "stealth" : 60,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -7271,12 +7271,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -7299,12 +7299,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -7355,12 +7355,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 8,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 80,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -7386,12 +7386,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -7414,12 +7414,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -7442,12 +7442,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 20
             }
         },
         {
@@ -7470,12 +7470,12 @@
             "exhaustion" : 1.666666753590107E-2,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -7498,12 +7498,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 8,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 80,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -7526,12 +7526,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 2,
-                "support" : 3,
-                "utility" : 2
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 20,
+                "support" : 30,
+                "utility" : 20
             }
         },
         {
@@ -7554,12 +7554,12 @@
             "exhaustion" : 3.333333507180214E-2,
             "distanceMultiplier" : 5E-1,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -7582,12 +7582,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -7613,12 +7613,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -7641,12 +7641,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 3,
-                "information" : 4,
-                "stealth" : 5,
-                "support" : 2,
-                "utility" : 6
+                "caster" : 20,
+                "combat" : 30,
+                "information" : 40,
+                "stealth" : 50,
+                "support" : 20,
+                "utility" : 60
             }
         },
         {
@@ -7725,12 +7725,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 6,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 60,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -7753,12 +7753,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -7781,12 +7781,12 @@
             "exhaustion" : 8.33333358168602E-2,
             "distanceMultiplier" : 2E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -7809,12 +7809,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 6,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 60,
+                "utility" : 10
             }
         },
         {
@@ -7837,12 +7837,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 4,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 40,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -7868,12 +7868,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 6,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 60,
+                "utility" : 40
             }
         },
         {
@@ -7896,12 +7896,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 6,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 60,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -7924,12 +7924,12 @@
             "exhaustion" : 1.666666716337204E-1,
             "distanceMultiplier" : 5E-1,
             "traits" : {
-                "caster" : 3,
-                "combat" : 3,
-                "information" : 2,
-                "stealth" : 5,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 30,
+                "information" : 20,
+                "stealth" : 50,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -7952,12 +7952,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -7980,12 +7980,12 @@
             "exhaustion" : 5E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -8008,12 +8008,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -8039,12 +8039,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -8067,12 +8067,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -8095,12 +8095,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 3,
-                "utility" : 2
+                "caster" : 20,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 30,
+                "utility" : 20
             }
         },
         {
@@ -8123,12 +8123,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -8151,12 +8151,12 @@
             "exhaustion" : 3.333333507180214E-2,
             "distanceMultiplier" : 2.0000000298023224E-1,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -8179,12 +8179,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 3,
-                "stealth" : 3,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 30,
+                "stealth" : 30,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -8207,12 +8207,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 4,
-                "support" : 2,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 40,
+                "support" : 20,
+                "utility" : 50
             }
         },
         {
@@ -8235,12 +8235,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 2,
-                "stealth" : 2,
-                "support" : 5,
-                "utility" : 5
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 20,
+                "stealth" : 20,
+                "support" : 50,
+                "utility" : 50
             }
         },
         {
@@ -8263,12 +8263,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 2,
-                "support" : 3,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 20,
+                "support" : 30,
+                "utility" : 30
             }
         },
         {
@@ -8291,12 +8291,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 7,
-                "combat" : 7,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 70,
+                "combat" : 70,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -8347,12 +8347,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 50
             }
         },
         {
@@ -8375,12 +8375,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 7,
-                "support" : 5,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 70,
+                "support" : 50,
+                "utility" : 30
             }
         },
         {
@@ -8403,12 +8403,12 @@
             "exhaustion" : 1.666666716337204E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 5,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 50,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -8431,12 +8431,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -8462,12 +8462,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -8490,12 +8490,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 4,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 2
+                "caster" : 40,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 20
             }
         },
         {
@@ -8518,12 +8518,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 3,
-                "combat" : 2,
-                "information" : 5,
-                "stealth" : 3,
-                "support" : 8,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 20,
+                "information" : 50,
+                "stealth" : 30,
+                "support" : 80,
+                "utility" : 40
             }
         },
         {
@@ -8546,12 +8546,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 6,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 60,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -8574,12 +8574,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -8605,12 +8605,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -8633,12 +8633,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -8664,12 +8664,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 8,
-                "information" : 2,
-                "stealth" : 4,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 80,
+                "information" : 20,
+                "stealth" : 40,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -8695,12 +8695,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 8,
-                "information" : 2,
-                "stealth" : 4,
-                "support" : 2,
-                "utility" : 5
+                "caster" : 20,
+                "combat" : 80,
+                "information" : 20,
+                "stealth" : 40,
+                "support" : 20,
+                "utility" : 50
             }
         },
         {
@@ -8726,12 +8726,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 5,
-                "combat" : 8,
-                "information" : 3,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 50,
+                "combat" : 80,
+                "information" : 30,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -8757,12 +8757,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 2,
-                "stealth" : 6,
-                "support" : 3,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 20,
+                "stealth" : 60,
+                "support" : 30,
+                "utility" : 50
             }
         },
         {
@@ -8819,12 +8819,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -8850,12 +8850,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -8881,12 +8881,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -8909,12 +8909,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -8940,12 +8940,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 6,
-                "information" : 3,
-                "stealth" : 6,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 60,
+                "information" : 30,
+                "stealth" : 60,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -8968,12 +8968,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 2,
-                "support" : 3,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 20,
+                "support" : 30,
+                "utility" : 30
             }
         },
         {
@@ -9024,12 +9024,12 @@
             "exhaustion" : 1E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -9080,12 +9080,12 @@
             "exhaustion" : 2.5E-1,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -9111,12 +9111,12 @@
             "exhaustion" : 0E0,
             "distanceMultiplier" : 1E0,
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         }
     ]
