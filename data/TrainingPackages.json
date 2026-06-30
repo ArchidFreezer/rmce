@@ -103,12 +103,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 3,
-                "utility" : 5
+                "caster" : 30,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 30,
+                "utility" : 50
             }
         },
         {
@@ -229,12 +229,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 50
             }
         },
         {
@@ -331,12 +331,12 @@
                 "SKILLGROUP_LORE"
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -449,12 +449,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -585,12 +585,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 7
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 70
             }
         },
         {
@@ -683,12 +683,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 5,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 50,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -775,12 +775,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 8,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 80,
+                "utility" : 30
             }
         },
         {
@@ -903,12 +903,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -1025,12 +1025,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -1107,12 +1107,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -1228,12 +1228,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -1323,12 +1323,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -1425,12 +1425,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 6,
-                "information" : 1,
-                "stealth" : 6,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 60,
+                "information" : 10,
+                "stealth" : 60,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -1515,12 +1515,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 8,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 80,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -1623,12 +1623,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 6
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 60
             }
         },
         {
@@ -1770,12 +1770,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 4,
-                "combat" : 4,
-                "information" : 3,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 40,
+                "combat" : 40,
+                "information" : 30,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -1832,12 +1832,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -1957,12 +1957,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -2084,12 +2084,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 2,
-                "stealth" : 6,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 20,
+                "stealth" : 60,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -2178,12 +2178,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -2278,12 +2278,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -2389,12 +2389,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 2,
-                "combat" : 6,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 60,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -2478,12 +2478,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -2556,12 +2556,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -2658,12 +2658,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 2,
-                "stealth" : 8,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 20,
+                "stealth" : 80,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -2787,12 +2787,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 2,
-                "combat" : 5,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 50,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -2884,12 +2884,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 3,
-                "utility" : 6
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 30,
+                "utility" : 60
             }
         },
         {
@@ -2975,12 +2975,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -3089,12 +3089,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 7
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 70
             }
         },
         {
@@ -3223,12 +3223,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -3322,12 +3322,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -3435,12 +3435,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 4,
-                "combat" : 2,
-                "information" : 3,
-                "stealth" : 7,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 40,
+                "combat" : 20,
+                "information" : 30,
+                "stealth" : 70,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -3525,12 +3525,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 6,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 60,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -3618,12 +3618,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 2,
-                "combat" : 7,
-                "information" : 2,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 70,
+                "information" : 20,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -3739,12 +3739,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 3,
-                "information" : 4,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 6
+                "caster" : 60,
+                "combat" : 30,
+                "information" : 40,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 60
             }
         },
         {
@@ -3862,12 +3862,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 3,
-                "utility" : 3
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 30,
+                "utility" : 30
             }
         },
         {
@@ -3966,12 +3966,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 9,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 90,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4060,12 +4060,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -4165,12 +4165,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 8,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 80,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -4259,12 +4259,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 8,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 80,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -4351,12 +4351,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 7,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 70,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -4448,12 +4448,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -4532,12 +4532,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 3
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 30
             }
         },
         {
@@ -4606,12 +4606,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 6
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 60
             }
         },
         {
@@ -4679,12 +4679,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 2,
-                "support" : 8,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 20,
+                "support" : 80,
+                "utility" : 10
             }
         },
         {
@@ -4781,12 +4781,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 2,
-                "information" : 5,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 20,
+                "information" : 50,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -4875,12 +4875,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -4989,12 +4989,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 4,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 30,
+                "combat" : 40,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -5081,12 +5081,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 6,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 60,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -5236,12 +5236,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -5380,12 +5380,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 8,
-                "combat" : 3,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 80,
+                "combat" : 30,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -5468,12 +5468,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 6
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 60
             }
         },
         {
@@ -5581,12 +5581,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -5645,12 +5645,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 8,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 80,
+                "utility" : 10
             }
         },
         {
@@ -5749,12 +5749,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -5857,12 +5857,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -5941,12 +5941,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -6034,12 +6034,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -6121,12 +6121,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 3,
-                "information" : 4,
-                "stealth" : 6,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 30,
+                "information" : 40,
+                "stealth" : 60,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -6190,12 +6190,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 6,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 60,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -6303,12 +6303,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 2,
-                "stealth" : 3,
-                "support" : 4,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 20,
+                "stealth" : 30,
+                "support" : 40,
+                "utility" : 50
             }
         },
         {
@@ -6395,12 +6395,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -6493,12 +6493,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 6
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 60
             }
         },
         {
@@ -6601,12 +6601,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 3,
-                "information" : 2,
-                "stealth" : 7,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 30,
+                "information" : 20,
+                "stealth" : 70,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -6702,12 +6702,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 5,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 50,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -6799,12 +6799,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 9,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 90,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -6912,12 +6912,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -6992,12 +6992,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 3,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 30,
+                "utility" : 50
             }
         },
         {
@@ -7104,12 +7104,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 7,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 70,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -7186,12 +7186,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 4,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 40,
+                "utility" : 50
             }
         },
         {
@@ -7291,12 +7291,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 6,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 60,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -7391,12 +7391,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 4,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 6,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 40,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 60,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -7521,12 +7521,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -7612,12 +7612,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 6
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 60
             }
         },
         {
@@ -7769,12 +7769,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -7869,12 +7869,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 3,
-                "information" : 3,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 6
+                "caster" : 30,
+                "combat" : 30,
+                "information" : 30,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 60
             }
         },
         {
@@ -7965,12 +7965,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 7
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 70
             }
         },
         {
@@ -8071,12 +8071,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 8,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 80,
+                "utility" : 30
             }
         },
         {
@@ -8167,12 +8167,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 1,
-                "support" : 2,
-                "utility" : 2
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 10,
+                "support" : 20,
+                "utility" : 20
             }
         },
         {
@@ -8301,12 +8301,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 3,
-                "information" : 2,
-                "stealth" : 3,
-                "support" : 4,
-                "utility" : 5
+                "caster" : 30,
+                "combat" : 30,
+                "information" : 20,
+                "stealth" : 30,
+                "support" : 40,
+                "utility" : 50
             }
         },
         {
@@ -8406,12 +8406,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 9,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 90,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -8483,12 +8483,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 2,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 20,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -8599,12 +8599,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -8727,12 +8727,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 4,
-                "stealth" : 3,
-                "support" : 3,
-                "utility" : 6
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 40,
+                "stealth" : 30,
+                "support" : 30,
+                "utility" : 60
             }
         },
         {
@@ -8841,12 +8841,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 3,
-                "stealth" : 4,
-                "support" : 4,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 30,
+                "stealth" : 40,
+                "support" : 40,
+                "utility" : 50
             }
         },
         {
@@ -8948,12 +8948,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 4,
-                "stealth" : 3,
-                "support" : 3,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 40,
+                "stealth" : 30,
+                "support" : 30,
+                "utility" : 50
             }
         },
         {
@@ -9050,12 +9050,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 2,
-                "stealth" : 4,
-                "support" : 2,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 20,
+                "stealth" : 40,
+                "support" : 20,
+                "utility" : 50
             }
         },
         {
@@ -9147,12 +9147,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 50
             }
         },
         {
@@ -9248,12 +9248,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 4,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 6
+                "caster" : 30,
+                "combat" : 40,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 60
             }
         },
         {
@@ -9341,12 +9341,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 6
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 60
             }
         },
         {
@@ -9460,12 +9460,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -9570,12 +9570,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -9635,12 +9635,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -9747,12 +9747,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 8,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 80,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -9825,12 +9825,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 9,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 90,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -9918,12 +9918,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -10013,12 +10013,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -10183,12 +10183,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 4,
-                "combat" : 2,
-                "information" : 4,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 7
+                "caster" : 40,
+                "combat" : 20,
+                "information" : 40,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 70
             }
         },
         {
@@ -10304,12 +10304,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -10435,12 +10435,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 2,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 20,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -10541,12 +10541,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -10677,12 +10677,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -10993,12 +10993,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 7,
-                "utility" : 1
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 70,
+                "utility" : 10
             }
         },
         {
@@ -11119,12 +11119,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -11240,12 +11240,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 6,
-                "information" : 1,
-                "stealth" : 7,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 60,
+                "information" : 10,
+                "stealth" : 70,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -11363,12 +11363,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -11445,12 +11445,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 4,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 40,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -11543,12 +11543,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 2,
-                "combat" : 5,
-                "information" : 2,
-                "stealth" : 7,
-                "support" : 2,
-                "utility" : 5
+                "caster" : 20,
+                "combat" : 50,
+                "information" : 20,
+                "stealth" : 70,
+                "support" : 20,
+                "utility" : 50
             }
         },
         {
@@ -11677,12 +11677,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 4,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 40,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -11822,12 +11822,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 6
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 60
             }
         },
         {
@@ -11913,12 +11913,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 7,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 70,
+                "utility" : 30
             }
         },
         {
@@ -12021,12 +12021,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 5,
-                "utility" : 1
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 50,
+                "utility" : 10
             }
         },
         {
@@ -12163,12 +12163,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 6,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 60,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -12268,12 +12268,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 4,
-                "combat" : 4,
-                "information" : 4,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 40,
+                "combat" : 40,
+                "information" : 40,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -12352,12 +12352,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -12486,12 +12486,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 8,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 80,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -12574,12 +12574,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 5,
-                "stealth" : 6,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 50,
+                "stealth" : 60,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -12705,12 +12705,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 7,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 70,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -12791,12 +12791,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 6
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 60
             }
         },
         {
@@ -12885,12 +12885,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 2,
-                "combat" : 1,
-                "information" : 8,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 10,
+                "information" : 80,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -13015,12 +13015,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 8,
-                "utility" : 3
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 80,
+                "utility" : 30
             }
         },
         {
@@ -13143,12 +13143,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 3,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 30,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -13267,12 +13267,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 8,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 80,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -13380,12 +13380,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -13505,12 +13505,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 7,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 70,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -13616,12 +13616,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 7,
-                "utility" : 1
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 70,
+                "utility" : 10
             }
         },
         {
@@ -13725,12 +13725,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 3,
-                "support" : 2,
-                "utility" : 6
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 30,
+                "support" : 20,
+                "utility" : 60
             }
         },
         {
@@ -13845,12 +13845,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 4,
-                "combat" : 8,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 40,
+                "combat" : 80,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -13961,12 +13961,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 9,
-                "combat" : 1,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 90,
+                "combat" : 10,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -14078,12 +14078,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 8,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 80,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -14147,12 +14147,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 2,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 20,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -14234,12 +14234,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 5,
-                "combat" : 2,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 5,
-                "utility" : 5
+                "caster" : 50,
+                "combat" : 20,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 50,
+                "utility" : 50
             }
         },
         {
@@ -14485,12 +14485,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 50
             }
         },
         {
@@ -14598,12 +14598,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 8,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 80,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -14700,12 +14700,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 6,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 10,
+                "combat" : 60,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -14785,12 +14785,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 7,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 30,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 70,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -14883,12 +14883,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -14975,12 +14975,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 1,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 10,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -15059,12 +15059,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 2,
-                "support" : 2,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 20,
+                "support" : 20,
+                "utility" : 40
             }
         },
         {
@@ -15170,12 +15170,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 8,
-                "combat" : 3,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 80,
+                "combat" : 30,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -15281,12 +15281,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 6,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 60,
+                "combat" : 60,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -15390,12 +15390,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 9,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 90,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -15499,12 +15499,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 9,
-                "combat" : 2,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 90,
+                "combat" : 20,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -15629,12 +15629,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -15716,12 +15716,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 8,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 80,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -15814,12 +15814,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 6,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 60,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -15870,12 +15870,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 7,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 70,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -15975,12 +15975,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 7,
-                "information" : 2,
-                "stealth" : 3,
-                "support" : 4,
-                "utility" : 5
+                "caster" : 30,
+                "combat" : 70,
+                "information" : 20,
+                "stealth" : 30,
+                "support" : 40,
+                "utility" : 50
             }
         },
         {
@@ -16048,12 +16048,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -16164,12 +16164,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 2,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 6,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 20,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 60,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -16270,12 +16270,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 5,
-                "information" : 1,
-                "stealth" : 8,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 30,
+                "combat" : 50,
+                "information" : 10,
+                "stealth" : 80,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -16351,12 +16351,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 1,
-                "stealth" : 4,
-                "support" : 2,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 10,
+                "stealth" : 40,
+                "support" : 20,
+                "utility" : 50
             }
         },
         {
@@ -16455,12 +16455,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -16586,12 +16586,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 8,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 80,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -16699,12 +16699,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 5,
-                "combat" : 1,
-                "information" : 6,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 3
+                "caster" : 50,
+                "combat" : 10,
+                "information" : 60,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 30
             }
         },
         {
@@ -16797,12 +16797,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 8,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 80,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -16922,12 +16922,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 4,
-                "combat" : 4,
-                "information" : 7,
-                "stealth" : 2,
-                "support" : 1,
-                "utility" : 6
+                "caster" : 40,
+                "combat" : 40,
+                "information" : 70,
+                "stealth" : 20,
+                "support" : 10,
+                "utility" : 60
             }
         },
         {
@@ -17027,12 +17027,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -17153,12 +17153,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 4,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 4,
-                "utility" : 3
+                "caster" : 10,
+                "combat" : 40,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 40,
+                "utility" : 30
             }
         },
         {
@@ -17277,12 +17277,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 7,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 70,
+                "utility" : 10
             }
         },
         {
@@ -17354,12 +17354,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 3,
-                "combat" : 3,
-                "information" : 4,
-                "stealth" : 5,
-                "support" : 1,
-                "utility" : 7
+                "caster" : 30,
+                "combat" : 30,
+                "information" : 40,
+                "stealth" : 50,
+                "support" : 10,
+                "utility" : 70
             }
         },
         {
@@ -17452,12 +17452,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 6
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 60
             }
         },
         {
@@ -17529,12 +17529,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 8,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 5
+                "caster" : 10,
+                "combat" : 80,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 50
             }
         },
         {
@@ -17606,12 +17606,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 3,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 8,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 30,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 80,
+                "utility" : 10
             }
         },
         {
@@ -17711,12 +17711,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 4,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 40,
+                "support" : 10,
+                "utility" : 20
             }
         },
         {
@@ -17817,12 +17817,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 1,
-                "information" : 4,
-                "stealth" : 3,
-                "support" : 2,
-                "utility" : 7
+                "caster" : 10,
+                "combat" : 10,
+                "information" : 40,
+                "stealth" : 30,
+                "support" : 20,
+                "utility" : 70
             }
         },
         {
@@ -17940,12 +17940,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 5,
-                "information" : 4,
-                "stealth" : 1,
-                "support" : 3,
-                "utility" : 4
+                "caster" : 10,
+                "combat" : 50,
+                "information" : 40,
+                "stealth" : 10,
+                "support" : 30,
+                "utility" : 40
             }
         },
         {
@@ -18035,12 +18035,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 7,
-                "information" : 2,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 70,
+                "combat" : 70,
+                "information" : 20,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -18142,12 +18142,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 4,
-                "combat" : 4,
-                "information" : 3,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 40,
+                "combat" : 40,
+                "information" : 30,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -18202,12 +18202,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 1,
-                "combat" : 9,
-                "information" : 1,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 1
+                "caster" : 10,
+                "combat" : 90,
+                "information" : 10,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 10
             }
         },
         {
@@ -18360,12 +18360,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 7,
-                "combat" : 1,
-                "information" : 5,
-                "stealth" : 1,
-                "support" : 1,
-                "utility" : 4
+                "caster" : 70,
+                "combat" : 10,
+                "information" : 50,
+                "stealth" : 10,
+                "support" : 10,
+                "utility" : 40
             }
         },
         {
@@ -18433,12 +18433,12 @@
                 }
             ],
             "traits" : {
-                "caster" : 2,
-                "combat" : 4,
-                "information" : 4,
-                "stealth" : 3,
-                "support" : 1,
-                "utility" : 2
+                "caster" : 20,
+                "combat" : 40,
+                "information" : 40,
+                "stealth" : 30,
+                "support" : 10,
+                "utility" : 20
             }
         }
     ]
