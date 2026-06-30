@@ -13956,20 +13956,17 @@
                     "value" : 6,
                     "numChoices" : 3,
                     "options" : [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
                         "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE"
                     ]
                 }
             ],
             "traits" : {
-                "caster" : 0,
-                "combat" : 0,
-                "information" : 0,
-                "stealth" : 0,
-                "support" : 0,
-                "utility" : 0
+                "caster" : 9,
+                "combat" : 1,
+                "information" : 1,
+                "stealth" : 1,
+                "support" : 1,
+                "utility" : 1
             }
         },
         {
