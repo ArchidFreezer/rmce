@@ -339,17 +339,17 @@ void AutoCharacterBuilder::allocateWeaponCosts(CharacterBuilder& builder) const 
 				int weight = archid::Dice(10).roll().result(); // We give a small random weight to the categories to ensure we don't always end up with the same category at the top.
 				if (weapon_category == &missile) {
 					weight += 100; // Missile weapons are the likeliest choice for semi spell users.
-					if (combat_closeness_ < 4) {
+					if (combat_closeness_ < 40) {
 						weight += 50; // If the character is more ranged focused then we give an extra weight to missile weapons.
 					}
 				} else if (weapon_category == &thrown) {
 					weight += 50; // We give a small weight to thrown weapons as these are better than melee.
-					if (combat_closeness_ > 4 && combat_closeness_ < 8) {
+					if (combat_closeness_ > 40 && combat_closeness_ < 80) {
 						weight += 50; // If the character is medium ranged focused then we give an extra weight to missile weapons.
 					}
 				} else {
 					weight += 25; // We give no weight to the other categories as they are not particularly good for casters.
-					if (combat_closeness_ > 8) {
+					if (combat_closeness_ > 80) {
 						weight += 100; // If the character insists on being in melee range then bump this up.
 					}
 				}
@@ -362,17 +362,17 @@ void AutoCharacterBuilder::allocateWeaponCosts(CharacterBuilder& builder) const 
 		for (const SkillCategoryData* weapon_category : weapon_categories) {
 			int weight = archid::Dice(10).roll().result(); // We give a small random weight to the categories to ensure we don't always end up with the same category at the top.
 			if (weapon_category == &missile) {
-				if (combat_closeness_ < 4) {
+				if (combat_closeness_ < 40) {
 					weight += 100; // If the character is ranged focused then we give an extra weight to missile weapons.
 				}
 			} else if (weapon_category == &thrown) {
-				if (combat_closeness_ > 4 && combat_closeness_ < 8) {
+				if (combat_closeness_ > 40 && combat_closeness_ < 80) {
 					weight += 25; // If the character is medium ranged focused then we give some weight to thrown weapons, but they are niche.
 				}
 			} else {
 				weight += 50; // The melee categories all get a decent weighting.
 
-				if (combat_closeness_ > 6) {
+				if (combat_closeness_ > 60) {
 					weight += 100; // If the character insists on being in melee range then bump this up.
 				}
 			}
@@ -533,8 +533,8 @@ void AutoCharacterBuilder::assignWeaponPreferencesForEssenceCaster(CharacterBuil
 
 	// Handle the melee case first as if the character fights at close range they will want that to be their best weapon skill with the lowest cost allocation.
 	// If the character fights at close range then they will want this weapon to be their best so allocate high weights.
-	if (combat_closeness_ > 6) {
-		if (traits_.stealth_ > 3) {
+	if (combat_closeness_ > 60) {
+		if (traits_.stealth_ > 30) {
 			// We add a weight to the dagger for melee as this is a strong preference for stealthy characters and also has value as a ranged weapon.
 			// This value is in a range that would allow a culturally preferred staff to be used as the best weapon if the culture preferences are strong enough, but otherwise it will likely be the best option for a stealthy character.
 			essence_weapon_weights[dagger] += Random::get(50, 60);
@@ -542,7 +542,7 @@ void AutoCharacterBuilder::assignWeaponPreferencesForEssenceCaster(CharacterBuil
 		// We add a weight to both melee options
 		essence_weapon_weights[dagger] += Random::get(95, 105);
 		essence_weapon_weights[staff] += Random::get(95, 105);
-	} else if (combat_closeness_ < 4) {
+	} else if (combat_closeness_ < 40) {
 		// Handle the long ranged case
 		essence_weapon_weights[blow_gun] += Random::get(70, 80);
 		essence_weapon_weights[composite_bow] += Random::get(70, 80);
@@ -605,7 +605,7 @@ void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
 	}
 
 	// Reduce the weight of armours with a missile attack penalty if the character is not expected to be in close combat and is not using combat casting as they are more likely to want to avoid the missile attack penalty.
-	if (combat_casting_ < 3 || combat_closeness_ < 4) {
+	if (combat_casting_ < 30 || combat_closeness_ < 40) {
 		for (const auto& [armour_type_data, weight] : armour_weights) {
 			if (armour_type_data->missileAttackPenalty() <= 0) {
 				continue;
@@ -625,7 +625,7 @@ void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
 	}
 
 	// If the character has high Quickness bonus weight armour in favour of those with a smaller penalty unless going full melee.
-	if (traits_.combat_ < 7 && combat_closeness_ < 7) {
+	if (traits_.combat_ < 70 && combat_closeness_ < 70) {
 		int quickness_db_bonus = builder.stats_[StatType::kQuickness].bonus() * 3;
 		if (quickness_db_bonus > 0) {
 			for (const auto& [armour_type_data, weight] : armour_weights) {
@@ -659,23 +659,23 @@ void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
 void AutoCharacterBuilder::ensureTraits(CharacterBuilder& builder) {
 	/* Core characteristics that drive preferred abilities */
 	if (!traits_.combat_) {
-		traits_.combat_ = archid::Dice(9).roll().result();
+		traits_.combat_ = archid::Dice(100).roll().result();
 		LOG_TRACE("AutoCharacterBuilder: Set combat to {}.", traits_.combat_);
 	}
 	if (!traits_.information_) {
-		traits_.information_ = archid::Dice(9).roll().result();
+		traits_.information_ = archid::Dice(100).roll().result();
 		LOG_TRACE("AutoCharacterBuilder: Set information to {}.", traits_.information_);
 	}
 	if (!traits_.stealth_) {
-		traits_.stealth_ = archid::Dice(9).roll().result();
+		traits_.stealth_ = archid::Dice(100).roll().result();
 		LOG_TRACE("AutoCharacterBuilder: Set stealth to {}.", traits_.stealth_);
 	}
 	if (!traits_.support_) {
-		traits_.support_ = archid::Dice(9).roll().result();
+		traits_.support_ = archid::Dice(100).roll().result();
 		LOG_TRACE("AutoCharacterBuilder: Set support to {}.", traits_.support_);
 	}
 	if (!traits_.utility_) {
-		traits_.utility_ = archid::Dice(9).roll().result();
+		traits_.utility_ = archid::Dice(100).roll().result();
 		LOG_TRACE("AutoCharacterBuilder: Set utility to {}.", traits_.utility_);
 	}
 
@@ -686,7 +686,7 @@ void AutoCharacterBuilder::ensureTraits(CharacterBuilder& builder) {
 			// We take the how big a focus the character puts on casting, plus a random element to determine how likely they are to want to cast in combat. This means that characters with a higher castering trait are more likely to want to
 			// cast in combat, but there is still a random element to allow for some variation and for some characters to be more focused on casting outside of combat.
 			int value = traits_.caster_ * 2;
-			value += Random::get(1, 9);
+			value += Random::get(1, 100);
 			combat_casting_ = value / 3; // The more a character uses spells the more likely they are to want to cast in combat
 		} else {
 			combat_casting_ = 1; // Non spell users are very unlikely to want to cast in combat.
@@ -695,24 +695,24 @@ void AutoCharacterBuilder::ensureTraits(CharacterBuilder& builder) {
 	}
 	if (!combat_closeness_) {
 		if (builder.profession_->spellUserType() == SpellUserType::kPure || builder.profession_->spellUserType() == SpellUserType::kHybrid) {
-			combat_closeness_ = Random::get(1, 3); // Pure and hybrid casters are unlikely to want to get close to combat.
+			combat_closeness_ = Random::get(1, 39); // Pure and hybrid casters are unlikely to want to get close to combat.
 		} else if (builder.profession_->spellUserType() == SpellUserType::kSemi) {
-			combat_closeness_ = Random::get(3, 9); // Semi casters are more likely to want to be in medium range or close combat.
+			combat_closeness_ = Random::get(40, 100); // Semi casters are more likely to want to be in medium range or close combat.
 		} else {
-			combat_closeness_ = Random::get(1, 9); // Non spell users can have a wide range of preferences for combat closeness so we give them a full range of random options.
+			combat_closeness_ = Random::get(1, 100); // Non spell users can have a wide range of preferences for combat closeness so we give them a full range of random options.
 		}
 		LOG_TRACE("AutoCharacterBuilder: Set combat closeness to {}.", combat_closeness_);
 	}
 
 	/* Whether to spend DPs on a small set of skills or a wider range */
 	if (!focussed_) {
-		focussed_ = Random::get(1, 9);
+		focussed_ = Random::get(1, 100);
 		LOG_TRACE("AutoCharacterBuilder: Set focussed to {}.", focussed_);
 	}
 
 	/* Whether to keep closely aligned to the traits or not */
 	if (!aligned_) {
-		aligned_ = Random::get(1, 9);
+		aligned_ = Random::get(1, 100);
 		LOG_TRACE("AutoCharacterBuilder: Set aligned to {}.", aligned_);
 	}
 }
@@ -1071,8 +1071,8 @@ void AutoCharacterBuilder::autoBackgroundChoices(CharacterBuilder& builder) {
 	while (num_options > 0) {
 		int choice = Random::get(1, range);
 		if (choice == 1) {
-			if (traits_.combat_ > 5 && !used_combat_bonus) { // If the character is combat focussed use that for the bonus
-				if (combat_closeness_ > 5 && preferred_melee_ != nullptr) {
+			if (traits_.combat_ > 50 && !used_combat_bonus) { // If the character is combat focussed use that for the bonus
+				if (combat_closeness_ > 50 && preferred_melee_ != nullptr) {
 					builder.addBackgroundSkillSpecialBonus(preferred_melee_, 10);
 					used_combat_bonus = true;
 					LOG_DEBUG("AutoCharacterBuilder: Made background skill bonus for preferred melee weapon.");
@@ -1095,8 +1095,8 @@ void AutoCharacterBuilder::autoBackgroundChoices(CharacterBuilder& builder) {
 				num_options--;
 			}
 		} else if (choice == 2) {
-			if (traits_.combat_ > 5 && !used_combat_bonus) { // If the character is combat focussed use that for the bonus
-				if (combat_closeness_ > 5 && preferred_melee_ != nullptr) {
+			if (traits_.combat_ > 50 && !used_combat_bonus) { // If the character is combat focussed use that for the bonus
+				if (combat_closeness_ > 50 && preferred_melee_ != nullptr) {
 					builder.addBackgroundCategorySpecialBonus(&preferred_melee_->skillData().category(), 10);
 					used_combat_bonus = true;
 					LOG_DEBUG("AutoCharacterBuilder: Made background category bonus for preferred melee weapon.");
