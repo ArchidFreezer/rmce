@@ -6,6 +6,7 @@
 #include <string_view>
 #include <ArmourTypeData.h>
 #include <ClimateData.h>
+#include <ClimateType.h>
 #include <EnvironmentType.h>
 #include <GameRuleData.h>
 #include <GameRuleDataChoice.h>
@@ -236,9 +237,9 @@ public:
 
 	/**
 	 * @brief Set the number of ranks that the character receives during adolescence for languages related to their culture
-	 * 
+	 *
 	 * Each type of langauge skill, somatic, spoken & writtent must be developed separately.
-	 * 
+	 *
 	 * @param adolescent_language_ranks number of language ranks
 	 */
 	void setAdolescentLanguageRanks(int adolescent_language_ranks) {
@@ -548,23 +549,23 @@ public:
 	 * @brief Add an climate type to the set of those required by the culture
 	 * @param climate ClimateData to add
 	 */
-	void addRequiredClimate(ClimateData& climate) {
-		required_climates_.emplace(&climate);
+	void addRequiredClimate(ClimateType::KoppenSubGroup climate) {
+		required_climates_.emplace(climate);
 	}
 
 	/**
 	 * @brief Set the set of climate types required by the culture
-	 * @param climates std::set of ClimateData pointers to set as required climates
+	 * @param climates std::set of ClimateType::KoppenSubGroup to set as required climates
 	 */
-	void setRequiredClimates(std::set<const ClimateData*> climates) {
+	void setRequiredClimates(std::set<ClimateType::KoppenSubGroup> climates) {
 		required_climates_ = std::move(climates);
 	}
 
 	/**
 	 * @brief Get a container with the climates required by the culture
-	 * @return std::set<ClimateData> climates
+	 * @return std::set<ClimateType::KoppenSubGroup> climates
 	 */
-	const std::set<const ClimateData*> requiredClimates() const {
+	const std::set<ClimateType::KoppenSubGroup> requiredClimates() const {
 		return required_climates_;
 	}
 
@@ -574,12 +575,8 @@ public:
 	 * @return `true` if the climate type is required by the culture
 	 * @return `true` if the climate type is not required by the culture
 	 */
-	bool isRequiredClimate(ClimateData& climate) const {
-		for (auto& key : required_climates_) {
-			if (climate.id() == key->id())
-				return true;
-		}
-		return false;
+	bool isRequiredClimate(ClimateType::KoppenSubGroup climate) const {
+		return (required_climates_.find(climate) != required_climates_.end());
 	}
 
 	/**
@@ -736,7 +733,7 @@ private:
 	std::map<const SubcategoriedSkillData*, int> skill_ranks_{};           /** Number of skill ranks gained during adolescence */
 	std::map<const SkillCategoryData*, int> skill_category_ranks_{};       /** Number of skill category ranks gained during adolescence */
 	std::map<const SkillCategoryData*, int> skill_category_skill_ranks_{}; /** Number of skill ranks from a category gained during adolescence */
-	std::set<const ClimateData*> required_climates_{};                     /**< Set of climates, one of which the culture will live in  */
+	std::set<ClimateType::KoppenSubGroup> required_climates_{};            /**< Set of climates, one of which the culture will live in  */
 	std::set<EnvironmentType::Feature> required_features_{};               /**< Set of environment features, one of which the culture will live in  */
 	std::set<EnvironmentType::Terrain> required_terrains_{};               /**< Set of environment terrains, one of which the culture will live in  */
 	std::set<EnvironmentType::Vegetation> required_vegetations_{};         /**< Set of environment vegetations, one of which the culture will live in  */
