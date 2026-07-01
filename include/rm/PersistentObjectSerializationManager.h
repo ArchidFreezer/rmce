@@ -452,8 +452,6 @@ std::unique_ptr<	serial::PersistentJsonSerializer<T>> PersistentObjectSerializat
 		return std::make_unique<CharacterBuilderSerializer>(object_manager_);
 	} else if constexpr (std::is_same_v<T, CharacterLeveller>) {
 		return std::make_unique<CharacterLevellerSerializer>(object_manager_);
-	} else if constexpr (std::is_same_v<T, ClimateData>) {
-		return std::make_unique<ClimateSerializer>(object_manager_);
 	} else if constexpr (std::is_same_v<T, CreaturePaceData>) {
 		return std::make_unique<CreaturePaceSerializer>(object_manager_);
 	} else if constexpr (std::is_same_v<T, CultureData>) {

@@ -8,7 +8,6 @@
 #include <CharacterSerializer.h>
 #include <CharacterBuilderSerializer.h>
 #include <CharacterLevellerSerializer.h>
-#include <ClimateSerializer.h>
 #include <CreaturePaceSerializer.h>
 #include <CultureSerializer.h>
 #include <CultureTypeSerializer.h>

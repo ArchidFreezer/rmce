@@ -421,9 +421,17 @@ rm::game::Location JsonConverter::getLocation(const json::object& obj, std::stri
 		fromString(water_str, water);
 		location.addWater(water);
 	}
-	std::set<std::string> climates_str = JsonConverter::getStringSet(*location_obj, "climates");
-	for (const auto& climate_str : climates_str) {
-		location.addClimate(&manager.get<ClimateData>(climate_str));
+	std::set<std::string> climate_group_str = JsonConverter::getStringSet(*location_obj, "climateGroups");
+	for (const auto& climate_group_str : climate_group_str) {
+		ClimateType::KoppenGroup climate_group{};
+		fromString(climate_group_str, climate_group);
+		location.addClimateGroup(climate_group);
+	}
+	std::set<std::string> climate_sub_group_str = JsonConverter::getStringSet(*location_obj, "climateSubGroups");
+	for (const auto& climate_sub_group_str : climate_sub_group_str) {
+		ClimateType::KoppenSubGroup climate_sub_group{};
+		fromString(climate_sub_group_str, climate_sub_group);
+		location.addClimateSubGroup(climate_sub_group);
 	}
 	return location;
 }
@@ -462,13 +470,21 @@ void JsonConverter::nestLocation(json::object& obj, const std::string key, const
 		if (water_str.size())
 			location_builder.setStringArray("waterSources", water_str);
 	}
-	if (location.climates().size()) {
-		std::set<std::string> climates_str{};
-		for (const auto& climate : location.climates()) {
-			climates_str.emplace(climate->id());
+	if (location.climateGroups().size()) {
+		std::set<std::string> climate_groups_str{};
+		for (const auto& climate_group : location.climateGroups()) {
+			climate_groups_str.emplace(ClimateType::toString(climate_group));
 		}
-		if (climates_str.size())
-			location_builder.setStringArray("climates", climates_str);
+		if (climate_groups_str.size())
+			location_builder.setStringArray("climateGroups", climate_groups_str);
+	}
+	if (location.climateSubGroups().size()) {
+		std::set<std::string> climate_sub_groups_str{};
+		for (const auto& climate_sub_group : location.climateSubGroups()) {
+			climate_sub_groups_str.emplace(ClimateType::toString(climate_sub_group));
+		}
+		if (climate_sub_groups_str.size())
+			location_builder.setStringArray("climateSubGroups", climate_sub_groups_str);
 	}
 	location_builder.endObject();
 }

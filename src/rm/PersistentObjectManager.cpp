@@ -76,8 +76,6 @@ const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 		result = &cache_.get<AttackTable>(id);
 	} else if (prefix == "book") {
 		result = &cache_.get<BookData>(id);
-	} else if (prefix == "climate") {
-		result = &cache_.get<ClimateData>(id);
 	} else if (prefix == "creaturepace") {
 		result = &cache_.get<CreaturePaceData>(id);
 	} else if (prefix == "culture") {
@@ -144,8 +142,6 @@ const std::set<std::string> PersistentObjectManager::getAllIds(std::string_view 
 		cache_.keys<BookData>(result);
 	} else if (lprefix == "character") {
 		cache_.keys<character::Character>(result);
-	} else if (lprefix == "climate") {
-		cache_.keys<ClimateData>(result);
 	} else if (lprefix == "creaturepace") {
 		cache_.keys<CreaturePaceData>(result);
 	} else if (lprefix == "culture") {

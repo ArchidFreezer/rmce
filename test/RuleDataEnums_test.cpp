@@ -6,12 +6,12 @@
 #include <CreatureBonusXpType.h>
 #include <CreatureConstitutionVarianceType.h>
 #include <LevelVarianceType.h>
+#include <ClimateType.h>
 #include <CreatureMovementSpeedType.h>
 #include <CreatureSizeType.h>
 #include <CriticalTableType.h>
 #include <CriticalType.h>
 #include <EnvironmentType.h>
-#include <HabitatType.h>
 #include <ManoeuvreDifficultyType.h>
 #include <PoisonType.h>
 #include <RealmType.h>
@@ -175,24 +175,32 @@ namespace {
 		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT20)), ArmourType::kAT20);
 	}
 
-	TEST(RuleDataEnums, HabitatTemperature) {
-		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kHot)), HabitatType::Temperature::kHot);
-		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kWarm)), HabitatType::Temperature::kWarm);
-		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kTemperate)), HabitatType::Temperature::kTemperate);
-		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kCool)), HabitatType::Temperature::kCool);
-		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kCold)), HabitatType::Temperature::kCold);
+	TEST(RuleDataEnums, KoppenGroup) {
+	    EXPECT_EQ(ClimateType::koppenGroup(ClimateType::toString(ClimateType::KoppenGroup::kContinental)), ClimateType::KoppenGroup::kContinental);
+		EXPECT_EQ(ClimateType::koppenGroup(ClimateType::toString(ClimateType::KoppenGroup::kDry)), ClimateType::KoppenGroup::kDry);
+	    EXPECT_EQ(ClimateType::koppenGroup(ClimateType::toString(ClimateType::KoppenGroup::kPolar)), ClimateType::KoppenGroup::kPolar);
+	    EXPECT_EQ(ClimateType::koppenGroup(ClimateType::toString(ClimateType::KoppenGroup::kTemperate)), ClimateType::KoppenGroup::kTemperate);
+		EXPECT_EQ(ClimateType::koppenGroup(ClimateType::toString(ClimateType::KoppenGroup::kTropical)), ClimateType::KoppenGroup::kTropical);
 
-		EXPECT_NE(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kHot)), HabitatType::Temperature::kWarm);
+		EXPECT_NE(ClimateType::koppenGroup(ClimateType::toString(ClimateType::KoppenGroup::kTropical)), ClimateType::KoppenGroup::kDry);
 	}
 
-	TEST(RuleDataEnums, HabitatPrecipitation) {
-		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kRainy)), HabitatType::Precipitation::kRainy);
-		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kHumid)), HabitatType::Precipitation::kHumid);
-		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kTemperate)), HabitatType::Precipitation::kTemperate);
-		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kDry)), HabitatType::Precipitation::kDry);
-		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kArid)), HabitatType::Precipitation::kArid);
+	TEST(RuleDataEnums, KoppenSubGroup) {
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kAridDesert)), ClimateType::KoppenSubGroup::kAridDesert);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kAridSteppe)), ClimateType::KoppenSubGroup::kAridSteppe);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kHumidContinentalHotSummer)), ClimateType::KoppenSubGroup::kHumidContinentalHotSummer);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kHumidContinentalWarmSummer)), ClimateType::KoppenSubGroup::kHumidContinentalWarmSummer);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kHumidSubtropical)), ClimateType::KoppenSubGroup::kHumidSubtropical);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kIceCap)), ClimateType::KoppenSubGroup::kIceCap);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kMarineWestCoast)), ClimateType::KoppenSubGroup::kMarineWestCoast);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kMediterranean)), ClimateType::KoppenSubGroup::kMediterranean);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kMonsoon)), ClimateType::KoppenSubGroup::kMonsoon);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kRainforest)), ClimateType::KoppenSubGroup::kRainforest);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kSavanna)), ClimateType::KoppenSubGroup::kSavanna);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kSubarctic)), ClimateType::KoppenSubGroup::kSubarctic);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kTundra)), ClimateType::KoppenSubGroup::kTundra);
 
-		EXPECT_NE(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kRainy)), HabitatType::Precipitation::kDry);
+		EXPECT_NE(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kHumidContinentalHotSummer)), ClimateType::KoppenSubGroup::kAridDesert);
 	}
 
 	TEST(RuleDataEnums, EnvironmentFeature) {

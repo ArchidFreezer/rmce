@@ -5,7 +5,6 @@
 #include <set>
 #include <string_view>
 #include <ArmourTypeData.h>
-#include <ClimateData.h>
 #include <ClimateType.h>
 #include <EnvironmentType.h>
 #include <GameRuleData.h>
