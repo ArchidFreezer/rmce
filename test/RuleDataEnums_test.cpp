@@ -186,8 +186,10 @@ namespace {
 	}
 
 	TEST(RuleDataEnums, KoppenSubGroup) {
-	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kAridDesert)), ClimateType::KoppenSubGroup::kAridDesert);
-	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kAridSteppe)), ClimateType::KoppenSubGroup::kAridSteppe);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kAridDesertCold)), ClimateType::KoppenSubGroup::kAridDesertCold);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kAridDesertHot)), ClimateType::KoppenSubGroup::kAridDesertHot);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kAridSteppeCold)), ClimateType::KoppenSubGroup::kAridSteppeCold);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kAridSteppeHot)), ClimateType::KoppenSubGroup::kAridSteppeHot);
 	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kHumidContinentalHotSummer)), ClimateType::KoppenSubGroup::kHumidContinentalHotSummer);
 	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kHumidContinentalWarmSummer)), ClimateType::KoppenSubGroup::kHumidContinentalWarmSummer);
 	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kHumidSubtropical)), ClimateType::KoppenSubGroup::kHumidSubtropical);

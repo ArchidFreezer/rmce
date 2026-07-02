@@ -26,7 +26,9 @@ enum class KoppenGroup {
 	/** Continental climates have large temperature variations between summer and winter */
 	kContinental,
 	/** Polar climates are cold year-round with limited precipitation */
-	kPolar
+	kPolar,
+	/** Highland climates are found in mountainous regions and have cooler temperatures than surrounding lowlands */
+	kHighland
 };
 
 /**
@@ -85,10 +87,14 @@ enum class KoppenSubGroup {
 	kMonsoon,
 	/** Tropical savanna climates have a distinct wet and dry season with moderate rainfall */
 	kSavanna,
-	/** Arid desert climates are extremely dry with very little precipitation */
-	kAridDesert,
-	/** Arid steppe climates are semi-arid with slightly more precipitation than deserts */
-	kAridSteppe,
+	/** Arid cold desert climates are extremely dry with very little precipitation with winter temperatures that can be very low */
+	kAridDesertCold,
+	/** Arid hot desert climates are extremely dry with very little precipitation with high temperatures throughout the year */
+	kAridDesertHot,
+	/** Arid cold steppe climates are semi-arid with slightly more precipitation than deserts and cold winters */
+	kAridSteppeCold,
+	/** Arid hot steppe climates are semi-arid with slightly more precipitation than deserts and hot summers */
+	kAridSteppeHot,
 	/** Mediterranean climates have hot, dry summers and mild, wet winters */
 	kMediterranean,
 	/** Humid subtropical climates have hot, humid summers and mild winters with moderate precipitation */
@@ -104,7 +110,9 @@ enum class KoppenSubGroup {
 	/** Tundra climates are cold and dry, with short, cool summers and long, harsh winters */
 	kTundra,
 	/** Ice cap climates are extremely cold and dry, with permanent ice and snow cover */
-	kIceCap
+	kIceCap,
+	/** Highland climates are found in mountainous regions and have cooler temperatures than surrounding lowlands */
+	kHighland
 };
 
 /**

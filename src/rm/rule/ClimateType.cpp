@@ -14,6 +14,8 @@ const std::string toString(KoppenGroup type) {
 		return "Continental";
 	case kPolar:
 		return "Polar";
+	case kHighland:
+		return "Highland";
 	default:
 		return "";
 	}
@@ -31,6 +33,8 @@ const std::optional<KoppenGroup> koppenGroup(std::string_view sv) {
 		return kContinental;
 	if (val == "polar")
 		return kPolar;
+	if (val == "highland")
+		return kHighland;
 	return {};
 }
 void fromString(std::string_view sv, KoppenGroup& type) {
@@ -70,6 +74,8 @@ const std::string toString(KoppenSubGroup type) {
 		return "Tundra";
 	case kIceCap:
 		return "Ice Cap";
+	case kHighland:
+		return "Highland";
 	default:
 		return "";
 	}
@@ -104,6 +110,8 @@ const std::optional<KoppenSubGroup> koppenSubGroup(std::string_view sv) {
 		return kTundra;
 	if (val == "icecap")
 		return kIceCap;
+	if (val == "highland")
+		return kHighland;
 	return {};
 }
 
@@ -121,8 +129,10 @@ const std::optional<KoppenGroup> koppenGroup(KoppenSubGroup& type) {
 	case KoppenSubGroup::kMonsoon:
 	case KoppenSubGroup::kSavanna:
 		return KoppenGroup::kTropical;
-	case KoppenSubGroup::kAridDesert:
-	case KoppenSubGroup::kAridSteppe:
+	case KoppenSubGroup::kAridDesertCold:
+	case KoppenSubGroup::kAridDesertHot:
+	case KoppenSubGroup::kAridSteppeCold:
+	case KoppenSubGroup::kAridSteppeHot:
 		return KoppenGroup::kDry;
 	case KoppenSubGroup::kMediterranean:
 	case KoppenSubGroup::kHumidSubtropical:
@@ -135,6 +145,8 @@ const std::optional<KoppenGroup> koppenGroup(KoppenSubGroup& type) {
 	case KoppenSubGroup::kTundra:
 	case KoppenSubGroup::kIceCap:
 		return KoppenGroup::kPolar;
+	case KoppenSubGroup::kHighland:
+		return KoppenGroup::kHighland;
 	default:
 		return {};
 	}
