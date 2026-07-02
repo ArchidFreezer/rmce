@@ -521,8 +521,8 @@
         }
       ],
       "requiredClimates": [
-        "Arid Desert",
-        "Arid Steppe"
+        "Arid Desert Hot",
+        "Arid Steppe Hot"
       ]
     },
     {
@@ -1082,7 +1082,7 @@
       ],
       "requiredClimates": [
         "Savanna",
-        "Arid Steppe"
+        "Arid Steppe Hot"
       ]
     },
     {

@@ -1249,7 +1249,7 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "AridSteppe",
+                    "AridSteppeHot",
                     "HumidSubtropical",
                     "MarineWestCoast",
                     "HumidContinentalHotSummer",
@@ -3661,7 +3661,7 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "AridSteppe",
+                    "AridSteppeCold",
                     "Mediterranean",
                     "MarineWestCoast",
                     "HumidContinentalWarmSummer",
@@ -5531,7 +5531,7 @@
                 ],
                 "terrains" : [
                     "Alpine",
-                    "Mountain",
+                    "Mountainous",
                     "Rough"
                 ],
                 "vegetation" : [
@@ -7229,7 +7229,7 @@
             "location" : {
                 "waterSources" : [
                     "Ocean",
-                    "Saltwater Shores"
+                    "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
                     "MarineWestCoast",
@@ -7288,7 +7288,7 @@
             "location" : {
                 "waterSources" : [
                     "Ocean",
-                    "Saltwater Shores"
+                    "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
                     "Rainforest",
@@ -10450,8 +10450,10 @@
                     "Rainforest",
                     "Monsoon",
                     "Savanna",
-                    "AridDesert",
-                    "AridSteppe",
+                    "AridDesertCold",
+                    "AridDesertHot",
+                    "AridSteppeCold",
+                    "AridSteppeHot",
                     "Mediterranean",
                     "HumidSubtropical",
                     "MarineWestCoast",
@@ -10533,8 +10535,8 @@
                     "Rainforest",
                     "Monsoon",
                     "Savanna",
-                    "AridDesert",
-                    "AridSteppe",
+                    "AridDesertHot",
+                    "AridSteppeHot",
                     "Mediterranean",
                     "HumidSubtropical",
                     "MarineWestCoast",
@@ -12379,7 +12381,6 @@
                     "Coniferous",
                     "Deciduous",
                     "Heath",
-                    "Saltwater Coast",
                     "Grasslands"
                 ],
                 "climateSubGroups" : [
