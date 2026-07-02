@@ -13,7 +13,6 @@ const std::set<std::string> PersistentObjectManager::getAllDataPrefixes() const 
 	result.insert("armourtype");
 	result.insert("attacktable");
 	result.insert("book");
-	result.insert("climate");
 	result.insert("creaturepace");
 	result.insert("culture");
 	result.insert("culturetype");
