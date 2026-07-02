@@ -184,7 +184,6 @@ public:
 	 */
 	void save();
 
-
 	/**
 	 * @brief Serialize all objects of any game rule type with a specific prefix in their ID to file
 	 *
@@ -328,7 +327,7 @@ public:
 	 *
 	 * @return Reference to the PersistentObjectManager
 	 */
-	 PersistentObjectManager& objectManager() const {
+	PersistentObjectManager& objectManager() const {
 		return object_manager_;
 	}
 
@@ -391,7 +390,11 @@ void PersistentObjectSerializationManager::deserializeAllObjects(const std::stri
 
 	// Construct the full file path and create the file serializer, then load the data
 	JsonFileSerializer<T> file_serializer(*serializer, root_key, data_directory_ + filename);
-	file_serializer.load();
+	try {
+		file_serializer.load();
+	} catch (const std::exception& e) {
+		throw std::runtime_error("Failed to load JSON file: " + data_directory_ + filename + " - Error: " + e.what());
+	}
 }
 
 template<persistent_object T>
@@ -431,7 +434,7 @@ void PersistentObjectSerializationManager::serializeTsv(const std::string& filen
 }
 
 template<persistent_object T>
-std::unique_ptr<	serial::PersistentJsonSerializer<T>> PersistentObjectSerializationManager::createJsonSerializer() {
+std::unique_ptr<serial::PersistentJsonSerializer<T>> PersistentObjectSerializationManager::createJsonSerializer() {
 	using namespace rm::rule;
 	using namespace rm::serial;
 
