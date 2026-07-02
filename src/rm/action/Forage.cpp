@@ -247,8 +247,10 @@ float forage_water(rm::game::character::Character& forager, rm::game::Location& 
 	}
 
 	std::set<KoppenSubGroup> arid_climates{};
-	arid_climates.insert(KoppenSubGroup::kAridDesert);
-	arid_climates.insert(KoppenSubGroup::kAridSteppe);
+	arid_climates.insert(KoppenSubGroup::kAridDesertCold);
+	arid_climates.insert(KoppenSubGroup::kAridDesertHot);
+	arid_climates.insert(KoppenSubGroup::kAridSteppeCold);
+	arid_climates.insert(KoppenSubGroup::kAridSteppeHot);
 
 	for (const auto climate : arid_climates) {
 		if (search_location.hasClimateSubGroup(climate)) {

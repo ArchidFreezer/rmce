@@ -54,10 +54,14 @@ const std::string toString(KoppenSubGroup type) {
 		return "Monsoon";
 	case kSavanna:
 		return "Savanna";
-	case kAridDesert:
-		return "Arid Desert";
-	case kAridSteppe:
-		return "Arid Steppe";
+	case kAridDesertCold:
+		return "Arid Desert Cold";
+	case kAridDesertHot:
+		return "Arid Desert Hot";
+	case kAridSteppeCold:
+		return "Arid Steppe Cold";
+	case kAridSteppeHot:
+		return "Arid Steppe Hot";
 	case kMediterranean:
 		return "Mediterranean";
 	case kHumidSubtropical:
@@ -90,10 +94,14 @@ const std::optional<KoppenSubGroup> koppenSubGroup(std::string_view sv) {
 		return kMonsoon;
 	if (val == "savanna")
 		return kSavanna;
-	if (val == "ariddesert")
-		return kAridDesert;
-	if (val == "aridsteppe")
-		return kAridSteppe;
+	if (val == "ariddesertcold")
+		return kAridDesertCold;
+	if (val == "ariddeserthot")
+		return kAridDesertHot;
+	if (val == "aridsteppecold")
+		return kAridSteppeCold;
+	if (val == "aridsteppehot")
+		return kAridSteppeHot;
 	if (val == "mediterranean")
 		return kMediterranean;
 	if (val == "humidsubtropical")

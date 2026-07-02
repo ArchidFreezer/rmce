@@ -623,8 +623,8 @@ TEST_F(ForageTest, ForageWater_ColdWetClimate_EasyDifficulty) {
  * @brief Test forage_water with hot dry climate (extremely hard)
  */
 TEST_F(ForageTest, ForageWater_HotDryClimate_ExtremelyHardDifficulty) {
-	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kAridDesert);
-	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kAridSteppe);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kAridDesertHot);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kAridSteppeHot);
 
 	SustainanceModifiers modifiers{*manager, 4, 1, false};
 
@@ -881,7 +881,7 @@ TEST_F(ForageTest, ForageSustainance_GoodConditions_HighSuccessRate) {
 TEST_F(ForageTest, ForageSustainance_PoorConditions_LowSuccessRate) {
 	test_location->addVegetation(EnvironmentType::Vegetation::kBarren);
 	test_location->addTerrain(EnvironmentType::Terrain::kAlpine);
-	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kAridDesert);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kAridDesertCold);
 
 	SustainanceModifiers modifiers{*manager, 2, 3, true};
 

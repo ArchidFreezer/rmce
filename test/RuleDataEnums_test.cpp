@@ -201,8 +201,9 @@ namespace {
 	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kSavanna)), ClimateType::KoppenSubGroup::kSavanna);
 	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kSubarctic)), ClimateType::KoppenSubGroup::kSubarctic);
 	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kTundra)), ClimateType::KoppenSubGroup::kTundra);
+	    EXPECT_EQ(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kHighland)), ClimateType::KoppenSubGroup::kHighland);
 
-		EXPECT_NE(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kHumidContinentalHotSummer)), ClimateType::KoppenSubGroup::kAridDesert);
+		EXPECT_NE(ClimateType::koppenSubGroup(ClimateType::toString(ClimateType::KoppenSubGroup::kHumidContinentalHotSummer)), ClimateType::KoppenSubGroup::kAridDesertCold);
 	}
 
 	TEST(RuleDataEnums, EnvironmentFeature) {
