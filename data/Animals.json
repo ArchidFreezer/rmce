@@ -37,9 +37,9 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -101,9 +101,9 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -167,9 +167,9 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -241,9 +241,9 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -306,9 +306,9 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -375,15 +375,15 @@
                     "Alpine",
                     "Rough"
                 ],
-                "vegetation": [
-                  "Heath",
-                  "Plains",
-                  "Tundra"
+                "vegetation" : [
+                    "Heath",
+                    "Plains",
+                    "Tundra"
                 ],
                 "climateSubGroups" : [
-                    "AridSteppeCold",
-                    "Subarctic",
+                    "Arid Steppe Cold",
                     "Highland",
+                    "Subarctic",
                     "Tundra"
                 ]
             },
@@ -437,9 +437,9 @@
                     "Marsh"
                 ],
                 "climateGroups" : [
-                    "Tropical",
                     "Dry",
-                    "Temperate"
+                    "Temperate",
+                    "Tropical"
                 ]
             },
             "standardAttacks" : [
@@ -497,10 +497,10 @@
                     "Saltwater Coast"
                 ],
                 "climateGroups" : [
-                    "Tropical",
+                    "Continental",
                     "Dry",
                     "Temperate",
-                    "Continental"
+                    "Tropical"
                 ]
             },
             "standardAttacks" : [
@@ -567,10 +567,10 @@
                     "Saltwater Coast"
                 ],
                 "climateGroups" : [
-                    "Tropical",
+                    "Continental",
                     "Dry",
                     "Temperate",
-                    "Continental"
+                    "Tropical"
                 ]
             },
             "standardAttacks" : [
@@ -637,11 +637,11 @@
                     "Saltwater Coast"
                 ],
                 "climateGroups" : [
-                    "Tropical",
-                    "Dry",
-                    "Temperate",
                     "Continental",
-                    "Highland"
+                    "Dry",
+                    "Highland",
+                    "Temperate",
+                    "Tropical"
                 ]
             },
             "groupAttacks" : [
@@ -714,15 +714,15 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridSteppeHot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -766,13 +766,13 @@
                 "max" : 1
             },
             "location" : {
-                "vegetation": [
-                  "Heath",
-                  "Plains"
+                "vegetation" : [
+                    "Heath",
+                    "Plains"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertCold",
-                    "AridSteppeCold"
+                    "Arid Desert Cold",
+                    "Arid Steppe Cold"
                 ]
             },
             "standardAttacks" : [
@@ -835,18 +835,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -922,18 +922,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -999,14 +999,14 @@
                     "Plains"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "AridSteppeHot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic"
                 ]
             },
@@ -1078,12 +1078,12 @@
                     "Tundra"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Monsoon",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Rainforest",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -1163,12 +1163,12 @@
                     "Deciduous"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Monsoon",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -1249,11 +1249,11 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "AridSteppeHot",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -1316,18 +1316,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -1390,16 +1390,16 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -1474,12 +1474,12 @@
                     "Saltwater Coast"
                 ],
                 "climateGroups" : [
-                    "Tropical",
-                    "Dry",
-                    "Temperate",
                     "Continental",
+                    "Dry",
                     "Highland",
-                    "Polar"
+                    "Polar",
+                    "Temperate",
+                    "Tropical"
                 ]
             },
             "standardAttacks" : [
@@ -1559,12 +1559,12 @@
                     "Saltwater Coast"
                 ],
                 "climateGroups" : [
-                    "Tropical",
-                    "Dry",
-                    "Temperate",
                     "Continental",
+                    "Dry",
                     "Highland",
-                    "Polar"
+                    "Polar",
+                    "Temperate",
+                    "Tropical"
                 ]
             },
             "standardAttacks" : [
@@ -1629,15 +1629,15 @@
                     "Plains"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic"
                 ]
             },
@@ -1713,12 +1713,12 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "HumidSubtropical"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -1794,16 +1794,16 @@
                     "Plains"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -1861,10 +1861,10 @@
                     "Saltwater Coast"
                 ],
                 "climateGroups" : [
-                    "Tropical",
+                    "Continental",
                     "Dry",
                     "Temperate",
-                    "Continental"
+                    "Tropical"
                 ]
             },
             "standardAttacks" : [
@@ -1939,12 +1939,12 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Monsoon",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Rainforest",
                     "Subarctic"
                 ]
             },
@@ -2011,10 +2011,10 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "waterSources" : [
                     "Breaks",
@@ -2025,18 +2025,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic"
                 ]
             },
@@ -2102,10 +2102,10 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "waterSources" : [
                     "Breaks",
@@ -2117,18 +2117,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic"
                 ]
             },
@@ -2190,12 +2190,12 @@
                     "Jungle"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "AridDesertCold",
-                    "AridDesertHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Humid Subtropical",
                     "Mediterranean",
-                    "HumidSubtropical"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -2250,16 +2250,16 @@
             },
             "location" : {
                 "vegetation" : [
+                    "Grasslands",
                     "Heath",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot"
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -2332,12 +2332,12 @@
                     "Freshwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "HumidSubtropical"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -2403,13 +2403,13 @@
                     "Lake"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "MarineWestCoast",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
                     "Highland",
+                    "Marine West Coast",
+                    "Mediterranean",
                     "Tundra"
                 ]
             },
@@ -2469,9 +2469,9 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -2526,14 +2526,14 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -2603,8 +2603,8 @@
                     "Glacier"
                 ],
                 "climateSubGroups" : [
-                    "MarineWestCoast",
-                    "HumidContinentalWarmSummer",
+                    "Humid Continental Warm Summer",
+                    "Marine West Coast",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -2664,18 +2664,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -2748,14 +2748,14 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Monsoon",
-                    "Savanna",
-                    "AridSteppeHot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -2832,18 +2832,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic"
                 ]
             },
@@ -2910,18 +2910,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic"
                 ]
             },
@@ -2971,13 +2971,13 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -3045,14 +3045,14 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "Highland"
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Highland",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -3115,10 +3115,10 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot"
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot"
                 ]
             },
             "standardAttacks" : [
@@ -3171,8 +3171,8 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertHot",
-                    "AridSteppeHot"
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             },
             "standardAttacks" : [
@@ -3232,16 +3232,16 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Rainforest",
                     "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
                     "Subarctic",
-                    "Highland",
                     "Tundra"
                 ]
             },
@@ -3362,14 +3362,14 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -3438,13 +3438,13 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -3502,10 +3502,10 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
                     "Rainforest",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -3579,9 +3579,9 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -3661,10 +3661,10 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "AridSteppeCold",
+                    "Arid Steppe Cold",
+                    "Humid Continental Warm Summer",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "MarineWestCoast",
-                    "HumidContinentalWarmSummer",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -3749,10 +3749,10 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridSteppeHot",
+                    "Arid Steppe Hot",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "MarineWestCoast",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -3825,9 +3825,9 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "AridSteppeHot",
-                    "MarineWestCoast",
-                    "HumidContinentalWarmSummer"
+                    "Arid Steppe Hot",
+                    "Humid Continental Warm Summer",
+                    "Marine West Coast"
                 ]
             },
             "standardAttacks" : [
@@ -3894,9 +3894,9 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -3966,9 +3966,9 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -4033,11 +4033,11 @@
                     "Saltwater Coast"
                 ],
                 "climateGroups" : [
-                    "Tropical",
-                    "Dry",
-                    "Temperate",
                     "Continental",
-                    "Polar"
+                    "Dry",
+                    "Polar",
+                    "Temperate",
+                    "Tropical"
                 ]
             },
             "standardAttacks" : [
@@ -4087,11 +4087,11 @@
                     "Saltwater Coast"
                 ],
                 "climateGroups" : [
-                    "Tropical",
-                    "Dry",
-                    "Temperate",
                     "Continental",
-                    "Polar"
+                    "Dry",
+                    "Polar",
+                    "Temperate",
+                    "Tropical"
                 ]
             },
             "standardAttacks" : [
@@ -4152,11 +4152,11 @@
                     "Saltwater Coast"
                 ],
                 "climateGroups" : [
-                    "Tropical",
-                    "Dry",
-                    "Temperate",
                     "Continental",
-                    "Polar"
+                    "Dry",
+                    "Polar",
+                    "Temperate",
+                    "Tropical"
                 ]
             },
             "standardAttacks" : [
@@ -4226,14 +4226,14 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "AridDesertCold",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic"
                 ]
             },
@@ -4304,10 +4304,10 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -4378,8 +4378,8 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -4441,8 +4441,8 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
                     "Monsoon",
+                    "Rainforest",
                     "Savanna"
                 ]
             },
@@ -4513,14 +4513,14 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -4579,13 +4579,13 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -4721,11 +4721,11 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -4789,12 +4789,12 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
                     "Mediterranean",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -4873,9 +4873,9 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "HumidSubtropical"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -4947,8 +4947,8 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertHot",
-                    "AridSteppeHot"
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             },
             "standardAttacks" : [
@@ -5020,8 +5020,8 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridSteppeHot"
+                    "Arid Steppe Hot",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -5073,11 +5073,11 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Monsoon",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalWarmSummer",
+                    "Rainforest",
                     "Subarctic"
                 ]
             },
@@ -5144,14 +5144,14 @@
             "location" : {
                 "vegetation" : [
                     "Deciduous",
-                    "Jungle",
-                    "Grasslands"
+                    "Grasslands",
+                    "Jungle"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Highland",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "HumidSubtropical",
-                    "Highland"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -5221,10 +5221,10 @@
                     "Plains"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -5296,8 +5296,8 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
-                    "Heath",
                     "Grasslands",
+                    "Heath",
                     "Plains"
                 ],
                 "waterSources" : [
@@ -5310,11 +5310,11 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -5383,12 +5383,12 @@
                     "Deciduous"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Warm Summer",
                     "Monsoon",
+                    "Rainforest",
                     "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "HumidContinentalWarmSummer",
                     "Subarctic"
                 ]
             },
@@ -5537,14 +5537,14 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
-                    "Heath",
-                    "Grasslands"
+                    "Grasslands",
+                    "Heath"
                 ],
                 "climateSubGroups" : [
-                    "MarineWestCoast",
-                    "HumidContinentalWarmSummer",
-                    "Subarctic",
-                    "Highland"
+                    "Highland",
+                    "Humid Continental Warm Summer",
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             },
             "standardAttacks" : [
@@ -5623,8 +5623,8 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
-                    "Heath",
                     "Grasslands",
+                    "Heath",
                     "Plains",
                     "Tundra"
                 ],
@@ -5637,18 +5637,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -5705,8 +5705,8 @@
             },
             "location" : {
                 "vegetation" : [
-                    "Heath",
                     "Grasslands",
+                    "Heath",
                     "Plains"
                 ],
                 "waterSources" : [
@@ -5714,8 +5714,8 @@
                     "Lake"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridSteppeHot"
+                    "Arid Steppe Hot",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -5779,8 +5779,8 @@
             },
             "location" : {
                 "vegetation" : [
-                    "Heath",
                     "Grasslands",
+                    "Heath",
                     "Plains"
                 ],
                 "waterSources" : [
@@ -5788,8 +5788,8 @@
                     "Lake"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridSteppeHot"
+                    "Arid Steppe Hot",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -5865,8 +5865,8 @@
                     "Freshwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertHot",
-                    "AridSteppeHot"
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             },
             "rangedAttacks" : [
@@ -5922,15 +5922,15 @@
                     "Rural"
                 ],
                 "vegetation" : [
-                    "Plains",
-                    "Grasslands"
+                    "Grasslands",
+                    "Plains"
                 ],
                 "climateSubGroups" : [
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -6014,18 +6014,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic"
                 ]
             },
@@ -6102,16 +6102,16 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Savanna",
                     "Subarctic"
                 ]
             },
@@ -6165,11 +6165,11 @@
                     "Plains"
                 ],
                 "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -6255,18 +6255,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -6322,16 +6322,16 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic"
                 ]
             },
@@ -6381,13 +6381,13 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -6451,13 +6451,13 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -6517,8 +6517,8 @@
                     "Saltwater Coast"
                 ],
                 "climateGroups" : [
-                    "Temperate",
-                    "Polar"
+                    "Polar",
+                    "Temperate"
                 ]
             },
             "standardAttacks" : [
@@ -6584,10 +6584,10 @@
                     "Deciduous"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridSteppeHot",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -6636,12 +6636,12 @@
                 ],
                 "waterSources" : [
                     "Freshwater Coast",
-                    "Saltwater Coast",
-                    "Islet"
+                    "Islet",
+                    "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridSteppeHot"
+                    "Arid Steppe Hot",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -6713,14 +6713,14 @@
                     "Jungle"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -6792,16 +6792,16 @@
             },
             "location" : {
                 "waterSources" : [
-                    "Lake",
                     "Freshwater Coast",
+                    "Lake",
                     "Ocean",
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -6863,9 +6863,9 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
+                    "Arid Steppe Hot",
                     "Rainforest",
-                    "Savanna",
-                    "AridSteppeHot"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -6931,8 +6931,8 @@
             "location" : {
                 "vegetation" : [
                     "Deciduous",
-                    "Heath",
                     "Grasslands",
+                    "Heath",
                     "Plains"
                 ],
                 "waterSources" : [
@@ -6940,11 +6940,11 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "HumidSubtropical"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -7009,9 +7009,9 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
-                    "Grasslands",
                     "Plains"
                 ],
                 "waterSources" : [
@@ -7025,16 +7025,16 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic"
                 ]
             },
@@ -7094,9 +7094,9 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
-                    "Grasslands",
                     "Plains"
                 ],
                 "waterSources" : [
@@ -7110,16 +7110,16 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic"
                 ]
             },
@@ -7183,8 +7183,8 @@
                     "Tundra"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertCold",
-                    "AridSteppeCold",
+                    "Arid Desert Cold",
+                    "Arid Steppe Cold",
                     "Tundra"
                 ]
             },
@@ -7232,7 +7232,7 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "MarineWestCoast",
+                    "Marine West Coast",
                     "Subarctic"
                 ]
             },
@@ -7291,11 +7291,11 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -7353,10 +7353,10 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Monsoon",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -7472,11 +7472,11 @@
                     "Plains"
                 ],
                 "climateSubGroups" : [
-                    "Monsoon",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Monsoon"
                 ]
             },
             "standardAttacks" : [
@@ -7534,11 +7534,11 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "HumidSubtropical"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -7606,7 +7606,7 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "HumidContinentalWarmSummer",
+                    "Humid Continental Warm Summer",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -7667,11 +7667,11 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -7720,15 +7720,15 @@
                     "Plains"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
-                    "Subarctic",
-                    "Highland"
+                    "Subarctic"
                 ]
             },
             "standardAttacks" : [
@@ -7804,8 +7804,8 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertCold",
-                    "AridSteppeCold",
+                    "Arid Desert Cold",
+                    "Arid Steppe Cold",
                     "Highland"
                 ]
             },
@@ -7886,12 +7886,12 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
-                    "Subarctic",
                     "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Subarctic",
                     "Tundra"
                 ]
             },
@@ -7966,19 +7966,19 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
                     "Rainforest",
                     "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
                     "Subarctic",
-                    "Highland",
                     "Tundra"
                 ]
             },
@@ -8038,10 +8038,10 @@
                     "Jungle"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -8115,11 +8115,11 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
                     "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -8202,16 +8202,16 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -8271,7 +8271,7 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "MarineWestCoast",
+                    "Marine West Coast",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -8332,12 +8332,12 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -8395,14 +8395,14 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -8466,14 +8466,14 @@
                     "Plains"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -8546,13 +8546,13 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -8609,9 +8609,9 @@
                     "Plains"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot"
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -8676,13 +8676,13 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic"
                 ]
             },
@@ -8728,8 +8728,8 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
-                    "Heath",
                     "Grasslands",
+                    "Heath",
                     "Plains",
                     "Tundra"
                 ],
@@ -8744,17 +8744,17 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
                     "Rainforest",
                     "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
                     "Subarctic",
-                    "Highland",
                     "Tundra"
                 ]
             },
@@ -8824,15 +8824,15 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Monsoon",
-                    "Savanna",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -8892,8 +8892,8 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "HumidSubtropical",
-                    "Highland"
+                    "Highland",
+                    "Humid Subtropical"
                 ]
             },
             "standardAttacks" : [
@@ -8965,12 +8965,12 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "HumidSubtropical"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -9025,12 +9025,12 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Ice Cap",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
                     "Subarctic",
-                    "Tundra",
-                    "IceCap"
+                    "Tundra"
                 ]
             },
             "standardAttacks" : [
@@ -9081,15 +9081,15 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
-               ]
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
+                ]
             },
             "standardAttacks" : [
                 {
@@ -9218,9 +9218,9 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
-                    "Grasslands",
                     "Plains"
                 ],
                 "waterSources" : [
@@ -9235,14 +9235,14 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Monsoon",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -9302,10 +9302,10 @@
                     "Lake"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "Highland"
+                    "Highland",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -9374,11 +9374,11 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
                     "Subarctic"
                 ]
             },
@@ -9448,9 +9448,9 @@
                     "Rough"
                 ],
                 "vegetation" : [
+                    "Grasslands",
                     "Heath",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "waterSources" : [
                     "Freshwater Coast",
@@ -9458,12 +9458,12 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "AridSteppeCold",
-                    "AridSteppeHot",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Subarctic"
                 ]
             },
@@ -9532,10 +9532,10 @@
                     "Jungle"
                 ],
                 "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
                     "Rainforest",
                     "Savanna",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
                     "Subarctic"
                 ]
             },
@@ -9598,8 +9598,8 @@
                     "Plains"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
                     "Mediterranean"
                 ]
             },
@@ -9662,11 +9662,11 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -9716,10 +9716,10 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Savanna",
+                    "Humid Subtropical",
                     "Mediterranean",
-                    "HumidSubtropical"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -9784,12 +9784,12 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
                     "Mediterranean",
-                    "HumidSubtropical"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "groupAttacks" : [
@@ -9839,13 +9839,13 @@
                     "Freshwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Savanna",
                     "Subarctic"
                 ]
             },
@@ -9911,9 +9911,9 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Plains",
-                    "Grasslands",
                     "Tundra"
                 ],
                 "waterSources" : [
@@ -9926,17 +9926,17 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalWarmSummer",
-                    "Subarctic",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
                     "Highland",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
+                    "Savanna",
+                    "Subarctic",
                     "Tundra"
                 ]
             },
@@ -10001,14 +10001,14 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Savanna",
-                    "AridSteppeHot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -10084,14 +10084,14 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -10172,11 +10172,11 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
                     "Subarctic"
                 ]
             },
@@ -10236,7 +10236,7 @@
                     "Tundra"
                 ],
                 "climateSubGroups" : [
-                    "HumidContinentalWarmSummer",
+                    "Humid Continental Warm Summer",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -10312,10 +10312,10 @@
                     "Lake"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Arid Steppe Hot",
                     "Monsoon",
-                    "Savanna",
-                    "AridSteppeHot"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -10384,9 +10384,9 @@
                     "Lake"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "HumidSubtropical"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -10447,18 +10447,18 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -10532,16 +10532,16 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -10606,12 +10606,12 @@
                     "Deciduous"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -10671,13 +10671,13 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Monsoon",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
-                    "Highland"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -10725,9 +10725,9 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Marine West Coast",
                     "Monsoon",
-                    "MarineWestCoast"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -10780,10 +10780,10 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "waterSources" : [
                     "Breaks",
@@ -10792,13 +10792,13 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -10869,14 +10869,14 @@
                     "Freshwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -10931,12 +10931,12 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Subtropical",
+                    "Ice Cap",
+                    "Marine West Coast",
                     "Monsoon",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "Tundra",
-                    "IceCap"
+                    "Rainforest",
+                    "Tundra"
                 ]
             },
             "standardAttacks" : [
@@ -10992,12 +10992,12 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Subtropical",
+                    "Ice Cap",
+                    "Marine West Coast",
                     "Monsoon",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "Tundra",
-                    "IceCap"
+                    "Rainforest",
+                    "Tundra"
                 ]
             },
             "standardAttacks" : [
@@ -11044,11 +11044,11 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic"
                 ]
             },
@@ -11112,9 +11112,9 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "MarineWestCoast",
-                    "Tundra",
-                    "IceCap"
+                    "Ice Cap",
+                    "Marine West Coast",
+                    "Tundra"
                 ]
             },
             "standardAttacks" : [
@@ -11170,9 +11170,9 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "MarineWestCoast",
-                    "Tundra",
-                    "IceCap"
+                    "Ice Cap",
+                    "Marine West Coast",
+                    "Tundra"
                 ]
             },
             "standardAttacks" : [
@@ -11221,9 +11221,9 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "HumidSubtropical"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -11282,10 +11282,10 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "waterSources" : [
                     "Breaks",
@@ -11296,12 +11296,12 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -11370,13 +11370,13 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -11427,13 +11427,13 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -11493,11 +11493,11 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "MarineWestCoast",
-                    "Highland"
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Highland",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -11569,16 +11569,16 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
-                    "Highland"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -11632,15 +11632,15 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
                     "Rainforest",
                     "Savanna",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
                     "Subarctic"
                 ]
             },
@@ -11710,9 +11710,9 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Highland",
                     "Monsoon",
-                    "Highland"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -11756,10 +11756,10 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "waterSources" : [
                     "Breaks",
@@ -11770,20 +11770,20 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
-                    "Subarctic",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
                     "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
+                    "Subarctic",
                     "Tundra"
                 ]
             },
@@ -11837,10 +11837,10 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "waterSources" : [
                     "Breaks",
@@ -11851,20 +11851,20 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridDesertCold",
-                    "AridDesertHot",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
-                    "Subarctic",
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
                     "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
+                    "Subarctic",
                     "Tundra"
                 ]
             },
@@ -11929,16 +11929,16 @@
             "location" : {
                 "vegetation" : [
                     "Deciduous",
+                    "Grasslands",
                     "Jungle",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
                     "Monsoon",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -12000,13 +12000,13 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -12065,11 +12065,11 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
+                    "Humid Subtropical",
                     "Mediterranean",
-                    "HumidSubtropical"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -12131,9 +12131,9 @@
                     "Waste"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot"
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -12192,13 +12192,13 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -12258,11 +12258,11 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic"
                 ]
             },
@@ -12321,9 +12321,9 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Highland",
                     "Monsoon",
-                    "Highland"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -12380,12 +12380,12 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
-                    "Heath",
-                    "Grasslands"
+                    "Grasslands",
+                    "Heath"
                 ],
                 "climateSubGroups" : [
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             },
             "standardAttacks" : [
@@ -12453,9 +12453,9 @@
                     "Underground"
                 ],
                 "climateSubGroups" : [
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast"
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -12524,10 +12524,10 @@
                     "Deciduous"
                 ],
                 "climateSubGroups" : [
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalWarmSummer"
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -12589,19 +12589,19 @@
             },
             "location" : {
                 "vegetation" : [
-                    "Plains",
-                    "Grasslands"
+                    "Grasslands",
+                    "Plains"
                 ],
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -12669,24 +12669,24 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "waterSources" : [
                     "Freshwater Coast",
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna",
                     "Subarctic"
                 ]
             },
@@ -12762,12 +12762,12 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Highland",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "Savanna",
-                    "HumidSubtropical",
-                    "HumidContinentalWarmSummer",
-                    "Highland"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -12840,13 +12840,13 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "AridSteppeHot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalWarmSummer",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic"
                 ]
             },
@@ -12922,8 +12922,8 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
                     "Monsoon",
+                    "Rainforest",
                     "Savanna"
                 ]
             },
@@ -12980,10 +12980,10 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical"
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -13033,12 +13033,12 @@
                     "Freshwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -13107,10 +13107,10 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "waterSources" : [
                     "Breaks",
@@ -13122,16 +13122,16 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
-                    "AridSteppeCold",
-                    "AridSteppeHot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -13198,13 +13198,13 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -13271,13 +13271,13 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -13333,13 +13333,13 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -13404,13 +13404,13 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer"
+                    "Monsoon",
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -13470,14 +13470,14 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Mediterranean",
                     "Rainforest",
                     "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
                     "Subarctic"
                 ]
             },
@@ -13532,9 +13532,9 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Subtropical",
                     "Monsoon",
-                    "HumidSubtropical"
+                    "Rainforest"
                 ]
             },
             "standardAttacks" : [
@@ -13595,12 +13595,12 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
                     "Mediterranean",
-                    "HumidSubtropical"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -13659,8 +13659,8 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Tundra",
-                    "IceCap"
+                    "Ice Cap",
+                    "Tundra"
                 ]
             },
             "standardAttacks" : [
@@ -13717,8 +13717,8 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Tundra",
-                    "IceCap"
+                    "Ice Cap",
+                    "Tundra"
                 ]
             },
             "standardAttacks" : [
@@ -13779,8 +13779,8 @@
                     "Freshwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Mediterranean",
-                    "MarineWestCoast"
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -13852,8 +13852,8 @@
                     "Freshwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Mediterranean",
-                    "MarineWestCoast"
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             },
             "standardAttacks" : [
@@ -13921,10 +13921,10 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
                     "Plains",
-                    "Grasslands",
                     "Tundra"
                 ],
                 "waterSources" : [
@@ -13938,15 +13938,15 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
+                    "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
-                    "Highland"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -13992,9 +13992,9 @@
             "location" : {
                 "vegetation" : [
                     "Deciduous",
+                    "Grasslands",
                     "Jungle",
-                    "Plains",
-                    "Grasslands"
+                    "Plains"
                 ],
                 "waterSources" : [
                     "Freshwater Coast",
@@ -14002,11 +14002,11 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
-                    "Savanna",
+                    "Humid Subtropical",
                     "Mediterranean",
-                    "HumidSubtropical"
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -14064,10 +14064,10 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Monsoon",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
+                    "Rainforest",
                     "Subarctic",
                     "Tundra"
                 ]
@@ -14126,14 +14126,14 @@
                     "Ocean"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Subtropical",
+                    "Ice Cap",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic",
-                    "Tundra",
-                    "IceCap"
+                    "Tundra"
                 ]
             },
             "standardAttacks" : [
@@ -14190,7 +14190,7 @@
                     "Ocean"
                 ],
                 "climateSubGroups" : [
-                    "IceCap"
+                    "Ice Cap"
                 ]
             },
             "standardAttacks" : [
@@ -14257,14 +14257,14 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Subtropical",
+                    "Ice Cap",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic",
-                    "Tundra",
-                    "IceCap"
+                    "Tundra"
                 ]
             },
             "standardAttacks" : [
@@ -14333,14 +14333,14 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Monsoon",
+                    "Humid Subtropical",
+                    "Ice Cap",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
+                    "Monsoon",
+                    "Rainforest",
                     "Subarctic",
-                    "Tundra",
-                    "IceCap"
+                    "Tundra"
                 ]
             },
             "standardAttacks" : [
@@ -14402,17 +14402,17 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
                     "Rainforest",
                     "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
-                    "Subarctic",
-                    "Highland"
+                    "Subarctic"
                 ]
             },
             "standardAttacks" : [
@@ -14485,16 +14485,16 @@
                     "Oasis"
                 ],
                 "climateSubGroups" : [
-                    "Rainforest",
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
                     "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
-                    "Highland"
+                    "Rainforest",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
@@ -14561,10 +14561,10 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
+                    "Grasslands",
                     "Heath",
                     "Jungle",
                     "Plains",
-                    "Grasslands",
                     "Tundra"
                 ],
                 "waterSources" : [
@@ -14578,15 +14578,15 @@
                     "Saltwater Coast"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "Mediterranean",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "HumidContinentalHotSummer",
-                    "HumidContinentalWarmSummer",
-                    "Subarctic",
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
                     "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
+                    "Subarctic",
                     "Tundra"
                 ]
             },
@@ -14640,8 +14640,8 @@
                     "Lake"
                 ],
                 "climateSubGroups" : [
-                    "Subarctic",
                     "Highland",
+                    "Subarctic",
                     "Tundra"
                 ]
             },
@@ -14709,11 +14709,11 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "HumidSubtropical",
-                    "MarineWestCoast",
-                    "Highland"
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Highland",
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             },
             "standardAttacks" : [
@@ -14767,10 +14767,10 @@
                     "Saltwater Coast"
                 ],
                 "climateGroups" : [
-                    "Tropical",
+                    "Continental",
                     "Dry",
                     "Temperate",
-                    "Continental"
+                    "Tropical"
                 ]
             },
             "standardAttacks" : [
@@ -14846,11 +14846,11 @@
                     "Marsh"
                 ],
                 "climateSubGroups" : [
-                    "Savanna",
-                    "AridDesertHot",
-                    "AridSteppeHot",
-                    "HumidSubtropical",
-                    "Highland"
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Highland",
+                    "Humid Subtropical",
+                    "Savanna"
                 ]
             },
             "standardAttacks" : [
