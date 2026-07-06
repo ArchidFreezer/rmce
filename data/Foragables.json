@@ -17,9 +17,6 @@
             "location" : {
                 "terrains" : [
                     "Alpine"
-                ],
-                "climates" : [
-                    "CLIMATE_FRIGID"
                 ]
             }
         },
@@ -43,11 +40,8 @@
                     "Heath",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -69,10 +63,8 @@
                 "waterSources" : [
                     "Glacier"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Tundra"
                 ]
             }
         },
@@ -100,9 +92,8 @@
                     "Marsh",
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Humid Subtropical"
                 ]
             }
         },
@@ -125,9 +116,8 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -150,9 +140,9 @@
                     "Alpine",
                     "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -174,9 +164,8 @@
                 "vegetation" : [
                     "Heath"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -198,10 +187,8 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -223,9 +210,9 @@
                 "waterSources" : [
                     "Breaks"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Mediterranean",
+                    "Savanna"
                 ]
             }
         },
@@ -248,9 +235,9 @@
                     "Islet",
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -272,12 +259,9 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -299,9 +283,11 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateGroups" : [
+                    "Continental",
+                    "Dry",
+                    "Temperate",
+                    "Tropical"
                 ]
             }
         },
@@ -323,10 +309,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -348,6 +332,9 @@
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous"
+                ],
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -366,12 +353,11 @@
             "addictionFactor" : 8,
             "cost" : "6 bp",
             "location" : {
-                "vegetation" : [
-                    "Plains"
+                "waterSources" : [
+                    "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -394,9 +380,8 @@
                     "Freshwater Coast",
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Arid Steppe Cold"
                 ]
             }
         },
@@ -420,10 +405,8 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateGroups" : [
+                    "Temperate"
                 ]
             }
         },
@@ -442,14 +425,13 @@
             "addictionFactor" : 0,
             "cost" : "1 bp",
             "location" : {
-                "terrains" : [
-                    "Alpine"
+                "waterSources" : [
+                    "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Arid Steppe Cold",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -471,11 +453,8 @@
                 "vegetation" : [
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -496,12 +475,12 @@
             "location" : {
                 "vegetation" : [
                     "Grasslands",
-                    "Plains"
+                    "Plains",
+                    "Tundra"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Arid Steppe Cold",
+                    "Tundra"
                 ]
             }
         },
@@ -524,10 +503,8 @@
                     "Deciduous",
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_HOT_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateGroups" : [
+                    "Temperate"
                 ]
             }
         },
@@ -550,10 +527,8 @@
                     "Deciduous",
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_HOT_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateGroups" : [
+                    "Temperate"
                 ]
             }
         },
@@ -573,17 +548,18 @@
             "cost" : "180-300 gp",
             "location" : {
                 "vegetation" : [
+                    "Coniferous",
                     "Deciduous",
                     "Grasslands",
                     "Heath",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
+                    "Savanna",
+                    "Subarctic"
                 ]
             }
         },
@@ -606,8 +582,9 @@
                     "Heath",
                     "Tundra"
                 ],
-                "climates" : [
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -629,10 +606,8 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -643,8 +618,8 @@
             "loreSkill" : "SKILL_HERB_LORE",
             "characteristics" : "Avhail is a short bush (about 3' high) with a brown stem and orange leaves. Its yellow, cherry-sized fruits (found in abundance after the summer solstice) have a sweet, mellon-like taste, numerous tiny seeds, and are very nutritious.",
             "medicinalUses" : "",
-            "otherUses" : "Avhail fruits may be eaten as a food source or a dessert treat when baked into pastries. They are also fermented into a potent brandy called biotaille.\nRegular ingestion negates the effects of dietary deficiency and mutes hunger and deprivation.",
-            "warning" : "Overindulgence of biotaille can result in a severe (though temporary) headache the following morning.",
+            "otherUses" : "Avhail fruits may be eaten as a food source or a dessert treat when baked into pastries. They are also fermented into a potent brandy called <em>biotaille</em>.\nRegular ingestion negates the effects of dietary deficiency and mutes hunger and deprivation.",
+            "warning" : "Overindulgence of <em>biotaille</em> can result in a severe (though temporary) headache the following morning.",
             "preparationType" : "Ingest",
             "effectType" : "General Purpose",
             "findDifficulty" : "Easy",
@@ -655,10 +630,8 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -681,9 +654,9 @@
                     "Marsh",
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -702,13 +675,12 @@
             "addictionFactor" : 7,
             "cost" : "102 gp",
             "location" : {
-                "terrains" : [
-                    "Alpine"
+                "waterSources" : [
+                    "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Arid Steppe Cold",
+                    "Subarctic"
                 ]
             }
         },
@@ -730,10 +702,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -778,10 +748,8 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateGroups" : [
+                    "Temperate"
                 ]
             }
         },
@@ -823,9 +791,8 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateGroups" : [
+                    "Tropical"
                 ]
             }
         },
@@ -847,9 +814,9 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Humid Continental Warm Summer",
+                    "Subarctic"
                 ]
             }
         },
@@ -871,9 +838,9 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -893,11 +860,11 @@
             "cost" : "9 sp/dose",
             "location" : {
                 "vegetation" : [
-                    "Grasslands"
+                    "Grasslands",
+                    "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateGroups" : [
+                    "Temperate"
                 ]
             }
         },
@@ -919,9 +886,8 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Rainforest"
                 ]
             }
         },
@@ -960,15 +926,12 @@
             "addictionFactor" : 0,
             "cost" : "25 gp",
             "location" : {
-                "terrains" : [
-                    "Mountainous"
-                ],
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -990,8 +953,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1012,6 +975,14 @@
             "location" : {
                 "waterSources" : [
                     "Marsh"
+                ],
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
+                    "Monsoon"
                 ]
             }
         },
@@ -1033,13 +1004,8 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1062,9 +1028,9 @@
                     "Desert",
                     "Oasis"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -1107,11 +1073,9 @@
                     "Mountainous",
                     "Rough"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -1134,11 +1098,8 @@
                     "Coniferous",
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1161,8 +1122,9 @@
                     "Desert",
                     "Oasis"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -1184,10 +1146,8 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateGroups" : [
+                    "Temperate"
                 ]
             }
         },
@@ -1209,9 +1169,12 @@
                 "features" : [
                     "Volcanic"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateGroups" : [
+                    "Continental",
+                    "Dry"
+                ],
+                "climateSubGroups" : [
+                    "Highland"
                 ]
             }
         },
@@ -1233,9 +1196,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1258,9 +1220,8 @@
                     "Rough",
                     "Waste"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateGroups" : [
+                    "Temperate"
                 ]
             }
         },
@@ -1283,9 +1244,14 @@
                     "Freshwater Coast",
                     "Lake"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_FRIGID"
+                "climateGroups" : [
+                    "Continental",
+                    "Polar"
+                ],
+                "climateSubGroups" : [
+                    "Arid Steppe Cold",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -1307,9 +1273,10 @@
                 "features" : [
                     "Volcanic"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -1328,12 +1295,11 @@
             "addictionFactor" : 22,
             "cost" : "110 gp",
             "location" : {
-                "vegetation" : [
-                    "Plains"
+                "waterSources" : [
+                    "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1356,9 +1322,9 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1401,9 +1367,9 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Humid Continental Warm Summer",
+                    "Savanna"
                 ]
             }
         },
@@ -1445,8 +1411,9 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Savanna"
                 ]
             }
         },
@@ -1468,9 +1435,8 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateGroups" : [
+                    "Tropical"
                 ]
             }
         },
@@ -1490,10 +1456,11 @@
             "cost" : "10 gp/dose",
             "location" : {
                 "vegetation" : [
-                    "Coniferous"
+                    "Deciduous",
+                    "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1536,9 +1503,9 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1561,9 +1528,9 @@
                     "Desert",
                     "Oasis"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -1606,8 +1573,8 @@
                     "Desert",
                     "Oasis"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot"
                 ]
             }
         },
@@ -1629,9 +1596,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1653,10 +1619,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1675,9 +1639,9 @@
             "addictionFactor" : 0,
             "cost" : "1 sp/dose",
             "location" : {
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer"
                 ]
             }
         },
@@ -1699,8 +1663,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1722,8 +1686,9 @@
                 "terrains" : [
                     "Rough"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Steppe Hot",
+                    "Savanna"
                 ]
             }
         },
@@ -1745,8 +1710,8 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Rainforest"
                 ]
             }
         },
@@ -1769,10 +1734,8 @@
                     "Mountainous",
                     "Rough"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Highland"
                 ]
             }
         },
@@ -1812,11 +1775,12 @@
             "cost" : "845 gp/dose",
             "location" : {
                 "terrains" : [
-                    "Alpine"
+                    "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Marine West Coast",
+                    "Tundra"
                 ]
             }
         },
@@ -1835,9 +1799,8 @@
             "addictionFactor" : 0,
             "cost" : "50 gp/dose",
             "location" : {
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1860,8 +1823,9 @@
                     "Desert",
                     "Oasis"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -1883,9 +1847,9 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -1906,6 +1870,12 @@
             "location" : {
                 "waterSources" : [
                     "Marsh"
+                ],
+                "climateSubGroups" : [
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -1927,9 +1897,8 @@
                 "vegetation" : [
                     "Heath"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -1952,9 +1921,9 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Steppe Hot",
+                    "Mediterranean"
                 ]
             }
         },
@@ -1977,9 +1946,10 @@
                     "Mountainous",
                     "Rough"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -2021,9 +1991,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2042,12 +2011,14 @@
             "addictionFactor" : 0,
             "cost" : "The Drughu would only bestow deadman’s eyes upon the most trusted of allies, often with the expectation of some reciprocal service",
             "location" : {
-                "terrains" : [
-                    "Rough"
-                ],
                 "vegetation" : [
                     "Deciduous",
-                    "Grasslands"
+                    "Grasslands",
+                    "Heath"
+                ],
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -2069,10 +2040,8 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateGroups" : [
+                    "Tropical"
                 ]
             }
         },
@@ -2094,9 +2063,8 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2118,9 +2086,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2142,11 +2109,9 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -2168,9 +2133,11 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -2192,9 +2159,9 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -2216,8 +2183,8 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Rainforest"
                 ]
             }
         },
@@ -2240,9 +2207,8 @@
                     "Mountainous",
                     "Rough"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2284,11 +2250,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Highland"
                 ]
             }
         },
@@ -2311,9 +2274,10 @@
                     "Freshwater Coast",
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             }
         },
@@ -2335,9 +2299,9 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2359,13 +2323,10 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -2388,11 +2349,12 @@
                     "Deciduous",
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_HOT_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Savanna"
                 ]
             }
         },
@@ -2414,10 +2376,10 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -2439,13 +2401,11 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -2468,10 +2428,8 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2493,10 +2451,9 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -2516,6 +2473,9 @@
             "cost" : "8 gp/dose",
             "location" : {
                 "vegetation" : [
+                    "Tundra"
+                ],
+                "climateSubGroups" : [
                     "Tundra"
                 ]
             }
@@ -2538,9 +2498,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2560,13 +2519,11 @@
             "cost" : "7 gp/dose",
             "location" : {
                 "vegetation" : [
-                    "Grasslands"
+                    "Grasslands",
+                    "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2587,6 +2544,10 @@
             "location" : {
                 "terrains" : [
                     "Mountainous"
+                ],
+                "climateSubGroups" : [
+                    "Highland",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2628,8 +2589,8 @@
                 "features" : [
                     "Volcanic"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Highland"
                 ]
             }
         },
@@ -2651,11 +2612,9 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -2677,9 +2636,10 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -2702,9 +2662,8 @@
                     "Ocean",
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2726,11 +2685,9 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -2752,11 +2709,12 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_HOT_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Mediterranean"
                 ]
             }
         },
@@ -2779,9 +2737,8 @@
                     "Freshwater Coast",
                     "Lake"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2802,6 +2759,10 @@
             "location" : {
                 "vegetation" : [
                     "Deciduous"
+                ],
+                "climateSubGroups" : [
+                    "Highland",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2824,10 +2785,8 @@
                     "Mountainous",
                     "Waste"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Highland"
                 ]
             }
         },
@@ -2849,9 +2808,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2873,9 +2831,10 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -2897,8 +2856,8 @@
                 "terrains" : [
                     "Alpine"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Highland"
                 ]
             }
         },
@@ -2920,11 +2879,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -2949,10 +2905,10 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -2974,11 +2930,8 @@
                 "vegetation" : [
                     "Heath"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3000,8 +2953,8 @@
                 "waterSources" : [
                     "Desert"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot"
                 ]
             }
         },
@@ -3023,28 +2976,9 @@
                 "features" : [
                     "Volcanic"
                 ],
-                "climates" : [
-                    "CLIMATE_FRIGID"
-                ]
-            }
-        },
-        {
-            "id" : "FORAGABLE_GENFUL",
-            "name" : "Genful",
-            "otherNames" : "Earth Ash",
-            "loreSkill" : "SKILL_HERB_LORE",
-            "characteristics" : "This white lichen grows in patches up to 1' square on long dead or inactive volcanoes. It clings to the rock on which it grows determinedly and cannot be scraped off without a knife.",
-            "medicinalUses" : "If removed and consumed, a genful patch equal in size to a man’s palm restores 90 hits over the next 24 hours. Gefnul keeps for up to a month after being harvested, though it is rumoured that some healers have found a way to preserve its virtue indefinitely.",
-            "otherUses" : "",
-            "warning" : "",
-            "preparationType" : "Ingest",
-            "effectType" : "Concussion Relief",
-            "findDifficulty" : "Hard",
-            "addictionFactor" : 0,
-            "cost" : "90 gp/dose",
-            "location" : {
-                "features" : [
-                    "Volcanic"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Tundra"
                 ]
             }
         },
@@ -3067,10 +3001,8 @@
                     "Mountainous",
                     "Rough"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3092,6 +3024,9 @@
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
+                ],
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3113,9 +3048,9 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -3140,8 +3075,11 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Cold",
+                    "Arid Desert Hot",
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -3183,19 +3121,11 @@
             "addictionFactor" : 20,
             "cost" : "4 sp/pouch of leaf (5 doses), 1 gp/ 5 doses powder",
             "location" : {
-                "vegetation" : [
-                    "Jungle"
-                ],
-                "waterSources" : [
-                    "Marsh"
-                ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -3217,9 +3147,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3239,7 +3168,11 @@
             "cost" : "",
             "location" : {
                 "terrains" : [
-                    "Alpine"
+                    "Alpine",
+                    "Mountainous"
+                ],
+                "climateSubGroups" : [
+                    "Highland"
                 ]
             }
         },
@@ -3280,6 +3213,12 @@
             "location" : {
                 "waterSources" : [
                     "Saltwater Coast"
+                ],
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -3326,11 +3265,10 @@
                     "Deciduous",
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_HOT_TEMPERATE",
-                    "CLIMATE_WARM_HUMID",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Rainforest"
                 ]
             }
         },
@@ -3353,11 +3291,8 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3381,9 +3316,8 @@
                     "Ocean",
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3405,9 +3339,10 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Humid Continental Warm Summer",
+                    "Mediterranean",
+                    "Savanna"
                 ]
             }
         },
@@ -3431,11 +3366,8 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3458,8 +3390,8 @@
                     "Deciduous",
                     "Heath"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3481,8 +3413,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3504,9 +3436,9 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -3526,11 +3458,14 @@
             "cost" : "25 gp",
             "location" : {
                 "vegetation" : [
+                    "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Savanna"
                 ]
             }
         },
@@ -3552,10 +3487,8 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3577,11 +3510,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3603,6 +3533,10 @@
                 "terrains" : [
                     "Mountainous",
                     "Rough"
+                ],
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3625,9 +3559,9 @@
                     "Alpine",
                     "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -3646,12 +3580,12 @@
             "addictionFactor" : 10,
             "cost" : "67 gp",
             "location" : {
-                "vegetation" : [
-                    "Plains"
+                "waterSources" : [
+                    "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Mediterranean"
                 ]
             }
         },
@@ -3673,8 +3607,8 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Rainforest"
                 ]
             }
         },
@@ -3696,8 +3630,9 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -3719,8 +3654,9 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Steppe Hot",
+                    "Mediterranean"
                 ]
             }
         },
@@ -3742,9 +3678,10 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             }
         },
@@ -3766,9 +3703,9 @@
                 "waterSources" : [
                     "Desert"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -3790,9 +3727,8 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3811,9 +3747,8 @@
             "addictionFactor" : 0,
             "cost" : "312 gp/dose",
             "location" : {
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3835,9 +3770,8 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3857,12 +3791,13 @@
             "cost" : "4 gp/dose",
             "location" : {
                 "terrains" : [
-                    "Alpine"
+                    "Alpine",
+                    "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -3884,10 +3819,9 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -3909,9 +3843,8 @@
                 "vegetation" : [
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Mediterranean"
                 ]
             }
         },
@@ -3933,11 +3866,10 @@
                 "terrains" : [
                     "Underground"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -3959,9 +3891,8 @@
                 "terrains" : [
                     "Underground"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -3984,11 +3915,8 @@
                     "Ocean",
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4011,10 +3939,10 @@
                     "Freshwater Coast",
                     "Lake"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -4036,9 +3964,8 @@
                 "waterSources" : [
                     "Breaks"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4061,9 +3988,9 @@
                     "Desert",
                     "Oasis"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -4085,9 +4012,8 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Rainforest"
                 ]
             }
         },
@@ -4106,12 +4032,16 @@
             "addictionFactor" : 3,
             "cost" : "29 gp",
             "location" : {
+                "features" : [
+                    "Battlefield"
+                ],
                 "vegetation" : [
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Steppe Hot",
+                    "Mediterranean",
+                    "Savanna"
                 ]
             }
         },
@@ -4133,8 +4063,9 @@
                 "terrains" : [
                     "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -4156,9 +4087,9 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer"
                 ]
             }
         },
@@ -4180,8 +4111,9 @@
                 "terrains" : [
                     "Waste"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -4204,9 +4136,8 @@
                     "Deciduous",
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateSubGroups" : [
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -4228,9 +4159,9 @@
                 "vegetation" : [
                     "Tundra"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -4251,6 +4182,12 @@
             "location" : {
                 "waterSources" : [
                     "Marsh"
+                ],
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
+                    "Subarctic"
                 ]
             }
         },
@@ -4273,9 +4210,9 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer"
                 ]
             }
         },
@@ -4297,12 +4234,10 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -4324,9 +4259,11 @@
                 "terrains" : [
                     "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -4347,6 +4284,9 @@
             "location" : {
                 "waterSources" : [
                     "Freshwater Coast"
+                ],
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4368,9 +4308,9 @@
                 "vegetation" : [
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Steppe Hot",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4392,8 +4332,8 @@
                 "waterSources" : [
                     "Desert"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot"
                 ]
             }
         },
@@ -4416,10 +4356,10 @@
                     "Deciduous",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -4439,11 +4379,13 @@
             "cost" : "154 gp",
             "location" : {
                 "vegetation" : [
-                    "Heath"
+                    "Heath",
+                    "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Steppe Cold",
+                    "Arid Steppe Hot",
+                    "Mediterranean"
                 ]
             }
         },
@@ -4465,9 +4407,9 @@
                 "waterSources" : [
                     "Breaks"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -4492,8 +4434,9 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -4515,9 +4458,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4539,9 +4481,8 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4563,9 +4504,10 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateSubGroups" : [
+                    "Arid Steppe Hot",
+                    "Humid Subtropical",
+                    "Mediterranean"
                 ]
             }
         },
@@ -4587,12 +4529,8 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4614,9 +4552,8 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4638,10 +4575,8 @@
                 "terrains" : [
                     "Rough"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4683,9 +4618,9 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4708,9 +4643,9 @@
                     "Desert",
                     "Oasis"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Cold",
+                    "Arid Desert Hot"
                 ]
             }
         },
@@ -4732,9 +4667,9 @@
                 "terrains" : [
                     "Underground"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -4756,9 +4691,8 @@
                 "waterSources" : [
                     "Ocean"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4780,10 +4714,6 @@
                 "terrains" : [
                     "Alpine",
                     "Mountainous"
-                ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE"
                 ]
             }
         },
@@ -4805,11 +4735,9 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -4871,9 +4799,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4914,6 +4841,9 @@
             "location" : {
                 "terrains" : [
                     "Rough"
+                ],
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4935,9 +4865,9 @@
                 "terrains" : [
                     "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -4960,9 +4890,8 @@
                     "Alpine",
                     "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Highland"
                 ]
             }
         },
@@ -4984,9 +4913,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -5048,11 +4976,6 @@
                 "terrains" : [
                     "Alpine",
                     "Mountainous"
-                ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_WARM_DRY"
                 ]
             }
         },
@@ -5074,9 +4997,9 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5098,9 +5021,9 @@
                 "vegetation" : [
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -5122,8 +5045,8 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Tundra"
                 ]
             }
         },
@@ -5146,9 +5069,11 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Mediterranean"
                 ]
             }
         },
@@ -5171,10 +5096,10 @@
                     "Alpine",
                     "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5196,9 +5121,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -5220,9 +5144,8 @@
                 "terrains" : [
                     "Alpine"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Highland"
                 ]
             }
         },
@@ -5247,9 +5170,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -5271,11 +5193,9 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -5297,8 +5217,9 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -5320,11 +5241,10 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_HOT_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -5369,10 +5289,10 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5394,12 +5314,9 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5425,9 +5342,9 @@
                     "Freshwater Coast",
                     "Lake"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -5452,10 +5369,10 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5481,11 +5398,11 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5507,9 +5424,10 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5531,9 +5449,9 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -5555,9 +5473,9 @@
                 "vegetation" : [
                     "Tundra"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5579,9 +5497,10 @@
                 "terrains" : [
                     "Alpine"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5603,8 +5522,9 @@
                 "waterSources" : [
                     "Desert"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Cold",
+                    "Arid Desert Hot"
                 ]
             }
         },
@@ -5626,9 +5546,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -5650,9 +5569,8 @@
                 "features" : [
                     "Volcanic"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Mediterranean"
                 ]
             }
         },
@@ -5674,12 +5592,10 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5701,9 +5617,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -5725,11 +5640,10 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -5772,8 +5686,10 @@
                 "terrains" : [
                     "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Highland"
                 ]
             }
         },
@@ -5795,10 +5711,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -5820,8 +5734,9 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5843,8 +5758,9 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5866,8 +5782,9 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5877,7 +5794,7 @@
             "otherNames" : "",
             "loreSkill" : "SKILL_HERB_LORE",
             "characteristics" : "Olvatári is a short shrub with shiny, round leaves and 1\" long thorns. A rare plant, it bears fruit and silver-white flowers for a very short time in summer.",
-            "medicinalUses" : "he juice from an olvatári fruit heals all burns, regardless of their severity, restores 1-10 hits and eliminates scar tissue. The juice keeps for up to 2 years.",
+            "medicinalUses" : "The juice from an olvatári fruit heals all burns, regardless of their severity, restores 1-10 hits and eliminates scar tissue. The juice keeps for up to 2 years.",
             "otherUses" : "",
             "warning" : "",
             "preparationType" : "Ingest",
@@ -5889,9 +5806,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -5913,10 +5829,10 @@
                 "terrains" : [
                     "Alpine"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5939,10 +5855,9 @@
                     "Cave",
                     "Cavern"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -5984,9 +5899,9 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6008,8 +5923,8 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Rainforest"
                 ]
             }
         },
@@ -6032,9 +5947,10 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical"
                 ]
             }
         },
@@ -6056,9 +5972,9 @@
                 "vegetation" : [
                     "Heath"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer"
                 ]
             }
         },
@@ -6080,8 +5996,9 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -6103,9 +6020,8 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6127,9 +6043,8 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6151,11 +6066,10 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6197,8 +6111,9 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -6221,9 +6136,8 @@
                     "Deciduous",
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6244,6 +6158,12 @@
             "location" : {
                 "vegetation" : [
                     "Deciduous"
+                ],
+                "climateSubGroups" : [
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -6265,11 +6185,11 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -6291,9 +6211,8 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6314,6 +6233,12 @@
             "location" : {
                 "vegetation" : [
                     "Deciduous"
+                ],
+                "climateSubGroups" : [
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -6335,11 +6260,10 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -6361,11 +6285,10 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -6387,10 +6310,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6412,9 +6333,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6435,6 +6355,13 @@
             "location" : {
                 "waterSources" : [
                     "Marsh"
+                ],
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -6455,6 +6382,12 @@
             "location" : {
                 "vegetation" : [
                     "Deciduous"
+                ],
+                "climateSubGroups" : [
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -6475,6 +6408,12 @@
             "location" : {
                 "vegetation" : [
                     "Deciduous"
+                ],
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean",
+                    "Savanna"
                 ]
             }
         },
@@ -6496,9 +6435,9 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -6539,10 +6478,6 @@
             "location" : {
                 "terrains" : [
                     "Underground"
-                ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
                 ]
             }
         },
@@ -6564,9 +6499,9 @@
                 "terrains" : [
                     "Alpine"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -6586,12 +6521,13 @@
             "cost" : "50 gp/blossom",
             "location" : {
                 "vegetation" : [
-                    "Grasslands"
+                    "Grasslands",
+                    "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -6613,9 +6549,11 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Humid Continental Hot Summer",
+                    "Mediterranean",
+                    "Savanna"
                 ]
             }
         },
@@ -6634,9 +6572,10 @@
             "addictionFactor" : 0,
             "cost" : "2 gp/dose",
             "location" : {
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Mediterranean"
                 ]
             }
         },
@@ -6659,9 +6598,8 @@
                     "Ocean",
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6747,8 +6685,10 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Savanna"
                 ]
             }
         },
@@ -6771,9 +6711,12 @@
                     "Desert",
                     "Oasis"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Savanna"
                 ]
             }
         },
@@ -6795,9 +6738,9 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -6819,13 +6762,9 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6848,8 +6787,8 @@
                     "Freshwater Coast",
                     "Islet"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6871,9 +6810,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6895,11 +6833,9 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -6921,9 +6857,10 @@
                 "terrains" : [
                     "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -6945,9 +6882,9 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -6969,9 +6906,10 @@
                 "vegetation" : [
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Savanna"
                 ]
             }
         },
@@ -6991,12 +6929,14 @@
             "cost" : "70 gp/bushel (enough to preserve a man-sized surface)",
             "location" : {
                 "vegetation" : [
+                    "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -7058,9 +6998,9 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -7082,9 +7022,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -7103,10 +7042,11 @@
             "addictionFactor" : 0,
             "cost" : "34 gp/dose",
             "location" : {
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Arid Desert Cold",
+                    "Arid Steppe Cold",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -7128,9 +7068,9 @@
                 "terrains" : [
                     "Alpine"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -7152,9 +7092,10 @@
                 "terrains" : [
                     "Alpine"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Arid Steppe Cold",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -7176,13 +7117,13 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Arid Steppe Cold",
+                    "Humid Continental Hot Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -7204,9 +7145,9 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -7228,10 +7169,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -7253,12 +7192,10 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -7300,11 +7237,9 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -7327,10 +7262,9 @@
                     "Freshwater Coast",
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -7355,9 +7289,9 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -7379,11 +7313,10 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -7407,9 +7340,9 @@
                     "Desert",
                     "Oasis"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -7431,9 +7364,12 @@
                 "waterSources" : [
                     "Ocean"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             }
         },
@@ -7455,9 +7391,12 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -7479,9 +7418,10 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -7503,10 +7443,9 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -7528,11 +7467,12 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_COOL_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Cold",
+                    "Arid Steppe Cold",
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -7552,6 +7492,9 @@
             "cost" : "10 gp/dose",
             "location" : {
                 "vegetation" : [
+                    "Tundra"
+                ],
+                "climateSubGroups" : [
                     "Tundra"
                 ]
             }
@@ -7574,13 +7517,10 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -7602,11 +7542,9 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast"
                 ]
             }
         },
@@ -7628,10 +7566,9 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -7653,8 +7590,9 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -7696,9 +7634,9 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -7720,9 +7658,10 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -7744,8 +7683,8 @@
                 "terrains" : [
                     "Alpine"
                 ],
-                "climates" : [
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Tundra"
                 ]
             }
         },
@@ -7767,11 +7706,10 @@
                 "vegetation" : [
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean",
+                    "Subarctic"
                 ]
             }
         },
@@ -7796,11 +7734,8 @@
                     "Heath",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -7822,9 +7757,9 @@
                 "vegetation" : [
                     "Heath"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -7846,9 +7781,9 @@
                 "terrains" : [
                     "Alpine"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -7870,10 +7805,13 @@
                 "terrains" : [
                     "Waste"
                 ],
-                "climates" : [
-                    "CLIMATE_",
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "waterSources" : [
+                    "Desert"
+                ],
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Mediterranean"
                 ]
             }
         },
@@ -7898,8 +7836,8 @@
                 "waterSources" : [
                     "Lake"
                 ],
-                "climates" : [
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Tundra"
                 ]
             }
         },
@@ -7921,11 +7859,9 @@
                 "vegetation" : [
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_DRY",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -7947,9 +7883,8 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -7971,12 +7906,11 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Arid Steppe Cold",
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -7998,9 +7932,12 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_HOT_TEMPERATE"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Mediterranean",
+                    "Monsoon",
+                    "Rainforest",
+                    "Savanna"
                 ]
             }
         },
@@ -8023,9 +7960,11 @@
                     "Grasslands",
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Steppe Hot",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Mediterranean"
                 ]
             }
         },
@@ -8047,10 +7986,9 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_FRIGID"
+                "climateSubGroups" : [
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -8092,8 +8030,8 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -8115,9 +8053,10 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -8139,10 +8078,10 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_HOT_TEMPERATE",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical"
                 ]
             }
         },
@@ -8164,9 +8103,9 @@
                 "waterSources" : [
                     "Marsh"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -8189,9 +8128,9 @@
                     "Ocean",
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -8213,9 +8152,11 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_WET"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -8237,8 +8178,9 @@
                 "waterSources" : [
                     "Desert"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot"
                 ]
             }
         },
@@ -8260,11 +8202,10 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -8306,9 +8247,10 @@
                 "terrains" : [
                     "Mountainous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COOL_DRY"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -8330,9 +8272,13 @@
                 "terrains" : [
                     "Alpine"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Highland",
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -8354,9 +8300,10 @@
                 "vegetation" : [
                     "Grasslands"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Humid Continental Hot Summer",
+                    "Humid Continental Warm Summer",
+                    "Savanna"
                 ]
             }
         },
@@ -8381,10 +8328,10 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -8406,9 +8353,9 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID",
-                    "CLIMATE_WARM_HUMID"
+                "climateSubGroups" : [
+                    "Monsoon",
+                    "Rainforest"
                 ]
             }
         },
@@ -8430,10 +8377,10 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -8475,9 +8422,9 @@
                 "vegetation" : [
                     "Coniferous"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_WET",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -8499,10 +8446,9 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic"
                 ]
             }
         },
@@ -8524,9 +8470,8 @@
                 "vegetation" : [
                     "Deciduous"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -8548,11 +8493,11 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Arid Steppe Cold",
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         },
@@ -8574,9 +8519,8 @@
                 "vegetation" : [
                     "Plains"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COOL_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast"
                 ]
             }
         },
@@ -8598,9 +8542,9 @@
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_WARM_TEMPERATE"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -8622,8 +8566,8 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Rainforest"
                 ]
             }
         },
@@ -8642,10 +8586,10 @@
             "addictionFactor" : 0,
             "cost" : "300-2000 gp/ dose",
             "location" : {
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -8667,8 +8611,8 @@
                 "vegetation" : [
                     "Jungle"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_HUMID"
+                "climateSubGroups" : [
+                    "Rainforest"
                 ]
             }
         },
@@ -8694,10 +8638,10 @@
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
-                "climates" : [
-                    "CLIMATE_COOL_DRY",
-                    "CLIMATE_COOL_TEMPERATE",
-                    "CLIMATE_COOL_WET"
+                "climateSubGroups" : [
+                    "Humid Subtropical",
+                    "Marine West Coast",
+                    "Mediterranean"
                 ]
             }
         },
@@ -8720,9 +8664,11 @@
                     "Cave",
                     "Volcanic"
                 ],
-                "climates" : [
-                    "CLIMATE_HOT_DRY",
-                    "CLIMATE_WARM_DRY"
+                "climateSubGroups" : [
+                    "Arid Desert Hot",
+                    "Arid Steppe Hot",
+                    "Mediterranean",
+                    "Savanna"
                 ]
             }
         },
@@ -8744,10 +8690,10 @@
                 "terrains" : [
                     "Underground"
                 ],
-                "climates" : [
-                    "CLIMATE_COLD_DRY",
-                    "CLIMATE_COLD_TEMPERATE",
-                    "CLIMATE_COLD_WET"
+                "climateSubGroups" : [
+                    "Marine West Coast",
+                    "Subarctic",
+                    "Tundra"
                 ]
             }
         }
