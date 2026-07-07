@@ -21,6 +21,18 @@ namespace rm::game {
 class Location {
 public:
 	/**
+	 * @brief Struct to define which environmental features, terrain, vegetation and water are required for a location to match
+	 *
+	 * This is used in conjunction with the Location::matches() method to determine if a specific location matches the criteria defined in this object.
+	 */
+	struct RequiredEnvironments {
+		bool feature{false};    /**< Whether a feature is required for the location to match */
+		bool terrain{false};    /**< Whether a terrain is required for the location to match */
+		bool vegetation{false}; /**< Whether a vegetation is required for the location to match */
+		bool water{false};      /**< Whether a water is required for the location to match */
+	};
+
+	/**
 	 * @brief Add an environmental feature to those that may be found in the location
 	 * @param feature EnvironmentType::Feature to add
 	 */
@@ -243,12 +255,65 @@ public:
 	 * */
 	bool matches(const Location& specific_location) const;
 
+	/**
+	 * @brief Check if a specific location matches the climate criteria defined in this object
+	 *
+	 * Checks whether @a specified location is considered be a subset of this location in terms of climate, meaning if there is a climate group or subgroup defined in this location,
+	 * the specific location must also have one defined to be considered a match. If there is no climate group or subgroup defined in this location then it is not considered
+	 * when matching and the specific location may or may not have it without impacting the result.
+	 *
+	 * @param specific_location Location to check against the climate criteria defined in this object
+	 * @return `true` if the location matches the climate criteria defined in this object
+	 * @return `false` if the location does not match the climate criteria defined in this object
+	 * */
+	bool matchesClimate(const Location& specific_location) const;
+
+	/**
+	 * @brief Check if a specific location matches the environmental criteria defined in this object
+	 *
+	 * Checks whether @a specified location is considered be a subset of this location in terms of environmental features, terrain, vegetation and water, meaning if there is a feature, terrain,
+	 * vegetation or water defined in this location, the specific location must also have one defined to be considered a match. If there is no feature, terrain, vegetation or water defined in this
+	 * location then it is not considered when matching and the specific location may or may not have it without impacting the result.
+	 *
+	 * The @a required_environments parameter is used to specify which of the environmental features, terrain, vegetation and water are required for a location to match. If a specific location does not meet the required criteria, it will
+	 * not be considered a match. The use of this parameter is based on the intersection of both the current location and the @a specific location.
+	 *
+	 * If all values are set to 'false' then there must be one matching environmental feature, terrain, vegetation or water for the location to match, but the grouping that it is in is not important. If any of the values are set to 'true'
+	 * then there must be at least one matching environmental element from that group. If multiple values are set to 'true' then there must be at least one matching environmental element from each of those groups for the location to match.
+	 *
+	 * @param specific_location Location to check against the environmental criteria defined in this object
+	 * @param required_environments RequiredEnvironments struct defining which environmental features, terrain, vegetation and water are required for a location to match
+	 * @return `true` if the location matches the environmental criteria defined in this object
+	 * @return `false` if the location does not match the environmental criteria defined in this object
+	 * */
+	bool matchesEnvironment(const Location& specific_location, RequiredEnvironments required_environments) const;
+
+	/**
+	 * @brief Check if a specific location matches the criteria defined in this object
+	 *
+	 * Checks whether @a specified location is considered be a subset of this location, meaning for if there is a feature, terrain, vegetation, water or climate that is defined in this location
+	 * the specific location must also have one defined to be considered a match. If there is no feature, terrain, vegetation, water or climate defined in this location then it is not considered
+	 * when matching and the specific location may or may not have it without impacting the result.
+	 *
+	 * The @a required_environments parameter is used to specify which of the environmental features, terrain, vegetation and water are required for a location to match. If a specific location does not meet the required criteria, it will
+	 * not be considered a match. The use of this parameter is based on the intersection of both the current location and the @a specific location.
+	 *
+	 * If all values are set to 'false' then there must be one matching environmental feature, terrain, vegetation or water for the location to match, but the grouping that it is in is not important. If any of the values are set to 'true'
+	 * then there must be at least one matching environmental element from that group. If multiple values are set to 'true' then there must be at least one matching environmental element from each of those groups for the location to match.
+	 *
+	 * @param specific_location Location to check against the criteria defined in this object
+	 * @param required_environments RequiredEnvironments struct defining which environmental features, terrain, vegetation and water are required for a location to match
+	 * @return `true` if the location matches the criteria defined in this object
+	 * @return `false` if the location does not match the criteria defined in this object
+	 * */
+	bool matches(const Location& specific_location, RequiredEnvironments required_environments) const;
+
 private:
-	std::set<rule::enums::EnvironmentType::Feature> features_{};           /**< Set of environmental features that are found in the location */
-	std::set<rule::enums::EnvironmentType::Terrain> terrains_{};           /**< Set of terrain types that are found in the location */
-	std::set<rule::enums::EnvironmentType::Vegetation> vegetation_{};      /**< Set of vegetation types that are found in the location */
-	std::set<rule::enums::EnvironmentType::Water> water_{};                /**< Set of water types that are found in the location */
-	std::set<rule::enums::ClimateType::KoppenGroup> climate_groups_{};       /**< Set of climate groups that are found in the location */
+	std::set<rule::enums::EnvironmentType::Feature> features_{};              /**< Set of environmental features that are found in the location */
+	std::set<rule::enums::EnvironmentType::Terrain> terrains_{};              /**< Set of terrain types that are found in the location */
+	std::set<rule::enums::EnvironmentType::Vegetation> vegetation_{};         /**< Set of vegetation types that are found in the location */
+	std::set<rule::enums::EnvironmentType::Water> water_{};                   /**< Set of water types that are found in the location */
+	std::set<rule::enums::ClimateType::KoppenGroup> climate_groups_{};        /**< Set of climate groups that are found in the location */
 	std::set<rule::enums::ClimateType::KoppenSubGroup> climate_sub_groups_{}; /**< Set of climate subgroups that are found in the location */
 };
 
