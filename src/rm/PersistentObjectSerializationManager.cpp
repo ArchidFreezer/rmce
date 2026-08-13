@@ -19,7 +19,6 @@ void PersistentObjectSerializationManager::load() {
 	deserializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armourtypes");
 	deserializeAllObjects<rm::rule::table::AttackTable>("AttackTables.json", "attacktables");
 	deserializeAllObjects<rm::rule::BookData>("Books.json", "books");
-	deserializeAllObjects<rm::rule::ClimateData>("Climates.json", "climates");
 	deserializeAllObjects<rm::rule::CreaturePaceData>("CreaturePaces.json", "creaturepaces");
 	deserializeAllObjects<rm::rule::CultureData>("Cultures.json", "cultures");
 	deserializeAllObjects<rm::rule::CultureTypeData>("CultureTypes.json", "culturetypes");
@@ -55,7 +54,6 @@ void PersistentObjectSerializationManager::save() {
 	serializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armourtypes");
 	serializeAllObjects<rm::rule::table::AttackTable>("AttackTables.json", "attacktables");
 	serializeAllObjects<rm::rule::BookData>("Books.json", "books");
-	serializeAllObjects<rm::rule::ClimateData>("Climates.json", "climates");
 	serializeAllObjects<rm::rule::CreaturePaceData>("CreaturePaces.json", "creaturepaces");
 	serializeAllObjects<rm::rule::CultureData>("Cultures.json", "cultures");
 	serializeAllObjects<rm::rule::CultureTypeData>("CultureTypes.json", "culturetypes");
@@ -98,7 +96,6 @@ void PersistentObjectSerializationManager::save(std::string_view prefix) {
 	if (clean_prefix == "attacktable") serializeAllObjects<rm::rule::table::AttackTable>("AttackTables.json", "attacktables");
 	if (clean_prefix == "book") serializeAllObjects<rm::rule::BookData>("Books.json", "books");
 	if (clean_prefix == "character") serializeAllObjects<rm::game::character::Character>("Characters.json", "characters");
-	if (clean_prefix == "climate") serializeAllObjects<rm::rule::ClimateData>("Climates.json", "climates");
 	if (clean_prefix == "creaturepace") serializeAllObjects<rm::rule::CreaturePaceData>("CreaturePaces.json", "creaturepaces");
 	if (clean_prefix == "culture") serializeAllObjects<rm::rule::CultureData>("Cultures.json", "cultures");
 	if (clean_prefix == "culturetype") serializeAllObjects<rm::rule::CultureTypeData>("CultureTypes.json", "culturetypes");
@@ -135,8 +132,6 @@ std::string PersistentObjectSerializationManager::serializeAnyDataObject(const s
 		return serializeObject(*attack_table);
 	} else if (auto book = dynamic_cast<const rule::BookData*>(obj)) {
 		return serializeObject(*book);
-	} else if (auto climate = dynamic_cast<const rule::ClimateData*>(obj)) {
-		return serializeObject(*climate);
 	} else if (auto creature_pace = dynamic_cast<const rule::CreaturePaceData*>(obj)) {
 		return serializeObject(*creature_pace);
 	} else if (auto culture = dynamic_cast<const rule::CultureData*>(obj)) {
@@ -214,8 +209,6 @@ std::string PersistentObjectSerializationManager::serializeAllObjects(std::strin
 		return serializeAllObjects_Impl<rm::rule::BookData>(root_key);
 	} else if (lower_prefix == "character") {
 		return serializeAllObjects_Impl<rm::game::character::Character>(root_key);
-	} else if (lower_prefix == "climate") {
-		return serializeAllObjects_Impl<rm::rule::ClimateData>(root_key);
 	} else if (lower_prefix == "creaturepace") {
 		return serializeAllObjects_Impl<rm::rule::CreaturePaceData>(root_key);
 	} else if (lower_prefix == "culture") {
@@ -280,8 +273,6 @@ const std::string PersistentObjectSerializationManager::deserializeObject(json::
 		obj_ptr = &deserializeObject<rm::rule::BookData>(obj);
 	} else if (lower_prefix == "character") {
 		obj_ptr = &deserializeObject<rm::game::character::Character>(obj);
-	} else if (lower_prefix == "climate") {
-		obj_ptr = &deserializeObject<rm::rule::ClimateData>(obj);
 	} else if (lower_prefix == "creaturepace") {
 		obj_ptr = &deserializeObject<rm::rule::CreaturePaceData>(obj);
 	} else if (lower_prefix == "culture") {

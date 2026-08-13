@@ -4,7 +4,6 @@
 #include <ArmourTypeData.h>
 #include <table/AttackTable.h>
 #include <BookData.h>
-#include <ClimateData.h>
 #include <CreaturePaceData.h>
 #include <CultureData.h>
 #include <CultureTypeData.h>

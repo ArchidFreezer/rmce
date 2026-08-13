@@ -395,10 +395,7 @@
         }
       ],
       "requiredClimates": [
-        "CLIMATE_COLD_DRY",
-        "CLIMATE_FRIGID"
-      ],
-      "requiredVegetations": [
+        "Subarctic",
         "Tundra"
       ]
     },
@@ -524,10 +521,8 @@
         }
       ],
       "requiredClimates": [
-        "CLIMATE_HOT_DRY"
-      ],
-      "requiredWaterSources": [
-        "Desert"
+        "Arid Desert Hot",
+        "Arid Steppe Hot"
       ]
     },
     {
@@ -1086,13 +1081,8 @@
         }
       ],
       "requiredClimates": [
-        "CLIMATE_COLD_DRY",
-        "CLIMATE_COOL_DRY",
-        "CLIMATE_HOT_DRY",
-        "CLIMATE_WARM_DRY"
-      ],
-      "requiredVegetations": [
-        "Plains"
+        "Savanna",
+        "Arid Steppe Hot"
       ]
     },
     {

@@ -25,12 +25,11 @@ json::value CultureTypeSerializer::serializeObject(const CultureTypeData& ref) c
 	JsonConverter::setSkillPrimitiveMap(obj, "skillRanks", ref.skillRanks());
 	JsonConverter::setDataPrimitiveMap(obj, "skillCategoryRanks", ref.skillCategoryRanks());
 	JsonConverter::setDataPrimitiveMap(obj, "skillCategorySkillRanks", ref.skillCategorySkillRanks());
-	JsonConverter::setDataSet(obj, "requiredClimates", ref.requiredClimates());
+	JsonConverter::setEnumSet(obj, "requiredClimates", ref.requiredClimates());
 	JsonConverter::setEnumSet(obj, "requiredFeatures", ref.requiredFeatures());
 	JsonConverter::setEnumSet(obj, "requiredTerrains", ref.requiredTerrains());
 	JsonConverter::setEnumSet(obj, "requiredVegetations", ref.requiredVegetations());
 	JsonConverter::setEnumSet(obj, "requiredWaterSources", ref.requiredWaterSources());
-
 
 	return obj;
 }
@@ -56,7 +55,7 @@ const CultureTypeData& CultureTypeSerializer::deserializeObject(json::object& js
 	ref.setSkillRanks(JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skillRanks", manager_));
 	ref.setSkillCategoryRanks(JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "skillCategoryRanks", manager_));
 	ref.setSkillCategorySkillRanks(JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "skillCategorySkillRanks", manager_));
-	ref.setRequiredClimates(JsonConverter::getDataSet<ClimateData>(jsonObj, "requiredClimates", manager_));
+	ref.setRequiredClimates(JsonConverter::getEnumSet<ClimateType::KoppenSubGroup>(jsonObj, "requiredClimates"));
 	ref.setRequiredFeatures(JsonConverter::getEnumSet<EnvironmentType::Feature>(jsonObj, "requiredFeatures"));
 	ref.setRequiredTerrains(JsonConverter::getEnumSet<EnvironmentType::Terrain>(jsonObj, "requiredTerrains"));
 	ref.setRequiredVegetations(JsonConverter::getEnumSet<EnvironmentType::Vegetation>(jsonObj, "requiredVegetations"));

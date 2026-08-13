@@ -206,6 +206,7 @@ float forage_water(rm::game::character::Character& forager, rm::game::Location& 
 	const rm::rule::SubcategoriedSkillData& foraging_skill = modifiers.object_factory.subcategoriedSkillData("SKILL_FORAGING");
 	float found_water = 0.0f;
 
+	using namespace rm::rule::enums::ClimateType;
 	using namespace rm::rule::enums::EnvironmentType;
 	using namespace rm::rule::enums::SkillDifficultyType;
 
@@ -213,40 +214,46 @@ float forage_water(rm::game::character::Character& forager, rm::game::Location& 
 	SkillDifficultyType::Type difficulty = kAbsurd;
 
 	// Deal with climate first
-	std::set<const rm::rule::ClimateData*> wet_climates{};
-	wet_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_COLD_WET"));
-	wet_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_COOL_WET"));
-	wet_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_WARM_WET"));
-	wet_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_COLD_TEMPERATE"));
-	wet_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_COOL_TEMPERATE"));
-	wet_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_WARM_TEMPERATE"));
-	wet_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_HOT_HUMID"));
+	std::set<KoppenSubGroup> wet_climates{};
+	wet_climates.insert(KoppenSubGroup::kRainforest);
+	wet_climates.insert(KoppenSubGroup::kMediterranean);
+	wet_climates.insert(KoppenSubGroup::kHumidSubtropical);
+	wet_climates.insert(KoppenSubGroup::kMarineWestCoast);
+	wet_climates.insert(KoppenSubGroup::kHumidContinentalHotSummer);
+	wet_climates.insert(KoppenSubGroup::kHumidContinentalWarmSummer);
+	if (!modifiers.dry_season) {
+		wet_climates.insert(KoppenSubGroup::kMonsoon);
+		wet_climates.insert(KoppenSubGroup::kSavanna);
+	}
 
 	for (const auto climate : wet_climates) {
-		if (search_location.hasClimate(climate)) {
+		if (search_location.hasClimateSubGroup(climate)) {
 			difficulty = std::min(difficulty, kEasy);
 			break;
 		}
 	}
 
-	std::set<const rm::rule::ClimateData*> dry_climates{};
-	dry_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_COLD_DRY"));
-	dry_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_COOL_DRY"));
-	dry_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_WARM_DRY"));
+	std::set<KoppenSubGroup> dry_climates{};
+	if (modifiers.dry_season) {
+		dry_climates.insert(KoppenSubGroup::kMonsoon);
+		dry_climates.insert(KoppenSubGroup::kSavanna);
+	}
 
 	for (const auto climate : dry_climates) {
-		if (search_location.hasClimate(climate)) {
+		if (search_location.hasClimateSubGroup(climate)) {
 			difficulty = std::min(difficulty, kHard);
 			break;
 		}
 	}
 
-	std::set<const rm::rule::ClimateData*> arid_climates{};
-	arid_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_FRIGID"));
-	arid_climates.insert(&modifiers.object_factory.get<rm::rule::ClimateData>("CLIMATE_HOT_DRY"));
+	std::set<KoppenSubGroup> arid_climates{};
+	arid_climates.insert(KoppenSubGroup::kAridDesertCold);
+	arid_climates.insert(KoppenSubGroup::kAridDesertHot);
+	arid_climates.insert(KoppenSubGroup::kAridSteppeCold);
+	arid_climates.insert(KoppenSubGroup::kAridSteppeHot);
 
 	for (const auto climate : arid_climates) {
-		if (search_location.hasClimate(climate)) {
+		if (search_location.hasClimateSubGroup(climate)) {
 			difficulty = std::min(difficulty, kExtremelyHard);
 			break;
 		}

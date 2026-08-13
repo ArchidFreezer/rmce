@@ -44,14 +44,11 @@ namespace {
 
 	TEST(LocationTest, TestClimate) {
 		Location location;
-		rule::ClimateData climate1("CLIMATE_ID_1");
-		rule::ClimateData climate2("CLIMATE_ID_2");
-		rule::ClimateData climate3("CLIMATE_ID_3");
-		location.addClimate(&climate1);
-		location.addClimate(&climate2);
-		EXPECT_TRUE(location.hasClimate(&climate1));
-		EXPECT_TRUE(location.hasClimate(&climate2));
-		EXPECT_FALSE(location.hasClimate(&climate3));
+		location.addClimateGroup(rule::enums::ClimateType::KoppenGroup::kTropical);
+		location.addClimateGroup(rule::enums::ClimateType::KoppenGroup::kDry);
+		EXPECT_TRUE(location.hasClimateGroup(rule::enums::ClimateType::KoppenGroup::kTropical));
+		EXPECT_TRUE(location.hasClimateGroup(rule::enums::ClimateType::KoppenGroup::kDry));
+		EXPECT_FALSE(location.hasClimateGroup(rule::enums::ClimateType::KoppenGroup::kTemperate));
 	}
 
 	TEST(LocationTest, TestDuplicate) {

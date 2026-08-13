@@ -7,7 +7,6 @@
 #include <PersistentObjectManager.h>
 #include <PersistentCache.h>
 #include <SubcategoriedSkillData.h>
-#include <ClimateData.h>
 
 using namespace rm::action::forage;
 using namespace rm::game;
@@ -601,8 +600,8 @@ TEST_F(ForageTest, ForageFood_SpecialRolls_ReturnCorrectValues) {
  * @brief Test forage_water with cold wet climate (easy)
  */
 TEST_F(ForageTest, ForageWater_ColdWetClimate_EasyDifficulty) {
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_COLD_WET");
-	test_location->addClimate(&climate);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kRainforest);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kMarineWestCoast);
 
 	SustainanceModifiers modifiers{*manager, 4, 1, false};
 
@@ -624,8 +623,8 @@ TEST_F(ForageTest, ForageWater_ColdWetClimate_EasyDifficulty) {
  * @brief Test forage_water with hot dry climate (extremely hard)
  */
 TEST_F(ForageTest, ForageWater_HotDryClimate_ExtremelyHardDifficulty) {
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_HOT_DRY");
-	test_location->addClimate(&climate);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kAridDesertHot);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kAridSteppeHot);
 
 	SustainanceModifiers modifiers{*manager, 4, 1, false};
 
@@ -699,8 +698,6 @@ TEST_F(ForageTest, ForageWater_BreaksDrySeason_ExtremelyHardDifficulty) {
  */
 TEST_F(ForageTest, ForageWater_AlpineTerrain_VeryHardDifficulty) {
 	test_location->addTerrain(EnvironmentType::Terrain::kAlpine);
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_COLD_WET");
-	test_location->addClimate(&climate);
 
 	SustainanceModifiers modifiers{*manager, 4, 1, false};
 
@@ -717,8 +714,7 @@ TEST_F(ForageTest, ForageWater_AlpineTerrain_VeryHardDifficulty) {
  * @brief Test forage_water with less than 4 hours (increased difficulty)
  */
 TEST_F(ForageTest, ForageWater_LessThan4Hours_IncreasesDifficulty) {
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_COOL_TEMPERATE");
-	test_location->addClimate(&climate);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kMarineWestCoast);
 
 	SustainanceModifiers modifiers_short{*manager, 1, 1, false};
 	SustainanceModifiers modifiers_normal{*manager, 4, 1, false};
@@ -746,8 +742,7 @@ TEST_F(ForageTest, ForageWater_LessThan4Hours_IncreasesDifficulty) {
  * @brief Test forage_water with more than 4 hours (decreased difficulty)
  */
 TEST_F(ForageTest, ForageWater_MoreThan4Hours_DecreasesDifficulty) {
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_COOL_TEMPERATE");
-	test_location->addClimate(&climate);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kMarineWestCoast);
 
 	SustainanceModifiers modifiers_normal{*manager, 4, 1, false};
 	SustainanceModifiers modifiers_long{*manager, 8, 1, false};
@@ -775,8 +770,7 @@ TEST_F(ForageTest, ForageWater_MoreThan4Hours_DecreasesDifficulty) {
  * @brief Test forage_water returns valid range of values
  */
 TEST_F(ForageTest, ForageWater_ReturnsValidRange) {
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_WARM_TEMPERATE");
-	test_location->addClimate(&climate);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kMediterranean);
 
 	SustainanceModifiers modifiers{*manager, 4, 1, false};
 
@@ -791,8 +785,7 @@ TEST_F(ForageTest, ForageWater_ReturnsValidRange) {
  * @brief Test forage_water special rolls return correct values
  */
 TEST_F(ForageTest, ForageWater_SpecialRolls_ReturnCorrectValues) {
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_WARM_TEMPERATE");
-	test_location->addClimate(&climate);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kMediterranean);
 
 	SustainanceModifiers modifiers{*manager, 4, 1, false};
 
@@ -823,8 +816,7 @@ TEST_F(ForageTest, ForageWater_SpecialRolls_ReturnCorrectValues) {
  */
 TEST_F(ForageTest, ForageSustainance_ReturnsBothFoodAndWater) {
 	test_location->addVegetation(EnvironmentType::Vegetation::kDeciduous);
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_WARM_TEMPERATE");
-	test_location->addClimate(&climate);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kMediterranean);
 
 	SustainanceModifiers modifiers{*manager, 4, 1, false};
 
@@ -842,8 +834,7 @@ TEST_F(ForageTest, ForageSustainance_ReturnsBothFoodAndWater) {
  */
 TEST_F(ForageTest, ForageSustainance_FoodAndWaterIndependent) {
 	test_location->addVegetation(EnvironmentType::Vegetation::kDeciduous);
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_WARM_TEMPERATE");
-	test_location->addClimate(&climate);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kMediterranean);
 
 	SustainanceModifiers modifiers{*manager, 4, 1, false};
 
@@ -866,8 +857,7 @@ TEST_F(ForageTest, ForageSustainance_FoodAndWaterIndependent) {
 TEST_F(ForageTest, ForageSustainance_GoodConditions_HighSuccessRate) {
 	test_location->addVegetation(EnvironmentType::Vegetation::kDeciduous);
 	test_location->addWater(EnvironmentType::Water::kLake);
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_WARM_TEMPERATE");
-	test_location->addClimate(&climate);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kMediterranean);
 
 	SustainanceModifiers modifiers{*manager, 8, 1, false};
 
@@ -891,8 +881,7 @@ TEST_F(ForageTest, ForageSustainance_GoodConditions_HighSuccessRate) {
 TEST_F(ForageTest, ForageSustainance_PoorConditions_LowSuccessRate) {
 	test_location->addVegetation(EnvironmentType::Vegetation::kBarren);
 	test_location->addTerrain(EnvironmentType::Terrain::kAlpine);
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_HOT_DRY");
-	test_location->addClimate(&climate);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kAridDesertCold);
 
 	SustainanceModifiers modifiers{*manager, 2, 3, true};
 
@@ -910,8 +899,7 @@ TEST_F(ForageTest, ForageSustainance_PoorConditions_LowSuccessRate) {
  */
 TEST_F(ForageTest, ForageSustainance_MultipleRuns_VariedResults) {
 	test_location->addVegetation(EnvironmentType::Vegetation::kGrasslands);
-	const ClimateData& climate = manager->get<ClimateData>("CLIMATE_COOL_TEMPERATE");
-	test_location->addClimate(&climate);
+	test_location->addClimateSubGroup(rm::rule::enums::ClimateType::KoppenSubGroup::kMarineWestCoast);
 
 	SustainanceModifiers modifiers{*manager, 4, 1, false};
 
