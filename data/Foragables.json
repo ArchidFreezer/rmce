@@ -14,7 +14,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "600 gp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ]
@@ -34,7 +34,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "1 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Heath",
@@ -59,7 +59,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 3,
             "cost" : "5 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Glacier"
                 ],
@@ -82,7 +82,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 1,
             "cost" : "3 sp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Grasslands"
@@ -111,7 +111,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 4,
             "cost" : "10gp buys a large, fresh leaf. A single application of the slave may cost up to 10 times that amount , dependiong on supply.",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -135,7 +135,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "100 gp/root. Not surprising, given the harsh terrain, the short growing season, the difficulty of finding the rhizome, and its short shelf-life. To someone blinded for life, it is a small price to pay.",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine",
                     "Mountainous"
@@ -160,7 +160,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "5 bp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Heath"
                 ],
@@ -183,7 +183,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "45gp / dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -206,7 +206,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 9,
             "cost" : "100 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Breaks"
                 ],
@@ -230,7 +230,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "75 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Islet",
                     "Saltwater Coast"
@@ -255,7 +255,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 1,
             "cost" : "2 sp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -279,7 +279,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 2,
             "cost" : "3 gp/dose; 35 gp/jar",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -305,7 +305,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 1,
             "cost" : "6-13 sp, depending on season and availability.",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -328,7 +328,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "1 bp/application",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous"
@@ -352,7 +352,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 8,
             "cost" : "6 bp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -375,7 +375,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 15,
             "cost" : "30 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast",
                     "Marsh"
@@ -399,7 +399,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Grasslands",
@@ -424,7 +424,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "1 bp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -449,7 +449,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 50,
             "cost" : "2 bp / drink",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Plains"
                 ],
@@ -472,7 +472,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 1,
             "cost" : "31 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains",
@@ -498,7 +498,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Grasslands"
@@ -522,7 +522,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "23 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Grasslands"
@@ -546,7 +546,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "180-300 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous",
@@ -577,7 +577,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 2,
             "cost" : "40 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Heath",
                     "Tundra"
@@ -602,7 +602,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 1,
             "cost" : "8 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -625,7 +625,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "3 bp/fruit",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -649,7 +649,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 3,
             "cost" : "45 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh",
                     "Saltwater Coast"
@@ -674,7 +674,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 7,
             "cost" : "102 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -698,7 +698,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "2 gp/berry",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -721,7 +721,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 4,
             "cost" : "90-120 gp",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Cave",
                     "Cavern",
@@ -743,7 +743,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "3 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -767,7 +767,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "6 gp each",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -787,7 +787,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "40 gp/nut",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -810,7 +810,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 20,
             "cost" : "60 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -834,7 +834,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "19 gp/dose (enough to cover a man-sized object)",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -858,7 +858,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "9 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -882,7 +882,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "15 gp/dose; 50 gp/lb",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -905,7 +905,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "2 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -925,7 +925,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "25 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -949,7 +949,7 @@
             "findDifficulty" : "Absurd",
             "addictionFactor" : 0,
             "cost" : "205-300 gp/application",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -972,7 +972,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "50 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -1000,7 +1000,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "1 cp/cone",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -1023,7 +1023,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "4 gp/leaf; 12 gp/succulent tissue",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert",
                     "Oasis"
@@ -1048,7 +1048,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "500 gp/dose due to the difficulkty of obtaining it",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ]
@@ -1068,7 +1068,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "14 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous",
                     "Rough"
@@ -1093,7 +1093,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "80 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous",
                     "Deciduous"
@@ -1117,7 +1117,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "600 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert",
                     "Oasis"
@@ -1142,7 +1142,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "4 gp/serving",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -1165,7 +1165,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 7,
             "cost" : "25 gp/dose",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Volcanic"
                 ],
@@ -1192,7 +1192,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "15 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -1215,7 +1215,7 @@
             "findDifficulty" : "Routine",
             "addictionFactor" : 1,
             "cost" : "4 sp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Rough",
                     "Waste"
@@ -1239,7 +1239,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "40-45 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast",
                     "Lake"
@@ -1269,7 +1269,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 45,
             "cost" : "9 gp",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Volcanic"
                 ],
@@ -1294,7 +1294,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 22,
             "cost" : "110 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -1317,7 +1317,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "25 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -1342,7 +1342,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "10 gp/dose",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Cave",
                     "Cavern"
@@ -1363,7 +1363,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "10 gp/resin nodule",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -1387,7 +1387,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "33 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -1407,7 +1407,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "65 gp/root (3 are needed to totally protect a Man; 2 for ½ a Man, or one Hobbit or one Dwarf).",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -1431,7 +1431,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 25,
             "cost" : "89 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -1454,7 +1454,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "10 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Grasslands"
@@ -1478,7 +1478,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "45 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -1498,7 +1498,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -1523,7 +1523,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "53 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert",
                     "Oasis"
@@ -1548,7 +1548,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "4 sp/strip",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -1568,7 +1568,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 7,
             "cost" : "54 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert",
                     "Oasis"
@@ -1592,7 +1592,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 1,
             "cost" : "36 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -1615,7 +1615,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "4 sp/nut",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -1638,7 +1638,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "1 sp/dose",
-            "location" : {
+            "habitat" : {
                 "climateSubGroups" : [
                     "Humid Continental Hot Summer",
                     "Humid Continental Warm Summer"
@@ -1659,7 +1659,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "7 gp/head",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -1682,7 +1682,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "9 sp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Rough"
                 ],
@@ -1706,7 +1706,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "85-100 gp/ dose. The effort required to locate and pick 2 bucketfuls is sufficient to keep the price inflated.",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -1729,7 +1729,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "600 gp/ dose (= juice from 1 plant). The price reflects the difficulty in locating, removing and processing the plant safely.",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous",
                     "Rough"
@@ -1753,7 +1753,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "50 gp/ dose (sufficient to cover a man’s arms, face and hands; i.e., ½ his body)",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -1773,7 +1773,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "845 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -1798,7 +1798,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "50 gp/dose",
-            "location" : {
+            "habitat" : {
                 "climateSubGroups" : [
                     "Marine West Coast"
                 ]
@@ -1818,7 +1818,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "35 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert",
                     "Oasis"
@@ -1843,7 +1843,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 6,
             "cost" : "40 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -1867,7 +1867,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "22 gp/blossom",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -1893,7 +1893,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 3,
             "cost" : "30 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Heath"
                 ],
@@ -1916,7 +1916,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "28 gp/ dose, because of the labor that goes into making seckis.",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -1941,7 +1941,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "2-5 bp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous",
                     "Rough"
@@ -1967,7 +1967,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "32 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -1987,7 +1987,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "1 sp/ dose of pollen; 1 gp/ seed",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -2010,7 +2010,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "The Drughu would only bestow deadman’s eyes upon the most trusted of allies, often with the expectation of some reciprocal service",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Grasslands",
@@ -2036,7 +2036,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 10,
             "cost" : "100 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -2059,7 +2059,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 1,
             "cost" : "3 sp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -2082,7 +2082,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "2 gp/dose of oil; 250+ gp/ mattress.",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -2105,7 +2105,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "15 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -2129,7 +2129,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "5 sp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -2155,7 +2155,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "3 sp/ dose; 5 sp/ stalk.",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -2179,7 +2179,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 5,
             "cost" : "25 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -2202,7 +2202,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 2,
             "cost" : "9 sp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous",
                     "Rough"
@@ -2226,7 +2226,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "22 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -2246,7 +2246,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "3 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -2269,7 +2269,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 3,
             "cost" : "14 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast",
                     "Marsh"
@@ -2295,7 +2295,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "3 sp/ration",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -2319,7 +2319,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 18,
             "cost" : "22 gp/flower",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -2344,7 +2344,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "560 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Grasslands"
@@ -2372,7 +2372,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 10,
             "cost" : "31 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -2397,7 +2397,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "5 gp/lb",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -2423,7 +2423,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 5,
             "cost" : "10 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -2447,7 +2447,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "10-99 gp/dose depending on regional availability",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -2471,7 +2471,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "8 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Tundra"
                 ],
@@ -2494,7 +2494,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "1 sp/bud",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -2517,7 +2517,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "7 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -2541,7 +2541,7 @@
             "findDifficulty" : "Absurd",
             "addictionFactor" : 0,
             "cost" : "330-350 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -2565,7 +2565,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "65 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ]
@@ -2585,7 +2585,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Volcanic"
                 ],
@@ -2608,7 +2608,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 24,
             "cost" : "90 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -2632,7 +2632,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 5,
             "cost" : "50 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -2657,7 +2657,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 15,
             "cost" : "12 sp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Ocean",
                     "Saltwater Coast"
@@ -2681,7 +2681,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -2705,7 +2705,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "4 gp/ dose (fresh); 4 sp (dried).",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -2732,7 +2732,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "3 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast",
                     "Lake"
@@ -2756,7 +2756,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -2780,7 +2780,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "3 bp/dose juice; 2 bp/dose powder.",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous",
                     "Waste"
@@ -2804,7 +2804,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "44 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -2827,7 +2827,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "5 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -2852,7 +2852,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "25-40 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ],
@@ -2875,7 +2875,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "9 sp/ handful of the seeds (which last for years).",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -2898,7 +2898,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "179 gp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -2926,7 +2926,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 10,
             "cost" : "4 bp to 5 sp depending on the quality of the strain.",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Heath"
                 ],
@@ -2949,7 +2949,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 3,
             "cost" : "55 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert"
                 ],
@@ -2972,7 +2972,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 10,
             "cost" : "90 gp",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Volcanic"
                 ],
@@ -2996,7 +2996,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "he Drughu only share gnosh with trusted friends and allies (of which they have very few). Under no circumstances do they reveal the secret of its making to outsiders.",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous",
                     "Rough"
@@ -3020,7 +3020,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "2 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -3044,7 +3044,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "8 sp/fresh plant; 1 gp/dried plant; 4 gp/dose ointment.",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -3068,7 +3068,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "34 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Waste"
                 ],
@@ -3097,7 +3097,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "101 gp/dose",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Volcanic"
                 ],
@@ -3120,7 +3120,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 20,
             "cost" : "4 sp/pouch of leaf (5 doses), 1 gp/ 5 doses powder",
-            "location" : {
+            "habitat" : {
                 "climateSubGroups" : [
                     "Humid Subtropical",
                     "Marine West Coast",
@@ -3143,7 +3143,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 18,
             "cost" : "7 sp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -3166,7 +3166,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine",
                     "Mountainous"
@@ -3190,7 +3190,7 @@
             "findDifficulty" : "Absurd",
             "addictionFactor" : 0,
             "cost" : "1000 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -3210,7 +3210,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "20 gp/dose (enough to cover an arm)",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -3236,7 +3236,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "12gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ],
@@ -3260,7 +3260,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "1 gp/dose of leaves, which must be gathered by a talented climber (Hard)",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Jungle"
@@ -3286,7 +3286,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 5,
             "cost" : "30 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -3310,7 +3310,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "45 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh",
                     "Ocean",
@@ -3335,7 +3335,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "175 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -3360,7 +3360,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "4 gp/dose (fresh); 1 gp/dose (dried)",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Grasslands",
@@ -3385,7 +3385,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "35+ gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Heath"
@@ -3409,7 +3409,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "1 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -3432,7 +3432,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "7 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -3456,7 +3456,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 5,
             "cost" : "25 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -3483,7 +3483,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 1,
             "cost" : "80 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -3506,7 +3506,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "9 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -3529,7 +3529,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous",
                     "Rough"
@@ -3554,7 +3554,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 2,
             "cost" : "12 gp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine",
                     "Mountainous"
@@ -3579,7 +3579,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 10,
             "cost" : "67 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -3603,7 +3603,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "45 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -3626,7 +3626,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "220-250 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -3650,7 +3650,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "3 gp/fruit",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -3674,7 +3674,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 33,
             "cost" : "1 sp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -3699,7 +3699,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 6,
             "cost" : "180 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert"
                 ],
@@ -3723,7 +3723,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "45 gp/fruit",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -3746,7 +3746,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "312 gp/dose",
-            "location" : {
+            "habitat" : {
                 "climateSubGroups" : [
                     "Marine West Coast"
                 ]
@@ -3766,7 +3766,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "3 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -3789,7 +3789,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "4 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine",
                     "Mountainous"
@@ -3815,7 +3815,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "1 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -3839,7 +3839,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 2,
             "cost" : "100 sp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Plains"
                 ],
@@ -3862,7 +3862,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "92 gp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ],
@@ -3887,7 +3887,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 3,
             "cost" : "71 gp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ],
@@ -3910,7 +3910,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "34 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Ocean",
                     "Saltwater Coast"
@@ -3934,7 +3934,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 4,
             "cost" : "145 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast",
                     "Lake"
@@ -3960,7 +3960,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 23,
             "cost" : "35 sp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Breaks"
                 ],
@@ -3983,7 +3983,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "41 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert",
                     "Oasis"
@@ -4008,7 +4008,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 6,
             "cost" : "90 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -4031,7 +4031,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 3,
             "cost" : "29 gp",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Battlefield"
                 ],
@@ -4059,7 +4059,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "3 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -4083,7 +4083,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "150 gp/leaf; 350 gp/dose poison",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -4107,7 +4107,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "8 gp/berry",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Waste"
                 ],
@@ -4131,7 +4131,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "3 gp/nut",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Grasslands"
@@ -4155,7 +4155,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 35,
             "cost" : "50 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Tundra"
                 ],
@@ -4179,7 +4179,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "24 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -4205,7 +4205,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 33,
             "cost" : "65 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -4230,7 +4230,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "12 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -4255,7 +4255,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "34 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -4281,7 +4281,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 18,
             "cost" : "5 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -4304,7 +4304,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "1 sp/bunch (enough to last 1 week)",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Plains"
                 ],
@@ -4328,7 +4328,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "27 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert"
                 ],
@@ -4351,7 +4351,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Plains"
@@ -4377,7 +4377,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "154 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Heath",
                     "Plains"
@@ -4403,7 +4403,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "27-53 gp/dose depending on proximity to biome",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Breaks"
                 ],
@@ -4427,7 +4427,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "20 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Tundra"
                 ],
@@ -4454,7 +4454,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "4 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -4477,7 +4477,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "3 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -4500,7 +4500,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "1 gp/dose (1 leaf)",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -4525,7 +4525,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "9 sp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -4548,7 +4548,7 @@
             "findDifficulty" : "Absurd",
             "addictionFactor" : 21,
             "cost" : "999 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -4571,7 +4571,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "10 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Rough"
                 ],
@@ -4594,7 +4594,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "4 gp/1 weeks ration",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -4614,7 +4614,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "4 gp/weeks ration",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -4638,7 +4638,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "520 gp/dose, because of the difficulty of finding and transporting it.",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert",
                     "Oasis"
@@ -4663,7 +4663,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 11,
             "cost" : "300 gp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ],
@@ -4687,7 +4687,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "9 sp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Ocean"
                 ],
@@ -4710,7 +4710,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "3 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine",
                     "Mountainous"
@@ -4731,7 +4731,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "12 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -4755,7 +4755,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "240 gp/dose of nen calgalen; 2 gp/foot of rope",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -4775,7 +4775,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "21 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -4795,7 +4795,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "3 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -4818,7 +4818,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "100 gp/pint (1 dose)",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -4838,7 +4838,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Rough"
                 ],
@@ -4861,7 +4861,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "75 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -4885,7 +4885,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "7gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine",
                     "Mountainous"
@@ -4909,7 +4909,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "3 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -4932,7 +4932,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -4952,7 +4952,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "4 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -4972,7 +4972,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 19,
             "cost" : "12 sp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine",
                     "Mountainous"
@@ -4993,7 +4993,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "12 sp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -5017,7 +5017,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "60 gp/sap; 150 gp/dose of balm (because of the difficulty in recognizing the plant among the others in the region",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Plains"
                 ],
@@ -5041,7 +5041,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 4,
             "cost" : "65 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -5064,7 +5064,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 50,
             "cost" : "2 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -5091,7 +5091,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "he Lossoth do not value currency, but would barter metsästäjän kukka for needful items (e.g., blankets, pelts, dried fruit, etc).",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine",
                     "Mountainous"
@@ -5117,7 +5117,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "9 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -5140,7 +5140,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "10 gp/berry",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ],
@@ -5163,7 +5163,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "24 gp/dose (1 flower).",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -5189,7 +5189,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "9 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -5213,7 +5213,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "12 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -5237,7 +5237,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "210 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -5262,7 +5262,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "12 gp/each",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Cavern"
                 ],
@@ -5285,7 +5285,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "120 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -5310,7 +5310,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "35 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -5334,7 +5334,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "5 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -5362,7 +5362,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "22 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -5390,7 +5390,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "9 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -5420,7 +5420,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "52 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -5445,7 +5445,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "80 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -5469,7 +5469,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "The Lossoth are happy to barter mustakuu for other goods which they need.",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Tundra"
                 ],
@@ -5493,7 +5493,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "The Lossoth are happy to barter näkökasvi roots for other goods which they need.",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ],
@@ -5518,7 +5518,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "21 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert"
                 ],
@@ -5542,7 +5542,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "4 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -5565,7 +5565,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 15,
             "cost" : "9 sp",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Volcanic"
                 ],
@@ -5588,7 +5588,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "60 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -5613,7 +5613,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "1 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -5636,7 +5636,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "13 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -5661,7 +5661,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "15 gp/dose",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Cave",
                     "Cavern"
@@ -5682,7 +5682,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -5707,7 +5707,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "23 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -5730,7 +5730,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 13,
             "cost" : "200 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -5754,7 +5754,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 22,
             "cost" : "600 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -5778,7 +5778,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 20,
             "cost" : "200 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -5802,7 +5802,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "5 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -5825,7 +5825,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "60 gp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ],
@@ -5850,7 +5850,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 2,
             "cost" : "29 gp",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Cave",
                     "Cavern"
@@ -5875,7 +5875,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "78 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -5895,7 +5895,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "5000 gp/dose due to difficulty harvesting",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -5919,7 +5919,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "800 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -5942,7 +5942,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 40,
             "cost" : "75 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -5968,7 +5968,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 7,
             "cost" : "35 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Heath"
                 ],
@@ -5992,7 +5992,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "1 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -6016,7 +6016,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "23 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -6039,7 +6039,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "35 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -6062,7 +6062,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "9 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -6087,7 +6087,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "12 gp/each",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -6107,7 +6107,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -6131,7 +6131,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "3 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Grasslands"
@@ -6155,7 +6155,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "1 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -6181,7 +6181,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "450 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -6207,7 +6207,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 1,
             "cost" : "40 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -6230,7 +6230,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "1 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -6256,7 +6256,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "3 sp/leaf; 33 gp/dose (1 oz) of red gift",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -6281,7 +6281,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 7,
             "cost" : "4 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -6306,7 +6306,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "9 sp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -6329,7 +6329,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -6352,7 +6352,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "43 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -6379,7 +6379,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "12 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -6405,7 +6405,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "50 gp/dose nectar",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -6431,7 +6431,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 10,
             "cost" : "25 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -6455,7 +6455,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -6475,7 +6475,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "56 gp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -6495,7 +6495,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "180 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ],
@@ -6519,7 +6519,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "50 gp/blossom",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -6545,7 +6545,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "9 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -6571,7 +6571,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "2 gp/dose",
-            "location" : {
+            "habitat" : {
                 "climateSubGroups" : [
                     "Arid Desert Hot",
                     "Arid Steppe Hot",
@@ -6593,7 +6593,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "35 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Ocean",
                     "Saltwater Coast"
@@ -6617,7 +6617,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "10 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -6640,7 +6640,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "34 gp/dose",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Cave",
                     "Cavern"
@@ -6661,7 +6661,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "22 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -6681,7 +6681,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "45 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -6706,7 +6706,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 6,
             "cost" : "36 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert",
                     "Oasis"
@@ -6734,7 +6734,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "2 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -6758,7 +6758,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "5 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -6782,7 +6782,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 3,
             "cost" : "27 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast",
                     "Islet"
@@ -6806,7 +6806,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "2 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -6829,7 +6829,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "4 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -6853,7 +6853,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "4 sp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -6878,7 +6878,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "45 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -6902,7 +6902,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 31,
             "cost" : "80 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Plains"
                 ],
@@ -6927,7 +6927,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 27,
             "cost" : "70 gp/bushel (enough to preserve a man-sized surface)",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -6954,7 +6954,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "12 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -6974,7 +6974,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "1 sp/each",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -6994,7 +6994,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "35 gp/dose of poison; 3 sp/ fruit.",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -7018,7 +7018,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "36 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -7041,7 +7041,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "34 gp/dose",
-            "location" : {
+            "habitat" : {
                 "climateSubGroups" : [
                     "Arid Desert Cold",
                     "Arid Steppe Cold",
@@ -7064,7 +7064,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "22 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ],
@@ -7088,7 +7088,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "34 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ],
@@ -7113,7 +7113,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "1 sp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -7141,7 +7141,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 2,
             "cost" : "23 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -7165,7 +7165,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "44 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -7188,7 +7188,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "22 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -7213,7 +7213,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "2 sp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -7233,7 +7233,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "33 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -7257,7 +7257,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 3,
             "cost" : "2 gp/berry",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast",
                     "Marsh"
@@ -7282,7 +7282,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "4 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -7309,7 +7309,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "3 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -7334,7 +7334,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 25,
             "cost" : "50 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Breaks",
                     "Desert",
@@ -7360,7 +7360,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 3,
             "cost" : "4 sp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Ocean"
                 ],
@@ -7387,7 +7387,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 3,
             "cost" : "23 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -7414,7 +7414,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 10,
             "cost" : "220 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -7439,7 +7439,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "4 sp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -7463,7 +7463,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "27 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -7490,7 +7490,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "10 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Tundra"
                 ],
@@ -7513,7 +7513,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "9 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -7538,7 +7538,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "2 gp (enough to cover 1 sq. '",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -7562,7 +7562,7 @@
             "findDifficulty" : "Routine",
             "addictionFactor" : 1,
             "cost" : "2 sp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -7586,7 +7586,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "125 gp/dose, because of the difficulty of keeping it alive",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -7610,7 +7610,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -7630,7 +7630,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 8,
             "cost" : "12 sp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -7654,7 +7654,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 6,
             "cost" : "31 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -7679,7 +7679,7 @@
             "findDifficulty" : "Absurd",
             "addictionFactor" : 0,
             "cost" : "1200 gp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ],
@@ -7702,7 +7702,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 100,
             "cost" : "38 sp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Plains"
                 ],
@@ -7727,7 +7727,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "75 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous",
                     "Grasslands",
@@ -7753,7 +7753,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 1,
             "cost" : "34 sp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Heath"
                 ],
@@ -7777,7 +7777,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ],
@@ -7801,7 +7801,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 9,
             "cost" : "4300 gp/leaf",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Waste"
                 ],
@@ -7829,7 +7829,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 45,
             "cost" : "9 gp/dose; It is much valued by viisaat, who would pay (in ivory) 2 to 3 times its market value.",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Volcanic"
                 ],
@@ -7855,7 +7855,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 6,
             "cost" : "12 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Plains"
                 ],
@@ -7879,7 +7879,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "3 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -7902,7 +7902,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "44 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -7928,7 +7928,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 2,
             "cost" : "8 sp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -7955,7 +7955,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 4,
             "cost" : "2 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands",
                     "Plains"
@@ -7982,7 +7982,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "200 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -8006,7 +8006,7 @@
             "findDifficulty" : "Absurd",
             "addictionFactor" : 0,
             "cost" : "330 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -8026,7 +8026,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "20 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Freshwater Coast"
                 ],
@@ -8049,7 +8049,7 @@
             "findDifficulty" : "Absurd",
             "addictionFactor" : 0,
             "cost" : "1000 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -8074,7 +8074,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 6,
             "cost" : "42 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -8099,7 +8099,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "66 gp/ dose for hemlock; 102 gp/ dose for blade hemlock",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Marsh"
                 ],
@@ -8123,7 +8123,7 @@
             "findDifficulty" : "Absurd",
             "addictionFactor" : 0,
             "cost" : "70 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Ocean",
                     "Saltwater Coast"
@@ -8148,7 +8148,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 50,
             "cost" : "220 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -8174,7 +8174,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 3,
             "cost" : "16 gp/dose",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Desert"
                 ],
@@ -8198,7 +8198,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "10 gp/dose (pink berries); 100 gp/dose (white berries),",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -8223,7 +8223,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -8243,7 +8243,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 0,
             "cost" : "75-100 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -8268,7 +8268,7 @@
             "findDifficulty" : "Extremely Hard",
             "addictionFactor" : 15,
             "cost" : "55 gp",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Alpine"
                 ],
@@ -8296,7 +8296,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 0,
             "cost" : "43 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Grasslands"
                 ],
@@ -8321,7 +8321,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 12,
             "cost" : "100 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous"
                 ],
@@ -8349,7 +8349,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 5,
             "cost" : "15 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -8373,7 +8373,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "12 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -8398,7 +8398,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ]
@@ -8418,7 +8418,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 0,
             "cost" : "33 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Coniferous"
                 ],
@@ -8442,7 +8442,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "5 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -8466,7 +8466,7 @@
             "findDifficulty" : "Light",
             "addictionFactor" : 0,
             "cost" : "4 sp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Deciduous"
                 ],
@@ -8489,7 +8489,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -8515,7 +8515,7 @@
             "findDifficulty" : "Easy",
             "addictionFactor" : 7,
             "cost" : "9 sp/flower",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Plains"
                 ],
@@ -8538,7 +8538,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 4,
             "cost" : "45 gp",
-            "location" : {
+            "habitat" : {
                 "waterSources" : [
                     "Saltwater Coast"
                 ],
@@ -8562,7 +8562,7 @@
             "findDifficulty" : "Hard",
             "addictionFactor" : 0,
             "cost" : "12 gp/dose",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -8585,7 +8585,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 0,
             "cost" : "300-2000 gp/ dose",
-            "location" : {
+            "habitat" : {
                 "climateSubGroups" : [
                     "Humid Subtropical",
                     "Marine West Coast",
@@ -8607,7 +8607,7 @@
             "findDifficulty" : "Sheer Folly",
             "addictionFactor" : 8,
             "cost" : "29 gp",
-            "location" : {
+            "habitat" : {
                 "vegetation" : [
                     "Jungle"
                 ],
@@ -8630,7 +8630,7 @@
             "findDifficulty" : "Very Hard",
             "addictionFactor" : 0,
             "cost" : "139 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Mountainous",
                     "Rough"
@@ -8659,7 +8659,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 2,
             "cost" : "70 sp",
-            "location" : {
+            "habitat" : {
                 "features" : [
                     "Cave",
                     "Volcanic"
@@ -8686,7 +8686,7 @@
             "findDifficulty" : "Medium",
             "addictionFactor" : 8,
             "cost" : "12 gp/dose",
-            "location" : {
+            "habitat" : {
                 "terrains" : [
                     "Underground"
                 ],

@@ -16,7 +16,7 @@
 #include <CriticalModifierType.h>
 #include <CriticalSizeTableType.h>
 #include <GameRuleData.h>
-#include <Location.h>
+#include <Habitat.h>
 #include <ManoeuvreDifficultyType.h>
 #include <NumberRange.h>
 #include <TreasureCodeData.h>
@@ -32,7 +32,7 @@ namespace rm::rule {
  *
  * There are both specific animals and generic animal types that are defined with the specific animals being fully defined specialisations of generic types.
  * 
- * The specific animals will be either commonly found animals that have a significant role in the game or unique animals that are only found in one location.
+ * The specific animals will be either commonly found animals that have a significant role in the game or unique animals that are only found in one habitat.
  * 
  * The generic animal types will be used to define the animals that are not significanrt enough to warrant a dedicated entry. The generic types may have a list of specific animal names for flavour purposes, but will use the generic data.
  * For example there may be a generic animal type of "Fish, Medium" with a list of specific animal names such as "Trout", "Salmon" and "Pike".
@@ -549,19 +549,19 @@ public:
 	}
 
 	/**
-	 * @brief Set the location definition for the animal
-	 * @param location Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there.
+	 * @brief Set the habitat definition for the animal
+	 * @param habitat Habitat definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there.
 	 */
-	void setLocation(rm::game::Location location) {
-		location_ = std::make_unique<rm::game::Location>(std::move(location));
+	void setHabitat(rm::game::Habitat habitat) {
+		habitat_ = std::make_unique<rm::game::Habitat>(std::move(habitat));
 	}
 
 	/**
-	 * @brief Get the location for the animal
-	 * @return Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there.
+	 * @brief Get the habitat for the animal
+	 * @return Habitat definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there.
 	 */
-	const rm::game::Location& location() const {
-		return *location_;
+	const rm::game::Habitat& habitat() const {
+		return *habitat_;
 	}
 
 	/**
@@ -732,8 +732,8 @@ private:
 	std::pair<int, int>
 	    encounter_range_{}; /**< A pair containing the minimum and maximum number of animals typically enountered in a single encounter, used to determine how many animals are encountered when an encounter with the animal is generated. */
 	std::pair<int, int> number_young_range_{}; /**< A pair containing the minimum and maximum number of young typically born in a single birth, used to determine how many young are born when a birth event is generated for the animal. */
-	std::unique_ptr<rm::game::Location>
-	    location_{}; /**< Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there. */
+	std::unique_ptr<rm::game::Habitat>
+	    habitat_{}; /**< Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there. */
 	std::map<const archid::NumberRange<int>*, rm::game::AnimalAttack>
 	    attacks_{}; /**< Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for
 	                   each animal and instead just reference the same data for all animals with the same attack chances. */

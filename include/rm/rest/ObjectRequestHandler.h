@@ -29,8 +29,8 @@ public:
 	 *
 	 * | Method | Endpoint | Description |
 	 * |--------|----------|-------------|
-	 * |GET    | /rmce/objects/count?types={types} | Get the count of objects of specific types (e.g. /rmce/objects/count?types=character,location) |
-	 * |GET    | /rmce/objects/types | Get a list of all known type prefixes for objects (e.g. "character", "location") |
+	 * |GET    | /rmce/objects/count?types={types} | Get the count of objects of specific types (e.g. /rmce/objects/count?types=character,habitat) |
+	 * |GET    | /rmce/objects/types | Get a list of all known type prefixes for objects (e.g. "character", "habitat") |
 	 * |GET    | /rmce/objects/{type} | Get a list of all objects of a specific type (e.g. /rmce/objects/character) |
 	 * |GET    | /rmce/objects/{type}?count | Get the count of objects of a specific type (e.g. /rmce/objects/character?count) |
 	 * |GET    | /rmce/objects/{type}?ids | Get a list of all object IDs of a specific type (e.g. /rmce/objects/character?ids) |

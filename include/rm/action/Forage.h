@@ -4,7 +4,7 @@
 #include <functional> // required for std::reference_wrapper
 
 #include <Character.h>
-#include <Location.h>
+#include <Habitat.h>
 #include <ForagableData.h>
 #include <PersistentObjectManager.h>
 
@@ -29,15 +29,15 @@ struct HerbModifiers {
 };
 
 /**
- * @brief Forage for herbs in a given location using the provided character and modifiers.
+ * @brief Forage for herbs in a given habitat using the provided character and modifiers.
  *
  * @param forager The character who is foraging.
- * @param search_location The location where the foraging is taking place.
+ * @param search_habitat The habitat of the habitat where the foraging is taking place.
  * @param modifiers The modifiers that affect the foraging process.
  *
  * @return A map of found and identified foragable resources and the number of doses found for each resource.
  */
-std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::Character& forager, rm::game::Location& search_location, HerbModifiers& modifiers);
+std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::Character& forager, rm::game::Habitat& search_habitat, HerbModifiers& modifiers);
 
 /**
  * @brief Struct to hold modifiers for the sustainance foraging action.
@@ -52,7 +52,7 @@ struct SustainanceModifiers {
 };
 
 /**
- * @brief Forage for sustainance in a given location using the provided character and modifiers.
+ * @brief Forage for sustainance in a given habitat using the provided character and modifiers.
  *
  * Foraging for sustainance is for finding water and plants for survival, it includes fishing  and clamming, but does not include hunting for meat. The foraging process is affected by the number of hours spent foraging, the number of people
  * sustainance is required for, and whether it is the dry season.
@@ -64,37 +64,37 @@ struct SustainanceModifiers {
  * increasing the difficulty by 1. The dry season makes foraging for water more difficult in locations where there are monsoons/dry seasons.
  *
  * @param forager The character who is foraging.
- * @param search_location The location where the foraging is taking place.
+ * @param search_habitat The habitat of the habitat where the foraging is taking place.
  * @param modifiers The modifiers that affect the foraging process.
  *
  * @return A pair of floats representing the amount of food and water found relative to the required amount.
  */
-std::pair<float, float> forage_sustainance(rm::game::character::Character& forager, rm::game::Location& search_location, SustainanceModifiers& modifiers);
+std::pair<float, float> forage_sustainance(rm::game::character::Character& forager, rm::game::Habitat& search_habitat, SustainanceModifiers& modifiers);
 
 /**
- * @brief Forage for food in a given location using the provided character and modifiers.
+ * @brief Forage for food in a given habitat using the provided character and modifiers.
  *
  * This function is a wrapper around forage_sustainance that only returns the amount of food found. It is provided for convenience when only the food foraging result is needed.
  *
  * @param forager The character who is foraging.
- * @param search_location The location where the foraging is taking place.
+ * @param search_habitat The habitat of the habitat where the foraging is taking place.
  * @param modifiers The modifiers that affect the foraging process.
  *
  * @return A float representing the amount of food found relative to the required amount.
  */
-float forage_food(rm::game::character::Character& forager, rm::game::Location& search_location, SustainanceModifiers& modifiers);
+float forage_food(rm::game::character::Character& forager, rm::game::Habitat& search_habitat, SustainanceModifiers& modifiers);
 
 /**
- * @brief Forage for water in a given location using the provided character and modifiers.
+ * @brief Forage for water in a given habitat using the provided character and modifiers.
  *
  * This function is a wrapper around forage_sustainance that only returns the amount of water found. It is provided for convenience when only the water foraging result is needed.
  *
  * @param forager The character who is foraging.
- * @param search_location The location where the foraging is taking place.
+ * @param search_habitat The habitat of the habitat where the foraging is taking place.
  * @param modifiers The modifiers that affect the foraging process.
  *
  * @return A float representing the amount of water found relative to the required amount.
  */
-float forage_water(rm::game::character::Character& forager, rm::game::Location& search_location, SustainanceModifiers& modifiers);
+float forage_water(rm::game::character::Character& forager, rm::game::Habitat& search_habitat, SustainanceModifiers& modifiers);
 
 } // namespace rm::action::forage

@@ -1,13 +1,13 @@
 #include <gtest/gtest.h>
 
-#include <Location.h>
+#include <Habitat.h>
 
 using namespace rm;
-using game::Location;
+using game::Habitat;
 
 namespace {
 	TEST(LocationTest, TestFeatures) {
-		Location location;
+		Habitat location;
 		location.addFeature(rule::enums::EnvironmentType::Feature::kCave);
 		location.addFeature(rule::enums::EnvironmentType::Feature::kRuins);
 		EXPECT_TRUE(location.hasFeature(rule::enums::EnvironmentType::Feature::kCave));
@@ -16,7 +16,7 @@ namespace {
 	}
 
 	TEST(LocationTest, TestTerrains) {
-		Location location;
+		Habitat location;
 		location.addTerrain(rule::enums::EnvironmentType::Terrain::kAlpine);
 		location.addTerrain(rule::enums::EnvironmentType::Terrain::kRough);
 		EXPECT_TRUE(location.hasTerrain(rule::enums::EnvironmentType::Terrain::kAlpine));
@@ -25,7 +25,7 @@ namespace {
 	}
 
 	TEST(LocationTest, TestVegetation) {
-		Location location;
+		Habitat location;
 		location.addVegetation(rule::enums::EnvironmentType::Vegetation::kBarren);
 		location.addVegetation(rule::enums::EnvironmentType::Vegetation::kJungle);
 		EXPECT_TRUE(location.hasVegetation(rule::enums::EnvironmentType::Vegetation::kBarren));
@@ -34,7 +34,7 @@ namespace {
 	}
 
 	TEST(LocationTest, TestWater) {
-		Location location;
+		Habitat location;
 		location.addWater(rule::enums::EnvironmentType::Water::kOasis);
 		location.addWater(rule::enums::EnvironmentType::Water::kSaltCoast);
 		EXPECT_TRUE(location.hasWater(rule::enums::EnvironmentType::Water::kOasis));
@@ -43,7 +43,7 @@ namespace {
 	}
 
 	TEST(LocationTest, TestClimate) {
-		Location location;
+		Habitat location;
 		location.addClimateGroup(rule::enums::ClimateType::KoppenGroup::kTropical);
 		location.addClimateGroup(rule::enums::ClimateType::KoppenGroup::kDry);
 		EXPECT_TRUE(location.hasClimateGroup(rule::enums::ClimateType::KoppenGroup::kTropical));
@@ -52,14 +52,14 @@ namespace {
 	}
 
 	TEST(LocationTest, TestDuplicate) {
-		Location location;
+		Habitat location;
 		location.addFeature(rule::enums::EnvironmentType::Feature::kCave);
 		location.addFeature(rule::enums::EnvironmentType::Feature::kCave);
 		EXPECT_TRUE(location.hasFeature(rule::enums::EnvironmentType::Feature::kCave));
 	}
 
 	TEST(LocationTest, TestEmpty) {
-		Location location;
+		Habitat location;
 		EXPECT_FALSE(location.hasFeature(rule::enums::EnvironmentType::Feature::kCave));
 		EXPECT_FALSE(location.hasTerrain(rule::enums::EnvironmentType::Terrain::kAlpine));
 		EXPECT_FALSE(location.hasVegetation(rule::enums::EnvironmentType::Vegetation::kBarren));
@@ -67,7 +67,7 @@ namespace {
 	}
 
 	TEST(LocationTest, TestSetters) {
-		Location location;
+		Habitat location;
 		location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave, rule::enums::EnvironmentType::Feature::kRuins });
 		location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine, rule::enums::EnvironmentType::Terrain::kRough });
 		location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren, rule::enums::EnvironmentType::Vegetation::kJungle });
@@ -87,7 +87,7 @@ namespace {
 	}
 
 	TEST(LocationTest, TestEmptySetters) {
-		Location location;
+		Habitat location;
 		location.setFeatures({});
 		location.setTerrains({});
 		location.setVegetation({});
@@ -99,12 +99,12 @@ namespace {
 	}
 
 	TEST(LocationTest, TestMatcher) {
-		Location location;
+		Habitat location;
 		location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave, rule::enums::EnvironmentType::Feature::kRuins });
 		location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine, rule::enums::EnvironmentType::Terrain::kRough });
 		location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren, rule::enums::EnvironmentType::Vegetation::kJungle });
 		location.setWater({ rule::enums::EnvironmentType::Water::kOasis, rule::enums::EnvironmentType::Water::kSaltCoast });
-		Location specific_location;
+		Habitat specific_location;
 		specific_location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave });
 		specific_location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine });
 		specific_location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren });
@@ -115,8 +115,8 @@ namespace {
 	}
 
 	TEST(LocationTest, TestMatcherEmpty) {
-		Location location;
-		Location specific_location;
+		Habitat location;
+		Habitat specific_location;
 		EXPECT_TRUE(location.matches(specific_location));
 		specific_location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave });
 		EXPECT_TRUE(location.matches(specific_location));
@@ -125,12 +125,12 @@ namespace {
 	}
 
 	TEST(LocationTest, TestMatcherPartial) {
-		Location location;
+		Habitat location;
 		location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave, rule::enums::EnvironmentType::Feature::kRuins });
 		location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine, rule::enums::EnvironmentType::Terrain::kRough });
 		location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren, rule::enums::EnvironmentType::Vegetation::kJungle });
 		location.setWater({ rule::enums::EnvironmentType::Water::kOasis, rule::enums::EnvironmentType::Water::kSaltCoast });
-		Location specific_location;
+		Habitat specific_location;
 		specific_location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave });
 		specific_location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine });
 		specific_location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren });
@@ -143,12 +143,12 @@ namespace {
 	}
 
 	TEST(LocationTest, TestMatcherMultiple) {
-		Location location;
+		Habitat location;
 		location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave, rule::enums::EnvironmentType::Feature::kRuins });
 		location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine, rule::enums::EnvironmentType::Terrain::kRough });
 		location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren, rule::enums::EnvironmentType::Vegetation::kJungle });
 		location.setWater({ rule::enums::EnvironmentType::Water::kOasis, rule::enums::EnvironmentType::Water::kSaltCoast });
-		Location specific_location;
+		Habitat specific_location;
 		specific_location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave, rule::enums::EnvironmentType::Feature::kRuins });
 		specific_location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine, rule::enums::EnvironmentType::Terrain::kRough });
 		specific_location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren, rule::enums::EnvironmentType::Vegetation::kJungle });
@@ -159,12 +159,12 @@ namespace {
 	}
 
 	TEST(LocationTest, TestMatcherSubset) {
-		Location location;
+		Habitat location;
 		location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave, rule::enums::EnvironmentType::Feature::kRuins });
 		location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine, rule::enums::EnvironmentType::Terrain::kRough });
 		location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren, rule::enums::EnvironmentType::Vegetation::kJungle });
 		location.setWater({ rule::enums::EnvironmentType::Water::kOasis, rule::enums::EnvironmentType::Water::kSaltCoast });
-		Location specific_location;
+		Habitat specific_location;
 		specific_location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave });
 		specific_location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine });
 		specific_location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren });
@@ -173,12 +173,12 @@ namespace {
 	}
 
 	TEST(LocationTest, TestMatcherSuperset) {
-		Location location;
+		Habitat location;
 		location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave });
 		location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine });
 		location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren });
 		location.setWater({ rule::enums::EnvironmentType::Water::kOasis });
-		Location specific_location;
+		Habitat specific_location;
 		specific_location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave, rule::enums::EnvironmentType::Feature::kRuins });
 		specific_location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine, rule::enums::EnvironmentType::Terrain::kRough });
 		specific_location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren, rule::enums::EnvironmentType::Vegetation::kJungle });
@@ -187,12 +187,12 @@ namespace {
 	}
 
 	TEST(LocationTest, TestMatcherNoMatch) {
-		Location location;
+		Habitat location;
 		location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave });
 		location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine });
 		location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren });
 		location.setWater({ rule::enums::EnvironmentType::Water::kOasis });
-		Location specific_location;
+		Habitat specific_location;
 		specific_location.setFeatures({ rule::enums::EnvironmentType::Feature::kEnchanted });
 		specific_location.setTerrains({ rule::enums::EnvironmentType::Terrain::kUnderground });
 		specific_location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kDeciduous });
@@ -201,11 +201,11 @@ namespace {
 	}
 
 	TEST(LocationTest, TestMatcherMatchNoFeature) {
-		Location location;
+		Habitat location;
 		location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine });
 		location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren });
 		location.setWater({ rule::enums::EnvironmentType::Water::kOasis });
-		Location specific_location;
+		Habitat specific_location;
 		specific_location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave, rule::enums::EnvironmentType::Feature::kRuins });
 		specific_location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine, rule::enums::EnvironmentType::Terrain::kRough });
 		specific_location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren, rule::enums::EnvironmentType::Vegetation::kJungle });
@@ -214,12 +214,12 @@ namespace {
 	}
 
 	TEST(LocationTest, TestMatcherEmptySpecific) {
-		Location location;
+		Habitat location;
 		location.setFeatures({ rule::enums::EnvironmentType::Feature::kCave });
 		location.setTerrains({ rule::enums::EnvironmentType::Terrain::kAlpine });
 		location.setVegetation({ rule::enums::EnvironmentType::Vegetation::kBarren });
 		location.setWater({ rule::enums::EnvironmentType::Water::kOasis });
-		Location specific_location;
+		Habitat specific_location;
 		EXPECT_FALSE(location.matches(specific_location));
 	}
 } // namespace

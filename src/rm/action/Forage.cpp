@@ -6,7 +6,7 @@
 
 namespace rm::action::forage {
 
-std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::Character& forager, rm::game::Location& search_location, HerbModifiers& modifiers) {
+std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::Character& forager, rm::game::Habitat& search_habitat, HerbModifiers& modifiers) {
 	archid::Dice d100(100, 5); // Create a d100 dice with open-ended rolls for the top and bottom 5 results
 
 	std::map<const rm::rule::ForagableData*, int> foraged_resources;
@@ -20,7 +20,7 @@ std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::
 	 */
 
 	/*
-	 * Perform foraging skill check to see what resources are found in the search location. The skill check is modified by the number of hours spent foraging, the number of additional searchers, and the number of previous failed searches.
+	 * Perform foraging skill check to see what resources are found in the search habitat. The skill check is modified by the number of hours spent foraging, the number of additional searchers, and the number of previous failed searches.
 	 */
 	// Get the characters foraging skill bonus
 	const rm::rule::SubcategoriedSkillData& foraging_skill = modifiers.object_factory.subcategoriedSkillData("SKILL_FORAGING");
@@ -51,7 +51,7 @@ std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::
 		const rm::rule::ForagableData& foragable = *modifiers.target_resource;
 
 		// Handle specific resource forage
-		if (foragable.location().matches(search_location)) {
+		if (foragable.habitat().matches(search_habitat)) {
 			int doses_roll = archid::Dice(20).roll().result();
 			int num_doses = std::max(1, 1 + doses_roll + foragable.findDifficultyRating());
 			foraged_resources[&foragable] = num_doses;
@@ -60,7 +60,7 @@ std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::
 		// Handle general forage
 		for (const auto& foragable_wrapper : modifiers.object_factory.getAll<rm::rule::ForagableData>()) {
 			const rm::rule::ForagableData& foragable = foragable_wrapper.get();
-			if (foragable.location().matches(search_location)) {
+			if (foragable.habitat().matches(search_habitat)) {
 				int doses_roll = d100.roll().result();
 				int num_doses = std::max(0, (foraging_roll + doses_roll + foragable.findDifficultyModifier() - 150) / 10);
 				if (num_doses > 0) {
@@ -110,7 +110,7 @@ std::map<const rm::rule::ForagableData*, int> forage_herbs(rm::game::character::
 	return identified_resources;
 }
 
-float forage_food(rm::game::character::Character& forager, rm::game::Location& search_location, SustainanceModifiers& modifiers) {
+float forage_food(rm::game::character::Character& forager, rm::game::Habitat& search_habitat, SustainanceModifiers& modifiers) {
 	// Get the characters foraging skill bonus
 	const rm::rule::SubcategoriedSkillData& foraging_skill = modifiers.object_factory.subcategoriedSkillData("SKILL_FORAGING");
 	float found_food = 0.0f;
@@ -122,38 +122,38 @@ float forage_food(rm::game::character::Character& forager, rm::game::Location& s
 	SkillDifficultyType::Type difficulty = kAbsurd;
 
 	// Deal with vegetation first
-	if (search_location.hasVegetation(Vegetation::kDeciduous) || search_location.hasVegetation(Vegetation::kConiferous) || search_location.hasVegetation(Vegetation::kJungle)) {
+	if (search_habitat.hasVegetation(Vegetation::kDeciduous) || search_habitat.hasVegetation(Vegetation::kConiferous) || search_habitat.hasVegetation(Vegetation::kJungle)) {
 		difficulty = std::min(difficulty, kEasy);
-	} else if (search_location.hasVegetation(Vegetation::kGrasslands) || search_location.hasVegetation(Vegetation::kHeath)) {
+	} else if (search_habitat.hasVegetation(Vegetation::kGrasslands) || search_habitat.hasVegetation(Vegetation::kHeath)) {
 		difficulty = std::min(difficulty, kMedium);
-	} else if (search_location.hasVegetation(Vegetation::kPlains)) {
+	} else if (search_habitat.hasVegetation(Vegetation::kPlains)) {
 		difficulty = std::min(difficulty, kHard);
-	} else if (search_location.hasVegetation(Vegetation::kTundra)) {
+	} else if (search_habitat.hasVegetation(Vegetation::kTundra)) {
 		difficulty = std::min(difficulty, kSheerFolly);
-	} else if (search_location.hasVegetation(Vegetation::kBarren)) {
+	} else if (search_habitat.hasVegetation(Vegetation::kBarren)) {
 		difficulty = std::min(difficulty, kAbsurd);
 	}
 
 	// Now deal with water sources
-	if (search_location.hasWater(Water::kFreshCoast) || search_location.hasWater(Water::kLake) || search_location.hasWater(Water::kOasis)) {
+	if (search_habitat.hasWater(Water::kFreshCoast) || search_habitat.hasWater(Water::kLake) || search_habitat.hasWater(Water::kOasis)) {
 		difficulty = std::min(difficulty, kEasy);
-	} else if (search_location.hasWater(Water::kMarsh)) {
+	} else if (search_habitat.hasWater(Water::kMarsh)) {
 		difficulty = std::min(difficulty, kMedium);
-	} else if (search_location.hasWater(Water::kSaltCoast)) {
+	} else if (search_habitat.hasWater(Water::kSaltCoast)) {
 		difficulty = std::min(difficulty, kHard);
-	} else if (search_location.hasWater(Water::kDesert)) {
+	} else if (search_habitat.hasWater(Water::kDesert)) {
 		difficulty = std::min(difficulty, kSheerFolly);
-	} else if (search_location.hasWater(Water::kGlacier)) {
+	} else if (search_habitat.hasWater(Water::kGlacier)) {
 		difficulty = std::min(difficulty, kAbsurd);
 	}
 
 	// If it is the dry season, and the water type is breaks or wadis, which are seasonal we set the minimum difficluty to kExtremlyHard
-	if (modifiers.dry_season && search_location.hasWater(Water::kBreaks)) {
+	if (modifiers.dry_season && search_habitat.hasWater(Water::kBreaks)) {
 		difficulty = std::max(difficulty, kExtremelyHard); // Note this is a max because the dry season makes it very difficult to find water in breaks or wadis, even if there is vegetation present
 	}
 
 	// Alpine terrain is always diffuclt to forage in, so if it is present, we set the difficulty to very hard regardless of vegetation or water sources
-	if (search_location.hasTerrain(Terrain::kAlpine)) {
+	if (search_habitat.hasTerrain(Terrain::kAlpine)) {
 		difficulty = std::max(difficulty, kVeryHard); // Note this is a max because alpine terrain is very difficult to forage in, even if there is vegetation or water present
 	}
 
@@ -201,7 +201,7 @@ float forage_food(rm::game::character::Character& forager, rm::game::Location& s
 	return found_food;
 }
 
-float forage_water(rm::game::character::Character& forager, rm::game::Location& search_location, SustainanceModifiers& modifiers) {
+float forage_water(rm::game::character::Character& forager, rm::game::Habitat& search_habitat, SustainanceModifiers& modifiers) {
 	// Get the characters foraging skill bonus
 	const rm::rule::SubcategoriedSkillData& foraging_skill = modifiers.object_factory.subcategoriedSkillData("SKILL_FORAGING");
 	float found_water = 0.0f;
@@ -227,7 +227,7 @@ float forage_water(rm::game::character::Character& forager, rm::game::Location& 
 	}
 
 	for (const auto climate : wet_climates) {
-		if (search_location.hasClimateSubGroup(climate)) {
+		if (search_habitat.hasClimateSubGroup(climate)) {
 			difficulty = std::min(difficulty, kEasy);
 			break;
 		}
@@ -240,7 +240,7 @@ float forage_water(rm::game::character::Character& forager, rm::game::Location& 
 	}
 
 	for (const auto climate : dry_climates) {
-		if (search_location.hasClimateSubGroup(climate)) {
+		if (search_habitat.hasClimateSubGroup(climate)) {
 			difficulty = std::min(difficulty, kHard);
 			break;
 		}
@@ -253,28 +253,28 @@ float forage_water(rm::game::character::Character& forager, rm::game::Location& 
 	arid_climates.insert(KoppenSubGroup::kAridSteppeHot);
 
 	for (const auto climate : arid_climates) {
-		if (search_location.hasClimateSubGroup(climate)) {
+		if (search_habitat.hasClimateSubGroup(climate)) {
 			difficulty = std::min(difficulty, kExtremelyHard);
 			break;
 		}
 	}
 
 	// Now deal with water sources
-	if (search_location.hasWater(Water::kFreshCoast) || search_location.hasWater(Water::kLake) || search_location.hasWater(Water::kOasis)) {
+	if (search_habitat.hasWater(Water::kFreshCoast) || search_habitat.hasWater(Water::kLake) || search_habitat.hasWater(Water::kOasis)) {
 		difficulty = std::min(difficulty, kEasy);
-	} else if (search_location.hasWater(Water::kMarsh)) {
+	} else if (search_habitat.hasWater(Water::kMarsh)) {
 		difficulty = std::min(difficulty, kMedium);
-	} else if (search_location.hasWater(Water::kDesert)) {
+	} else if (search_habitat.hasWater(Water::kDesert)) {
 		difficulty = std::min(difficulty, kSheerFolly);
 	}
 
 	// If it is the dry season, and the water type is breaks or wadis, which are seasonal we set the minimum difficluty to kExtremlyHard
-	if (modifiers.dry_season && search_location.hasWater(Water::kBreaks)) {
+	if (modifiers.dry_season && search_habitat.hasWater(Water::kBreaks)) {
 		difficulty = std::max(difficulty, kExtremelyHard); // Note this is a max because the dry season makes it very difficult to find water in breaks or wadis, even if there is vegetation present
 	}
 
 	// Alpine terrain is always diffuclt to forage in, so if it is present, we set the difficulty to very hard regardless of vegetation or water sources
-	if (search_location.hasTerrain(Terrain::kAlpine)) {
+	if (search_habitat.hasTerrain(Terrain::kAlpine)) {
 		difficulty = std::max(difficulty, kVeryHard); // Note this is a max because alpine terrain is very difficult to forage in, even if there is vegetation or water present
 	}
 
@@ -319,13 +319,13 @@ float forage_water(rm::game::character::Character& forager, rm::game::Location& 
 	return found_water;
 }
 
-std::pair<float, float> forage_sustainance(rm::game::character::Character& forager, rm::game::Location& search_location, SustainanceModifiers& modifiers) {
+std::pair<float, float> forage_sustainance(rm::game::character::Character& forager, rm::game::Habitat& search_habitat, SustainanceModifiers& modifiers) {
 	// Get the characters foraging skill bonus
 	const rm::rule::SubcategoriedSkillData& foraging_skill = modifiers.object_factory.subcategoriedSkillData("SKILL_FORAGING");
 
 	// Make the food roll
-	float found_food = forage_food(forager, search_location, modifiers);
-	float found_water = forage_water(forager, search_location, modifiers);
+	float found_food = forage_food(forager, search_habitat, modifiers);
+	float found_water = forage_water(forager, search_habitat, modifiers);
 
 	return {found_food, found_water};
 }
