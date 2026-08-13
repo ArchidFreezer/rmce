@@ -19,7 +19,7 @@ namespace rm::rule {
 
 /**
  * @class CultureTypeData
- * @brief Definition of what comprises the primary adolescent influences on a character based on location and culture
+ * @brief Definition of what comprises the primary adolescent influences on a character based on habitat and culture
  *
  * Some aspects of a character, such as the physical appearance and biological traits, are tied to the characters race, but many elements are more associated with how and where they grew up. A dwarf living in a metropolitan city has as much
  * in common with an elf brought up in the city as they do with a dwarf in an underground cavern complex.

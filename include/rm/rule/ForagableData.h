@@ -3,7 +3,7 @@
 #include <string>
 
 #include <GameRuleData.h>
-#include <Location.h>
+#include <Habitat.h>
 #include <ForagableEffectType.h>
 #include <ForagablePreparationType.h>
 #include <SkillDifficultyType.h>
@@ -72,19 +72,19 @@ public:
 	}
 
 	/**
-	 * @brief Set the location definition for the foragable resource
-	 * @param location Location definition for the foragable resource, used to determine where the resource can be found in the game world. This is used to match against specific locations to determine if the resource can be found there.
+	 * @brief Set the habitat definition for the foragable resource
+	 * @param habitat Habitat definition for the foragable resource, used to determine where the resource can be found in the game world. This is used to match against specific locations to determine if the resource can be found there.
 	 */
-	void setLocation(rm::game::Location location) {
-		location_ = std::make_unique<rm::game::Location>(std::move(location));
+	void setHabitat(rm::game::Habitat habitat) {
+		habitat_ = std::make_unique<rm::game::Habitat>(std::move(habitat));
 	}
 
 	/**
-	 * @brief Get the location for the foragable resource
-	 * @return Location definition for the foragable resource, used to determine where the resource can be found in the game world. This is used to match against specific locations to determine if the resource can be found there.
+	 * @brief Get the habitat for the foragable resource
+	 * @return Habitat definition for the foragable resource, used to determine where the resource can be found in the game world. This is used to match against specific locations to determine if the resource can be found there.
 	 */
-	const rm::game::Location& location() const {
-		return *location_;
+	const rm::game::Habitat& habitat() const {
+		return *habitat_;
 	}
 
 	/**
@@ -268,7 +268,7 @@ private:
 	std::string other_names_{};                         /**< The other names of the foragable resource, used to provide additional information about the resource. */
 	ForagableEffectType::Type effect_type_{}; /**< The effect type of the foragable resource, used to determine the type of effect that the prepared resource has when used. */
 	const SubcategoriedSkillData* lore_skill_{nullptr}; /**< The skill used to identify the herb. */
-	std::unique_ptr<rm::game::Location> location_{};    /**< The location of the foragable resource. */
+	std::unique_ptr<rm::game::Habitat> habitat_{};    /**< The habitat of the foragable resource. */
 	ForagablePreparationType::Type preparation_type_{}; /**< The preparation type of the resource, used to determine how the resource can be prepared and used after it is foraged. */
 	SkillDifficultyType::Type find_difficulty_{};       /**< The difficulty of foraging the resource, used to determine the skill check difficulty when foraging for the resource. */
 	int addiction_factor_{};                            /**< The addiction factor of the resource, optionally used to determine how addictive the resource is when consumed. */

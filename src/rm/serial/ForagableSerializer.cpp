@@ -22,7 +22,7 @@ json::value ForagableSerializer::serializeObject(const ForagableData& ref) const
 	JsonConverter::setString(obj, "cost", ref.cost());
 
 	// Location data
-	JsonConverter::nestLocation(obj, "location", ref.location());
+	JsonConverter::nestHabitat(obj, "habitat", ref.habitat());
 
 
 	return obj;
@@ -56,9 +56,9 @@ const ForagableData& ForagableSerializer::deserializeObject(json::object& jsonOb
 	ref.setAddictionFactor(JsonConverter::getInt(jsonObj, "addictionFactor"));
 	ref.setCost(JsonConverter::getString(jsonObj, "cost"));
 
-	// Location data
-	rm::game::Location location = JsonConverter::getLocation(jsonObj, "location", manager_);
-	ref.setLocation(location);
+	// Habitat data
+	rm::game::Habitat habitat = JsonConverter::getHabitat(jsonObj, "habitat", manager_);
+	ref.setHabitat(habitat);
 
 
 	return ref;

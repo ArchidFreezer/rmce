@@ -394,99 +394,99 @@ void JsonConverter::setCharacterTraits(json::object& obj, std::string_view key, 
 	obj[key] = trait_obj;
 }
 
-rm::game::Location JsonConverter::getLocation(const json::object& obj, std::string_view key, rm::PersistentObjectManager& manager) {
-	const json::object* location_obj = getObject(obj, key);
-	rm::game::Location location{};
-	std::set<std::string> features_str = JsonConverter::getStringSet(*location_obj, "features");
+rm::game::Habitat JsonConverter::getHabitat(const json::object& obj, std::string_view key, rm::PersistentObjectManager& manager) {
+	const json::object* habitat_obj = getObject(obj, key);
+	rm::game::Habitat habitat{};
+	std::set<std::string> features_str = JsonConverter::getStringSet(*habitat_obj, "features");
 	for (const auto& feature_str : features_str) {
 		EnvironmentType::Feature feature{};
 		fromString(feature_str, feature);
-		location.addFeature(feature);
+		habitat.addFeature(feature);
 	}
-	std::set<std::string> terrains_str = JsonConverter::getStringSet(*location_obj, "terrains");
+	std::set<std::string> terrains_str = JsonConverter::getStringSet(*habitat_obj, "terrains");
 	for (const auto& terrain_str : terrains_str) {
 		EnvironmentType::Terrain terrain{};
 		fromString(terrain_str, terrain);
-		location.addTerrain(terrain);
+		habitat.addTerrain(terrain);
 	}
-	std::set<std::string> vegetation_str = JsonConverter::getStringSet(*location_obj, "vegetation");
+	std::set<std::string> vegetation_str = JsonConverter::getStringSet(*habitat_obj, "vegetation");
 	for (const auto& vegetation_str : vegetation_str) {
 		EnvironmentType::Vegetation vegetation{};
 		fromString(vegetation_str, vegetation);
-		location.addVegetation(vegetation);
+		habitat.addVegetation(vegetation);
 	}
-	std::set<std::string> water_str = JsonConverter::getStringSet(*location_obj, "waterSources");
+	std::set<std::string> water_str = JsonConverter::getStringSet(*habitat_obj, "waterSources");
 	for (const auto& water_str : water_str) {
 		EnvironmentType::Water water{};
 		fromString(water_str, water);
-		location.addWater(water);
+		habitat.addWater(water);
 	}
-	std::set<std::string> climate_group_str = JsonConverter::getStringSet(*location_obj, "climateGroups");
+	std::set<std::string> climate_group_str = JsonConverter::getStringSet(*habitat_obj, "climateGroups");
 	for (const auto& climate_group_str : climate_group_str) {
 		ClimateType::KoppenGroup climate_group{};
 		fromString(climate_group_str, climate_group);
-		location.addClimateGroup(climate_group);
+		habitat.addClimateGroup(climate_group);
 	}
-	std::set<std::string> climate_sub_group_str = JsonConverter::getStringSet(*location_obj, "climateSubGroups");
+	std::set<std::string> climate_sub_group_str = JsonConverter::getStringSet(*habitat_obj, "climateSubGroups");
 	for (const auto& climate_sub_group_str : climate_sub_group_str) {
 		ClimateType::KoppenSubGroup climate_sub_group{};
 		fromString(climate_sub_group_str, climate_sub_group);
-		location.addClimateSubGroup(climate_sub_group);
+		habitat.addClimateSubGroup(climate_sub_group);
 	}
-	return location;
+	return habitat;
 }
 
-void JsonConverter::nestLocation(json::object& obj, const std::string key, const rm::game::Location& location) {
-	JsonConverter::NestedBuilder location_builder = JsonConverter::createNested(obj).beginObject(key);
-	if (location.features().size()) {
+void JsonConverter::nestHabitat(json::object& obj, const std::string key, const rm::game::Habitat& habitat) {
+	JsonConverter::NestedBuilder habitat_builder = JsonConverter::createNested(obj).beginObject(key);
+	if (habitat.features().size()) {
 		std::set<std::string> features_str{};
-		for (const auto& feature : location.features()) {
+		for (const auto& feature : habitat.features()) {
 			features_str.emplace(EnvironmentType::toString(feature));
 		}
 		if (features_str.size())
-			location_builder.setStringArray("features", features_str);
+			habitat_builder.setStringArray("features", features_str);
 	}
-	if (location.terrains().size()) {
+	if (habitat.terrains().size()) {
 		std::set<std::string> terrains_str{};
-		for (const auto& terrain : location.terrains()) {
+		for (const auto& terrain : habitat.terrains()) {
 			terrains_str.emplace(EnvironmentType::toString(terrain));
 		}
 		if (terrains_str.size())
-			location_builder.setStringArray("terrains", terrains_str);
+			habitat_builder.setStringArray("terrains", terrains_str);
 	}
-	if (location.vegetation().size()) {
+	if (habitat.vegetation().size()) {
 		std::set<std::string> vegetation_str{};
-		for (const auto& vegetation : location.vegetation()) {
+		for (const auto& vegetation : habitat.vegetation()) {
 			vegetation_str.emplace(EnvironmentType::toString(vegetation));
 		}
 		if (vegetation_str.size())
-			location_builder.setStringArray("vegetation", vegetation_str);
+			habitat_builder.setStringArray("vegetation", vegetation_str);
 	}
-	if (location.water().size()) {
+	if (habitat.water().size()) {
 		std::set<std::string> water_str{};
-		for (const auto& water : location.water()) {
+		for (const auto& water : habitat.water()) {
 			water_str.emplace(EnvironmentType::toString(water));
 		}
 		if (water_str.size())
-			location_builder.setStringArray("waterSources", water_str);
+			habitat_builder.setStringArray("waterSources", water_str);
 	}
-	if (location.climateGroups().size()) {
+	if (habitat.climateGroups().size()) {
 		std::set<std::string> climate_groups_str{};
-		for (const auto& climate_group : location.climateGroups()) {
+		for (const auto& climate_group : habitat.climateGroups()) {
 			climate_groups_str.emplace(ClimateType::toString(climate_group));
 		}
 		if (climate_groups_str.size())
-			location_builder.setStringArray("climateGroups", climate_groups_str);
+			habitat_builder.setStringArray("climateGroups", climate_groups_str);
 	}
-	if (location.climateSubGroups().size()) {
+	if (habitat.climateSubGroups().size()) {
 		std::set<std::string> climate_sub_groups_str{};
-		for (const auto& climate_sub_group : location.climateSubGroups()) {
+		for (const auto& climate_sub_group : habitat.climateSubGroups()) {
 			climate_sub_groups_str.emplace(ClimateType::toString(climate_sub_group));
 		}
 		if (climate_sub_groups_str.size())
-			location_builder.setStringArray("climateSubGroups", climate_sub_groups_str);
+			habitat_builder.setStringArray("climateSubGroups", climate_sub_groups_str);
 	}
-	location_builder.endObject();
+	habitat_builder.endObject();
 }
 
 } // namespace rm::serial

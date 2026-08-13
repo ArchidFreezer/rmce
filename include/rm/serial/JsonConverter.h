@@ -10,7 +10,7 @@
 #include <GameRuleDataChoice.h>
 #include <CharacterTraits.h>
 #include <LanguageRanks.h>
-#include <Location.h>
+#include <Habitat.h>
 #include <SubcategoriedSkillData.h>
 #include <PersistentObjectManager.h>
 
@@ -1786,22 +1786,22 @@ public:
 	static void setCharacterTraits(json::object& obj, std::string_view key, const rm::game::character::CharacterTraits& traits);
 
 	/**
-	 * @brief Retrieves a location from a JSON object.
-	 * @param obj The JSON object containing the location data.
-	 * @param key The key associated with the location data in the JSON object.
-	 * @param manager The persistent object manager used to retrieve or manage any necessary data related to the location.
-	 * @return A Location object representing the location defined in the JSON object.
+	 * @brief Retrieves a habitat from a JSON object.
+	 * @param obj The JSON object containing the habitat data.
+	 * @param key The key associated with the habitat data in the JSON object.
+	 * @param manager The persistent object manager used to retrieve or manage any necessary data related to the habitat.
+	 * @return A Habitat object representing the habitat defined in the JSON object.
 	 */
-	static rm::game::Location getLocation(const json::object& obj, std::string_view key, rm::PersistentObjectManager& manager);
+	static rm::game::Habitat getHabitat(const json::object& obj, std::string_view key, rm::PersistentObjectManager& manager);
 	
 	/**
-	 * @brief Sets a location in a JSON object.
+	 * @brief Sets a habitat in a JSON object.
 	 *
-	 * @param obj The JSON object to modify with the location data.
-	 * @param key The key under which to store the location in the JSON object.
-	 * @param location The Location object containing the location data to be set in the JSON object.
+	 * @param obj The JSON object to modify with the habitat data.
+	 * @param key The key under which to store the habitat in the JSON object.
+	 * @param habitat The Habitat object containing the habitat data to be set in the JSON object.
 	 */
-	static void nestLocation(json::object& obj, const std::string key, const rm::game::Location& location);
+	static void nestHabitat(json::object& obj, const std::string key, const rm::game::Habitat& habitat);
 
 private:
 	template<typename Primitive>

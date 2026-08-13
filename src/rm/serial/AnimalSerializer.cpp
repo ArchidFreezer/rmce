@@ -49,7 +49,7 @@ json::value AnimalSerializer::serializeObject(const AnimalData& ref) const {
 	}
 
 	// Location data
-	JsonConverter::nestLocation(obj, "location", ref.location());
+	JsonConverter::nestHabitat(obj, "habitat", ref.habitat());
 
 	// Standard attacks
 	if (ref.attacks().size()) {
@@ -231,8 +231,8 @@ const AnimalData& AnimalSerializer::deserializeObject(json::object& jsonObj) con
 	}
 
 	// Location data
-	rm::game::Location location = JsonConverter::getLocation(jsonObj, "location", manager_);
-	ref.setLocation(location);
+	rm::game::Habitat habitat = JsonConverter::getHabitat(jsonObj, "habitat", manager_);
+	ref.setHabitat(habitat);
 
 	NumberMatcherFactory number_matcher{};
 

@@ -2,7 +2,7 @@
 
 #include <Forage.h>
 #include <Character.h>
-#include <Location.h>
+#include <Habitat.h>
 #include <ForagableData.h>
 #include <PersistentObjectManager.h>
 #include <PersistentCache.h>
@@ -38,8 +38,8 @@ protected:
 		test_character = &manager->get<character::Character>();
 		test_character->setName("Test Forager");
 
-		// Create a test location
-		test_location = std::make_unique<Location>();
+		// Create a test habitat
+		test_location = std::make_unique<Habitat>();
 	}
 
 	std::unique_ptr<rm::PersistentCache> cache;
@@ -48,7 +48,7 @@ protected:
 	const SubcategoriedSkillData* herb_lore_skill;
 	const SubcategoriedSkillData* poison_lore_skill;
 	character::Character* test_character;
-	std::unique_ptr<Location> test_location;
+	std::unique_ptr<Habitat> test_location;
 };
 
 // -----------------------------------------------------------------------
@@ -59,7 +59,7 @@ protected:
  * @brief Test that forage_herbs returns empty map when foraging roll is less than 100
  */
 TEST_F(ForageTest, ForageHerbs_FailedForagingRoll_ReturnsEmpty) {
-	// Set up location with deciduous vegetation
+	// Set up habitat with deciduous vegetation
 	test_location->addVegetation(EnvironmentType::Vegetation::kDeciduous);
 
 	// Create modifiers with very low hours spent (should result in low roll)
@@ -82,7 +82,7 @@ TEST_F(ForageTest, ForageHerbs_FailedForagingRoll_ReturnsEmpty) {
  * @brief Test that failed_search_count is incremented on failed forage
  */
 TEST_F(ForageTest, ForageHerbs_FailedSearch_IncrementsCounter) {
-	// Set up location with barren vegetation (difficult)
+	// Set up habitat with barren vegetation (difficult)
 	test_location->addVegetation(EnvironmentType::Vegetation::kBarren);
 
 	// Create modifiers with very low hours spent
@@ -110,13 +110,13 @@ TEST_F(ForageTest, ForageHerbs_FailedSearch_IncrementsCounter) {
  * @brief Test that additional_searchers bonus is applied
  */
 TEST_F(ForageTest, ForageHerbs_AdditionalSearchers_AppliesBonus) {
-	// Set up location
+	// Set up habitat
 	test_location->addVegetation(EnvironmentType::Vegetation::kDeciduous);
 
 	// Create a foragable resource
 	ForagableData& herb = manager->get<ForagableData>("TEST_HERB");
 	herb.setName("Test Herb");
-	herb.setLocation(*test_location);
+	herb.setHabitat(*test_location);
 	herb.setFindDifficulty(SkillDifficultyType::kLight);
 	herb.setLoreSkill(herb_lore_skill);
 
@@ -148,13 +148,13 @@ TEST_F(ForageTest, ForageHerbs_AdditionalSearchers_AppliesBonus) {
  * @brief Test that hunted penalty is applied
  */
 TEST_F(ForageTest, ForageHerbs_HuntedPenalty_ReducesSuccessRate) {
-	// Set up location
+	// Set up habitat
 	test_location->addVegetation(EnvironmentType::Vegetation::kDeciduous);
 
 	// Create a foragable resource
 	ForagableData& herb = manager->get<ForagableData>("TEST_HERB_2");
 	herb.setName("Test Herb 2");
-	herb.setLocation(*test_location);
+	herb.setHabitat(*test_location);
 	herb.setFindDifficulty(SkillDifficultyType::kLight);
 	herb.setLoreSkill(herb_lore_skill);
 
@@ -186,13 +186,13 @@ TEST_F(ForageTest, ForageHerbs_HuntedPenalty_ReducesSuccessRate) {
  * @brief Test that hours_spent modifier affects foraging results
  */
 TEST_F(ForageTest, ForageHerbs_HoursSpent_AffectsResults) {
-	// Set up location
+	// Set up habitat
 	test_location->addVegetation(EnvironmentType::Vegetation::kDeciduous);
 
 	// Create a foragable resource
 	ForagableData& herb = manager->get<ForagableData>("TEST_HERB_3");
 	herb.setName("Test Herb 3");
-	herb.setLocation(*test_location);
+	herb.setHabitat(*test_location);
 	herb.setFindDifficulty(SkillDifficultyType::kLight);
 	herb.setLoreSkill(herb_lore_skill);
 
@@ -224,19 +224,19 @@ TEST_F(ForageTest, ForageHerbs_HoursSpent_AffectsResults) {
  * @brief Test that target_resource searches for specific herb
  */
 TEST_F(ForageTest, ForageHerbs_TargetResource_SearchesSpecificHerb) {
-	// Set up location
+	// Set up habitat
 	test_location->addVegetation(EnvironmentType::Vegetation::kJungle);
 
 	// Create multiple foragable resources
 	ForagableData& target_herb = manager->get<ForagableData>("TARGET_HERB");
 	target_herb.setName("Target Herb");
-	target_herb.setLocation(*test_location);
+	target_herb.setHabitat(*test_location);
 	target_herb.setFindDifficulty(SkillDifficultyType::kLight);
 	target_herb.setLoreSkill(herb_lore_skill);
 
 	ForagableData& other_herb = manager->get<ForagableData>("OTHER_HERB");
 	other_herb.setName("Other Herb");
-	other_herb.setLocation(*test_location);
+	other_herb.setHabitat(*test_location);
 	other_herb.setFindDifficulty(SkillDifficultyType::kLight);
 	other_herb.setLoreSkill(herb_lore_skill);
 
@@ -259,13 +259,13 @@ TEST_F(ForageTest, ForageHerbs_TargetResource_SearchesSpecificHerb) {
  * @brief Test that herb_lore_bonus is applied during identification
  */
 TEST_F(ForageTest, ForageHerbs_HerbLoreBonus_AffectsIdentification) {
-	// Set up location
+	// Set up habitat
 	test_location->addVegetation(EnvironmentType::Vegetation::kDeciduous);
 
 	// Create a difficult to identify herb
 	ForagableData& rare_herb = manager->get<ForagableData>("RARE_HERB");
 	rare_herb.setName("Rare Herb");
-	rare_herb.setLocation(*test_location);
+	rare_herb.setHabitat(*test_location);
 	rare_herb.setFindDifficulty(SkillDifficultyType::kVeryHard);  // High difficulty
 	rare_herb.setLoreSkill(herb_lore_skill);
 
@@ -297,13 +297,13 @@ TEST_F(ForageTest, ForageHerbs_HerbLoreBonus_AffectsIdentification) {
  * @brief Test that poison_lore_bonus is applied for poison-type foragables
  */
 TEST_F(ForageTest, ForageHerbs_PoisonLoreBonus_AffectsPoison) {
-	// Set up location
+	// Set up habitat
 	test_location->addWater(EnvironmentType::Water::kMarsh);
 
 	// Create a poison foragable
 	ForagableData& poison_herb = manager->get<ForagableData>("POISON_HERB");
 	poison_herb.setName("Poison Herb");
-	poison_herb.setLocation(*test_location);
+	poison_herb.setHabitat(*test_location);
 	poison_herb.setFindDifficulty(SkillDifficultyType::kHard);
 	poison_herb.setLoreSkill(poison_lore_skill);
 
@@ -332,37 +332,37 @@ TEST_F(ForageTest, ForageHerbs_PoisonLoreBonus_AffectsPoison) {
 }
 
 /**
- * @brief Test that location matching works correctly
+ * @brief Test that habitat matching works correctly
  */
 TEST_F(ForageTest, ForageHerbs_LocationMatching_OnlyFindsMatchingHerbs) {
 	// Set up two different locations
-	Location forest_location;
+	Habitat forest_location;
 	forest_location.addVegetation(EnvironmentType::Vegetation::kDeciduous);
 
-	Location desert_location;
+	Habitat desert_location;
 	desert_location.addVegetation(EnvironmentType::Vegetation::kBarren);
 
 	// Create herbs for different locations
 	ForagableData& forest_herb = manager->get<ForagableData>("FOREST_HERB");
 	forest_herb.setName("Forest Herb");
-	forest_herb.setLocation(forest_location);
+	forest_herb.setHabitat(forest_location);
 	forest_herb.setFindDifficulty(SkillDifficultyType::kLight);
 	forest_herb.setLoreSkill(herb_lore_skill);
 
 	ForagableData& desert_herb = manager->get<ForagableData>("DESERT_HERB");
 	desert_herb.setName("Desert Herb");
-	desert_herb.setLocation(desert_location);
+	desert_herb.setHabitat(desert_location);
 	desert_herb.setFindDifficulty(SkillDifficultyType::kLight);
 	desert_herb.setLoreSkill(herb_lore_skill);
 
-	// Search in forest location
+	// Search in forest habitat
 	HerbModifiers modifiers{*manager, nullptr, 15, 5, 0, false};
 
 	// Run multiple times to get results
 	for (int i = 0; i < 50; i++) {
 		auto result = forage_herbs(*test_character, forest_location, modifiers);
 		if (!result.empty()) {
-			// Should not find desert herb in forest location
+			// Should not find desert herb in forest habitat
 			EXPECT_TRUE(result.find(&desert_herb) == result.end());
 			break;
 		}
